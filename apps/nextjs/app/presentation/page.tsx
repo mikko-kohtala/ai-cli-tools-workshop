@@ -1,10 +1,10 @@
+import { ChevronRight, Code2, GitBranch, Settings, Shield, Terminal, Zap } from "lucide-react";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage } from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Terminal, Shield, Zap, Code2, GitBranch, Settings, ChevronRight } from "lucide-react";
 
 export default function PresentationPage() {
   return (
@@ -39,9 +39,9 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Agenda Section */}
-          <section id="agenda" className="space-y-6">
+          <section className="space-y-6" id="agenda">
             <h2 className="font-bold text-4xl">Workshop Agenda</h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-lg text-muted-foreground">
               This 90-minute workshop is designed to give you a comprehensive understanding of AI CLI tools, with a
               focus on OpenAI's Codex CLI. We'll cover everything from basic concepts to advanced workflows.
             </p>
@@ -118,7 +118,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Overview Section */}
-          <section id="overview" className="space-y-6">
+          <section className="space-y-6" id="overview">
             <h2 className="font-bold text-4xl">Codex CLI at a Glance</h2>
             <p className="text-lg leading-relaxed">
               Codex CLI is a revolutionary tool that brings the power of GPT-5-based AI directly to your terminal. It's
@@ -149,8 +149,8 @@ export default function PresentationPage() {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-sm">
-                    Bridges the gap between natural language requests and local tooling. Describe what you want in
-                    plain English, and Codex CLI translates it to precise actions.
+                    Bridges the gap between natural language requests and local tooling. Describe what you want in plain
+                    English, and Codex CLI translates it to precise actions.
                   </p>
                   <div className="rounded-lg bg-neutral-900 p-4 font-mono text-sm text-white">
                     <div className="text-green-400">$ codex "find all TODO comments"</div>
@@ -177,8 +177,8 @@ export default function PresentationPage() {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <p className="text-sm">
-                    Respects project constraints while automating routine tasks. Understands your dependencies,
-                    follows your code style, and adheres to your project's conventions.
+                    Respects project constraints while automating routine tasks. Understands your dependencies, follows
+                    your code style, and adheres to your project's conventions.
                   </p>
                 </CardContent>
               </Card>
@@ -192,7 +192,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Key Concepts Section */}
-          <section id="concepts" className="space-y-6">
+          <section className="space-y-6" id="concepts">
             <h2 className="font-bold text-4xl">Key Concepts</h2>
             <p className="text-lg leading-relaxed">
               To use Codex CLI effectively, it's important to understand the core concepts that govern how it operates.
@@ -210,13 +210,13 @@ export default function PresentationPage() {
                     Every Codex CLI session starts with a clear understanding of its environment. This includes the
                     current working directory (cwd), sandbox mode, network access, and approval settings.
                   </p>
-                  <Tabs defaultValue="context" className="w-full">
+                  <Tabs className="w-full" defaultValue="context">
                     <TabsList className="grid w-full grid-cols-3">
                       <TabsTrigger value="context">Context Info</TabsTrigger>
                       <TabsTrigger value="example">Example</TabsTrigger>
                       <TabsTrigger value="best-practice">Best Practice</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="context" className="space-y-2">
+                    <TabsContent className="space-y-2" value="context">
                       <ul className="list-disc space-y-2 pl-6">
                         <li>
                           <strong>Working Directory:</strong> The root of your project where Codex operates
@@ -265,13 +265,13 @@ export default function PresentationPage() {
                     This ensures transparency and gives you the opportunity to review the approach before changes are
                     made.
                   </p>
-                  <Tabs defaultValue="workflow" className="w-full">
+                  <Tabs className="w-full" defaultValue="workflow">
                     <TabsList className="grid w-full grid-cols-3">
                       <TabsTrigger value="workflow">Workflow</TabsTrigger>
                       <TabsTrigger value="example">Example</TabsTrigger>
                       <TabsTrigger value="benefits">Benefits</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="workflow" className="space-y-2">
+                    <TabsContent className="space-y-2" value="workflow">
                       <ol className="list-decimal space-y-3 pl-6">
                         <li>
                           <strong>Understand:</strong> Codex analyzes the request and existing code
@@ -379,7 +379,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Architecture Section */}
-          <section id="architecture" className="space-y-6">
+          <section className="space-y-6" id="architecture">
             <h2 className="font-bold text-4xl">Harness Architecture</h2>
             <p className="text-lg leading-relaxed">
               The Codex CLI harness is a sophisticated system that balances power with safety. Understanding its
@@ -444,19 +444,19 @@ export default function PresentationPage() {
                     levels of access control.
                   </p>
                   <div className="space-y-3">
-                    <div className="rounded-lg border-l-4 border-green-500 bg-green-50 p-4">
+                    <div className="rounded-lg border-green-500 border-l-4 bg-green-50 p-4">
                       <h4 className="mb-1 font-semibold text-green-900">read-only</h4>
                       <p className="text-green-800 text-sm">
                         Can read files and execute safe commands. No modifications allowed. Best for exploration.
                       </p>
                     </div>
-                    <div className="rounded-lg border-l-4 border-yellow-500 bg-yellow-50 p-4">
+                    <div className="rounded-lg border-yellow-500 border-l-4 bg-yellow-50 p-4">
                       <h4 className="mb-1 font-semibold text-yellow-900">workspace-write</h4>
-                      <p className="text-yellow-800 text-sm">
+                      <p className="text-sm text-yellow-800">
                         Can modify files within the workspace. Cannot access system files. Recommended default.
                       </p>
                     </div>
-                    <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-4">
+                    <div className="rounded-lg border-red-500 border-l-4 bg-red-50 p-4">
                       <h4 className="mb-1 font-semibold text-red-900">danger</h4>
                       <p className="text-red-800 text-sm">
                         Full system access. Can modify any file or execute any command. Use with extreme caution.
@@ -480,7 +480,7 @@ export default function PresentationPage() {
                       <TabsTrigger value="policies">Policies</TabsTrigger>
                       <TabsTrigger value="comparison">When to Use</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="policies" className="space-y-3">
+                    <TabsContent className="space-y-3" value="policies">
                       <div className="rounded-lg border p-3">
                         <h4 className="mb-1 font-semibold">never</h4>
                         <p className="text-sm">No escalation requests. Work within current limitations.</p>
@@ -498,14 +498,13 @@ export default function PresentationPage() {
                         <p className="text-sm">Require confirmation for most commands.</p>
                       </div>
                     </TabsContent>
-                    <TabsContent value="comparison" className="space-y-3 text-sm">
+                    <TabsContent className="space-y-3 text-sm" value="comparison">
                       <div className="rounded-lg bg-blue-50 p-3">
                         <strong>Exploration:</strong> Use <code className="rounded bg-blue-200 px-1">never</code> or{" "}
                         <code className="rounded bg-blue-200 px-1">on-failure</code>
                       </div>
                       <div className="rounded-lg bg-green-50 p-3">
-                        <strong>Development:</strong> Use{" "}
-                        <code className="rounded bg-green-200 px-1">on-request</code>
+                        <strong>Development:</strong> Use <code className="rounded bg-green-200 px-1">on-request</code>
                       </div>
                       <div className="rounded-lg bg-yellow-50 p-3">
                         <strong>Production:</strong> Use <code className="rounded bg-yellow-200 px-1">untrusted</code>
@@ -541,14 +540,14 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Sandboxing Section */}
-          <section id="sandboxing" className="space-y-6">
+          <section className="space-y-6" id="sandboxing">
             <h2 className="font-bold text-4xl">Working with Sandboxing</h2>
             <p className="text-lg leading-relaxed">
               Sandbox modes are your first line of defense against unintended consequences. They define what Codex CLI
               can and cannot do in your environment, providing fine-grained control over filesystem and system access.
             </p>
 
-            <Card className="border-l-4 border-blue-500 bg-blue-50">
+            <Card className="border-blue-500 border-l-4 bg-blue-50">
               <CardHeader>
                 <CardTitle>🎯 Golden Rule of Sandboxing</CardTitle>
               </CardHeader>
@@ -572,7 +571,7 @@ export default function PresentationPage() {
                       <TabsTrigger value="scenarios">Scenarios</TabsTrigger>
                       <TabsTrigger value="troubleshooting">Troubleshooting</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="guidelines" className="space-y-3">
+                    <TabsContent className="space-y-3" value="guidelines">
                       <div className="space-y-4">
                         <div className="flex items-start gap-3">
                           <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-sm text-white">
@@ -622,34 +621,32 @@ export default function PresentationPage() {
                         </div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="scenarios" className="space-y-4">
+                    <TabsContent className="space-y-4" value="scenarios">
                       <div className="rounded-lg border p-4">
                         <h4 className="mb-2 font-semibold text-green-700">✅ Good: Exploring New Codebase</h4>
                         <p className="mb-2 text-sm">Use read-only mode to understand structure without risk.</p>
-                        <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                        <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                           $ codex --sandbox read-only "show me the project structure"
                         </div>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h4 className="mb-2 font-semibold text-green-700">✅ Good: Feature Development</h4>
                         <p className="mb-2 text-sm">Use workspace-write for making changes within project.</p>
-                        <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                        <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                           $ codex --sandbox workspace-write "add authentication"
                         </div>
                       </div>
                       <div className="rounded-lg border p-4">
                         <h4 className="mb-2 font-semibold text-red-700">❌ Bad: Using Danger Mode Unnecessarily</h4>
                         <p className="mb-2 text-sm">Avoid danger mode unless absolutely required.</p>
-                        <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                        <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                           $ codex --sandbox danger "fix the bug"
                         </div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="troubleshooting" className="space-y-3 text-sm">
+                    <TabsContent className="space-y-3 text-sm" value="troubleshooting">
                       <div className="rounded-lg bg-yellow-50 p-4">
-                        <p className="mb-2 font-semibold">
-                          Problem: "Permission denied" when trying to create files
-                        </p>
+                        <p className="mb-2 font-semibold">Problem: "Permission denied" when trying to create files</p>
                         <p>
                           Solution: Check if you're in read-only mode. Request escalation to workspace-write or restart
                           session with appropriate permissions.
@@ -672,7 +669,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Building Sessions Section */}
-          <section id="sessions" className="space-y-6">
+          <section className="space-y-6" id="sessions">
             <h2 className="font-bold text-4xl">Building Effective Sessions</h2>
             <p className="text-lg leading-relaxed">
               The quality of your Codex CLI sessions depends on clear communication, proper planning, and iterative
@@ -691,11 +688,13 @@ export default function PresentationPage() {
                       <TabsTrigger value="good">Good Examples</TabsTrigger>
                       <TabsTrigger value="bad">Bad Examples</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="good" className="space-y-3">
+                    <TabsContent className="space-y-3" value="good">
                       <div className="rounded-lg border-2 border-green-200 bg-green-50 p-4">
                         <p className="mb-2 font-semibold text-green-900">✅ Clear and Specific</p>
                         <div className="space-y-2 font-mono text-sm">
-                          <div className="rounded bg-white p-2">"Add input validation to the user registration form"</div>
+                          <div className="rounded bg-white p-2">
+                            "Add input validation to the user registration form"
+                          </div>
                           <div className="rounded bg-white p-2">
                             "Refactor the authentication middleware to use async/await"
                           </div>
@@ -703,7 +702,7 @@ export default function PresentationPage() {
                         </div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="bad" className="space-y-3">
+                    <TabsContent className="space-y-3" value="bad">
                       <div className="rounded-lg border-2 border-red-200 bg-red-50 p-4">
                         <p className="mb-2 font-semibold text-red-900">❌ Vague and Unclear</p>
                         <div className="space-y-2 font-mono text-sm">
@@ -749,7 +748,7 @@ export default function PresentationPage() {
                         <div className="mt-3 text-yellow-400">Current: Step 1</div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="tips" className="space-y-2">
+                    <TabsContent className="space-y-2" value="tips">
                       <ul className="list-disc space-y-2 pl-6 text-sm">
                         <li>Keep plans updated as you progress through steps</li>
                         <li>Mark completed steps to track progress</li>
@@ -783,11 +782,11 @@ export default function PresentationPage() {
                         <li>src/types/user.ts (updated types)</li>
                       </ul>
                       <p className="mt-3 text-muted-foreground">Test the changes:</p>
-                      <div className="mt-1 rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                      <div className="mt-1 rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                         npm test -- auth.test.ts
                       </div>
                       <p className="mt-3 text-muted-foreground">Commit suggestion:</p>
-                      <div className="mt-1 rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                      <div className="mt-1 rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                         git commit -m "feat: add input validation to user registration"
                       </div>
                     </div>
@@ -821,7 +820,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Communication Guidelines */}
-          <section id="communication" className="space-y-6">
+          <section className="space-y-6" id="communication">
             <h2 className="font-bold text-4xl">Communication Guidelines</h2>
             <p className="text-lg leading-relaxed">
               Effective communication with Codex CLI ensures you get precise, actionable responses. Follow these
@@ -878,7 +877,7 @@ export default function PresentationPage() {
                       <TabsTrigger value="good">Summarized ✅</TabsTrigger>
                     </TabsList>
                     <TabsContent value="bad">
-                      <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                      <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                         <div>[verbose test output...]</div>
                         <div>Test Suites: 5 passed, 5 total</div>
                         <div>Tests: 47 passed, 47 total</div>
@@ -888,7 +887,7 @@ export default function PresentationPage() {
                       </div>
                     </TabsContent>
                     <TabsContent value="good">
-                      <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                      <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                         <div className="text-green-400">✓ All tests passed</div>
                         <div className="text-neutral-300">5 suites, 47 tests (3.5s)</div>
                       </div>
@@ -910,9 +909,9 @@ export default function PresentationPage() {
                     </div>
                     <div>
                       <p className="mb-1 font-semibold">Block:</p>
-                      <div className="rounded bg-neutral-900 p-2 font-mono text-xs text-white">
+                      <div className="rounded bg-neutral-900 p-2 font-mono text-white text-xs">
                         <div>function validate(input) {"{"}</div>
-                        <div>  return input.length {"> 0;"}</div>
+                        <div> return input.length {"> 0;"}</div>
                         <div>{"}"}</div>
                       </div>
                     </div>
@@ -925,7 +924,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Pro Tips Section */}
-          <section id="pro-tips" className="space-y-6">
+          <section className="space-y-6" id="pro-tips">
             <h2 className="font-bold text-4xl">Pro Tips for Power Users</h2>
             <p className="text-lg leading-relaxed">
               Once you're comfortable with the basics, these advanced techniques will help you unlock the full potential
@@ -947,7 +946,7 @@ export default function PresentationPage() {
                       <TabsTrigger value="rg">ripgrep (rg)</TabsTrigger>
                       <TabsTrigger value="examples">Examples</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="rg" className="space-y-3">
+                    <TabsContent className="space-y-3" value="rg">
                       <p className="text-sm">
                         Prefer <code className="rounded bg-neutral-200 px-1">rg</code> for fast searches. Always specify
                         the working directory for context.
@@ -959,7 +958,7 @@ export default function PresentationPage() {
                         <div className="text-green-400">rg "function authenticate" -C 3</div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="examples" className="space-y-3">
+                    <TabsContent className="space-y-3" value="examples">
                       <div className="space-y-3 text-sm">
                         <div className="rounded-lg border p-3">
                           <p className="mb-1 font-semibold">Find all API calls:</p>
@@ -999,9 +998,9 @@ export default function PresentationPage() {
                     <div className="rounded-lg border-2 border-red-200 bg-red-50 p-3">
                       <p className="mb-2 font-semibold text-red-900">❌ Over-formatted</p>
                       <div className="rounded bg-white p-2 font-mono text-xs">
-                        <div>{'=========='}</div>
+                        <div>{"=========="}</div>
                         <div>📝 Created: auth.ts 🎉</div>
-                        <div>{'=========='}</div>
+                        <div>{"=========="}</div>
                       </div>
                     </div>
                   </div>
@@ -1028,7 +1027,9 @@ export default function PresentationPage() {
                   </div>
                   <div className="rounded-lg bg-blue-50 p-4 text-sm">
                     <p className="font-semibold">Pro Tip:</p>
-                    <p>Use git to review changes: <code className="rounded bg-blue-200 px-1">git diff</code></p>
+                    <p>
+                      Use git to review changes: <code className="rounded bg-blue-200 px-1">git diff</code>
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -1044,7 +1045,7 @@ export default function PresentationPage() {
                       <TabsTrigger value="examples">Examples</TabsTrigger>
                       <TabsTrigger value="pitfalls">Avoid</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="patterns" className="space-y-2 text-sm">
+                    <TabsContent className="space-y-2 text-sm" value="patterns">
                       <ul className="list-disc space-y-2 pl-6">
                         <li>Always specify workdir parameter for context</li>
                         <li>Chain commands carefully with proper error handling</li>
@@ -1052,7 +1053,7 @@ export default function PresentationPage() {
                         <li>Capture output for processing when needed</li>
                       </ul>
                     </TabsContent>
-                    <TabsContent value="examples" className="space-y-3">
+                    <TabsContent className="space-y-3" value="examples">
                       <div className="space-y-3 text-sm">
                         <div className="rounded-lg bg-neutral-900 p-3 font-mono text-white">
                           <div className="text-blue-400"># Run tests in specific directory</div>
@@ -1068,7 +1069,7 @@ export default function PresentationPage() {
                         </div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="pitfalls" className="space-y-2 text-sm">
+                    <TabsContent className="space-y-2 text-sm" value="pitfalls">
                       <ul className="list-disc space-y-2 pl-6 text-red-800">
                         <li>❌ Don't run commands without specifying workdir</li>
                         <li>❌ Avoid destructive commands without explicit confirmation</li>
@@ -1085,22 +1086,22 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Demo Section */}
-          <section id="demo" className="space-y-6">
+          <section className="space-y-6" id="demo">
             <h2 className="font-bold text-4xl">Demo Flow Example</h2>
             <p className="text-lg leading-relaxed">
-              Let's walk through a complete example of how to use Codex CLI for a real-world task: refactoring a
-              logging module for structured output.
+              Let's walk through a complete example of how to use Codex CLI for a real-world task: refactoring a logging
+              module for structured output.
             </p>
 
-            <Card className="border-l-4 border-purple-500">
+            <Card className="border-purple-500 border-l-4">
               <CardHeader>
                 <CardTitle className="text-2xl">Scenario: Refactor Logging Module</CardTitle>
                 <CardDescription>Transform plain text logs to structured JSON format</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="mb-4 text-sm">
-                  <strong>Goal:</strong> Update the logging system to output structured JSON logs for better parsing
-                  and analysis in production environments.
+                  <strong>Goal:</strong> Update the logging system to output structured JSON logs for better parsing and
+                  analysis in production environments.
                 </p>
               </CardContent>
             </Card>
@@ -1128,13 +1129,19 @@ export default function PresentationPage() {
                         </div>
                       </div>
                     </TabsContent>
-                    <TabsContent value="output" className="space-y-2 text-sm">
+                    <TabsContent className="space-y-2 text-sm" value="output">
                       <p>Current implementation uses console.log with string concatenation:</p>
-                      <div className="rounded-lg bg-neutral-900 p-3 font-mono text-xs text-white">
+                      <div className="rounded-lg bg-neutral-900 p-3 font-mono text-white text-xs">
                         <div>
-                          <span className="text-blue-400">function</span> log(message: <span className="text-green-400">string</span>) {"{"}
+                          <span className="text-blue-400">function</span> log(message:{" "}
+                          <span className="text-green-400">string</span>) {"{"}
                         </div>
-                        <div>  console.log(`[${"{"}{new Date().toISOString()}{"}"}] ${"{"}message{"}"}`);</div>
+                        <div>
+                          {" "}
+                          console.log(`[${"{"}
+                          {new Date().toISOString()}
+                          {"}"}] ${"{"}message{"}"}`);
+                        </div>
                         <div>{"}"}</div>
                       </div>
                       <p className="mt-2">
@@ -1186,14 +1193,14 @@ export default function PresentationPage() {
                       <TabsTrigger value="output">Output Format</TabsTrigger>
                     </TabsList>
                     <TabsContent value="logger">
-                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-xs text-white">
+                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-white text-xs">
                         <div>
                           <span className="text-blue-400">interface</span> LogEntry {"{"}
                         </div>
-                        <div>  timestamp: string;</div>
-                        <div>  level: 'info' | 'warn' | 'error';</div>
-                        <div>  message: string;</div>
-                        <div>  metadata?: Record&lt;string, any&gt;;</div>
+                        <div> timestamp: string;</div>
+                        <div> level: 'info' | 'warn' | 'error';</div>
+                        <div> message: string;</div>
+                        <div> metadata?: Record&lt;string, any&gt;;</div>
                         <div>{"}"}</div>
                         <div className="mt-3">
                           <span className="text-blue-400">class</span> Logger {"{"}
@@ -1202,37 +1209,40 @@ export default function PresentationPage() {
                           {"  "}
                           <span className="text-blue-400">private</span> format(entry: LogEntry) {"{"}
                         </div>
-                        <div>    return JSON.stringify(entry);</div>
-                        <div>  {"}"}</div>
+                        <div> return JSON.stringify(entry);</div>
+                        <div> {"}"}</div>
                         <div className="mt-2">
                           {"  "}info(message: string, metadata?: any) {"{"}
                         </div>
-                        <div>    console.log(this.format({"{"}...{"}"}));</div>
-                        <div>  {"}"}</div>
+                        <div>
+                          {" "}
+                          console.log(this.format({"{"}...{"}"}));
+                        </div>
+                        <div> {"}"}</div>
                         <div>{"}"}</div>
                       </div>
                     </TabsContent>
                     <TabsContent value="usage">
-                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-xs text-white">
-                        <div className="text-blue-400">// Before</div>
+                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-white text-xs">
+                        <div className="text-blue-400">{"//"} Before</div>
                         <div className="text-red-400">log('User logged in');</div>
-                        <div className="mt-3 text-blue-400">// After</div>
+                        <div className="mt-3 text-blue-400">{"//"} After</div>
                         <div className="text-green-400">logger.info('User logged in', {"{"}</div>
-                        <div className="text-green-400">  userId: user.id,</div>
-                        <div className="text-green-400">  requestId: req.id</div>
+                        <div className="text-green-400"> userId: user.id,</div>
+                        <div className="text-green-400"> requestId: req.id</div>
                         <div className="text-green-400">{"}"})</div>
                       </div>
                     </TabsContent>
                     <TabsContent value="output">
-                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-xs text-white">
+                      <div className="rounded-lg bg-neutral-900 p-4 font-mono text-white text-xs">
                         <div>{"{"}</div>
-                        <div>  "timestamp": "2025-10-22T14:30:00.000Z",</div>
-                        <div>  "level": "info",</div>
-                        <div>  "message": "User logged in",</div>
-                        <div>  "metadata": {"{"}</div>
-                        <div>    "userId": "user_123",</div>
-                        <div>    "requestId": "req_456"</div>
-                        <div>  {"}"}</div>
+                        <div> "timestamp": "2025-10-22T14:30:00.000Z",</div>
+                        <div> "level": "info",</div>
+                        <div> "message": "User logged in",</div>
+                        <div> "metadata": {"{"}</div>
+                        <div> "userId": "user_123",</div>
+                        <div> "requestId": "req_456"</div>
+                        <div> {"}"}</div>
                         <div>{"}"}</div>
                       </div>
                     </TabsContent>
@@ -1284,11 +1294,11 @@ export default function PresentationPage() {
                   </div>
                   <div className="rounded-lg bg-blue-50 p-4">
                     <p className="mb-2 font-semibold text-blue-900">📝 Modified Files:</p>
-                    <ul className="space-y-1 font-mono text-xs text-blue-800">
+                    <ul className="space-y-1 font-mono text-blue-800 text-xs">
                       <li>src/logger.ts (refactored)</li>
                       <li>src/types/logger.ts (created)</li>
                       <li>tests/logger.test.ts (created)</li>
-                      <li>src/**/*.ts (updated log calls)</li>
+                      <li>{"src/**/*.ts"} (updated log calls)</li>
                     </ul>
                   </div>
                   <div className="rounded-lg bg-yellow-50 p-4">
@@ -1302,7 +1312,12 @@ export default function PresentationPage() {
                   <div className="rounded-lg border p-4">
                     <p className="mb-2 font-semibold">🚀 Suggested Next Steps:</p>
                     <ul className="list-disc space-y-1 pl-6">
-                      <li>Commit changes: <code className="rounded bg-neutral-200 px-1">git commit -m "refactor: structured JSON logging"</code></li>
+                      <li>
+                        Commit changes:{" "}
+                        <code className="rounded bg-neutral-200 px-1">
+                          git commit -m "refactor: structured JSON logging"
+                        </code>
+                      </li>
                       <li>Update deployment documentation</li>
                       <li>Configure log aggregation service to parse JSON</li>
                     </ul>
@@ -1315,7 +1330,7 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Next Steps Section */}
-          <section id="next-steps" className="space-y-6">
+          <section className="space-y-6" id="next-steps">
             <h2 className="font-bold text-4xl">Next Steps</h2>
             <p className="text-lg leading-relaxed">
               Ready to start using Codex CLI? Here's how to get started and integrate it into your workflow.
@@ -1327,7 +1342,9 @@ export default function PresentationPage() {
                   <CardTitle>Install and Configure</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <p className="text-sm">Get Codex CLI set up on your machine and explore the different sandbox configurations.</p>
+                  <p className="text-sm">
+                    Get Codex CLI set up on your machine and explore the different sandbox configurations.
+                  </p>
                   <div className="rounded-lg bg-neutral-900 p-4 font-mono text-sm text-white">
                     <div className="text-blue-400"># Installation (example)</div>
                     <div className="text-green-400">npm install -g @openai/codex-cli</div>
@@ -1344,7 +1361,9 @@ export default function PresentationPage() {
                   <CardTitle>Script Common Commands</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <p className="text-sm">Create scripts for frequently used commands like lint and test for quick reuse in sessions.</p>
+                  <p className="text-sm">
+                    Create scripts for frequently used commands like lint and test for quick reuse in sessions.
+                  </p>
                   <div className="rounded-lg bg-neutral-900 p-4 font-mono text-sm text-white">
                     <div className="text-blue-400"># .codex/scripts.sh</div>
                     <div className="text-green-400">alias lint="npm run lint"</div>
@@ -1359,7 +1378,10 @@ export default function PresentationPage() {
                   <CardTitle>Share Feedback</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm">
-                  <p>Help improve Codex CLI by sharing your experiences, challenges, and suggestions with the OpenAI team.</p>
+                  <p>
+                    Help improve Codex CLI by sharing your experiences, challenges, and suggestions with the OpenAI
+                    team.
+                  </p>
                   <ul className="list-disc space-y-1 pl-6">
                     <li>Report bugs and unexpected behavior</li>
                     <li>Suggest new features or improvements</li>
@@ -1384,7 +1406,7 @@ export default function PresentationPage() {
               </Card>
             </div>
 
-            <Card className="border-l-4 border-green-500 bg-green-50">
+            <Card className="border-green-500 border-l-4 bg-green-50">
               <CardHeader>
                 <CardTitle>🎯 Workshop Tasks</CardTitle>
               </CardHeader>
@@ -1394,8 +1416,8 @@ export default function PresentationPage() {
                   exercises.
                 </p>
                 <a
-                  href="/tasks"
                   className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-green-700"
+                  href="/tasks"
                 >
                   Start Workshop Tasks
                   <ChevronRight className="h-5 w-5" />
@@ -1407,9 +1429,11 @@ export default function PresentationPage() {
           <Separator />
 
           {/* Q&A Section */}
-          <section id="qa" className="space-y-6 pb-12">
+          <section className="space-y-6 pb-12" id="qa">
             <h2 className="font-bold text-4xl">Q & A</h2>
-            <p className="text-lg leading-relaxed">Common questions to consider as you adopt AI CLI tools in your workflow.</p>
+            <p className="text-lg leading-relaxed">
+              Common questions to consider as you adopt AI CLI tools in your workflow.
+            </p>
 
             <div className="space-y-4">
               <Card>
