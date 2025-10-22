@@ -74,6 +74,7 @@ export default function PresentationPage() {
 
   return (
     <SidebarProvider>
+      <AppSidebar side="left" />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <Breadcrumb>
@@ -83,13 +84,13 @@ export default function PresentationPage() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <SidebarTrigger className="-mr-1 ml-auto rotate-180" />
+          <SidebarTrigger className="-ml-1" />
         </header>
 
         <div className="flex flex-1">
           {/* Main Content */}
           <div className="flex-1 overflow-auto">
-            <div className="mx-auto max-w-5xl p-8">
+            <div className="mx-auto max-w-6xl p-8">
               {/* Introduction Section */}
               <section className="mb-16 flex min-h-[50vh] flex-col justify-center" id="intro">
                 <div className="space-y-6 text-center">
@@ -2024,7 +2025,6 @@ echo "✓ All checks passed"`}</code>
           )}
         </div>
       </SidebarInset>
-      <AppSidebar side="right" />
     </SidebarProvider>
   );
 }
