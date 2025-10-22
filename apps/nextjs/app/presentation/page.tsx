@@ -22,6 +22,7 @@ export default function PresentationPage() {
         </header>
 
         <div className="flex flex-1 flex-col gap-12 p-8 pb-16">
+          <div className="mx-auto w-full max-w-7xl">
           {/* Hero Section */}
           <section className="space-y-6 py-12 text-center">
             <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-blue-100">
@@ -1493,6 +1494,7 @@ export default function PresentationPage() {
               </CardContent>
             </Card>
           </section>
+          </div>
         </div>
       </SidebarInset>
       <AppSidebar side="right" />
