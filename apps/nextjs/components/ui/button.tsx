@@ -1,5 +1,3 @@
-/** biome-ignore-all lint/performance/noNamespaceImport: <shadcn> */
-/** biome-ignore-all lint/nursery/noReactForwardRef: <shadcn> */
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";

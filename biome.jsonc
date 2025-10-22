@@ -12,7 +12,8 @@
       },
       "nursery": {
         "useConsistentTypeDefinitions": "off",
-        "useMaxParams": "off"
+        "useMaxParams": "off",
+        "noReactForwardRef": "off"
       },
       "suspicious": {
         "noConsole": "off",
@@ -20,6 +21,9 @@
       },
       "style": {
         "useFilenamingConvention": "off"
+      },
+      "performance": {
+        "noNamespaceImport": "off"
       }
     }
   }

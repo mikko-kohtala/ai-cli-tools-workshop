@@ -47,6 +47,29 @@ Both the presentation and workshop materials will be published closer to the eve
 You have access to /Users/mikkoh/code/mikko/react-19-workshop which is similarly structured workshop. We will be using same tooling: next.js, tailwind with shadcn
 components, sidebar and so on. We will be keeping the simple and clean ui styles.
 
-## 003 - claude code - execute the previous
+## 003 - claude code
 
-## 004 -
+execute
+
+## 004 - claude code
+
+Can you create to my next.js, placeholders for:
+
+- / - homepage
+- /presentation
+- /tasks
+- /tasks/1 (pages, work page and solution page)
+
+This is to get things started.
+
+Make it so that right side of the application has sidebar with the application structure. This is pretty similar as in react-19-workshop
+
+## 005 - claude code
+
+Can you install all of the needed shadcn components with "pnpm dlx shadcn@latest add tooltip" for example.
+
+## 006 - claude code
+
+/reset
+
+## 007 -
