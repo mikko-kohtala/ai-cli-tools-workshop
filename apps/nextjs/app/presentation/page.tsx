@@ -124,6 +124,7 @@ export default function PresentationPage() {
           <SidebarTrigger className="-mr-1 ml-auto rotate-180" />
         </header>
         <div className="flex flex-1 flex-col gap-16 overflow-y-auto p-8">
+          <div className="mx-auto w-full max-w-7xl">
           <section className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
             <div className="space-y-6">
               <div className="space-y-3">
@@ -523,6 +524,7 @@ export default function PresentationPage() {
               </CardContent>
             </Card>
           </section>
+          </div>
         </div>
       </SidebarInset>
       <AppSidebar side="right" />
