@@ -222,9 +222,9 @@ export default function PresentationPage() {
           </Breadcrumb>
           <SidebarTrigger className="-mr-1 ml-auto rotate-180" />
         </header>
-        <main className="flex flex-1 flex-col gap-8 p-8">
+        <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 p-8">
           {presentationContent.map((slide) => (
-            <Card className="mx-auto w-full max-w-4xl" key={slide.title}>
+            <Card className="w-full" key={slide.title}>
               <CardHeader>
                 <CardTitle className="font-bold text-3xl">{slide.title}</CardTitle>
                 {slide.subtitle && <CardDescription className="text-lg">{slide.subtitle}</CardDescription>}
