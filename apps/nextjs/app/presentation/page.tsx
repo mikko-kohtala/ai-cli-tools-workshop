@@ -1,22 +1,12 @@
 "use client";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Code, FileText, GitBranch, Layers, Lightbulb, MessageSquare, Shield, Terminal, Users } from "lucide-react";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage } from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import {
-  Code,
-  FileText,
-  GitBranch,
-  Layers,
-  Lightbulb,
-  MessageSquare,
-  Shield,
-  Terminal,
-  Users,
-} from "lucide-react";
 
 const presentationContent = [
   {
@@ -52,22 +42,26 @@ const presentationContent = [
     items: [
       {
         text: "Environment Context",
-        description: "Every session starts with a clear context, including the current working directory, sandbox settings, network access, and approval requirements. This ensures the agent has the necessary information to operate safely and effectively.",
+        description:
+          "Every session starts with a clear context, including the current working directory, sandbox settings, network access, and approval requirements. This ensures the agent has the necessary information to operate safely and effectively.",
         icon: <Terminal className="h-6 w-6 text-blue-500" />,
       },
       {
         text: "Plan & Execute",
-        description: "For any non-trivial task, the agent first builds a lightweight, step-by-step plan. This plan is shared with you for approval before any code is modified, providing transparency and control over the process.",
+        description:
+          "For any non-trivial task, the agent first builds a lightweight, step-by-step plan. This plan is shared with you for approval before any code is modified, providing transparency and control over the process.",
         icon: <FileText className="h-6 w-6 text-green-500" />,
       },
       {
         text: "Tooling Contracts",
-        description: "The agent interacts with your system through a set of well-defined tools, such as `shell`, `plan`, and `view_image`. These tools have strict usage guidelines to ensure predictable and safe execution of commands.",
+        description:
+          "The agent interacts with your system through a set of well-defined tools, such as `shell`, `plan`, and `view_image`. These tools have strict usage guidelines to ensure predictable and safe execution of commands.",
         icon: <Code className="h-6 w-6 text-purple-500" />,
       },
       {
         text: "Outputs",
-        description: "All responses from the agent are formatted as plain text and styled by the CLI. This means you get clean, readable output without raw command dumps or unnecessary clutter.",
+        description:
+          "All responses from the agent are formatted as plain text and styled by the CLI. This means you get clean, readable output without raw command dumps or unnecessary clutter.",
         icon: <MessageSquare className="h-6 w-6 text-yellow-500" />,
       },
     ],
@@ -77,20 +71,27 @@ const presentationContent = [
     verbose:
       "The CLI harness is the backbone of Codex CLI, providing the necessary layers of abstraction and security to make AI-powered development safe and efficient.",
     items: [
-      { text: "CLI Frontend", description: "Wraps prompts, agent replies, and provides inline diffs for code changes.", icon: <Terminal /> },
+      {
+        text: "CLI Frontend",
+        description: "Wraps prompts, agent replies, and provides inline diffs for code changes.",
+        icon: <Terminal />,
+      },
       {
         text: "Sandbox Layer",
-        description: "Enforces filesystem and network policies (e.g., read-only, workspace-write) to prevent unintended side effects.",
+        description:
+          "Enforces filesystem and network policies (e.g., read-only, workspace-write) to prevent unintended side effects.",
         icon: <Shield />,
       },
       {
         text: "Approval Flow",
-        description: "Controls when and how the agent can request escalated permissions for potentially risky operations.",
+        description:
+          "Controls when and how the agent can request escalated permissions for potentially risky operations.",
         icon: <Users />,
       },
       {
         text: "Agent Runtime",
-        description: "Delivers instructions, templates, and formatting to ensure the agent's output is reliable and consistent.",
+        description:
+          "Delivers instructions, templates, and formatting to ensure the agent's output is reliable and consistent.",
         icon: <Layers />,
       },
     ],
@@ -130,15 +131,18 @@ const presentationContent = [
     items: [
       {
         text: "never",
-        description: "The agent will never request escalated permissions. It must work around any limitations imposed by the sandbox.",
+        description:
+          "The agent will never request escalated permissions. It must work around any limitations imposed by the sandbox.",
       },
       {
         text: "on-request",
-        description: "The agent can ask for permission to perform a specific action via the `with_escalated_permissions` tool.",
+        description:
+          "The agent can ask for permission to perform a specific action via the `with_escalated_permissions` tool.",
       },
       {
         text: "on-failure",
-        description: "The agent will only request escalation after a command has failed due to insufficient permissions.",
+        description:
+          "The agent will only request escalation after a command has failed due to insufficient permissions.",
       },
       {
         text: "untrusted",
@@ -219,53 +223,50 @@ export default function PresentationPage() {
           <SidebarTrigger className="-mr-1 ml-auto rotate-180" />
         </header>
         <main className="flex flex-1 flex-col gap-8 p-8">
-          {presentationContent.map((slide, index) => (
-            <Card key={index} className="w-full max-w-4xl mx-auto">
+          {presentationContent.map((slide) => (
+            <Card className="mx-auto w-full max-w-4xl" key={slide.title}>
               <CardHeader>
-                <CardTitle className="text-3xl font-bold">{slide.title}</CardTitle>
-                {slide.subtitle && (
-                  <CardDescription className="text-lg">{slide.subtitle}</CardDescription>
-                )}
+                <CardTitle className="font-bold text-3xl">{slide.title}</CardTitle>
+                {slide.subtitle && <CardDescription className="text-lg">{slide.subtitle}</CardDescription>}
               </CardHeader>
               <CardContent className="space-y-4">
                 {slide.verbose && <p className="text-muted-foreground">{slide.verbose}</p>}
                 <ul className="space-y-4">
-                  {slide.items &&
-                    slide.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-4">
-                        {typeof item === "string" ? (
-                          <>
-                            <Lightbulb className="h-6 w-6 text-yellow-400 mt-1" />
-                            <span>{item}</span>
-                          </>
-                        ) : (
-                          <>
-                            <div className="flex-shrink-0">{item.icon}</div>
-                            <div className="flex-grow">
-                              <p className="font-semibold">{item.text}</p>
-                              {item.description && (
-                                <p className="text-sm text-muted-foreground">{item.description}</p>
-                              )}
-                            </div>
-                          </>
-                        )}
-                      </li>
-                    ))}
+                  {slide.items?.map((item) => (
+                    <li className="flex items-start gap-4" key={typeof item === "string" ? item : item.text}>
+                      {typeof item === "string" ? (
+                        <>
+                          <Lightbulb className="mt-1 h-6 w-6 text-yellow-400" />
+                          <span>{item}</span>
+                        </>
+                      ) : (
+                        <>
+                          {"icon" in item && <div className="flex-shrink-0">{item.icon}</div>}
+                          <div className="flex-grow">
+                            <p className="font-semibold">{item.text}</p>
+                            {"description" in item && (
+                              <p className="text-muted-foreground text-sm">{item.description}</p>
+                            )}
+                          </div>
+                        </>
+                      )}
+                    </li>
+                  ))}
                 </ul>
                 {slide.example && (
                   <div className="mt-6">
-                    <h4 className="font-semibold text-lg mb-2">{slide.example.title}</h4>
+                    <h4 className="mb-2 font-semibold text-lg">{slide.example.title}</h4>
                     <Tabs defaultValue={slide.example.tabs[0].trigger}>
                       <TabsList>
-                        {slide.example.tabs.map((tab, tabIndex) => (
-                          <TabsTrigger key={tabIndex} value={tab.trigger}>
+                        {slide.example.tabs.map((tab) => (
+                          <TabsTrigger key={tab.trigger} value={tab.trigger}>
                             {tab.trigger}
                           </TabsTrigger>
                         ))}
                       </TabsList>
-                      {slide.example.tabs.map((tab, tabIndex) => (
-                        <TabsContent key={tabIndex} value={tab.trigger}>
-                          <div className="p-4 border rounded-md bg-gray-50 dark:bg-gray-900">
+                      {slide.example.tabs.map((tab) => (
+                        <TabsContent key={tab.trigger} value={tab.trigger}>
+                          <div className="rounded-md border bg-gray-50 p-4 dark:bg-gray-900">
                             <pre className="text-sm">
                               <code>{tab.content}</code>
                             </pre>
@@ -276,7 +277,7 @@ export default function PresentationPage() {
                   </div>
                 )}
               </CardContent>
-              {index < presentationContent.length - 1 && <Separator className="my-8" />}
+              {presentationContent.indexOf(slide) < presentationContent.length - 1 && <Separator className="my-8" />}
             </Card>
           ))}
         </main>
