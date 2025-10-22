@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { PresentationNavigation } from "./presentation-navigation";
 import { PresentationSlide } from "./presentation-slide";
 
-interface Slide {
+export interface Slide {
   id: string;
   title?: string;
   subtitle?: string;
