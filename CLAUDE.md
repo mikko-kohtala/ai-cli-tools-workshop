@@ -18,7 +18,6 @@
 
 1. Run `pnpm dev` (starts both Convex dev + Next.js)
 2. Convex auto-generates types on schema changes
-3. Next.js uses workspace dependency `@acme/database`
 
 ## Commands
 
