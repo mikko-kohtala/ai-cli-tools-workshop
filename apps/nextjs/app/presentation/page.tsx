@@ -60,7 +60,7 @@ const sandboxPolicies = [
       "Agents can explicitly request escalations. Humans remain in full control because they must approve or deny each elevation.",
     notes: [
       "Great for confident teams who want flexibility during live problem solving.",
-      "Train participants to supply concise justifications (\"Need to install dependencies\" instead of \"please\".).",
+      'Train participants to supply concise justifications ("Need to install dependencies" instead of "please".).',
     ],
     command: "npm install @storybook/react --save-dev",
     expectation:
@@ -127,9 +127,7 @@ export default function PresentationPage() {
           <section className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
             <div className="space-y-6">
               <div className="space-y-3">
-                <p className="font-semibold text-muted-foreground text-xs uppercase tracking-[0.2em]">
-                  Presentation
-                </p>
+                <p className="font-semibold text-muted-foreground text-xs uppercase tracking-[0.2em]">Presentation</p>
                 <h1 className="font-bold text-4xl tracking-tight lg:text-5xl">
                   AI CLI Tools Workshop — Codex CLI Deep Dive
                 </h1>
@@ -207,8 +205,8 @@ export default function PresentationPage() {
                   <CardTitle className="text-xl">Key Outcomes</CardTitle>
                 </CardHeader>
                 <CardContent className="p-5 pt-2 text-muted-foreground text-sm">
-                  Highlight Codex CLI fundamentals, reinforce sandbox and approval models, and create a smooth segue into
-                  the hands-on lab.
+                  Highlight Codex CLI fundamentals, reinforce sandbox and approval models, and create a smooth segue
+                  into the hands-on lab.
                 </CardContent>
               </Card>
             </div>
@@ -236,8 +234,8 @@ export default function PresentationPage() {
             <p className="text-base text-muted-foreground">
               Codex CLI places a GPT-5-based coding agent directly in your terminal. It translates natural language
               requests into actionable steps, runs shell commands with clear audit trails, and generates code changes
-              that respect the constraints of your repository. Because every response remains plain text, you can rely on
-              the CLI itself to format highlights—ideal for live demos or recorded walkthroughs.
+              that respect the constraints of your repository. Because every response remains plain text, you can rely
+              on the CLI itself to format highlights—ideal for live demos or recorded walkthroughs.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               <Card>
@@ -317,8 +315,8 @@ export default function PresentationPage() {
                 </CardHeader>
                 <CardContent className="space-y-2 text-sm">
                   <p>
-                    Ships the shared instructions (like always setting <code>workdir</code>) plus reusable behaviors such
-                    as planning. These conventions guarantee consistent output across presenters and teams.
+                    Ships the shared instructions (like always setting <code>workdir</code>) plus reusable behaviors
+                    such as planning. These conventions guarantee consistent output across presenters and teams.
                   </p>
                 </CardContent>
               </Card>
@@ -387,7 +385,9 @@ export default function PresentationPage() {
                   </p>
                   <p className="font-medium text-foreground">Narration Tips</p>
                   <ul className="list-disc space-y-2 pl-6">
-                    <li>Highlight that plans require at least two steps and must be updated after meaningful progress.</li>
+                    <li>
+                      Highlight that plans require at least two steps and must be updated after meaningful progress.
+                    </li>
                     <li>Show how diffs include line numbers so reviewers can jump straight into code.</li>
                   </ul>
                 </div>
@@ -413,14 +413,18 @@ export default function PresentationPage() {
                 <div className="space-y-3 text-muted-foreground text-sm">
                   <p className="font-medium text-foreground">Scenario</p>
                   <p>
-                    Request an update to onboarding documentation. The agent gathers project context with <code>rg</code>
-                    , drafts the content, and uses <code>apply_patch</code> to edit the markdown file while keeping ASCII
-                    formatting.
+                    Request an update to onboarding documentation. The agent gathers project context with{" "}
+                    <code>rg</code>, drafts the content, and uses <code>apply_patch</code> to edit the markdown file
+                    while keeping ASCII formatting.
                   </p>
                   <p className="font-medium text-foreground">Narration Tips</p>
                   <ul className="list-disc space-y-2 pl-6">
-                    <li>Show how commands like <code>rg</code> respect the instruction to set <code>workdir</code>.</li>
-                    <li>Emphasize the agent’s final summary: change rationale, file references, and suggested next steps.</li>
+                    <li>
+                      Show how commands like <code>rg</code> respect the instruction to set <code>workdir</code>.
+                    </li>
+                    <li>
+                      Emphasize the agent’s final summary: change rationale, file references, and suggested next steps.
+                    </li>
                   </ul>
                 </div>
               </TabsContent>
@@ -430,8 +434,8 @@ export default function PresentationPage() {
           <section className="space-y-4">
             <h2 className="font-semibold text-3xl tracking-tight">Communication Guidelines</h2>
             <p className="text-base text-muted-foreground">
-              Presenters model the tone we expect from agents: concise, factual, and easy to scan. Reinforce these habits
-              so participants keep them in mind during the workshop.
+              Presenters model the tone we expect from agents: concise, factual, and easy to scan. Reinforce these
+              habits so participants keep them in mind during the workshop.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               <Card>
@@ -440,7 +444,9 @@ export default function PresentationPage() {
                   <CardDescription>Leverage the CLI’s styling powers</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2 text-muted-foreground text-sm">
-                  <p>Use inline <code>backticks</code> for commands and fenced code blocks for longer snippets.</p>
+                  <p>
+                    Use inline <code>backticks</code> for commands and fenced code blocks for longer snippets.
+                  </p>
                   <p>Keep headings short; the CLI adds styling automatically.</p>
                   <p>Summarize command outputs instead of pasting every line of a log.</p>
                 </CardContent>
@@ -452,7 +458,9 @@ export default function PresentationPage() {
                 </CardHeader>
                 <CardContent className="space-y-2 text-muted-foreground text-sm">
                   <p>State assumptions, flag open questions, and offer non-blocking follow-ups.</p>
-                  <p>Reference files with clickable paths like <code>app/presentation/page.tsx:210</code>.</p>
+                  <p>
+                    Reference files with clickable paths like <code>app/presentation/page.tsx:210</code>.
+                  </p>
                   <p>Invite participants to suggest next steps or share alternative approaches.</p>
                 </CardContent>
               </Card>
@@ -491,8 +499,8 @@ export default function PresentationPage() {
               </CardHeader>
               <CardContent className="space-y-4 text-sm">
                 <p>
-                  Reinforce that participants will immediately apply concepts in the Codex CLI sandbox. Encourage them to
-                  open the tasks page, review the instructions, and keep the CLI handy for live coding.
+                  Reinforce that participants will immediately apply concepts in the Codex CLI sandbox. Encourage them
+                  to open the tasks page, review the instructions, and keep the CLI handy for live coding.
                 </p>
                 <Button asChild variant="outline">
                   <Link href="/tasks/1">Preview Task 1</Link>
