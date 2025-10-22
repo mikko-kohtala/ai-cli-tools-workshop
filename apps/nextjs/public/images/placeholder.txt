@@ -1,0 +1,9 @@
+# Image Placeholders
+
+This directory contains placeholder images for the presentation:
+
+1. codex-cli-logo.png - Codex CLI logo (to be added manually)
+2. codex-cli-overview.png - Architecture overview diagram (to be added manually)  
+3. codex-architecture.png - Detailed architecture diagram (to be added manually)
+
+You can add these images manually or I can help you download them from the internet.
