@@ -1,27 +1,44 @@
-# AI Context: Next.js + Convex Monorepo
+# AI CLI Tools Workshop
 
-## Architecture
+Workshop exploring AI Command Line tools, with primary focus on OpenAI's Codex CLI.
+Built with Next.js 15 for presentation and interactive workshop tasks.
 
-- `apps/nextjs` - Next.js 15 app (React 19, TailwindCSS 4)
-- **Next.js app**: `apps/nextjs/app/` (App Router)
-- **Convex schema**: `packages/database/convex/schema.ts`
-- **Components**: `apps/nextjs/components/`
+**Event Date:** October 28, 2025, 14:00–15:30
+**Deployment:** https://ai-cli-tools-workshop.vercel.app
 
-## Tech Specifics
+## Workshop Structure
 
-- **Convex**: Real-time database, queries auto-generated to `convex/_generated`
-- **Auth**: Better Auth + Convex plugin (not separate auth tables)
-- **Styling**: Tailwind 4 + Radix UI primitives + CVA
-- **Schemas**: users (email), todos (text, isCompleted, userId)
+- **Presentation** (`/presentation`) - 25min overview of AI CLI tools landscape
+- **Workshop Tasks** (`/tasks/[1-4]`) - 1 hour hands-on exercises with Codex CLI
 
-## Development Workflow
+## Tech Stack
 
-1. Run `pnpm dev` (starts both Convex dev + Next.js)
-2. Convex auto-generates types on schema changes
+- **Frontend**: Next.js 15 (App Router), React 19, TailwindCSS
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Styling**: Simple and clean design patterns (sidebar navigation, card layouts)
+- **Deployment**: Vercel
 
-## Commands
+## Project Focus
 
-- `pnpm dev` - Start all services
-- `pnpm build` - Build everything
-- `pnpm check` - Biome lint+format
-- `pnpm typecheck` - Biome lint+format
+Main focus is on **Codex CLI** (OpenAI's coding agent that runs locally from terminal).
+Participants can also try other AI CLI tools if they have access: Claude Code, Gemini CLI, Amp Code, or Opencode.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Key Commands
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run linting
+- `npm run format` - Format code
