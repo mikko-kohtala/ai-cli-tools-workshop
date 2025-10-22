@@ -29,7 +29,7 @@ export default function PresentationPage() {
         </header>
 
         <div className="flex-1 overflow-auto">
-          <div className="container mx-auto max-w-4xl space-y-12 p-8">
+          <div className="mx-auto max-w-6xl space-y-12 p-8">
             {/* Title Section */}
             <TitleSection />
 
