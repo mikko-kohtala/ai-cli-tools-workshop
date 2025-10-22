@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PresentationNavigation } from "./presentation-navigation";
 import { PresentationSlide } from "./presentation-slide";
 
@@ -23,21 +23,24 @@ export function Presentation({ slides, autoPlay = false, autoPlayInterval = 5000
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
 
-  const goToSlide = (slideIndex: number) => {
-    setCurrentSlide(Math.max(0, Math.min(slideIndex, slides.length - 1)));
-  };
+  const goToSlide = useCallback(
+    (slideIndex: number) => {
+      setCurrentSlide(Math.max(0, Math.min(slideIndex, slides.length - 1)));
+    },
+    [slides.length]
+  );
 
-  const goToPrevious = () => {
-    goToSlide(currentSlide - 1);
-  };
+  const goToPrevious = useCallback(() => {
+    setCurrentSlide((prev) => Math.max(0, prev - 1));
+  }, []);
 
-  const goToNext = () => {
-    goToSlide(currentSlide + 1);
-  };
+  const goToNext = useCallback(() => {
+    setCurrentSlide((prev) => Math.min(slides.length - 1, prev + 1));
+  }, [slides.length]);
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
+  const togglePlay = useCallback(() => {
+    setIsPlaying((prev) => !prev);
+  }, []);
 
   // Auto-play functionality
   useEffect(() => {

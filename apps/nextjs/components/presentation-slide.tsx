@@ -26,9 +26,9 @@ export function PresentationSlide({ children, className, title, subtitle, image,
             <Image
               alt={imageAlt || ""}
               className="max-h-64 max-w-full rounded-lg object-contain shadow-lg sm:max-h-80 lg:max-h-96"
+              height={600}
               src={image}
               width={800}
-              height={600}
             />
           </div>
         )}

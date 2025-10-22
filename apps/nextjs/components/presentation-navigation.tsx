@@ -57,13 +57,13 @@ export function PresentationNavigation({
         <div className="flex gap-1">
           {slideIndicators.map((index) => (
             <button
-              type="button"
               aria-label={`Go to slide ${index + 1}`}
               className={`h-2 w-2 rounded-full transition-colors ${
                 index === currentSlide ? "bg-primary" : "bg-muted hover:bg-muted-foreground/50"
               }`}
               key={index}
               onClick={() => onGoToSlide(index)}
+              type="button"
             />
           ))}
         </div>
