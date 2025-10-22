@@ -72,4 +72,43 @@ Can you install all of the needed shadcn components with "pnpm dlx shadcn@latest
 
 /reset
 
-## 007 -
+## 007 - codex
+
+> I wanted to get Claude Code docs in markdown format for reference. https://docs.claude.com/sitemap.xml
+
+Can you create a script which removes all of the other lines, but no those starting with "https://docs.claude.com/en"
+
+Can you create a script which saves markdown content from the urls listed in claude-urls.txt save them to claude-code folder
+
+## 008 - claude.ai web and chatgpt.com - deep research
+
+I'm planning to host "AI CLI Tools Workshop". In this workshop I need to introduce people to the AI CLI tooling and how to work with them effectively.
+
+Can you help me to create presentation about the subject.
+
+```
+# AI CLI Tools Workshop
+
+Workshop exploring AI Command Line tools, with primary focus on OpenAI's Codex CLI.
+Built with Next.js 15 for presentation and interactive workshop tasks.
+
+## Workshop Structure
+
+- **Presentation** (`/presentation`) - 25min overview of AI CLI tools landscape
+- **Workshop Tasks** (`/tasks/[1-4]`) - 1 hour hands-on exercises with Codex CLI
+
+## Tech Stack
+
+- **Frontend**: Next.js 15 (App Router), React 19, TailwindCSS
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Styling**: Simple and clean design patterns (sidebar navigation, card layouts)
+- **Deployment**: Vercel
+
+## Project Focus
+
+Main focus is on **Codex CLI** (OpenAI's coding agent that runs locally from terminal).
+Participants can also try other AI CLI tools if they have access: Claude Code, Gemini CLI, Amp Code, or Opencode.
+```
+
+> output for codex was: docs/chatgpt-plan.md
+> output for claude was: docs/claude-plan.md
