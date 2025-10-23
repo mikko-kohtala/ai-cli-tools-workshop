@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/nursery/noShadow: shadcn */
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: shadcn */
 "use client";
 
 import * as React from "react";

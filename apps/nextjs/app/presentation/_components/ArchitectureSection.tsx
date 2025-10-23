@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: shadcn */
 import { Code, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -8,7 +9,7 @@ const architectureSteps = [
     title: "CLI Frontend",
     subtitle: "Wraps prompts, agent replies, and inline diffs",
     description:
-      "The frontend is what you interact with—the terminal interface that displays messages, accepts your input, and renders diffs. It handles syntax highlighting, progress indicators, and user confirmation prompts. Think of it as the 'view' layer in an MVC architecture.",
+      "The frontend is what you interact with - the terminal interface that displays messages, accepts your input, and renders diffs. It handles syntax highlighting, progress indicators, and user confirmation prompts. Think of it as the 'view' layer in an MVC architecture.",
   },
   {
     number: 2,

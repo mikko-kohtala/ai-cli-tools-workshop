@@ -1,10 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AppSidebar } from "@/components/app-sidebar";
-import { SiteHeader } from "@/components/site-header";
 import { Separator } from "@/components/ui/separator";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AgendaSection } from "./_components/AgendaSection";
 import { ApprovalsSection } from "./_components/ApprovalsSection";
 import { ArchitectureSection } from "./_components/ArchitectureSection";
@@ -71,62 +68,45 @@ export default function PresentationPage() {
   };
 
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
-          "--header-height": "calc(var(--spacing) * 12)",
-        } as React.CSSProperties
-      }
-    >
-      <AppSidebar variant="inset" />
-      <SidebarInset>
-        <SiteHeader />
-        <div className="flex flex-1 flex-col">
-          <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-1">
-              {/* Main Content */}
-              <div className="flex-1 overflow-auto">
-                <div className="mx-auto max-w-6xl p-8">
-                  <IntroSection />
-                  <Separator className="my-16" />
-                  <AgendaSection />
-                  <Separator className="my-16" />
-                  <GlanceSection />
-                  <Separator className="my-16" />
-                  <ConceptsSection />
-                  <Separator className="my-16" />
-                  <ArchitectureSection />
-                  <Separator className="my-16" />
-                  <SandboxingSection />
-                  <Separator className="my-16" />
-                  <ApprovalsSection />
-                  <Separator className="my-16" />
-                  <SessionsSection />
-                  <Separator className="my-16" />
-                  <CommunicationSection />
-                  <Separator className="my-16" />
-                  <TipsSection />
-                  <Separator className="my-16" />
-                  <DemoSection />
-                  <Separator className="my-16" />
-                  <NextStepsSection />
-                  <Separator className="my-16" />
-                  <QASection />
-                </div>
-              </div>
-
-              {/* Table of Contents Sidebar */}
-              <TableOfContents
-                activeSection={activeSection}
-                isOpen={tocOpen}
-                onSectionClick={scrollToSection}
-                sections={sections}
-              />
-            </div>
-          </div>
+    <div className="flex flex-1">
+      {/* Main Content */}
+      <div className="flex-1 overflow-auto">
+        <div className="mx-auto max-w-6xl p-8">
+          <IntroSection />
+          <Separator className="my-16" />
+          <AgendaSection />
+          <Separator className="my-16" />
+          <GlanceSection />
+          <Separator className="my-16" />
+          <ConceptsSection />
+          <Separator className="my-16" />
+          <ArchitectureSection />
+          <Separator className="my-16" />
+          <SandboxingSection />
+          <Separator className="my-16" />
+          <ApprovalsSection />
+          <Separator className="my-16" />
+          <SessionsSection />
+          <Separator className="my-16" />
+          <CommunicationSection />
+          <Separator className="my-16" />
+          <TipsSection />
+          <Separator className="my-16" />
+          <DemoSection />
+          <Separator className="my-16" />
+          <NextStepsSection />
+          <Separator className="my-16" />
+          <QASection />
         </div>
-      </SidebarInset>
-    </SidebarProvider>
+      </div>
+
+      {/* Table of Contents Sidebar */}
+      <TableOfContents
+        activeSection={activeSection}
+        isOpen={tocOpen}
+        onSectionClick={scrollToSection}
+        sections={sections}
+      />
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/style/noMagicNumbers: shadcn */
 "use client";
 
 import * as React from "react";
