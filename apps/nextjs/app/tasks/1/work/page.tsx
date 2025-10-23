@@ -8,7 +8,7 @@ export default function Task1WorkPage() {
         <p className="text-lg">Your workspace for completing the task.</p>
       </div>
 
-      <div className="rounded-lg border bg-amber-50 p-6">
+      <div className="rounded-lg border bg-amber-50 p-6 dark:bg-amber-950/30">
         <h2 className="mb-3 font-semibold text-xl">📝 Task Instructions</h2>
         <p className="mb-4">Follow these steps in your local terminal with Codex CLI:</p>
         <ol className="list-decimal space-y-2 pl-6">

@@ -28,7 +28,7 @@ export function QASection() {
                 {discussionTopics.map((topic, index) => (
                   <div className="flex items-start gap-3" key={`topic-${index}`}>
                     <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700">
-                      <span className="text-slate-600 dark:text-slate-300 text-sm">?</span>
+                      <span className="text-slate-600 text-sm dark:text-slate-300">?</span>
                     </div>
                     <p>{topic}</p>
                   </div>

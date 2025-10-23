@@ -18,6 +18,33 @@ Built with Next.js 15 for presentation and interactive workshop tasks.
 - **Styling**: Simple and clean design patterns (sidebar navigation, card layouts)
 - **Deployment**: Vercel
 
+## Styling & Dark Mode
+
+The application uses TailwindCSS with full dark mode support. All components should work seamlessly in both light and dark themes.
+
+### Dark Mode Pattern
+
+When adding or modifying components, always include dark mode variants for light backgrounds:
+
+```tsx
+// Light backgrounds
+bg-*-50      → bg-*-50 dark:bg-*-950/30
+bg-*-100     → bg-*-100 dark:bg-*-900/30
+bg-white     → bg-white dark:bg-slate-900 (for content cards)
+bg-white     → bg-white dark:bg-slate-950 (for code blocks)
+
+// Text colors
+text-*-600   → text-*-600 dark:text-*-400 (for icons and accent colors)
+text-blue-600 → text-blue-600 dark:text-blue-400 (for links)
+
+// Examples
+className="bg-blue-50 dark:bg-blue-950/30"
+className="text-purple-600 dark:text-purple-400"
+className="bg-white dark:bg-slate-900"
+```
+
+**Note:** The presentation section (`/presentation`) and root page (`/`) have been fully updated with dark mode support. When adding new features, maintain this pattern for consistency.
+
 ## Project Focus
 
 Main focus is on **Codex CLI** (OpenAI's coding agent that runs locally from terminal).

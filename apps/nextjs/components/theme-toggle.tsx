@@ -13,11 +13,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button
-        className="border border-border px-2 py-1 font-mono text-xs transition-colors"
-        disabled
-        type="button"
-      >
+      <button className="border border-border px-2 py-1 font-mono text-xs transition-colors" disabled type="button">
         [...]
       </button>
     );

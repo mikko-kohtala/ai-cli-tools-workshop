@@ -45,7 +45,7 @@ export function AgendaSection() {
               {agendaItems.map((item, index) => (
                 <li className="flex items-start gap-3" key={`workshop-${item.title}`}>
                   <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
-                    <span className="font-semibold text-blue-600 dark:text-blue-400 text-sm">{index + 1}</span>
+                    <span className="font-semibold text-blue-600 text-sm dark:text-blue-400">{index + 1}</span>
                   </div>
                   <div>
                     <span className="font-semibold text-lg">{item.title}</span>

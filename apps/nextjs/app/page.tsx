@@ -36,17 +36,17 @@ export default function Page() {
         </Link>
       </div>
 
-      <div className="rounded-lg border bg-green-50 p-6">
+      <div className="rounded-lg border bg-green-50 p-6 dark:bg-green-950/30">
         <h2 className="mb-4 font-semibold text-2xl tracking-tight">🚀 Getting Started</h2>
         <div className="space-y-4">
           <p>This workshop consists of a presentation followed by hands-on tasks with AI CLI tools.</p>
 
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded border bg-white p-4">
+            <div className="rounded border bg-white p-4 dark:bg-slate-900">
               <h3 className="mb-2 font-semibold text-foreground text-lg">🌐 Workshop Access</h3>
               <p className="mb-3 text-sm">Access the workshop immediately:</p>
               <a
-                className="font-mono text-blue-600 text-sm underline hover:text-blue-800"
+                className="font-mono text-blue-600 text-sm underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                 href="https://ai-cli-tools-workshop.vercel.app"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -55,7 +55,7 @@ export default function Page() {
               </a>
             </div>
 
-            <div className="rounded border bg-white p-4">
+            <div className="rounded border bg-white p-4 dark:bg-slate-900">
               <h3 className="mb-2 font-semibold text-foreground text-lg">📅 Event Details</h3>
               <p className="mb-1 text-sm">
                 <strong>Date:</strong> October 28, 2025
@@ -90,7 +90,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="rounded-lg border bg-blue-50 p-6">
+      <div className="rounded-lg border bg-blue-50 p-6 dark:bg-blue-950/30">
         <h2 className="mb-4 font-semibold text-2xl tracking-tight">About Codex CLI</h2>
         <div className="space-y-4">
           <p>
@@ -101,12 +101,12 @@ export default function Page() {
             It's available through our existing OpenAI ChatGPT licensing and provides powerful capabilities for
             automating development tasks while keeping you in control.
           </p>
-          <div className="mt-4 rounded border bg-white p-4">
+          <div className="mt-4 rounded border bg-white p-4 dark:bg-slate-900">
             <h3 className="mb-2 font-semibold text-foreground text-lg">🔗 Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-blue-600 underline hover:text-blue-800"
+                  className="text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                   href="https://developers.openai.com/codex/cli"
                   rel="noopener noreferrer"
                   target="_blank"

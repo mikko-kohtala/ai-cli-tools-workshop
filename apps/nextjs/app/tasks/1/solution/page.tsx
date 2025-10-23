@@ -8,12 +8,12 @@ export default function Task1SolutionPage() {
         <p className="text-lg">Reference solution and guidance for completing the task.</p>
       </div>
 
-      <div className="rounded-lg border bg-green-50 p-6">
+      <div className="rounded-lg border bg-green-50 p-6 dark:bg-green-950/30">
         <h2 className="mb-3 font-semibold text-xl">✅ Solution Steps</h2>
         <div className="space-y-4">
           <div>
             <h3 className="mb-2 font-semibold">1. Installation</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm">
+            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div># Follow the official installation guide</div>
               <div># Visit: https://developers.openai.com/codex/cli</div>
             </div>
@@ -21,7 +21,7 @@ export default function Task1SolutionPage() {
 
           <div>
             <h3 className="mb-2 font-semibold">2. Verify Installation</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm">
+            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>codex --version</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -31,7 +31,7 @@ export default function Task1SolutionPage() {
 
           <div>
             <h3 className="mb-2 font-semibold">3. Start a Session</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm">
+            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>codex</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -41,7 +41,7 @@ export default function Task1SolutionPage() {
 
           <div>
             <h3 className="mb-2 font-semibold">4. First Interaction</h3>
-            <div className="rounded bg-white p-3 text-sm">
+            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2">
                 <strong>Example prompt:</strong>
               </p>
@@ -51,7 +51,7 @@ export default function Task1SolutionPage() {
 
           <div>
             <h3 className="mb-2 font-semibold">5. End Session</h3>
-            <div className="rounded bg-white p-3 text-sm">
+            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p>Type "exit" or press Ctrl+C to end the session.</p>
             </div>
           </div>

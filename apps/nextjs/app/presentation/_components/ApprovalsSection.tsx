@@ -102,7 +102,7 @@ export function ApprovalsSection() {
           <Card>
             <CardContent className="p-6">
               <p className="mb-3 font-semibold text-sm">Approval flow in action (on-request mode):</p>
-              <div className="space-y-3 rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4 text-sm">
+              <div className="space-y-3 rounded-lg bg-slate-50 p-4 text-sm dark:bg-slate-900/30">
                 <div>
                   <p className="font-semibold text-green-600">You: Install the axios package</p>
                 </div>

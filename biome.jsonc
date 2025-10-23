@@ -20,7 +20,8 @@
         "noUnknownAtRules": "off"
       },
       "style": {
-        "useFilenamingConvention": "off"
+        "useFilenamingConvention": "off",
+        "noMagicNumbers": "off"
       },
       "performance": {
         "noNamespaceImport": "off"

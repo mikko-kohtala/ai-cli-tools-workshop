@@ -60,7 +60,7 @@ export function DemoSection() {
                   <p className="mb-3 font-semibold text-base">
                     Analyze files → draft approach → implement changes → run tests
                   </p>
-                  <div className="rounded bg-slate-50 dark:bg-slate-900/30 p-4">
+                  <div className="rounded bg-slate-50 p-4 dark:bg-slate-900/30">
                     <p className="mb-2 font-semibold text-sm">Codex's generated plan:</p>
                     <ol className="list-inside list-decimal space-y-2 text-sm">
                       <li>Search for all console.log occurrences (estimated: 50-100 files)</li>
@@ -94,7 +94,7 @@ export function DemoSection() {
                 <TabsContent className="mt-4" value="step1">
                   <Card>
                     <CardContent className="p-4">
-                      <pre className="rounded bg-slate-50 dark:bg-slate-900/30 p-3 text-sm">
+                      <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Find all console.log usage{"\n"}</code>
                         <code className="text-blue-600">Codex:</code>{" "}
                         <code>
@@ -111,7 +111,7 @@ export function DemoSection() {
                 <TabsContent className="mt-4" value="step2">
                   <Card>
                     <CardContent className="p-4">
-                      <pre className="rounded bg-slate-50 dark:bg-slate-900/30 p-3 text-sm">
+                      <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Yes, use pino{"\n"}</code>
                         <code className="text-blue-600">Codex:</code>{" "}
                         <code>
@@ -127,7 +127,7 @@ export function DemoSection() {
                 <TabsContent className="mt-4" value="step3">
                   <Card>
                     <CardContent className="p-4">
-                      <pre className="rounded bg-slate-50 dark:bg-slate-900/30 p-3 text-sm">
+                      <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-blue-600">Codex:</code>{" "}
                         <code>
                           {" "}
@@ -144,7 +144,7 @@ export function DemoSection() {
                 <TabsContent className="mt-4" value="step4">
                   <Card>
                     <CardContent className="p-4">
-                      <pre className="rounded bg-slate-50 dark:bg-slate-900/30 p-3 text-sm">
+                      <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Run tests{"\n"}</code>
                         <code className="text-blue-600">Codex:</code>{" "}
                         <code>
@@ -184,7 +184,7 @@ export function DemoSection() {
                         <li>All 124 tests now passing</li>
                       </ul>
                     </div>
-                    <div className="rounded border border-amber-200 bg-amber-50 dark:bg-amber-950/30 p-3">
+                    <div className="rounded border border-amber-200 bg-amber-50 p-3 dark:bg-amber-950/30">
                       <p className="mb-2 flex items-center gap-2 font-semibold">
                         <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                         Considerations:
@@ -199,7 +199,8 @@ export function DemoSection() {
                       <p className="mb-2 font-semibold text-base">Suggested next steps:</p>
                       <ol className="list-inside list-decimal space-y-1 text-foreground/70">
                         <li>
-                          Review the changes with <code className="rounded bg-slate-100 dark:bg-slate-800 px-1">git diff</code>
+                          Review the changes with{" "}
+                          <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">git diff</code>
                         </li>
                         <li>Test manually in development environment</li>
                         <li>Update documentation to reflect new logging approach</li>

@@ -45,11 +45,11 @@ export function ConceptsSection() {
                 <TabsTrigger value="network">Network</TabsTrigger>
               </TabsList>
               <TabsContent className="mt-4" value="cwd">
-                <div className="rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4">
+                <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
                   <p className="mb-2 text-sm">
                     <strong>Example:</strong>
                   </p>
-                  <pre className="rounded border bg-white dark:bg-slate-950 p-3 text-sm">
+                  <pre className="rounded border bg-white p-3 text-sm dark:bg-slate-950">
                     <code>
                       $ pwd{"\n"}/Users/dev/my-app{"\n"}
                       {"\n"}$ codex{"\n"}Codex CLI v1.0.0{"\n"}Context: /Users/dev/my-app (git: main){"\n"}
@@ -58,31 +58,32 @@ export function ConceptsSection() {
                   </pre>
                   <p className="mt-3 text-foreground/70 text-sm">
                     The agent knows it's working in{" "}
-                    <code className="rounded bg-white dark:bg-slate-800 px-1 py-0.5">/Users/dev/my-app</code> on the main branch.
+                    <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">/Users/dev/my-app</code> on the
+                    main branch.
                   </p>
                 </div>
               </TabsContent>
               <TabsContent className="mt-4" value="sandbox">
-                <div className="rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4">
+                <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
                   <p className="mb-2 text-sm">Sandbox modes control file system access:</p>
                   <ul className="list-inside list-disc space-y-1 text-sm">
                     <li>
-                      <code className="rounded bg-white dark:bg-slate-800 px-1 py-0.5">read-only</code>: Can read files but not modify
-                      them
+                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">read-only</code>: Can read files
+                      but not modify them
                     </li>
                     <li>
-                      <code className="rounded bg-white dark:bg-slate-800 px-1 py-0.5">workspace-write</code>: Can modify files within the
-                      project (default)
+                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">workspace-write</code>: Can
+                      modify files within the project (default)
                     </li>
                     <li>
-                      <code className="rounded bg-white dark:bg-slate-800 px-1 py-0.5">danger</code>: Unrestricted access (use with
-                      caution)
+                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">danger</code>: Unrestricted
+                      access (use with caution)
                     </li>
                   </ul>
                 </div>
               </TabsContent>
               <TabsContent className="mt-4" value="network">
-                <div className="rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4">
+                <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
                   <p className="mb-2 text-sm">Network policies determine what the agent can access:</p>
                   <ul className="list-inside list-disc space-y-1 text-sm">
                     <li>Install npm packages</li>
@@ -109,7 +110,7 @@ export function ConceptsSection() {
               This gives you visibility into what will happen and an opportunity to adjust the approach before any code
               changes are made.
             </p>
-            <Card className="border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/30">
+            <Card className="border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-950/30">
               <CardContent className="p-4">
                 <p className="mb-2 font-semibold text-sm">Example Planning Session:</p>
                 <div className="space-y-2 text-sm">
@@ -209,7 +210,7 @@ found 0 vulnerabilities`}</code>
                 </pre>
               </TabsContent>
               <TabsContent className="mt-4" value="good">
-                <div className="rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4 text-sm">
+                <div className="rounded-lg bg-slate-50 p-4 text-sm dark:bg-slate-900/30">
                   <p className="font-semibold text-green-600">✓ Installed dependencies</p>
                   <p className="mt-2 text-foreground/70">Added 234 packages. No vulnerabilities found.</p>
                 </div>

@@ -120,7 +120,7 @@ export function TipsSection() {
                     <p className="text-foreground/70 text-sm italic">{item.description}</p>
                     <p className="mt-2 text-sm">{item.detail}</p>
                     {item.example && (
-                      <pre className="mt-3 rounded border bg-white dark:bg-slate-950 p-3 text-xs">
+                      <pre className="mt-3 rounded border bg-white p-3 text-xs dark:bg-slate-950">
                         <code>{item.example}</code>
                       </pre>
                     )}
@@ -153,7 +153,7 @@ export function TipsSection() {
                       </pre>
                     )}
                     {opt.example && (
-                      <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-sm">
+                      <pre className="mt-2 rounded border bg-white p-3 text-sm dark:bg-slate-950">
                         <code>{opt.example}</code>
                       </pre>
                     )}
@@ -178,7 +178,7 @@ export function TipsSection() {
                       </pre>
                     )}
                     {tip.example && (
-                      <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-sm">
+                      <pre className="mt-2 rounded border bg-white p-3 text-sm dark:bg-slate-950">
                         <code>{tip.example}</code>
                       </pre>
                     )}

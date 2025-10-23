@@ -24,7 +24,7 @@ export function TableOfContents({ sections, activeSection, onSectionClick, isOpe
 
   return (
     <div
-      className={`sticky top-0 hidden h-screen overflow-auto border-l lg:block transition-all duration-300 ${
+      className={`sticky top-0 hidden h-screen overflow-auto border-l transition-all duration-300 lg:block ${
         isCollapsed ? "w-12" : "w-64"
       }`}
     >
@@ -34,10 +34,10 @@ export function TableOfContents({ sections, activeSection, onSectionClick, isOpe
             <h3 className="font-semibold text-foreground/60 text-sm uppercase tracking-wider">Contents</h3>
           )}
           <button
-            type="button"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="ml-auto rounded-md p-1 transition-colors hover:bg-muted"
             aria-label={isCollapsed ? "Expand table of contents" : "Collapse table of contents"}
+            className="ml-auto rounded-md p-1 transition-colors hover:bg-muted"
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            type="button"
           >
             {isCollapsed ? <IconChevronLeft className="size-4" /> : <IconChevronRight className="size-4" />}
           </button>

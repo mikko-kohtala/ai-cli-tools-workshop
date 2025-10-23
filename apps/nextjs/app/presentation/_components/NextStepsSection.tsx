@@ -169,7 +169,7 @@ export function NextStepsSection() {
                 {card.usageExample && (
                   <>
                     <p className="mt-3 text-foreground/70">Use in sessions:</p>
-                    <pre className="rounded border bg-slate-50 dark:bg-slate-900/30 p-3 text-xs">
+                    <pre className="rounded border bg-slate-50 p-3 text-xs dark:bg-slate-900/30">
                       <code>{card.usageExample}</code>
                     </pre>
                   </>

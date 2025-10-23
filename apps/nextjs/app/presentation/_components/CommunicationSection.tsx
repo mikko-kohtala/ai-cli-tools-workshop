@@ -40,7 +40,7 @@ export function CommunicationSection() {
                 <TabsTrigger value="bad">❌ Poor Response</TabsTrigger>
               </TabsList>
               <TabsContent className="mt-4" value="good">
-                <div className="rounded bg-slate-50 dark:bg-slate-900/30 p-4 text-sm">
+                <div className="rounded bg-slate-50 p-4 text-sm dark:bg-slate-900/30">
                   <p className="mb-2 font-semibold">✓ Added pagination</p>
                   <p className="mb-2 text-foreground/80">Modified 2 files:</p>
                   <ul className="ml-2 list-inside list-disc text-foreground/80">
@@ -51,7 +51,7 @@ export function CommunicationSection() {
                 </div>
               </TabsContent>
               <TabsContent className="mt-4" value="bad">
-                <div className="rounded bg-red-50 dark:bg-red-950/30 p-4 text-sm">
+                <div className="rounded bg-red-50 p-4 text-sm dark:bg-red-950/30">
                   <p className="text-foreground/80">
                     So I looked at your code and I think what you're trying to do is add pagination which is a really
                     common pattern in web development where you split large datasets into smaller pages so users don't
@@ -74,7 +74,7 @@ export function CommunicationSection() {
               When Codex references files, it includes the full path and often specific line numbers. Many terminals
               make these clickable, allowing you to jump directly to the relevant code.
             </p>
-            <div className="rounded bg-slate-50 dark:bg-slate-900/30 p-4">
+            <div className="rounded bg-slate-50 p-4 dark:bg-slate-900/30">
               <p className="mb-2 text-sm">Example references:</p>
               <pre className="text-sm">
                 <code className="text-blue-600">src/components/UserList.tsx:47</code> - Added loading state
@@ -112,7 +112,7 @@ export function CommunicationSection() {
               </div>
               <div>
                 <p className="mb-2 font-semibold text-sm">✅ Codex summary</p>
-                <div className="rounded bg-slate-50 dark:bg-slate-900/30 p-3 text-sm">
+                <div className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                   <p className="font-semibold text-green-600">✓ Installed 3 packages</p>
                   <p className="mt-2 text-foreground/80">Added: axios, lodash, date-fns</p>
                   <p className="mt-2 text-amber-600 text-xs">⚠ 2 deprecated dependencies (non-critical)</p>
@@ -132,12 +132,13 @@ export function CommunicationSection() {
               Codex uses Markdown-style formatting to make code stand out from prose. Code blocks use syntax
               highlighting, and inline code uses backticks for clarity.
             </p>
-            <div className="space-y-3 rounded bg-slate-50 dark:bg-slate-900/30 p-4 text-sm">
+            <div className="space-y-3 rounded bg-slate-50 p-4 text-sm dark:bg-slate-900/30">
               <p>
-                Inline code: Updated the <code className="rounded bg-white dark:bg-slate-800 px-1 py-0.5">API_URL</code> constant
+                Inline code: Updated the <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">API_URL</code>{" "}
+                constant
               </p>
               <p className="mt-3">Code block:</p>
-              <pre className="rounded border bg-white dark:bg-slate-950 p-3">
+              <pre className="rounded border bg-white p-3 dark:bg-slate-950">
                 <code>{`const fetchUsers = async () => {
   const response = await fetch(API_URL);
   return response.json();

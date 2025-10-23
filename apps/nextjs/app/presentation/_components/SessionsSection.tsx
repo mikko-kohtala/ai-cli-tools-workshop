@@ -95,7 +95,7 @@ export function SessionsSection() {
                 <div className="flex-1">
                   <p className="font-semibold text-lg">{item.title}</p>
                   <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
-                  <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-xs">{item.example}</pre>
+                  <pre className="mt-2 rounded border bg-white p-3 text-xs dark:bg-slate-950">{item.example}</pre>
                 </div>
               </li>
             ))}

@@ -25,7 +25,7 @@ export default function Task1Page() {
                 <p>
                   Install Codex CLI by following the official documentation at{" "}
                   <a
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-600 hover:underline dark:text-blue-400"
                     href="https://developers.openai.com/codex/cli"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -69,7 +69,7 @@ export default function Task1Page() {
 
           <div className="space-y-4">
             <h2 className="font-semibold text-2xl">Expected Outcome</h2>
-            <div className="rounded-lg border bg-neutral-50 p-4">
+            <div className="rounded-lg border bg-neutral-50 p-4 dark:bg-neutral-900/30">
               <p className="mb-2">
                 <strong>By the end of this task, you should:</strong>
               </p>
