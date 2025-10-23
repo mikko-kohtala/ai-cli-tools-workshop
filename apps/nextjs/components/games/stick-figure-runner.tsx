@@ -11,10 +11,14 @@ export function StickFigureRunner() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
 
     const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    if (!ctx) {
+      return;
+    }
 
     canvas.width = 800;
     canvas.height = 400;
@@ -93,7 +97,9 @@ export function StickFigureRunner() {
     };
 
     const gameLoop = () => {
-      if (isGameOver) return;
+      if (isGameOver) {
+        return;
+      }
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -182,11 +188,12 @@ export function StickFigureRunner() {
     <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gray-100 p-8 dark:bg-slate-800">
       <h1 className="font-bold text-4xl">Stick Figure Runner</h1>
       <p className="text-gray-600 dark:text-gray-300">Press SPACE or ↑ to jump</p>
-      <canvas ref={canvasRef} className="rounded-lg border-4 border-gray-800 shadow-2xl" />
+      <canvas className="rounded-lg border-4 border-gray-800 shadow-2xl" ref={canvasRef} />
       {gameState.isGameOver && (
         <button
-          onClick={restartGame}
           className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+          onClick={restartGame}
+          type="button"
         >
           Restart Game
         </button>

@@ -256,8 +256,8 @@ export function ReasoningSection() {
       <div className="mb-8">
         <h3 className="mb-6 font-semibold text-2xl">When to Use Different Reasoning Levels</h3>
         <div className="space-y-4">
-          {useCases.map((useCase, index) => (
-            <Card key={`usecase-${index}`}>
+          {useCases.map((useCase) => (
+            <Card key={useCase.level}>
               <CardHeader>
                 <CardTitle className="text-lg">{useCase.level}</CardTitle>
               </CardHeader>
@@ -265,8 +265,8 @@ export function ReasoningSection() {
                 <div className="mb-4">
                   <p className="mb-2 font-semibold text-sm">Good for:</p>
                   <ul className="space-y-1">
-                    {useCase.scenarios.map((scenario, idx) => (
-                      <li className="flex items-start gap-2 text-sm" key={`scenario-${index}-${idx}`}>
+                    {useCase.scenarios.map((scenario) => (
+                      <li className="flex items-start gap-2 text-sm" key={scenario}>
                         <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
                         <span className="text-foreground/70">{scenario}</span>
                       </li>
