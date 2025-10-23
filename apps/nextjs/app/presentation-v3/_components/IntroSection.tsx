@@ -8,9 +8,7 @@ export function IntroSection() {
         <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gray-800 dark:bg-gray-700">
           <Terminal className="h-10 w-10 text-gray-100" />
         </div>
-        <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-300">
-          AI CLI Tools
-        </h1>
+        <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-300">AI CLI Tools</h1>
 
         {/* <div className="mx-auto max-w-2xl pt-6 text-left">
           <Card className="border-blue-200 bg-blue-50">

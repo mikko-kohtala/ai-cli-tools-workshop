@@ -143,8 +143,8 @@ export function LandscapeSection() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                  {tool.highlights.map((highlight, idx) => (
-                    <li className="flex items-start gap-2 text-sm" key={`highlight-${idx}`}>
+                  {tool.highlights.map((highlight) => (
+                    <li className="flex items-start gap-2 text-sm" key={highlight}>
                       <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600 dark:text-green-400" />
                       <span>{highlight}</span>
                     </li>

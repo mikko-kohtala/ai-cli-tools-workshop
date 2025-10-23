@@ -72,13 +72,13 @@ export function ToolComparisonSection() {
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {tools.map((t) => (
-          <Card key={`tool-${t.name}`} className="border-2 hover:border-indigo-200">
+          <Card className="border-2 hover:border-indigo-200" key={`tool-${t.name}`}>
             <CardHeader>
               <CardTitle>{t.name}</CardTitle>
               <CardDescription>{t.ecosystem}</CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
                 <li>
                   <span className="font-semibold">Focus:</span> {t.focus}
                 </li>
@@ -99,4 +99,3 @@ export function ToolComparisonSection() {
     </section>
   );
 }
-

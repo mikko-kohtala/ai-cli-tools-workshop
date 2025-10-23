@@ -59,41 +59,41 @@ export function SelectionChecklistSection() {
           <div className="grid gap-6 md:grid-cols-2">
             <div>
               <p className="mb-2 font-semibold">Constraints</p>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
-                {checklist.constraints.map((i, idx) => (
-                  <li key={`c-${idx}`}>{i}</li>
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
+                {checklist.constraints.map((i) => (
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </div>
             <div>
               <p className="mb-2 font-semibold">Safety</p>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
-                {checklist.safety.map((i, idx) => (
-                  <li key={`s-${idx}`}>{i}</li>
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
+                {checklist.safety.map((i) => (
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="mb-2 mt-2 font-semibold">Workflow fit</p>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
-                {checklist.workflow.map((i, idx) => (
-                  <li key={`w-${idx}`}>{i}</li>
+              <p className="mt-2 mb-2 font-semibold">Workflow fit</p>
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
+                {checklist.workflow.map((i) => (
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="mb-2 mt-2 font-semibold">Integration</p>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
-                {checklist.integration.map((i, idx) => (
-                  <li key={`i-${idx}`}>{i}</li>
+              <p className="mt-2 mb-2 font-semibold">Integration</p>
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
+                {checklist.integration.map((i) => (
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="mb-2 mt-2 font-semibold">Team adoption</p>
-              <ul className="list-inside list-disc space-y-1 text-sm text-foreground/80">
-                {checklist.adoption.map((i, idx) => (
-                  <li key={`a-${idx}`}>{i}</li>
+              <p className="mt-2 mb-2 font-semibold">Team adoption</p>
+              <ul className="list-inside list-disc space-y-1 text-foreground/80 text-sm">
+                {checklist.adoption.map((i) => (
+                  <li key={i}>{i}</li>
                 ))}
               </ul>
             </div>
@@ -106,9 +106,9 @@ export function SelectionChecklistSection() {
           <CardTitle>Quick decision tips</CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="list-inside list-disc space-y-2 text-sm text-foreground/80">
-            {quickTips.map((tip, idx) => (
-              <li key={`tip-${idx}`}>{tip}</li>
+          <ul className="list-inside list-disc space-y-2 text-foreground/80 text-sm">
+            {quickTips.map((tip) => (
+              <li key={tip}>{tip}</li>
             ))}
           </ul>
         </CardContent>
@@ -116,4 +116,3 @@ export function SelectionChecklistSection() {
     </section>
   );
 }
-

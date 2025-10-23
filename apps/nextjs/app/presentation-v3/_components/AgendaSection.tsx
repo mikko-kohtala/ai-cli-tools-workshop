@@ -4,8 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const agendaItems = [
   {
     title: "Why AI CLI tools matter",
-    description:
-      "The shift toward terminal-first AI assistants and where they fit in dev workflows",
+    description: "The shift toward terminal-first AI assistants and where they fit in dev workflows",
   },
   {
     title: "Landscape & selection",
@@ -42,7 +41,8 @@ export function AgendaSection() {
         <CardContent className="p-8">
           <div className="space-y-6">
             <p className="mb-6 text-lg">
-              This 90-minute workshop blends overview and hands-on practice with AI CLI tools. Here’s the flow we’ll follow:
+              This 90-minute workshop blends overview and hands-on practice with AI CLI tools. Here’s the flow we’ll
+              follow:
             </p>
             <ul className="space-y-4">
               {agendaItems.map((item, index) => (

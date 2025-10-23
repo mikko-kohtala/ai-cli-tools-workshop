@@ -117,9 +117,20 @@ export function ApprovalsSection() {
               <div className="space-y-3 text-sm">
                 <p className="text-foreground/70">Configuration patterns (vary by tool):</p>
                 <ul className="ml-4 list-inside list-disc space-y-1 text-foreground/80">
-                  <li>CLI flag: <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">{`<cli> --approval on-request`}</code></li>
-                  <li>Config set: <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">{`<cli> config set approval on-request`}</code></li>
-                  <li>Environment: <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">APPROVAL_POLICY=untrusted</code></li>
+                  <li>
+                    CLI flag:{" "}
+                    <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">{"<cli> --approval on-request"}</code>
+                  </li>
+                  <li>
+                    Config set:{" "}
+                    <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">
+                      {"<cli> config set approval on-request"}
+                    </code>
+                  </li>
+                  <li>
+                    Environment:{" "}
+                    <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">APPROVAL_POLICY=untrusted</code>
+                  </li>
                 </ul>
                 <p className="mt-2 text-foreground/70">Check your tool's docs for exact commands and defaults.</p>
               </div>

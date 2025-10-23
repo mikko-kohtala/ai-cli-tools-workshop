@@ -79,7 +79,8 @@ export function SessionsSection() {
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed">
               Getting the most out of AI CLIs requires effective communication. Treat it like pair programming with an
-              AI colleague — the clearer your goals, the better the results. Here are proven strategies for productive sessions.
+              AI colleague — the clearer your goals, the better the results. Here are proven strategies for productive
+              sessions.
             </p>
           </CardContent>
         </Card>

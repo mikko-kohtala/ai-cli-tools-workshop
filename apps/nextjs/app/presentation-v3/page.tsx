@@ -13,11 +13,11 @@ import { IntroSection } from "./_components/IntroSection";
 import { NextStepsSection } from "./_components/NextStepsSection";
 import { QASection } from "./_components/QASection";
 import { SandboxingSection } from "./_components/SandboxingSection";
+import { SelectionChecklistSection } from "./_components/SelectionChecklistSection";
 import { SessionsSection } from "./_components/SessionsSection";
 import { TableOfContents } from "./_components/TableOfContents";
 import { TipsSection } from "./_components/TipsSection";
 import { ToolComparisonSection } from "./_components/ToolComparisonSection";
-import { SelectionChecklistSection } from "./_components/SelectionChecklistSection";
 
 const sections = [
   { id: "intro", title: "Introduction" },

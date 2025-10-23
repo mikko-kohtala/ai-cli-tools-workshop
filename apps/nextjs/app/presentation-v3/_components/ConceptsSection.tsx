@@ -48,7 +48,11 @@ export function ConceptsSection() {
                     <strong>Example:</strong>
                   </p>
                   <pre className="rounded border bg-white p-3 text-sm dark:bg-slate-950">
-                    <code>{`$ pwd\n/Users/dev/my-app\n\n$ <cli>\n<cli> vX.Y.Z\nContext: /Users/dev/my-app (git: main)\nReady!`}</code>
+                    <code>
+                      {
+                        "$ pwd\n/Users/dev/my-app\n\n$ <cli>\n<cli> vX.Y.Z\nContext: /Users/dev/my-app (git: main)\nReady!"
+                      }
+                    </code>
                   </pre>
                   <p className="mt-3 text-foreground/70 text-sm">
                     The agent knows it's working in{" "}
@@ -101,7 +105,8 @@ export function ConceptsSection() {
           <CardContent>
             <p className="mb-4 text-foreground/70">
               For non-trivial tasks (anything requiring more than 2 steps), most AI CLIs create a plan before executing.
-              This gives you visibility into what will happen and a chance to adjust the approach before any code changes.
+              This gives you visibility into what will happen and a chance to adjust the approach before any code
+              changes.
             </p>
             <Card className="border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-950/30">
               <CardContent className="p-4">
@@ -111,7 +116,8 @@ export function ConceptsSection() {
                     <span className="font-semibold text-green-600">You:</span> Add authentication to the app
                   </p>
                   <p>
-                    <span className="font-semibold text-blue-600">Agent:</span> I'll help you add authentication. Here's my plan:
+                    <span className="font-semibold text-blue-600">Agent:</span> I'll help you add authentication. Here's
+                    my plan:
                   </p>
                   <ol className="ml-4 list-inside list-decimal space-y-1 text-foreground/70">
                     <li>Install required packages (bcrypt, jsonwebtoken)</li>

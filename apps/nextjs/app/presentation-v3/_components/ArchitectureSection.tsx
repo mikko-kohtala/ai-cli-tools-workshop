@@ -75,9 +75,9 @@ export function ArchitectureSection() {
         <Card>
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed">
-              Most AI CLI tools share a similar architecture (often called a "harness") coordinating multiple
-              components to provide a secure, efficient, and user-friendly experience. Understanding these layers helps
-              you get more from the tool and troubleshoot issues when they arise.
+              Most AI CLI tools share a similar architecture (often called a "harness") coordinating multiple components
+              to provide a secure, efficient, and user-friendly experience. Understanding these layers helps you get
+              more from the tool and troubleshoot issues when they arise.
             </p>
           </CardContent>
         </Card>

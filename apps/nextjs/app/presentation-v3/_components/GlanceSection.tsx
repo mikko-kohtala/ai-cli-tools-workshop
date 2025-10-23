@@ -44,9 +44,9 @@ export function GlanceSection() {
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed">
               AI CLI tools like Codex CLI, Claude Code, Gemini CLI, Amp Code, and Opencode represent a new generation of
-              development helpers. They understand natural language, execute complex tasks, and integrate with your local
-              toolchain. Unlike IDE plugins or web-based assistants, these tools run in your terminal, letting you keep
-              your normal workflow while maintaining control over your codebase and environment.
+              development helpers. They understand natural language, execute complex tasks, and integrate with your
+              local toolchain. Unlike IDE plugins or web-based assistants, these tools run in your terminal, letting you
+              keep your normal workflow while maintaining control over your codebase and environment.
             </p>
           </CardContent>
         </Card>
@@ -96,7 +96,7 @@ export function GlanceSection() {
               <div className="space-y-3">
                 <p className="text-foreground/70 text-sm">Start a session in your project directory:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
-                  <code>{`cd my-project\n<cli>`}</code>
+                  <code>{"cd my-project\n<cli>"}</code>
                 </pre>
                 <p className="mt-3 text-foreground/70 text-sm">
                   The CLI initializes and presents an interactive prompt for natural-language requests.
@@ -107,14 +107,14 @@ export function GlanceSection() {
               <div className="space-y-3">
                 <p className="text-foreground/70 text-sm">Example conversation:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50 text-sm">
-                  <code className="text-green-400">You:</code> <code>{`Add input validation to the login form\n`}</code>
+                  <code className="text-green-400">You:</code> <code>{"Add input validation to the login form\n"}</code>
                   <code className="text-blue-400">Agent:</code>{" "}
                   <code>
                     {" "}
                     {`I'll add email and password validation.\n`}
-                    {`Creating validationUtils.ts...\n`}
-                    {`Updating LoginForm.tsx...\n`}
-                    {`Done! Added email format and password strength checks.`}
+                    {"Creating validationUtils.ts...\n"}
+                    {"Updating LoginForm.tsx...\n"}
+                    {"Done! Added email format and password strength checks."}
                   </code>
                 </pre>
               </div>
