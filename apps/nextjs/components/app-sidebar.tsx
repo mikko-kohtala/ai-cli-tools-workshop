@@ -1,38 +1,39 @@
+/** biome-ignore-all lint/a11y/useValidAnchor: TODO: Fix this */
 "use client";
 
-import { Terminal } from "lucide-react";
+import { IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import type * as React from "react";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarRail,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
-// Navigation data
-const navigation = {
-  main: [
+const data = {
+  navMain: [
     {
       title: "Home",
       url: "/",
-      items: [],
+      icon: IconHome,
     },
     {
       title: "Presentation",
       url: "/presentation",
-      items: [],
+      icon: IconPresentation,
     },
     {
-      title: "Workshop Tasks",
+      title: "Tasks",
       url: "/tasks",
+      icon: IconCheckbox,
       items: [
         {
           title: "Task 1",
@@ -56,37 +57,15 @@ const navigation = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const pathname = usePathname();
-
-  // Check if a URL is active
-  const isActive = (url: string) => {
-    if (url === "/") {
-      return pathname === "/";
-    }
-
-    // For hash links, check if the pathname matches the base URL
-    if (url.includes("#")) {
-      const baseUrl = url.split("#")[0];
-      return pathname === baseUrl || pathname.startsWith(`${baseUrl}/`);
-    }
-
-    return pathname === url || pathname.startsWith(`${url}/`);
-  };
-
   return (
-    <Sidebar {...props}>
+    <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild size="lg">
+            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
               <Link href="/">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Terminal className="size-4" />
-                </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">AI CLI Tools</span>
-                  <span className="">Workshop</span>
-                </div>
+                <IconInnerShadowTop className="!size-5" />
+                <span className="font-semibold text-base">AI CLI Workshop</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -94,34 +73,47 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navigation.main.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    <Link className="font-medium" href={item.url}>
-                      {item.title}
-                    </Link>
-                  </SidebarMenuButton>
-                  {item.items?.length > 0 && (
-                    <SidebarMenu className="mt-1 ml-4">
-                      {item.items.map((subItem) => (
-                        <SidebarMenuItem key={subItem.title}>
-                          <SidebarMenuButton asChild isActive={isActive(subItem.url)} size="sm">
-                            <Link href={subItem.url}>{subItem.title}</Link>
-                          </SidebarMenuButton>
-                        </SidebarMenuItem>
-                      ))}
-                    </SidebarMenu>
-                  )}
-                </SidebarMenuItem>
-              ))}
+              {data.navMain.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    {item.items ? (
+                      <>
+                        <SidebarMenuButton asChild tooltip={item.title}>
+                          <Link href={item.url}>
+                            {Icon && <Icon />}
+                            <span>{item.title}</span>
+                          </Link>
+                        </SidebarMenuButton>
+                        <SidebarMenuSub>
+                          {item.items.map((subItem) => (
+                            <SidebarMenuSubItem key={subItem.title}>
+                              <SidebarMenuSubButton asChild>
+                                <Link href={subItem.url}>
+                                  <span>{subItem.title}</span>
+                                </Link>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                          ))}
+                        </SidebarMenuSub>
+                      </>
+                    ) : (
+                      <SidebarMenuButton asChild tooltip={item.title}>
+                        <Link href={item.url}>
+                          {Icon && <Icon />}
+                          <span>{item.title}</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    )}
+                  </SidebarMenuItem>
+                );
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarRail />
     </Sidebar>
   );
 }
