@@ -89,7 +89,7 @@ export function GlanceSection() {
                 </pre>
                 <p className="mt-3 text-foreground/70 text-sm">Or with Homebrew on macOS:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
-                  <code>brew install openai/tap/codex</code>
+                  <code>brew install codex</code>
                 </pre>
               </div>
             </TabsContent>

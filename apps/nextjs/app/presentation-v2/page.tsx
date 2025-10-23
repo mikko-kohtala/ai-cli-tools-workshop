@@ -11,6 +11,7 @@ import { EffectiveUsageSection } from "./_components/EffectiveUsageSection";
 import { IntroSection } from "./_components/IntroSection";
 import { LandscapeSection } from "./_components/LandscapeSection";
 import { QASection } from "./_components/QASection";
+import { ReasoningSection } from "./_components/ReasoningSection";
 import { SecuritySection } from "./_components/SecuritySection";
 import { TableOfContents } from "./_components/TableOfContents";
 
@@ -20,6 +21,7 @@ const sections = [
   { id: "landscape", title: "AI CLI Tools Landscape" },
   { id: "concepts", title: "Core Concepts" },
   { id: "architecture", title: "Architecture & Design Patterns" },
+  { id: "reasoning", title: "Models & Reasoning" },
   { id: "security", title: "Security & Control" },
   { id: "effective-usage", title: "Effective Usage" },
   { id: "demo", title: "Demo Flow" },
@@ -75,6 +77,8 @@ export default function PresentationPage() {
           <ConceptsSection />
           <Separator className="my-16" />
           <ArchitecturePatternsSection />
+          <Separator className="my-16" />
+          <ReasoningSection />
           <Separator className="my-16" />
           <SecuritySection />
           <Separator className="my-16" />
