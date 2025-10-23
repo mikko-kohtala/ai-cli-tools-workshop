@@ -17,9 +17,8 @@ export function DemoSection() {
         <Card>
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed">
-              Let's walk through a complete development workflow using an AI CLI tool. This example demonstrates how all
-              the concepts we've discussed come together in practice—the specific commands may vary by tool, but the
-              overall workflow pattern remains consistent.
+              Let's walk through a complete development workflow using Codex CLI. This example demonstrates how all the
+              concepts we've discussed come together in practice.
             </p>
           </CardContent>
         </Card>
@@ -62,7 +61,7 @@ export function DemoSection() {
                     Analyze files → draft approach → implement changes → run tests
                   </p>
                   <div className="rounded bg-slate-50 p-4 dark:bg-slate-900/30">
-                    <p className="mb-2 font-semibold text-sm">AI's generated plan:</p>
+                    <p className="mb-2 font-semibold text-sm">Codex's generated plan:</p>
                     <ol className="list-inside list-decimal space-y-2 text-sm">
                       <li>Search for all console.log occurrences (estimated: 50-100 files)</li>
                       <li>Install pino logger package</li>
@@ -97,7 +96,7 @@ export function DemoSection() {
                     <CardContent className="p-4">
                       <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Find all console.log usage{"\n"}</code>
-                        <code className="text-blue-600">AI:</code>{" "}
+                        <code className="text-blue-600">Codex:</code>{" "}
                         <code>
                           {" "}
                           Searching...{"\n"}Found 73 occurrences in 28 files{"\n"}
@@ -114,7 +113,7 @@ export function DemoSection() {
                     <CardContent className="p-4">
                       <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Yes, use pino{"\n"}</code>
-                        <code className="text-blue-600">AI:</code>{" "}
+                        <code className="text-blue-600">Codex:</code>{" "}
                         <code>
                           {" "}
                           Installing pino...{"\n"}✓ Installed pino@8.15.0{"\n"}
@@ -129,7 +128,7 @@ export function DemoSection() {
                   <Card>
                     <CardContent className="p-4">
                       <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
-                        <code className="text-blue-600">AI:</code>{" "}
+                        <code className="text-blue-600">Codex:</code>{" "}
                         <code>
                           {" "}
                           Refactoring 28 files...{"\n"}
@@ -147,7 +146,7 @@ export function DemoSection() {
                     <CardContent className="p-4">
                       <pre className="rounded bg-slate-50 p-3 text-sm dark:bg-slate-900/30">
                         <code className="text-green-600">You:</code> <code>Run tests{"\n"}</code>
-                        <code className="text-blue-600">AI:</code>{" "}
+                        <code className="text-blue-600">Codex:</code>{" "}
                         <code>
                           {" "}
                           Running test suite...{"\n"}

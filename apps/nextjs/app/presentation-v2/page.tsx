@@ -3,27 +3,33 @@
 import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { AgendaSection } from "./_components/AgendaSection";
-import { ArchitecturePatternsSection } from "./_components/ArchitecturePatternsSection";
-import { ChoosingToolSection } from "./_components/ChoosingToolSection";
+import { ApprovalsSection } from "./_components/ApprovalsSection";
+import { ArchitectureSection } from "./_components/ArchitectureSection";
+import { CommunicationSection } from "./_components/CommunicationSection";
 import { ConceptsSection } from "./_components/ConceptsSection";
 import { DemoSection } from "./_components/DemoSection";
-import { EffectiveUsageSection } from "./_components/EffectiveUsageSection";
+import { GlanceSection } from "./_components/GlanceSection";
 import { IntroSection } from "./_components/IntroSection";
-import { LandscapeSection } from "./_components/LandscapeSection";
+import { NextStepsSection } from "./_components/NextStepsSection";
 import { QASection } from "./_components/QASection";
-import { SecuritySection } from "./_components/SecuritySection";
+import { SandboxingSection } from "./_components/SandboxingSection";
+import { SessionsSection } from "./_components/SessionsSection";
 import { TableOfContents } from "./_components/TableOfContents";
+import { TipsSection } from "./_components/TipsSection";
 
 const sections = [
   { id: "intro", title: "Introduction" },
   { id: "agenda", title: "Agenda" },
-  { id: "landscape", title: "AI CLI Tools Landscape" },
-  { id: "concepts", title: "Core Concepts" },
-  { id: "architecture", title: "Architecture & Design Patterns" },
-  { id: "security", title: "Security & Control" },
-  { id: "effective-usage", title: "Effective Usage" },
-  { id: "demo", title: "Demo Flow" },
-  { id: "choosing", title: "Choosing Your Tool" },
+  { id: "glance", title: "Codex CLI at a Glance" },
+  { id: "concepts", title: "Key Concepts" },
+  { id: "architecture", title: "Harness Architecture" },
+  { id: "sandboxing", title: "Working with Sandboxing" },
+  { id: "approvals", title: "Approval Policies in Practice" },
+  { id: "sessions", title: "Building Effective Sessions" },
+  { id: "communication", title: "Communication Guidelines" },
+  { id: "tips", title: "Pro Tips for Power Users" },
+  { id: "demo", title: "Demo Flow Idea" },
+  { id: "next-steps", title: "Next Steps" },
   { id: "qa", title: "Q & A" },
 ];
 
@@ -70,19 +76,25 @@ export default function PresentationPage() {
           <Separator className="my-16" />
           <AgendaSection />
           <Separator className="my-16" />
-          <LandscapeSection />
+          <GlanceSection />
           <Separator className="my-16" />
           <ConceptsSection />
           <Separator className="my-16" />
-          <ArchitecturePatternsSection />
+          <ArchitectureSection />
           <Separator className="my-16" />
-          <SecuritySection />
+          <SandboxingSection />
           <Separator className="my-16" />
-          <EffectiveUsageSection />
+          <ApprovalsSection />
+          <Separator className="my-16" />
+          <SessionsSection />
+          <Separator className="my-16" />
+          <CommunicationSection />
+          <Separator className="my-16" />
+          <TipsSection />
           <Separator className="my-16" />
           <DemoSection />
           <Separator className="my-16" />
-          <ChoosingToolSection />
+          <NextStepsSection />
           <Separator className="my-16" />
           <QASection />
         </div>
