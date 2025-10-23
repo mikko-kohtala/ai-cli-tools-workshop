@@ -90,8 +90,8 @@ export function SandboxingSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="sandboxing">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
-          <Shield className="h-5 w-5 text-amber-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30">
+          <Shield className="h-5 w-5 text-amber-600 dark:text-amber-400" />
         </div>
         <h2 className="font-bold text-4xl">Working with Sandboxing</h2>
       </div>
@@ -113,7 +113,7 @@ export function SandboxingSection() {
           <ul className="space-y-4">
             {sandboxingGuidelines.map((item) => (
               <li className="flex items-start gap-3" key={`security-${item.title}`}>
-                <Shield className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600" />
+                <Shield className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
                 <div>
                   <p className="font-semibold text-lg">{item.title}</p>
                   <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
@@ -183,10 +183,10 @@ export function SandboxingSection() {
         </TabsContent>
       </Tabs>
 
-      <Card className="border-amber-200 bg-amber-50">
+      <Card className="border-amber-200 bg-amber-50 dark:bg-amber-950/30">
         <CardContent className="p-6">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600" />
+            <AlertTriangle className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
             <div>
               <p className="mb-2 font-semibold text-lg">Best Practice: Start Restrictive</p>
               <p className="text-foreground/70 text-sm">

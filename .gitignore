@@ -23,6 +23,7 @@ dist
 .DS_Store
 *.pem
 Thumbs.db
+.playwright-mcp/
 
 # debug
 npm-debug.log*

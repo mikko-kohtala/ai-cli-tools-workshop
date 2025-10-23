@@ -33,8 +33,8 @@ export function GlanceSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="glance">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
-          <Zap className="h-5 w-5 text-purple-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
+          <Zap className="h-5 w-5 text-purple-600 dark:text-purple-400" />
         </div>
         <h2 className="font-bold text-4xl">Codex CLI at a Glance</h2>
       </div>
@@ -56,8 +56,8 @@ export function GlanceSection() {
         {features.map((item) => (
           <Card className="border-2 transition-colors hover:border-purple-200" key={`feature-${item.title}`}>
             <CardHeader>
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
-                <item.icon className="h-6 w-6 text-purple-600" />
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
+                <item.icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
               <CardTitle className="text-xl">{item.title}</CardTitle>
               <CardDescription className="text-base">{item.description}</CardDescription>
@@ -67,10 +67,10 @@ export function GlanceSection() {
         ))}
       </div>
 
-      <Card className="bg-linear-to-br from-purple-50 to-blue-50">
+      <Card className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/30 dark:to-blue-950/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5 text-purple-600" />
+            <Lightbulb className="h-5 w-5 text-purple-600 dark:text-purple-400" />
             Quick Example: Getting Started
           </CardTitle>
         </CardHeader>

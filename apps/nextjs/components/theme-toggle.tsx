@@ -14,7 +14,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="fixed top-2 right-2 border border-border px-2 py-1 font-mono text-xs transition-colors"
+        className="border border-border px-2 py-1 font-mono text-xs transition-colors"
         disabled
         type="button"
       >
@@ -29,7 +29,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="fixed top-2 right-2 border border-border px-2 py-1 font-mono text-xs transition-colors hover:border-primary hover:text-primary"
+      className="border border-border px-2 py-1 font-mono text-xs transition-colors hover:border-primary hover:text-primary"
       onClick={toggleTheme}
       type="button"
     >

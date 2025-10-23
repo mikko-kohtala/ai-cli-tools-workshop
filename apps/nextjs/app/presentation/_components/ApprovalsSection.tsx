@@ -56,8 +56,8 @@ export function ApprovalsSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="approvals">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100">
-          <CheckCircle className="h-5 w-5 text-red-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+          <CheckCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
         </div>
         <h2 className="font-bold text-4xl">Approval Policies in Practice</h2>
       </div>
@@ -102,7 +102,7 @@ export function ApprovalsSection() {
           <Card>
             <CardContent className="p-6">
               <p className="mb-3 font-semibold text-sm">Approval flow in action (on-request mode):</p>
-              <div className="space-y-3 rounded-lg bg-slate-50 p-4 text-sm">
+              <div className="space-y-3 rounded-lg bg-slate-50 dark:bg-slate-900/30 p-4 text-sm">
                 <div>
                   <p className="font-semibold text-green-600">You: Install the axios package</p>
                 </div>

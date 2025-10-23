@@ -5,7 +5,7 @@ export function IntroSection() {
   return (
     <section className="mb-16 flex min-h-[50vh] flex-col justify-center" id="intro">
       <div className="space-y-6 text-center">
-        <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 to-purple-600">
+        <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
           <Terminal className="h-10 w-10 text-white" />
         </div>
         <h1 className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-bold text-5xl text-transparent md:text-6xl">

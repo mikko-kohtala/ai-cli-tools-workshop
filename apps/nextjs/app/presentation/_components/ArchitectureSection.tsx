@@ -65,8 +65,8 @@ export function ArchitectureSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="architecture">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
-          <Code className="h-5 w-5 text-indigo-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/30">
+          <Code className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
         </div>
         <h2 className="font-bold text-4xl">Harness Architecture</h2>
       </div>
@@ -83,7 +83,7 @@ export function ArchitectureSection() {
         </Card>
       </div>
 
-      <Card className="mb-8 bg-gradient-to-br from-indigo-50 to-purple-50">
+      <Card className="mb-8 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30">
         <CardContent className="p-8">
           <div className="space-y-6">
             {architectureSteps.map((step, index) => (

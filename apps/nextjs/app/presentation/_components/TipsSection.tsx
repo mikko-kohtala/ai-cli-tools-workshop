@@ -89,8 +89,8 @@ export function TipsSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="tips">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-100">
-          <Zap className="h-5 w-5 text-cyan-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-100 dark:bg-cyan-900/30">
+          <Zap className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
         </div>
         <h2 className="font-bold text-4xl">Pro Tips for Power Users</h2>
       </div>
@@ -106,7 +106,7 @@ export function TipsSection() {
         </Card>
       </div>
 
-      <Card className="mb-8 border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50">
+      <Card className="mb-8 border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950/30 dark:to-blue-950/30">
         <CardContent className="p-8">
           <div className="space-y-6">
             {proTips.map((item, index) => (
@@ -120,7 +120,7 @@ export function TipsSection() {
                     <p className="text-foreground/70 text-sm italic">{item.description}</p>
                     <p className="mt-2 text-sm">{item.detail}</p>
                     {item.example && (
-                      <pre className="mt-3 rounded border bg-white p-3 text-xs">
+                      <pre className="mt-3 rounded border bg-white dark:bg-slate-950 p-3 text-xs">
                         <code>{item.example}</code>
                       </pre>
                     )}
@@ -153,7 +153,7 @@ export function TipsSection() {
                       </pre>
                     )}
                     {opt.example && (
-                      <pre className="mt-2 rounded border bg-white p-3 text-sm">
+                      <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-sm">
                         <code>{opt.example}</code>
                       </pre>
                     )}
@@ -178,7 +178,7 @@ export function TipsSection() {
                       </pre>
                     )}
                     {tip.example && (
-                      <pre className="mt-2 rounded border bg-white p-3 text-sm">
+                      <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-sm">
                         <code>{tip.example}</code>
                       </pre>
                     )}

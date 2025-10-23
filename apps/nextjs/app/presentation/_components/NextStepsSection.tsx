@@ -114,8 +114,8 @@ export function NextStepsSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="next-steps">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
-          <ArrowRight className="h-5 w-5 text-emerald-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+          <ArrowRight className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
         </div>
         <h2 className="font-bold text-4xl">Next Steps</h2>
       </div>
@@ -135,8 +135,8 @@ export function NextStepsSection() {
         {nextStepsCards.map((card) => (
           <Card className="border-2 transition-colors hover:border-emerald-200" key={`next-${card.title}`}>
             <CardHeader>
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100">
-                <card.icon className="h-6 w-6 text-emerald-600" />
+              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+                <card.icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
               </div>
               <CardTitle>{card.title}</CardTitle>
               <CardDescription>{card.description}</CardDescription>
@@ -169,7 +169,7 @@ export function NextStepsSection() {
                 {card.usageExample && (
                   <>
                     <p className="mt-3 text-foreground/70">Use in sessions:</p>
-                    <pre className="rounded border bg-slate-50 p-3 text-xs">
+                    <pre className="rounded border bg-slate-50 dark:bg-slate-900/30 p-3 text-xs">
                       <code>{card.usageExample}</code>
                     </pre>
                   </>

@@ -68,8 +68,8 @@ export function SessionsSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="sessions">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100">
-          <Users className="h-5 w-5 text-teal-600" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
+          <Users className="h-5 w-5 text-teal-600 dark:text-teal-400" />
         </div>
         <h2 className="font-bold text-4xl">Building Effective Sessions</h2>
       </div>
@@ -86,16 +86,16 @@ export function SessionsSection() {
         </Card>
       </div>
 
-      <Card className="mb-8 bg-teal-50">
+      <Card className="mb-8 bg-teal-50 dark:bg-teal-950/30">
         <CardContent className="p-8">
           <ul className="space-y-4">
             {sessionGuidelines.map((item) => (
               <li className="flex items-start gap-3" key={`comm-${item.title}`}>
-                <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-teal-600" />
+                <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-teal-600 dark:text-teal-400" />
                 <div className="flex-1">
                   <p className="font-semibold text-lg">{item.title}</p>
                   <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
-                  <pre className="mt-2 rounded border bg-white p-3 text-xs">{item.example}</pre>
+                  <pre className="mt-2 rounded border bg-white dark:bg-slate-950 p-3 text-xs">{item.example}</pre>
                 </div>
               </li>
             ))}

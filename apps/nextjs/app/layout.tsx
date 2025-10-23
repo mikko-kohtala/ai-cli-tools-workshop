@@ -4,7 +4,6 @@ import type { ReactNode } from "react";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import "./globals.css";
 
@@ -54,7 +53,6 @@ export default function RootLayout({
               </div>
             </SidebarInset>
           </SidebarProvider>
-          <ThemeToggle />
         </ThemeProvider>
       </body>
     </html>
