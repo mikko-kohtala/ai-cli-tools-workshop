@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/a11y/useValidAnchor: TODO: Fix this */
 "use client";
 
-import { IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
+import { IconCheckbox, IconDeviceGamepad2, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
 import Link from "next/link";
 import type * as React from "react";
 import {
@@ -39,6 +39,11 @@ const data = {
       title: "Presentation v3",
       url: "/presentation-v3",
       icon: IconPresentation,
+    },
+    {
+      title: "Games",
+      url: "/games",
+      icon: IconDeviceGamepad2,
     },
     {
       title: "Tasks",
