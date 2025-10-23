@@ -1,82 +1,85 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Light theme - Paper/Amber style */
+  --background: #fefbf3;
+  --foreground: #1a1a1a;
+  --card: #faf7f0;
+  --card-foreground: #1a1a1a;
+  --popover: #faf7f0;
+  --popover-foreground: #1a1a1a;
+  --primary: #2d5016;
+  --primary-foreground: #fefbf3;
+  --secondary: #f0ede6;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f0ede6;
+  --muted-foreground: #666666;
+  --accent: #d97706;
+  --accent-foreground: #fefbf3;
+  --destructive: #dc2626;
+  --destructive-foreground: #fefbf3;
+  --border: #d4d4aa;
+  --input: #f0ede6;
+  --ring: #2d5016;
+  --chart-1: #2d5016;
+  --chart-2: #0369a1;
+  --chart-3: #d97706;
+  --chart-4: #7c2d12;
+  --chart-5: #991b1b;
+  --radius: 0px;
+  --sidebar: #faf7f0;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #2d5016;
+  --sidebar-primary-foreground: #fefbf3;
+  --sidebar-accent: #f0ede6;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #d4d4aa;
+  --sidebar-ring: #2d5016;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Dark theme - Terminal style */
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: #161616;
+  --card-foreground: #ffffff;
+  --popover: #161616;
+  --popover-foreground: #ffffff;
+  --primary: #00e997;
+  --primary-foreground: #0a0a0a;
+  --secondary: #2b3330;
+  --secondary-foreground: #ffffff;
+  --muted: #242424;
+  --muted-foreground: #bbbbbb;
+  --accent: #ff9900;
+  --accent-foreground: #0a0a0a;
+  --destructive: #cb3855;
+  --destructive-foreground: #ffffff;
+  --border: #292929;
+  --input: #242424;
+  --ring: #00e997;
+  --chart-1: #00e997;
+  --chart-2: #7644c3;
+  --chart-3: #f9ff3f;
+  --chart-4: #f3ba2f;
+  --chart-5: #cb3855;
+  --sidebar: #161616;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #00e997;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #2b3330;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #292929;
+  --sidebar-ring: #00e997;
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Geist", "Geist Fallback", ui-monospace, monospace;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", "JetBrains Mono", "Fira Code", "Consolas", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -119,7 +122,79 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+  }
+
+  /* Focus states */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Text selection */
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+
+  /* Terminal utilities */
+  .terminal-text {
+    @apply font-mono text-primary;
+  }
+
+  .terminal-command {
+    @apply font-mono text-muted-foreground;
+  }
+
+  .terminal-prompt::before {
+    content: "$ ";
+    @apply text-accent;
+  }
+
+  .terminal-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+
+  /* Terminal table styling */
+  .terminal-table {
+    font-family: monospace;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .terminal-table th,
+  .terminal-table td {
+    @apply border border-border px-4 py-2 text-left;
+  }
+
+  .terminal-table th {
+    @apply bg-muted font-bold;
   }
 }
