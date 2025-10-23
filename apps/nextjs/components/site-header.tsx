@@ -9,7 +9,7 @@ export function SiteHeader() {
         <SidebarTrigger className="-ml-1" />
         <Separator className="mx-2 data-[orientation=vertical]:h-4" orientation="vertical" />
         <h1 className="font-medium text-base">AI CLI Tools Workshop</h1>
-        <div className="ml-auto flex items-center gap-2">
+        {/* <div className="ml-auto flex items-center gap-2">
           <Button asChild className="hidden sm:flex" size="sm" variant="ghost">
             <a
               className="dark:text-foreground"
@@ -20,7 +20,7 @@ export function SiteHeader() {
               Workshop Site
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
     </header>
   );

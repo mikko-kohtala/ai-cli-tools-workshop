@@ -16,7 +16,7 @@ export function TableOfContents({ sections, activeSection, onSectionClick, isOpe
   }
 
   return (
-    <div className="sticky top-0 hidden h-screen w-64 overflow-auto border-l bg-muted/10 lg:block">
+    <div className="sticky top-0 hidden h-screen w-64 overflow-auto lg:block">
       <div className="p-6">
         <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wider">Contents</h3>
         <nav className="space-y-1">
@@ -24,8 +24,8 @@ export function TableOfContents({ sections, activeSection, onSectionClick, isOpe
             <button
               className={`block w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                 activeSection === section.id
-                  ? "bg-primary font-medium text-primary-foreground"
-                  : "text-muted-foreground hover:bg-muted"
+                  ? "bg-muted/50 font-medium text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
               key={section.id}
               onClick={() => onSectionClick(section.id)}
