@@ -84,7 +84,7 @@ export function ApprovalsSection() {
               <CardDescription>{policy.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="mb-3 text-muted-foreground text-sm">{policy.details}</p>
+              <p className="mb-3 text-foreground/70 text-sm">{policy.details}</p>
               <p className="text-sm">
                 <strong>Best for:</strong> {policy.bestFor}
               </p>
@@ -108,7 +108,7 @@ export function ApprovalsSection() {
                 </div>
                 <div>
                   <p className="font-semibold text-blue-600">Codex: I need to run 'npm install axios'. This will:</p>
-                  <ul className="mt-1 ml-4 list-inside list-disc text-muted-foreground">
+                  <ul className="mt-1 ml-4 list-inside list-disc text-foreground/80">
                     <li>Download and install axios from npm registry</li>
                     <li>Update package.json and package-lock.json</li>
                     <li>Use network access to download the package</li>

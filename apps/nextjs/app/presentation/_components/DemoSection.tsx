@@ -37,7 +37,7 @@ export function DemoSection() {
               <Card>
                 <CardContent className="p-4">
                   <p className="mb-3 text-lg">"Refactor logging module for structured output"</p>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-foreground/70 text-sm">
                     <strong>Context:</strong> The current logging uses console.log throughout the app. We want to switch
                     to a structured logger (like Winston or Pino) that supports log levels, timestamps, and structured
                     data.
@@ -176,7 +176,7 @@ export function DemoSection() {
                   <div className="space-y-4 text-sm">
                     <div>
                       <p className="mb-2 font-semibold text-base">Summary of changes:</p>
-                      <ul className="list-inside list-disc space-y-1 text-muted-foreground">
+                      <ul className="list-inside list-disc space-y-1 text-foreground/70">
                         <li>Installed pino logger (1 dependency)</li>
                         <li>Created logger utility with environment-aware config</li>
                         <li>Refactored 73 logging statements across 28 files</li>
@@ -189,7 +189,7 @@ export function DemoSection() {
                         <AlertTriangle className="h-4 w-4 text-amber-600" />
                         Considerations:
                       </p>
-                      <ul className="list-inside list-disc space-y-1 text-muted-foreground text-xs">
+                      <ul className="list-inside list-disc space-y-1 text-foreground/70 text-xs">
                         <li>Log output format changed - update any log parsing scripts</li>
                         <li>Production logs now JSON - ensure log aggregation tools can handle this</li>
                         <li>Some debug logs may be more verbose now</li>
@@ -197,7 +197,7 @@ export function DemoSection() {
                     </div>
                     <div>
                       <p className="mb-2 font-semibold text-base">Suggested next steps:</p>
-                      <ol className="list-inside list-decimal space-y-1 text-muted-foreground">
+                      <ol className="list-inside list-decimal space-y-1 text-foreground/70">
                         <li>
                           Review the changes with <code className="rounded bg-slate-100 px-1">git diff</code>
                         </li>
@@ -220,7 +220,7 @@ export function DemoSection() {
             <Lightbulb className="mt-1 h-5 w-5 flex-shrink-0 text-violet-600" />
             <div>
               <p className="mb-2 font-semibold text-lg">Key Takeaways from This Demo</p>
-              <ul className="list-inside list-disc space-y-2 text-muted-foreground text-sm">
+              <ul className="list-inside list-disc space-y-2 text-foreground/70 text-sm">
                 <li>The agent created a plan before starting work</li>
                 <li>Each step was clearly communicated with progress updates</li>
                 <li>When tests failed, the agent proactively offered to fix them</li>

@@ -94,7 +94,7 @@ export function SessionsSection() {
                 <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0 text-teal-600" />
                 <div className="flex-1">
                   <p className="font-semibold text-lg">{item.title}</p>
-                  <p className="mt-1 text-muted-foreground text-sm">{item.description}</p>
+                  <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
                   <pre className="mt-2 rounded border bg-white p-3 text-xs">{item.example}</pre>
                 </div>
               </li>
@@ -114,7 +114,7 @@ export function SessionsSection() {
               <Card key={`good-${practice.title}`}>
                 <CardContent className="p-4">
                   <p className="mb-2 font-semibold">✅ {practice.title}</p>
-                  <p className="text-muted-foreground text-sm">{practice.description}</p>
+                  <p className="text-foreground/70 text-sm">{practice.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -126,7 +126,7 @@ export function SessionsSection() {
               <Card key={`bad-${practice.title}`}>
                 <CardContent className="p-4">
                   <p className="mb-2 font-semibold">❌ {practice.title}</p>
-                  <p className="text-muted-foreground text-sm">{practice.description}</p>
+                  <p className="text-foreground/70 text-sm">{practice.description}</p>
                 </CardContent>
               </Card>
             ))}

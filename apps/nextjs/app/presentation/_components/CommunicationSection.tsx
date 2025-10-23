@@ -30,7 +30,7 @@ export function CommunicationSection() {
             <CardDescription>Format output for quick scanning and comprehension</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground text-sm">
+            <p className="mb-4 text-foreground/70 text-sm">
               Codex avoids long-winded explanations unless you ask for details. Responses are structured with headers,
               bullet points, and clear sections so you can quickly understand what happened.
             </p>
@@ -42,17 +42,17 @@ export function CommunicationSection() {
               <TabsContent className="mt-4" value="good">
                 <div className="rounded bg-slate-50 p-4 text-sm">
                   <p className="mb-2 font-semibold">✓ Added pagination</p>
-                  <p className="mb-2 text-muted-foreground">Modified 2 files:</p>
-                  <ul className="ml-2 list-inside list-disc text-muted-foreground">
+                  <p className="mb-2 text-foreground/80">Modified 2 files:</p>
+                  <ul className="ml-2 list-inside list-disc text-foreground/80">
                     <li>ProductList.tsx - Added Pagination component</li>
                     <li>useProducts.ts - Added page and limit params</li>
                   </ul>
-                  <p className="mt-3 text-muted-foreground">Next: Run 'npm test' to verify</p>
+                  <p className="mt-3 text-foreground/80">Next: Run 'npm test' to verify</p>
                 </div>
               </TabsContent>
               <TabsContent className="mt-4" value="bad">
                 <div className="rounded bg-red-50 p-4 text-sm">
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground/80">
                     So I looked at your code and I think what you're trying to do is add pagination which is a really
                     common pattern in web development where you split large datasets into smaller pages so users don't
                     have to load everything at once which is better for performance and UX and I decided to implement it
@@ -70,7 +70,7 @@ export function CommunicationSection() {
             <CardDescription>Include precise line numbers for easy navigation</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground text-sm">
+            <p className="mb-4 text-foreground/70 text-sm">
               When Codex references files, it includes the full path and often specific line numbers. Many terminals
               make these clickable, allowing you to jump directly to the relevant code.
             </p>
@@ -92,7 +92,7 @@ export function CommunicationSection() {
             <CardDescription>Summarize key findings instead of dumping logs</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground text-sm">
+            <p className="mb-4 text-foreground/70 text-sm">
               Instead of showing you hundreds of lines of npm output or test logs, Codex summarizes what matters: Did it
               succeed? Were there errors? What changed?
             </p>
@@ -114,7 +114,7 @@ export function CommunicationSection() {
                 <p className="mb-2 font-semibold text-sm">✅ Codex summary</p>
                 <div className="rounded bg-slate-50 p-3 text-sm">
                   <p className="font-semibold text-green-600">✓ Installed 3 packages</p>
-                  <p className="mt-2 text-muted-foreground">Added: axios, lodash, date-fns</p>
+                  <p className="mt-2 text-foreground/80">Added: axios, lodash, date-fns</p>
                   <p className="mt-2 text-amber-600 text-xs">⚠ 2 deprecated dependencies (non-critical)</p>
                 </div>
               </div>
@@ -128,7 +128,7 @@ export function CommunicationSection() {
             <CardDescription>Format code snippets and literals properly</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground text-sm">
+            <p className="mb-4 text-foreground/70 text-sm">
               Codex uses Markdown-style formatting to make code stand out from prose. Code blocks use syntax
               highlighting, and inline code uses backticks for clarity.
             </p>

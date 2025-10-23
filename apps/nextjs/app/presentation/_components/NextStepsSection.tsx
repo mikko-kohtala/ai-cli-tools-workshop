@@ -145,8 +145,8 @@ export function NextStepsSection() {
               <div className="space-y-3 text-sm">
                 {card.steps && (
                   <>
-                    <p className="text-muted-foreground">Start with these steps:</p>
-                    <ol className="list-inside list-decimal space-y-2 text-muted-foreground">
+                    <p className="text-foreground/70">Start with these steps:</p>
+                    <ol className="list-inside list-decimal space-y-2 text-foreground/70">
                       {card.steps.map((step, idx) => (
                         <li key={`step-${idx}`}>{step}</li>
                       ))}
@@ -160,7 +160,7 @@ export function NextStepsSection() {
                 )}
                 {card.scriptExample && (
                   <>
-                    <p className="text-muted-foreground">Create reusable workflows:</p>
+                    <p className="text-foreground/70">Create reusable workflows:</p>
                     <pre className="rounded bg-slate-950 p-3 text-slate-50 text-xs">
                       <code>{card.scriptExample}</code>
                     </pre>
@@ -168,7 +168,7 @@ export function NextStepsSection() {
                 )}
                 {card.usageExample && (
                   <>
-                    <p className="mt-3 text-muted-foreground">Use in sessions:</p>
+                    <p className="mt-3 text-foreground/70">Use in sessions:</p>
                     <pre className="rounded border bg-slate-50 p-3 text-xs">
                       <code>{card.usageExample}</code>
                     </pre>
@@ -176,10 +176,10 @@ export function NextStepsSection() {
                 )}
                 {card.bullets && (
                   <>
-                    <p className="text-muted-foreground">
+                    <p className="text-foreground/70">
                       {card.title === "Share Feedback" ? "Help improve Codex CLI:" : "Team adoption strategies:"}
                     </p>
-                    <ul className="list-inside list-disc space-y-2 text-muted-foreground">
+                    <ul className="list-inside list-disc space-y-2 text-foreground/70">
                       {card.bullets.map((bullet, idx) => (
                         <li key={`bullet-${idx}`}>{bullet}</li>
                       ))}

@@ -117,7 +117,7 @@ export function TipsSection() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold text-lg">{item.title}</p>
-                    <p className="text-muted-foreground text-sm italic">{item.description}</p>
+                    <p className="text-foreground/70 text-sm italic">{item.description}</p>
                     <p className="mt-2 text-sm">{item.detail}</p>
                     {item.example && (
                       <pre className="mt-3 rounded border bg-white p-3 text-xs">
@@ -146,7 +146,7 @@ export function TipsSection() {
                 {workflowOptimizations.map((opt, index) => (
                   <div key={`workflow-${index}`}>
                     <p className="mb-2 font-semibold">{opt.title}</p>
-                    <p className="text-muted-foreground text-sm">{opt.description}</p>
+                    <p className="text-foreground/70 text-sm">{opt.description}</p>
                     {opt.command && (
                       <pre className="mt-2 rounded bg-slate-950 p-3 text-slate-50 text-sm">
                         <code>{opt.command}</code>
@@ -171,7 +171,7 @@ export function TipsSection() {
                 {debuggingTips.map((tip, index) => (
                   <div key={`debug-${index}`}>
                     <p className="mb-2 font-semibold">{tip.title}</p>
-                    {tip.description && <p className="mt-2 text-muted-foreground text-sm">{tip.description}</p>}
+                    {tip.description && <p className="mt-2 text-foreground/70 text-sm">{tip.description}</p>}
                     {tip.command && (
                       <pre className="mt-2 rounded bg-slate-950 p-3 text-slate-50 text-sm">
                         <code>{tip.command}</code>
@@ -197,7 +197,7 @@ export function TipsSection() {
                   {shortcuts.map((shortcut) => (
                     <div key={`shortcut-${shortcut.key}`}>
                       <p className="font-semibold">{shortcut.key}</p>
-                      <p className="text-muted-foreground text-xs">{shortcut.description}</p>
+                      <p className="text-foreground/70 text-xs">{shortcut.description}</p>
                     </div>
                   ))}
                 </div>

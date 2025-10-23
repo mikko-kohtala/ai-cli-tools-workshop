@@ -61,7 +61,7 @@ export function GlanceSection() {
               </div>
               <CardTitle className="text-xl">{item.title}</CardTitle>
               <CardDescription className="text-base">{item.description}</CardDescription>
-              <p className="pt-2 text-muted-foreground text-sm">{item.details}</p>
+              <p className="pt-2 text-foreground/70 text-sm">{item.details}</p>
             </CardHeader>
           </Card>
         ))}
@@ -83,11 +83,11 @@ export function GlanceSection() {
             </TabsList>
             <TabsContent className="mt-4" value="install">
               <div className="space-y-3">
-                <p className="text-muted-foreground text-sm">Install Codex CLI globally with npm:</p>
+                <p className="text-foreground/70 text-sm">Install Codex CLI globally with npm:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>npm install -g @openai/codex-cli</code>
                 </pre>
-                <p className="mt-3 text-muted-foreground text-sm">Or with Homebrew on macOS:</p>
+                <p className="mt-3 text-foreground/70 text-sm">Or with Homebrew on macOS:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>brew install openai/tap/codex</code>
                 </pre>
@@ -95,18 +95,18 @@ export function GlanceSection() {
             </TabsContent>
             <TabsContent className="mt-4" value="first">
               <div className="space-y-3">
-                <p className="text-muted-foreground text-sm">Start a session in your project directory:</p>
+                <p className="text-foreground/70 text-sm">Start a session in your project directory:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>cd my-project{"\n"}codex</code>
                 </pre>
-                <p className="mt-3 text-muted-foreground text-sm">
+                <p className="mt-3 text-foreground/70 text-sm">
                   The CLI will initialize and present an interactive prompt where you can type requests.
                 </p>
               </div>
             </TabsContent>
             <TabsContent className="mt-4" value="example">
               <div className="space-y-3">
-                <p className="text-muted-foreground text-sm">Example conversation:</p>
+                <p className="text-foreground/70 text-sm">Example conversation:</p>
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50 text-sm">
                   <code className="text-green-400">You:</code> <code>Add input validation to the login form{"\n"}</code>
                   <code className="text-blue-400">Codex:</code>{" "}

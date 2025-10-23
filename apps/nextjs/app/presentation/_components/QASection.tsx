@@ -24,7 +24,7 @@ export function QASection() {
           <div className="space-y-6">
             <div>
               <p className="mb-4 font-semibold text-2xl">Discussion Topics</p>
-              <div className="space-y-4 text-lg text-muted-foreground">
+              <div className="space-y-4 text-foreground/80 text-lg">
                 {discussionTopics.map((topic, index) => (
                   <div className="flex items-start gap-3" key={`topic-${index}`}>
                     <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-slate-200">
@@ -40,7 +40,7 @@ export function QASection() {
 
             <div className="pt-4 text-center">
               <p className="font-semibold text-3xl">Thank you!</p>
-              <p className="mt-3 text-lg text-muted-foreground">Ready to dive into the workshop tasks?</p>
+              <p className="mt-3 text-foreground/80 text-lg">Ready to dive into the workshop tasks?</p>
               <div className="mt-6">
                 <a
                   className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"

@@ -1,4 +1,4 @@
-# Codex CLI Tool
+# AI CLI Tools Workshop
 
 Empowering collaborative coding assistance from your terminal
 

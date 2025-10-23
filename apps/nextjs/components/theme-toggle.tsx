@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import { useTheme } from "next-themes";
+import * as React from "react";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -14,8 +14,9 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="fixed top-2 right-2 border border-border px-2 py-1 text-xs font-mono transition-colors"
+        className="fixed top-2 right-2 border border-border px-2 py-1 font-mono text-xs transition-colors"
         disabled
+        type="button"
       >
         [...]
       </button>
@@ -28,8 +29,8 @@ export function ThemeToggle() {
 
   return (
     <button
+      className="fixed top-2 right-2 border border-border px-2 py-1 font-mono text-xs transition-colors hover:border-primary hover:text-primary"
       onClick={toggleTheme}
-      className="fixed top-2 right-2 border border-border px-2 py-1 text-xs font-mono transition-colors hover:border-primary hover:text-primary"
       type="button"
     >
       [{theme === "dark" ? "dark" : "light"}]

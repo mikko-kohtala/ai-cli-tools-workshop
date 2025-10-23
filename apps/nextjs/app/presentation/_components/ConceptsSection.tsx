@@ -33,7 +33,7 @@ export function ConceptsSection() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground">
+            <p className="mb-4 text-foreground/70">
               When you start Codex CLI, it automatically captures your current working directory, reads your project
               configuration, and establishes a context that includes environment variables, git status, and available
               tools. This context helps the agent understand your project structure and make informed decisions.
@@ -56,7 +56,7 @@ export function ConceptsSection() {
                       Ready!
                     </code>
                   </pre>
-                  <p className="mt-3 text-muted-foreground text-sm">
+                  <p className="mt-3 text-foreground/70 text-sm">
                     The agent knows it's working in{" "}
                     <code className="rounded bg-white px-1 py-0.5">/Users/dev/my-app</code> on the main branch.
                   </p>
@@ -104,7 +104,7 @@ export function ConceptsSection() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground">
+            <p className="mb-4 text-foreground/70">
               For non-trivial tasks (anything requiring more than 2 steps), Codex CLI creates a plan before executing.
               This gives you visibility into what will happen and an opportunity to adjust the approach before any code
               changes are made.
@@ -120,7 +120,7 @@ export function ConceptsSection() {
                     <span className="font-semibold text-blue-600">Codex:</span> I'll help you add authentication. Here's
                     my plan:
                   </p>
-                  <ol className="ml-4 list-inside list-decimal space-y-1 text-muted-foreground">
+                  <ol className="ml-4 list-inside list-decimal space-y-1 text-foreground/70">
                     <li>Install required packages (bcrypt, jsonwebtoken)</li>
                     <li>Create auth middleware</li>
                     <li>Add login/signup endpoints</li>
@@ -144,7 +144,7 @@ export function ConceptsSection() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground">
+            <p className="mb-4 text-foreground/70">
               Codex CLI has access to specific tools that allow it to interact with your system. Each tool has a
               "contract"—a set of rules about when and how it can be used. This ensures predictable and safe behavior.
             </p>
@@ -155,7 +155,7 @@ export function ConceptsSection() {
                   <CardDescription className="text-sm">Execute commands</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-muted-foreground">Run npm scripts, git commands, tests, and builds</p>
+                  <p className="text-foreground/70">Run npm scripts, git commands, tests, and builds</p>
                 </CardContent>
               </Card>
               <Card>
@@ -164,7 +164,7 @@ export function ConceptsSection() {
                   <CardDescription className="text-sm">Create task plans</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-muted-foreground">Break down complex tasks into steps</p>
+                  <p className="text-foreground/70">Break down complex tasks into steps</p>
                 </CardContent>
               </Card>
               <Card>
@@ -173,7 +173,7 @@ export function ConceptsSection() {
                   <CardDescription className="text-sm">Analyze screenshots</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-muted-foreground">Understand UI issues from images</p>
+                  <p className="text-foreground/70">Understand UI issues from images</p>
                 </CardContent>
               </Card>
             </div>
@@ -188,7 +188,7 @@ export function ConceptsSection() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-muted-foreground">
+            <p className="mb-4 text-foreground/70">
               Codex CLI is designed for clarity. Instead of showing you raw command output, it summarizes results,
               highlights important information, and presents file changes as clean diffs. This makes it easy to
               understand what happened without wading through logs.
@@ -211,7 +211,7 @@ found 0 vulnerabilities`}</code>
               <TabsContent className="mt-4" value="good">
                 <div className="rounded-lg bg-slate-50 p-4 text-sm">
                   <p className="font-semibold text-green-600">✓ Installed dependencies</p>
-                  <p className="mt-2 text-muted-foreground">Added 234 packages. No vulnerabilities found.</p>
+                  <p className="mt-2 text-foreground/70">Added 234 packages. No vulnerabilities found.</p>
                 </div>
               </TabsContent>
             </Tabs>

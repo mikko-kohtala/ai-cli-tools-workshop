@@ -116,7 +116,7 @@ export function SandboxingSection() {
                 <Shield className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600" />
                 <div>
                   <p className="font-semibold text-lg">{item.title}</p>
-                  <p className="mt-1 text-muted-foreground text-sm">{item.description}</p>
+                  <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
                 </div>
               </li>
             ))}
@@ -137,7 +137,7 @@ export function SandboxingSection() {
                 {sandboxModes.map((mode) => (
                   <div className={`border-l-4 border-l-${mode.color}-500 pl-4`} key={`mode-${mode.mode}`}>
                     <h4 className="font-semibold text-lg">{mode.mode}</h4>
-                    <p className="text-muted-foreground text-sm">{mode.description}</p>
+                    <p className="text-foreground/70 text-sm">{mode.description}</p>
                     <p className="mt-2 text-sm">
                       <strong>Use when:</strong> {mode.useCase}
                     </p>
@@ -174,7 +174,7 @@ export function SandboxingSection() {
                   <p className="mb-2">
                     <strong>Mode:</strong> {scenario.mode}
                   </p>
-                  <p className="text-muted-foreground">"{scenario.request}"</p>
+                  <p className="text-foreground/70">"{scenario.request}"</p>
                   <p className={`mt-2 text-${scenario.statusColor}-600`}>✓ {scenario.status}</p>
                 </CardContent>
               </Card>
@@ -189,7 +189,7 @@ export function SandboxingSection() {
             <AlertTriangle className="mt-1 h-5 w-5 flex-shrink-0 text-amber-600" />
             <div>
               <p className="mb-2 font-semibold text-lg">Best Practice: Start Restrictive</p>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-foreground/70 text-sm">
                 When working with a new project or experimenting with Codex CLI, start with 'read-only' or
                 'workspace-write' mode. You can always escalate permissions if needed, but it's much harder to undo
                 accidental changes.

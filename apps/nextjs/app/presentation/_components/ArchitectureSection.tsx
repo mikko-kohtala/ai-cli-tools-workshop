@@ -94,7 +94,7 @@ export function ArchitectureSection() {
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-2 font-semibold text-2xl">{step.title}</h3>
-                    <p className="mb-3 text-lg text-muted-foreground">{step.subtitle}</p>
+                    <p className="mb-3 text-foreground/70 text-lg">{step.subtitle}</p>
                     <p className="text-sm">{step.description}</p>
                   </div>
                 </div>

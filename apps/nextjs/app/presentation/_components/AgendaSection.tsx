@@ -37,7 +37,7 @@ export function AgendaSection() {
       <Card>
         <CardContent className="p-8">
           <div className="space-y-6">
-            <p className="mb-6 text-lg text-muted-foreground">
+            <p className="mb-6 text-lg">
               This 90-minute workshop is structured to give you both theoretical understanding and practical hands-on
               experience with Codex CLI. Here's what we'll cover:
             </p>
@@ -49,7 +49,7 @@ export function AgendaSection() {
                   </div>
                   <div>
                     <span className="font-semibold text-lg">{item.title}</span>
-                    <p className="mt-1 text-muted-foreground">{item.description}</p>
+                    <p className="mt-1">{item.description}</p>
                   </div>
                 </li>
               ))}
