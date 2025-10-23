@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Settings } from "lucide-react";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -142,7 +142,7 @@ export function ConceptsSection() {
                       </p>
                     </div>
                     <div className="rounded border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950/30">
-                      <p className="mb-2 font-semibold text-sm text-green-700 dark:text-green-400">Best Practices:</p>
+                      <p className="mb-2 font-semibold text-green-700 text-sm dark:text-green-400">Best Practices:</p>
                       <ul className="list-inside list-disc space-y-1 text-green-900/70 text-xs dark:text-green-100/70">
                         <li>Regularly clear your chat when switching tasks</li>
                         <li>Be cautious with MCP servers—they can bloat context rapidly</li>

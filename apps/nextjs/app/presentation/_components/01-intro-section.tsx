@@ -11,13 +11,13 @@ export function IntroSection() {
         </div>
         <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-300">AI CLI Tools</h1>
 
-        <div className="mx-auto max-w-4xl pt-6">
+        <div className="mx-auto flex max-w-2xl justify-center pt-6">
           <Image
             alt="Claude Code CLI"
             className="rounded-lg shadow-lg"
-            height={600}
+            height={400}
             src="/images/claude-code-01.png"
-            width={800}
+            width={533}
           />
         </div>
 
@@ -27,7 +27,7 @@ export function IntroSection() {
               "You want people using AI well. You don't want high velocity. You want sustainable value creation with
               maintained comprehension. You don't want AI-dependent employees. You want AI-augmented experts."
             </p>
-            <p className="font-normal text-base text-gray-600 dark:text-gray-400">- Chetan Conikee</p>
+            <p className="text-left font-normal text-base text-gray-600 dark:text-gray-400">- Chetan Conikee</p>
           </blockquote>
         </div>
       </div>
