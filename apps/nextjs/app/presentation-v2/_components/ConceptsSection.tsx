@@ -16,9 +16,9 @@ export function ConceptsSection() {
         <Card>
           <CardContent className="p-6">
             <p className="text-lg leading-relaxed">
-              To use AI CLI tools effectively, it's essential to understand four foundational concepts that govern how
-              these agents operate. These concepts are common across most tools and ensure that your development
-              sessions are secure, predictable, and aligned with your project's requirements.
+              To use Codex CLI effectively, it's essential to understand four foundational concepts that govern how the
+              agent operates. These concepts ensure that your development sessions are secure, predictable, and aligned
+              with your project's requirements.
             </p>
           </CardContent>
         </Card>
@@ -27,17 +27,16 @@ export function ConceptsSection() {
       <div className="space-y-6">
         <Card className="border-l-4 border-l-green-500">
           <CardHeader>
-            <CardTitle className="text-2xl">Project Context</CardTitle>
+            <CardTitle className="text-2xl">Environment Context</CardTitle>
             <CardDescription className="text-base">
-              Every session starts by understanding your project environment
+              Every session starts with cwd, sandbox, network, and approval settings
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              When you start an AI CLI tool, it automatically captures your current working directory, reads your
-              project configuration, and establishes a context that includes environment variables, git status, file
-              structure, and available tools. This context helps the agent understand your project and make informed
-              decisions.
+              When you start Codex CLI, it automatically captures your current working directory, reads your project
+              configuration, and establishes a context that includes environment variables, git status, and available
+              tools. This context helps the agent understand your project structure and make informed decisions.
             </p>
             <Tabs defaultValue="cwd">
               <TabsList>
@@ -53,8 +52,8 @@ export function ConceptsSection() {
                   <pre className="rounded border bg-white p-3 text-sm dark:bg-slate-950">
                     <code>
                       $ pwd{"\n"}/Users/dev/my-app{"\n"}
-                      {"\n"}$ claude code{"\n"}Claude Code v2.0{"\n"}Working directory: /Users/dev/my-app{"\n"}Git
-                      branch: main{"\n"}Ready to assist!
+                      {"\n"}$ codex{"\n"}Codex CLI v1.0.0{"\n"}Context: /Users/dev/my-app (git: main){"\n"}
+                      Ready!
                     </code>
                   </pre>
                   <p className="mt-3 text-foreground/70 text-sm">
@@ -102,14 +101,14 @@ export function ConceptsSection() {
           <CardHeader>
             <CardTitle className="text-2xl">Plan & Execute</CardTitle>
             <CardDescription className="text-base">
-              Agents build lightweight plans before tackling complex tasks
+              Agents build lightweight plans before touching code-heavy tasks
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              For non-trivial tasks, most AI CLI tools create a plan before executing. This gives you visibility into
-              what will happen and an opportunity to adjust the approach before any code changes are made. This
-              plan-first workflow helps catch issues early and ensures alignment with your intentions.
+              For non-trivial tasks (anything requiring more than 2 steps), Codex CLI creates a plan before executing.
+              This gives you visibility into what will happen and an opportunity to adjust the approach before any code
+              changes are made.
             </p>
             <Card className="border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-950/30">
               <CardContent className="p-4">
@@ -119,8 +118,8 @@ export function ConceptsSection() {
                     <span className="font-semibold text-green-600">You:</span> Add authentication to the app
                   </p>
                   <p>
-                    <span className="font-semibold text-blue-600">AI:</span> I'll help you add authentication. Here's my
-                    plan:
+                    <span className="font-semibold text-blue-600">Codex:</span> I'll help you add authentication. Here's
+                    my plan:
                   </p>
                   <ol className="ml-4 list-inside list-decimal space-y-1 text-foreground/70">
                     <li>Install required packages (bcrypt, jsonwebtoken)</li>
@@ -130,7 +129,7 @@ export function ConceptsSection() {
                     <li>Add environment variables for JWT secret</li>
                   </ol>
                   <p className="mt-3">
-                    <span className="font-semibold text-blue-600">AI:</span> Does this approach work for you?
+                    <span className="font-semibold text-blue-600">Codex:</span> Does this approach work for you?
                   </p>
                 </div>
               </CardContent>
@@ -140,45 +139,42 @@ export function ConceptsSection() {
 
         <Card className="border-l-4 border-l-purple-500">
           <CardHeader>
-            <CardTitle className="text-2xl">Tool Access & Capabilities</CardTitle>
+            <CardTitle className="text-2xl">Tooling Contracts</CardTitle>
             <CardDescription className="text-base">
-              What AI agents can do and how they interact with your system
+              Shell, plan, and view_image tools with strict usage guidelines
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              AI CLI tools have access to specific capabilities that allow them to interact with your system. These
-              typically include file operations, shell command execution, and specialized functions. Understanding what
-              tools can and cannot do helps you work more effectively and securely.
+              Codex CLI has access to specific tools that allow it to interact with your system. Each tool has a
+              "contract"—a set of rules about when and how it can be used. This ensures predictable and safe behavior.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">File Operations</CardTitle>
-                  <CardDescription className="text-sm">Read, write, and edit files</CardDescription>
+                  <CardTitle className="text-base">shell</CardTitle>
+                  <CardDescription className="text-sm">Execute commands</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-foreground/70">
-                    Create new files, modify existing code, and organize project structure
-                  </p>
+                  <p className="text-foreground/70">Run npm scripts, git commands, tests, and builds</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">Shell Commands</CardTitle>
-                  <CardDescription className="text-sm">Execute terminal commands</CardDescription>
+                  <CardTitle className="text-base">plan</CardTitle>
+                  <CardDescription className="text-sm">Create task plans</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-foreground/70">Run npm scripts, git commands, tests, builds, and more</p>
+                  <p className="text-foreground/70">Break down complex tasks into steps</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-base">Context Analysis</CardTitle>
-                  <CardDescription className="text-sm">Understand your project</CardDescription>
+                  <CardTitle className="text-base">view_image</CardTitle>
+                  <CardDescription className="text-sm">Analyze screenshots</CardDescription>
                 </CardHeader>
                 <CardContent className="text-sm">
-                  <p className="text-foreground/70">Search code, analyze dependencies, and view images/screenshots</p>
+                  <p className="text-foreground/70">Understand UI issues from images</p>
                 </CardContent>
               </Card>
             </div>
@@ -187,19 +183,21 @@ export function ConceptsSection() {
 
         <Card className="border-l-4 border-l-orange-500">
           <CardHeader>
-            <CardTitle className="text-2xl">Clear Communication</CardTitle>
-            <CardDescription className="text-base">Readable outputs that summarize actions and results</CardDescription>
+            <CardTitle className="text-2xl">Outputs</CardTitle>
+            <CardDescription className="text-base">
+              Plain-text responses styled by the CLI; no raw command dumps
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              Modern AI CLI tools are designed for clarity. Instead of showing raw command output, they summarize
-              results, highlight important information, and present file changes as clean diffs. This makes it easy to
-              understand what happened without wading through verbose logs and technical details.
+              Codex CLI is designed for clarity. Instead of showing you raw command output, it summarizes results,
+              highlights important information, and presents file changes as clean diffs. This makes it easy to
+              understand what happened without wading through logs.
             </p>
             <Tabs defaultValue="bad">
               <TabsList className="grid w-full grid-cols-2">
                 <TabsTrigger value="bad">❌ Raw Output</TabsTrigger>
-                <TabsTrigger value="good">✅ AI CLI Output</TabsTrigger>
+                <TabsTrigger value="good">✅ Codex Output</TabsTrigger>
               </TabsList>
               <TabsContent className="mt-4" value="bad">
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50 text-xs">

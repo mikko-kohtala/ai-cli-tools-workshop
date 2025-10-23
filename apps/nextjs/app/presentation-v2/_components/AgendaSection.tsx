@@ -3,25 +3,25 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const agendaItems = [
   {
-    title: "Why AI CLI tools matter",
+    title: "Why Codex CLI matters",
     description:
-      "Understanding the paradigm shift in development workflows and the unique value proposition of terminal-based AI assistants",
+      "Understanding the paradigm shift in development workflows and the benefits of terminal-based AI assistants",
   },
   {
-    title: "The AI CLI tools landscape",
-    description: "Overview of available tools, their capabilities, and when to use them for different scenarios",
+    title: "How the CLI harness works",
+    description: "Deep dive into the architecture, from frontend to agent runtime",
   },
   {
-    title: "Core concepts and architecture patterns",
-    description: "How these tools work under the hood, from project context to security layers and agent runtimes",
+    title: "Working with sandboxing and approvals",
+    description: "Security best practices and policy configurations for safe AI-assisted development",
   },
   {
-    title: "Security and control mechanisms",
-    description: "Understanding filesystem access, approval flows, and best practices for safe AI-assisted development",
+    title: "Building effective workflows",
+    description: "Practical strategies for communicating with the agent and structuring development sessions",
   },
   {
-    title: "Effective usage and choosing your tool",
-    description: "Practical strategies for working with AI CLI tools and selecting the right one for your needs",
+    title: "Pro tips and next steps",
+    description: "Advanced techniques and how to integrate Codex CLI into your team's workflow",
   },
 ];
 
@@ -39,7 +39,7 @@ export function AgendaSection() {
           <div className="space-y-6">
             <p className="mb-6 text-lg">
               This 90-minute workshop is structured to give you both theoretical understanding and practical hands-on
-              experience with AI CLI tools. Here's what we'll cover:
+              experience with Codex CLI. Here's what we'll cover:
             </p>
             <ul className="space-y-4">
               {agendaItems.map((item, index) => (
