@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Settings } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,71 +28,129 @@ export function ConceptsSection() {
       <div className="space-y-6">
         <Card className="border-l-4 border-l-green-500">
           <CardHeader>
-            <CardTitle className="text-2xl">Project Context</CardTitle>
+            <CardTitle className="text-2xl">Context Window & Project Context</CardTitle>
             <CardDescription className="text-base">
-              Every session starts by understanding your project environment
+              Understanding the main constraint that impacts AI agent performance
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              When you start an AI CLI tool, it automatically captures your current working directory, reads your
-              project configuration, and establishes a context that includes environment variables, git status, file
-              structure, and available tools. This context helps the agent understand your project and make informed
-              decisions.
+              The <strong>context window</strong> is the entire set of input and output tokens that the LLM can see at
+              any moment. It includes the system prompt, your messages, the agent's responses, and any files or tools
+              loaded. Every model has a hard limit (e.g., 200k tokens for Claude Sonnet, up to 2M for some models).
+              Critically, <strong>the larger the context, the worse performance becomes</strong> due to the "lost in the
+              middle" problem—information in the middle of long conversations gets deprioritized.
             </p>
-            <Tabs defaultValue="cwd">
-              <TabsList>
-                <TabsTrigger value="cwd">Working Directory</TabsTrigger>
-                <TabsTrigger value="sandbox">Sandbox Mode</TabsTrigger>
-                <TabsTrigger value="network">Network</TabsTrigger>
+            <Tabs defaultValue="whats-in">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="whats-in">What's in Context</TabsTrigger>
+                <TabsTrigger value="limits">Limits & Performance</TabsTrigger>
+                <TabsTrigger value="managing">Managing Context</TabsTrigger>
               </TabsList>
-              <TabsContent className="mt-4" value="cwd">
+              <TabsContent className="mt-4" value="whats-in">
                 <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
-                  <p className="mb-2 text-sm">
-                    <strong>Example:</strong>
-                  </p>
-                  <pre className="rounded border bg-white p-3 text-sm dark:bg-slate-950">
-                    <code>
-                      $ pwd{"\n"}/Users/dev/my-app{"\n"}
-                      {"\n"}$ claude code{"\n"}Claude Code v2.0{"\n"}Working directory: /Users/dev/my-app{"\n"}Git
-                      branch: main{"\n"}Ready to assist!
-                    </code>
-                  </pre>
-                  <p className="mt-3 text-foreground/70 text-sm">
-                    The agent knows it's working in{" "}
-                    <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">/Users/dev/my-app</code> on the
-                    main branch.
+                  <p className="mb-3 font-semibold text-sm">Token breakdown in a typical session:</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between rounded bg-white p-2 dark:bg-slate-950">
+                      <span>System prompt & instructions</span>
+                      <code className="text-green-600 dark:text-green-400">~15k tokens (8%)</code>
+                    </div>
+                    <div className="flex justify-between rounded bg-white p-2 dark:bg-slate-950">
+                      <span>Conversation messages</span>
+                      <code className="text-blue-600 dark:text-blue-400">~77k tokens (40%)</code>
+                    </div>
+                    <div className="flex justify-between rounded bg-white p-2 dark:bg-slate-950">
+                      <span>Files & code snippets</span>
+                      <code className="text-purple-600 dark:text-purple-400">~25k tokens (13%)</code>
+                    </div>
+                    <div className="flex justify-between rounded bg-white p-2 dark:bg-slate-950">
+                      <span>MCP tools & integrations</span>
+                      <code className="text-amber-600 dark:text-amber-400">~8k tokens (4%)</code>
+                    </div>
+                    <div className="mt-2 flex justify-between border-t pt-2 font-semibold">
+                      <span>Total used</span>
+                      <code>125k / 200k tokens (62%)</code>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-foreground/60 text-xs">
+                    Everything counts toward the limit: working directory, git status, environment info, file contents,
+                    chat history, and tool definitions.
                   </p>
                 </div>
               </TabsContent>
-              <TabsContent className="mt-4" value="sandbox">
+              <TabsContent className="mt-4" value="limits">
                 <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
-                  <p className="mb-2 text-sm">Sandbox modes control file system access:</p>
-                  <ul className="list-inside list-disc space-y-1 text-sm">
-                    <li>
-                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">read-only</code>: Can read files
-                      but not modify them
-                    </li>
-                    <li>
-                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">workspace-write</code>: Can
-                      modify files within the project (default)
-                    </li>
-                    <li>
-                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">danger</code>: Unrestricted
-                      access (use with caution)
-                    </li>
-                  </ul>
+                  <div className="mb-4 space-y-2 text-sm">
+                    <p className="font-semibold">The "Lost in the Middle" Problem:</p>
+                    <p className="text-foreground/70">
+                      LLMs suffer from retrieval issues in long contexts. Information at the{" "}
+                      <strong>start and end</strong> of conversations has the most impact, while details in the middle
+                      get deprioritized. This mimics human primacy and recency bias.
+                    </p>
+                  </div>
+                  <div className="mb-4 rounded border border-amber-200 bg-amber-50 p-3 dark:border-amber-800 dark:bg-amber-950/30">
+                    <p className="mb-2 flex items-center gap-2 font-semibold text-sm">
+                      <span className="text-amber-600 dark:text-amber-400">⚠</span>
+                      Performance Impact
+                    </p>
+                    <p className="text-foreground/70 text-xs">
+                      Bigger context windows don't mean better results. A model with 2M tokens might perform worse than
+                      one with 200k if the context is bloated. Models do better with less, more focused information.
+                    </p>
+                  </div>
+                  <div className="text-sm">
+                    <p className="mb-2 font-semibold">Model limits (examples):</p>
+                    <ul className="list-inside list-disc space-y-1 text-foreground/70 text-xs">
+                      <li>Claude Sonnet 3.5: 200k tokens</li>
+                      <li>GPT-4 Turbo: 128k tokens</li>
+                      <li>Gemini 1.5 Pro: 2M tokens</li>
+                      <li>Smaller/older models: 4k-32k tokens</li>
+                    </ul>
+                  </div>
                 </div>
               </TabsContent>
-              <TabsContent className="mt-4" value="network">
+              <TabsContent className="mt-4" value="managing">
                 <div className="rounded-lg bg-slate-50 p-4 dark:bg-slate-900/30">
-                  <p className="mb-2 text-sm">Network policies determine what the agent can access:</p>
-                  <ul className="list-inside list-disc space-y-1 text-sm">
-                    <li>Install npm packages</li>
-                    <li>Fetch documentation</li>
-                    <li>Make API calls for testing</li>
-                    <li>Clone repositories (if allowed)</li>
-                  </ul>
+                  <div className="mb-4">
+                    <p className="mb-3 font-semibold text-sm">Check context usage with /context command:</p>
+                    <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
+                      <Image
+                        alt="Claude Code context usage visualization showing 142k/200k tokens (71%) with breakdown: System prompt 2.4k, System tools 13k, MCP tools 13.7k, Memory files 661, Messages 67.8k, Free space 58k, Autocompact buffer 45k"
+                        className="w-full"
+                        height={456}
+                        src="/images/claude-code-context.png"
+                        width={1138}
+                      />
+                    </div>
+                    <p className="mt-2 text-foreground/60 text-xs">
+                      This visualization shows a real session at 71% capacity with detailed token breakdown by category.
+                    </p>
+                  </div>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="mb-1 font-semibold">Clear conversation (recommended):</p>
+                      <p className="text-foreground/70 text-xs">
+                        Use <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">/clear</code> to wipe
+                        history and start fresh. Do this when switching tasks or when you have &lt;50k tokens remaining.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="mb-1 font-semibold">Compact conversation:</p>
+                      <p className="text-foreground/70 text-xs">
+                        Use <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">/compact</code> to
+                        summarize the conversation into a smaller message. Preserves "vibes" but takes time and tokens.
+                      </p>
+                    </div>
+                    <div className="rounded border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950/30">
+                      <p className="mb-2 font-semibold text-sm text-green-700 dark:text-green-400">Best Practices:</p>
+                      <ul className="list-inside list-disc space-y-1 text-green-900/70 text-xs dark:text-green-100/70">
+                        <li>Regularly clear your chat when switching tasks</li>
+                        <li>Be cautious with MCP servers—they can bloat context rapidly</li>
+                        <li>Avoid very large system prompts or rules files</li>
+                        <li>Keep conversations focused and lean for best performance</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>

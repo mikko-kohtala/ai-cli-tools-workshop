@@ -1,6 +1,7 @@
 # AI CLI Tools Workshop
 
-Workshop exploring AI Command Line tools, with primary focus on OpenAI's Codex CLI.
+Workshop exploring AI Command Line tools.
+
 Built with Next.js 15 for presentation and interactive workshop tasks.
 
 **Event Date:** October 28, 2025, 14:00–15:30
@@ -44,11 +45,6 @@ className="bg-white dark:bg-slate-900"
 ```
 
 **Note:** The presentation section (`/presentation`) and root page (`/`) have been fully updated with dark mode support. When adding new features, maintain this pattern for consistency.
-
-## Project Focus
-
-Main focus is on **Codex CLI** (OpenAI's coding agent that runs locally from terminal).
-Participants can also try other AI CLI tools if they have access: Claude Code, Gemini CLI, Amp Code, or Opencode.
 
 ## Development
 

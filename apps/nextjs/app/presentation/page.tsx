@@ -2,18 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { AgendaSection } from "./_components/AgendaSection";
-import { ArchitecturePatternsSection } from "./_components/ArchitecturePatternsSection";
-import { ChoosingToolSection } from "./_components/ChoosingToolSection";
-import { ConceptsSection } from "./_components/ConceptsSection";
-import { DemoSection } from "./_components/DemoSection";
-import { EffectiveUsageSection } from "./_components/EffectiveUsageSection";
-import { IntroSection } from "./_components/IntroSection";
-import { LandscapeSection } from "./_components/LandscapeSection";
-import { QASection } from "./_components/QASection";
-import { ReasoningSection } from "./_components/ReasoningSection";
-import { SecuritySection } from "./_components/SecuritySection";
-import { TableOfContents } from "./_components/TableOfContents";
+import { IntroSection } from "./_components/01-intro-section";
+import { AgendaSection } from "./_components/02-agenda-section";
+import { LandscapeSection } from "./_components/03-landscape-section";
+import { ConceptsSection } from "./_components/04-concepts-section";
+import { ArchitecturePatternsSection } from "./_components/05-architecture-patterns-section";
+import { ReasoningSection } from "./_components/06-reasoning-section";
+import { SecuritySection } from "./_components/07-security-section";
+import { EffectiveUsageSection } from "./_components/08-effective-usage-section";
+import { DemoSection } from "./_components/09-demo-section";
+import { ChoosingToolSection } from "./_components/10-choosing-tool-section";
+import { QASection } from "./_components/11-qa-section";
+import { TableOfContents } from "./_components/12-table-of-contents";
 
 const sections = [
   { id: "intro", title: "Introduction" },

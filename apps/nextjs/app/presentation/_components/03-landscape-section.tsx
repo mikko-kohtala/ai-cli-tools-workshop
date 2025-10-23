@@ -33,7 +33,7 @@ const tools = [
   {
     name: "Claude Code",
     provider: "Anthropic",
-    model: "Claude 3.5 Sonnet",
+    model: "Claude 4.5 Sonnet",
     highlights: ["Excellent reasoning", "Strong with complex refactoring", "Built-in safety features"],
   },
   {
@@ -45,7 +45,7 @@ const tools = [
   {
     name: "Gemini CLI",
     provider: "Google",
-    model: "Gemini 2.0",
+    model: "Gemini 2.5 Pro",
     highlights: ["Multimodal capabilities", "Strong code search", "Google Cloud integration"],
   },
   {
@@ -195,7 +195,7 @@ export function LandscapeSection() {
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>
                     cd my-project{"\n"}
-                    claude code <span className="text-slate-400"># or: codex, gemini, amp</span>
+                    claude <span className="text-slate-400"># or: codex, gemini, amp</span>
                   </code>
                 </pre>
                 <p className="mt-3 text-foreground/70 text-sm">

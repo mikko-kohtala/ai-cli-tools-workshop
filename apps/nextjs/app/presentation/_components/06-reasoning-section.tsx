@@ -204,7 +204,9 @@ export function ReasoningSection() {
       <Card className="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30">
         <CardHeader>
           <CardTitle className="text-2xl">Claude Code: Thinking Mode</CardTitle>
-          <CardDescription className="text-base">Request deeper reasoning with natural language keywords</CardDescription>
+          <CardDescription className="text-base">
+            Request deeper reasoning with natural language keywords
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="mb-4 space-y-4">
@@ -305,8 +307,8 @@ export function ReasoningSection() {
             <li className="flex items-start gap-2">
               <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
               <span className="text-foreground/70">
-                <strong>Match complexity:</strong> Use deeper reasoning for architecture decisions, security reviews, and
-                complex refactoring
+                <strong>Match complexity:</strong> Use deeper reasoning for architecture decisions, security reviews,
+                and complex refactoring
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -319,7 +321,8 @@ export function ReasoningSection() {
             <li className="flex items-start gap-2">
               <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
               <span className="text-foreground/70">
-                <strong>Experiment:</strong> Try different levels to find what works best for your workflow and task types
+                <strong>Experiment:</strong> Try different levels to find what works best for your workflow and task
+                types
               </span>
             </li>
           </ul>
