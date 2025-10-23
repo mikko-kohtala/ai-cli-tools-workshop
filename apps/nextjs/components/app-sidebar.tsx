@@ -31,6 +31,11 @@ const data = {
       icon: IconPresentation,
     },
     {
+      title: "Presentation v2",
+      url: "/presentation-v2",
+      icon: IconPresentation,
+    },
+    {
       title: "Tasks",
       url: "/tasks",
       icon: IconCheckbox,
