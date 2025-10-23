@@ -1,6 +1,5 @@
 "use client";
 
-import type { LucideIcon } from "lucide-react";
 import type * as React from "react";
 
 import {
@@ -18,7 +17,7 @@ export function NavSecondary({
   items: {
     title: string;
     url: string;
-    icon: LucideIcon;
+    icon: React.ComponentType<{ className?: string }>;
   }[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
   return (

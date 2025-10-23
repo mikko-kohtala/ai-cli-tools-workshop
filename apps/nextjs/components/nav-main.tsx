@@ -1,6 +1,7 @@
 "use client";
 
-import { type LucideIcon, MailIcon, PlusCircleIcon } from "lucide-react";
+import { MailIcon, PlusCircleIcon } from "lucide-react";
+import type React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +18,7 @@ export function NavMain({
   items: {
     title: string;
     url: string;
-    icon?: LucideIcon;
+    icon?: React.ComponentType<{ className?: string }>;
   }[];
 }) {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
-import { FolderIcon, type LucideIcon, MoreHorizontalIcon, ShareIcon } from "lucide-react";
+import { FolderIcon, MoreHorizontalIcon, ShareIcon } from "lucide-react";
+import type React from "react";
 
 import {
   DropdownMenu,
@@ -24,7 +25,7 @@ export function NavDocuments({
   items: {
     name: string;
     url: string;
-    icon: LucideIcon;
+    icon: React.ComponentType<{ className?: string }>;
   }[];
 }) {
   const { isMobile } = useSidebar();
