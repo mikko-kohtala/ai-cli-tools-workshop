@@ -69,7 +69,7 @@ const differentApproaches = [
   {
     aspect: "Model Selection",
     variations: [
-      "Single model per tool (Claude Code uses Claude, Codex uses GPT)",
+      "Single provider per tool (Anthropic-only, OpenAI-only)",
       "Multi-model support (some tools let you choose)",
       "Specialized models for different tasks",
     ],

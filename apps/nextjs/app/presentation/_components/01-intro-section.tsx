@@ -13,10 +13,10 @@ export function IntroSection() {
 
         <div className="mx-auto flex max-w-2xl justify-center pt-6">
           <Image
-            alt="Claude Code CLI"
+            alt="Codex CLI in the terminal"
             className="rounded-lg shadow-lg"
             height={400}
-            src="/images/claude-code-01.png"
+            src="/images/codex-cli-01.png"
             width={533}
           />
         </div>

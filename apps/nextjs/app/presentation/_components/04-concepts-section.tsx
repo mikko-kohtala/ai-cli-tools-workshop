@@ -37,9 +37,10 @@ export function ConceptsSection() {
             <p className="mb-4 text-foreground/70">
               The <strong>context window</strong> is the entire set of input and output tokens that the LLM can see at
               any moment. It includes the system prompt, your messages, the agent's responses, and any files or tools
-              loaded. Every model has a hard limit (e.g., 200k tokens for Claude Sonnet, up to 2M for some models).
-              Critically, <strong>the larger the context, the worse performance becomes</strong> due to the "lost in the
-              middle" problem—information in the middle of long conversations gets deprioritized.
+              loaded. Every model has a hard limit (many modern models support hundreds of thousands of tokens, with
+              some offering million+ token contexts). Critically, <strong>the larger the context, the more quality can
+              degrade</strong> due to the "lost in the middle" effect—information buried in long conversations gets
+              deprioritized.
             </p>
             <Tabs defaultValue="whats-in">
               <TabsList className="grid w-full grid-cols-3">

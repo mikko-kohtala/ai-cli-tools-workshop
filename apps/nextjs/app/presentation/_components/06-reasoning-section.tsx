@@ -4,16 +4,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const reasoningComparison = [
   {
-    tool: "Claude Code",
+    tool: "Claude-based CLIs",
     method: "Thinking Keywords",
     levels: ["think", "think hard", "think harder", "ultrathink"],
-    description: "Use natural language keywords to request deeper reasoning when needed",
+    description: "Some tools support natural language keywords to request deeper reasoning when needed",
   },
   {
     tool: "Codex CLI",
-    method: "Reasoning Levels",
-    levels: ["minimal", "low", "medium", "high"],
-    description: "Switch models and reasoning effort with the /model command",
+    method: "Reasoning Settings",
+    levels: ["minimal", "medium", "high"],
+    description: "Switch model and reasoning level via CLI flags or in-chat commands",
   },
 ];
 
@@ -41,7 +41,7 @@ const useCases = [
     ],
     tools: {
       claude: '"think about the best approach to implement..."',
-      codex: "Default medium level (comes standard)",
+      codex: "Default: medium; raise to high for nuanced tradeoffs",
     },
   },
   {
@@ -55,7 +55,7 @@ const useCases = [
     ],
     tools: {
       claude: '"think harder about the security implications..."',
-      codex: "/model with high reasoning for GPT-5-Codex",
+      codex: "Use /model or flags to select a stronger model and high reasoning",
     },
   },
 ];
@@ -129,17 +129,18 @@ export function ReasoningSection() {
             <TabsContent className="mt-4" value="models">
               <div className="space-y-4">
                 <div>
-                  <p className="mb-2 font-semibold text-sm">Default: GPT-5</p>
+                  <p className="mb-2 font-semibold text-sm">Default model (configurable)</p>
                   <p className="text-foreground/70 text-sm">
-                    Codex runs GPT-5 by default, providing excellent performance for most coding tasks with balanced
-                    speed and quality.
+                    Codex uses a sensible default model based on your configuration. You can switch providers and
+                    models depending on availability (e.g., OpenAI GPT-4.x / o-series, Anthropic Claude, Google
+                    Gemini).
                   </p>
                 </div>
                 <div>
-                  <p className="mb-2 font-semibold text-sm">Optimized: GPT-5-Codex</p>
+                  <p className="mb-2 font-semibold text-sm">Optimized for coding</p>
                   <p className="text-foreground/70 text-sm">
-                    GPT-5-Codex is specifically optimized for agentic coding tasks. It adjusts reasoning time based on
-                    task complexity and can work independently for 7+ hours on large, complex projects.
+                    Some models are tuned for code and agentic workflows. Choose a code-optimized option for larger
+                    refactors or complex tasks when available.
                   </p>
                 </div>
                 <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
@@ -147,14 +148,14 @@ export function ReasoningSection() {
                     <strong>Switch models:</strong>
                   </p>
                   <pre className="rounded border bg-slate-950 p-2 text-xs">
-                    <code className="text-slate-50">codex --model gpt-5-codex</code>
+                    <code className="text-slate-50">codex --model openai:gpt-4o</code>
                   </pre>
                 </div>
               </div>
             </TabsContent>
             <TabsContent className="mt-4" value="levels">
               <div className="space-y-3">
-                <p className="text-sm">GPT-5 exposes a reasoning_effort parameter with four levels:</p>
+                <p className="text-sm">Codex exposes a reasoning level setting with four tiers:</p>
                 <div className="space-y-2">
                   <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
                     <code className="text-sm">minimal</code>
@@ -180,15 +181,15 @@ export function ReasoningSection() {
                 <p className="text-sm">Use the /model command to switch between models and reasoning levels:</p>
                 <div className="space-y-3">
                   <div>
-                    <p className="mb-2 font-semibold text-sm">Switch to GPT-5-Codex with high reasoning:</p>
+                    <p className="mb-2 font-semibold text-sm">Switch to an OpenAI model with high reasoning:</p>
                     <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model gpt-5-codex high</code>
+                      <code className="text-slate-50 text-sm">/model openai:gpt-4o high</code>
                     </pre>
                   </div>
                   <div>
-                    <p className="mb-2 font-semibold text-sm">Return to default GPT-5 with medium reasoning:</p>
+                    <p className="mb-2 font-semibold text-sm">Return to your default model with medium reasoning:</p>
                     <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model gpt-5 medium</code>
+                      <code className="text-slate-50 text-sm">/model default medium</code>
                     </pre>
                   </div>
                 </div>
@@ -203,7 +204,7 @@ export function ReasoningSection() {
 
       <Card className="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30">
         <CardHeader>
-          <CardTitle className="text-2xl">Claude Code: Thinking Mode</CardTitle>
+          <CardTitle className="text-2xl">Claude-based CLIs: Thinking Mode</CardTitle>
           <CardDescription className="text-base">
             Request deeper reasoning with natural language keywords
           </CardDescription>
@@ -211,8 +212,8 @@ export function ReasoningSection() {
         <CardContent>
           <div className="mb-4 space-y-4">
             <p className="text-foreground/70 text-sm">
-              Claude 3.7 Sonnet introduced hybrid reasoning, allowing you to request extended thinking when needed. Use
-              these keywords to control how deeply Claude thinks about your problem:
+              Recent Claude models support extended reasoning, allowing you to request deeper thinking when needed. Use
+              these keywords to guide how thoroughly the model analyzes your problem:
             </p>
             <div className="grid gap-3 md:grid-cols-2">
               <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
@@ -275,7 +276,7 @@ export function ReasoningSection() {
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
                   <div className="rounded-lg bg-cyan-50 p-3 dark:bg-cyan-950/30">
-                    <p className="mb-1 font-semibold text-xs">Claude Code</p>
+                    <p className="mb-1 font-semibold text-xs">Claude-based CLIs</p>
                     <code className="text-xs">{useCase.tools.claude}</code>
                   </div>
                   <div className="rounded-lg bg-blue-50 p-3 dark:bg-blue-950/30">

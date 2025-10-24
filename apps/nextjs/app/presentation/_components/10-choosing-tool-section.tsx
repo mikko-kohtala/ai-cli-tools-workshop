@@ -8,7 +8,7 @@ const decisionFactors = [
     factor: "Model Quality & Reasoning",
     questions: ["How complex are your typical tasks?", "Do you need deep reasoning for architecture decisions?"],
     guidance:
-      "Claude (Claude Code) excels at complex reasoning and refactoring. GPT-5 (Codex CLI) is fast and versatile. Consider your task complexity.",
+      "Claude-based CLIs often excel at deeper reasoning and complex refactors. OpenAI-based setups tend to be fast and versatile. Match model choice to your task complexity.",
   },
   {
     factor: "Speed & Responsiveness",
@@ -36,28 +36,28 @@ const toolProfiles = [
     provider: "Anthropic",
     bestFor: ["Complex refactoring", "Architecture decisions", "Safety-critical code", "Deep reasoning tasks"],
     consider: "Strong safety features, excellent at understanding context, may be slower for simple tasks",
-    getStarted: "Install: npm install -g @anthropic/claude-code\nRequires: Anthropic API key",
+    getStarted: "See the tool's documentation for installation and setup.\nRequires: Anthropic API key",
   },
   {
     name: "Codex CLI",
     provider: "OpenAI",
     bestFor: ["Rapid prototyping", "Quick iterations", "Broad language support", "Fast execution"],
     consider: "Very fast, versatile, large ecosystem, may need more guidance for complex tasks",
-    getStarted: "Install: npm install -g @openai/codex-cli\nRequires: OpenAI API key",
+    getStarted: "See this workshop repo for setup details.\nRequires: API key for your chosen provider (e.g., OpenAI)",
   },
   {
-    name: "Gemini CLI",
+    name: "Gemini-based CLIs",
     provider: "Google",
     bestFor: ["Multimodal tasks", "Google Cloud integration", "Code search", "Large context windows"],
-    consider: "Strong at code search, integrates well with Google Cloud, newer to market",
-    getStarted: "Install: gcloud components install gemini\nRequires: Google Cloud account",
+    consider: "Strong at code search, integrates well with Google Cloud",
+    getStarted: "See Google AI Studio / Cloud documentation for setup.\nRequires: Google Cloud account",
   },
   {
-    name: "Others (Amp, Opencode, etc.)",
+    name: "Others (Aider, community tools)",
     provider: "Various",
     bestFor: ["Model flexibility", "Team collaboration", "Custom workflows", "Specific use cases"],
     consider: "May offer unique features like model selection, team features, or specialized capabilities",
-    getStarted: "Check each tool's documentation for installation and setup",
+    getStarted: "Example: pipx install aider-chat\nRequires: API key for your chosen provider",
   },
 ];
 

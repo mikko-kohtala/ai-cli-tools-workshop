@@ -31,28 +31,28 @@ const valueProps = [
 
 const tools = [
   {
-    name: "Claude Code",
-    provider: "Anthropic",
-    model: "Claude 4.5 Sonnet",
-    highlights: ["Excellent reasoning", "Strong with complex refactoring", "Built-in safety features"],
-  },
-  {
     name: "Codex CLI",
-    provider: "OpenAI",
-    model: "GPT-5",
-    highlights: ["Fast execution", "Great for rapid prototyping", "Extensive tool ecosystem"],
+    provider: "Open-source (uses OpenAI, others)",
+    model: "Supports multiple providers",
+    highlights: ["Terminal-native workflow", "Plans + apply_patch diffs", "Approval flows and sandboxing"],
   },
   {
-    name: "Gemini CLI",
+    name: "Claude-based CLIs",
+    provider: "Anthropic",
+    model: "Claude family (various)",
+    highlights: ["Strong reasoning", "Helpful refactors", "Safety features"],
+  },
+  {
+    name: "Gemini-based CLIs",
     provider: "Google",
-    model: "Gemini 2.5 Pro",
-    highlights: ["Multimodal capabilities", "Strong code search", "Google Cloud integration"],
+    model: "Gemini family (various)",
+    highlights: ["Multimodal support", "Code search integrations", "Cloud ecosystem"],
   },
   {
-    name: "Amp Code",
-    provider: "Amp",
-    model: "Multiple models",
-    highlights: ["Model selection", "Team collaboration", "Custom workflows"],
+    name: "Aider",
+    provider: "Community",
+    model: "Multiple providers",
+    highlights: ["Git-aware diffs", "Fast prototyping", "Simple workflow"],
   },
 ];
 
@@ -131,7 +131,10 @@ export function LandscapeSection() {
       </div>
 
       <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">Available Tools</h3>
+        <h3 className="mb-2 font-semibold text-2xl">Available Tools</h3>
+        <p className="mb-4 text-foreground/70 text-sm">
+          Examples only—this ecosystem moves quickly and names/models evolve. Focus on capabilities and fit.
+        </p>
         <div className="grid gap-6 md:grid-cols-2">
           {tools.map((tool) => (
             <Card key={`tool-${tool.name}`}>
@@ -195,7 +198,7 @@ export function LandscapeSection() {
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>
                     cd my-project{"\n"}
-                    claude <span className="text-slate-400"># or: codex, gemini, amp</span>
+                    codex <span className="text-slate-400"># or: claude, gemini, aider</span>
                   </code>
                 </pre>
                 <p className="mt-3 text-foreground/70 text-sm">

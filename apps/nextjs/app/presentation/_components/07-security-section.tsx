@@ -1,4 +1,5 @@
 import { AlertTriangle, Shield } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -31,7 +32,7 @@ const accessLevels = [
     color: "green",
     description: "Can read files, analyze code, and answer questions. Cannot modify anything.",
     useCase: "Exploring new codebases, code reviews, understanding architecture.",
-    example: "Claude Code: --sandbox read-only",
+    example: "Codex CLI: --sandbox read-only",
   },
   {
     level: "Workspace-scoped",
@@ -165,22 +166,32 @@ export function SecuritySection() {
         </TabsList>
         <TabsContent className="mt-4" value="access">
           <div className="space-y-4">
-            {accessLevels.map((level) => (
-              <Card className={`border-l-4 border-l-${level.color}-500`} key={`access-${level.level}`}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{level.level}</CardTitle>
-                  <CardDescription>{level.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-2 text-sm">
-                    <strong>Use when:</strong> {level.useCase}
-                  </p>
-                  <p className="rounded bg-slate-50 p-2 text-foreground/60 text-xs dark:bg-slate-900/30">
-                    {level.example}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {accessLevels.map((level) => {
+              const borderClass =
+                level.color === "green"
+                  ? "border-l-green-500"
+                  : level.color === "blue"
+                    ? "border-l-blue-500"
+                    : level.color === "red"
+                      ? "border-l-red-500"
+                      : "border-l-slate-300";
+              return (
+                <Card className={cn("border-l-4", borderClass)} key={`access-${level.level}`}>
+                  <CardHeader>
+                    <CardTitle className="text-lg">{level.level}</CardTitle>
+                    <CardDescription>{level.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mb-2 text-sm">
+                      <strong>Use when:</strong> {level.useCase}
+                    </p>
+                    <p className="rounded bg-slate-50 p-2 text-foreground/60 text-xs dark:bg-slate-900/30">
+                      {level.example}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </TabsContent>
         <TabsContent className="mt-4" value="approval">
@@ -211,27 +222,35 @@ export function SecuritySection() {
         </TabsContent>
         <TabsContent className="mt-4" value="scenarios">
           <div className="space-y-4">
-            {securityScenarios.map((scenario) => (
-              <Card key={`scenario-${scenario.title}`}>
-                <CardHeader>
-                  <CardTitle className="text-base">Scenario: {scenario.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2 text-sm">
-                  <p>
-                    <strong>Access Level:</strong> {scenario.accessLevel}
-                  </p>
-                  <p>
-                    <strong>Approval Strategy:</strong> {scenario.approvalStrategy}
-                  </p>
-                  <p className="text-foreground/70">
-                    <strong>Task:</strong> "{scenario.task}"
-                  </p>
-                  <p className={`text-${scenario.statusColor}-600 dark:text-${scenario.statusColor}-400`}>
-                    {scenario.status}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {securityScenarios.map((scenario) => {
+              const statusClass =
+                scenario.statusColor === "green"
+                  ? "text-green-600 dark:text-green-400"
+                  : scenario.statusColor === "blue"
+                    ? "text-blue-600 dark:text-blue-400"
+                    : scenario.statusColor === "amber"
+                      ? "text-amber-600 dark:text-amber-400"
+                      : "text-red-600 dark:text-red-400";
+              return (
+                <Card key={`scenario-${scenario.title}`}>
+                  <CardHeader>
+                    <CardTitle className="text-base">Scenario: {scenario.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-2 text-sm">
+                    <p>
+                      <strong>Access Level:</strong> {scenario.accessLevel}
+                    </p>
+                    <p>
+                      <strong>Approval Strategy:</strong> {scenario.approvalStrategy}
+                    </p>
+                    <p className="text-foreground/70">
+                      <strong>Task:</strong> "{scenario.task}"
+                    </p>
+                    <p className={statusClass}>{scenario.status}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </TabsContent>
       </Tabs>
