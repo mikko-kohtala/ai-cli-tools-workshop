@@ -8,7 +8,7 @@ const decisionFactors = [
     factor: "Model Quality & Reasoning",
     questions: ["How complex are your typical tasks?", "Do you need deep reasoning for architecture decisions?"],
     guidance:
-      "Claude-based CLIs often excel at deeper reasoning and complex refactors. OpenAI-based setups tend to be fast and versatile. Match model choice to your task complexity.",
+      "Claude Code often excels at deeper reasoning and complex refactors. OpenAI-based setups tend to be fast and versatile. Match model choice to your task complexity.",
   },
   {
     factor: "Speed & Responsiveness",
@@ -46,18 +46,18 @@ const toolProfiles = [
     getStarted: "See this workshop repo for setup details.\nRequires: API key for your chosen provider (e.g., OpenAI)",
   },
   {
-    name: "Gemini-based CLIs",
+    name: "Gemini CLI",
     provider: "Google",
     bestFor: ["Multimodal tasks", "Google Cloud integration", "Code search", "Large context windows"],
     consider: "Strong at code search, integrates well with Google Cloud",
     getStarted: "See Google AI Studio / Cloud documentation for setup.\nRequires: Google Cloud account",
   },
   {
-    name: "Others (Aider, community tools)",
-    provider: "Various",
-    bestFor: ["Model flexibility", "Team collaboration", "Custom workflows", "Specific use cases"],
-    consider: "May offer unique features like model selection, team features, or specialized capabilities",
-    getStarted: "Example: pipx install aider-chat\nRequires: API key for your chosen provider",
+    name: "Amp",
+    provider: "Sourcegraph",
+    bestFor: ["Team collaboration", "Parallel task execution", "Complex debugging", "1M token context needs"],
+    consider: "Auto-selects optimal models, thread sharing, subagents for parallel work, Oracle for complex reasoning",
+    getStarted: "VS Code extension (works with Cursor, Windsurf) or CLI\nRequires: Amp account (free tier available)",
   },
 ];
 

@@ -37,22 +37,22 @@ const tools = [
     highlights: ["Terminal-native workflow", "Plans + apply_patch diffs", "Approval flows and sandboxing"],
   },
   {
-    name: "Claude-based CLIs",
+    name: "Claude Code",
     provider: "Anthropic",
-    model: "Claude family (various)",
+    model: "Uses latest Claude models",
     highlights: ["Strong reasoning", "Helpful refactors", "Safety features"],
   },
   {
-    name: "Gemini-based CLIs",
+    name: "Gemini CLI",
     provider: "Google",
-    model: "Gemini family (various)",
+    model: "Uses latest Gemini models",
     highlights: ["Multimodal support", "Code search integrations", "Cloud ecosystem"],
   },
   {
-    name: "Aider",
-    provider: "Community",
-    model: "Multiple providers",
-    highlights: ["Git-aware diffs", "Fast prototyping", "Simple workflow"],
+    name: "Amp",
+    provider: "Sourcegraph",
+    model: "Auto-selects best model",
+    highlights: ["1M token context", "Subagent parallelization", "Oracle second opinions"],
   },
 ];
 
@@ -198,7 +198,7 @@ export function LandscapeSection() {
                 <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
                   <code>
                     cd my-project{"\n"}
-                    codex <span className="text-slate-400"># or: claude, gemini, aider</span>
+                    codex <span className="text-slate-400"># or: claude, gemini, amp</span>
                   </code>
                 </pre>
                 <p className="mt-3 text-foreground/70 text-sm">
