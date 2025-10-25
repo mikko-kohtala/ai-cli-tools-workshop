@@ -93,8 +93,8 @@ export function ChoosingToolSection() {
                 <div className="mb-3">
                   <p className="mb-2 font-semibold text-sm">Ask yourself:</p>
                   <ul className="list-inside list-disc space-y-1 text-sm">
-                    {item.questions.map((q, idx) => (
-                      <li className="text-foreground/70" key={`q-${idx}`}>
+                    {item.questions.map((q) => (
+                      <li className="text-foreground/70" key={q}>
                         {q}
                       </li>
                     ))}
@@ -120,8 +120,8 @@ export function ChoosingToolSection() {
                 <div>
                   <p className="mb-2 font-semibold text-sm">Best for:</p>
                   <ul className="space-y-1 text-sm">
-                    {tool.bestFor.map((item, idx) => (
-                      <li className="flex items-start gap-2" key={`best-${idx}`}>
+                    {tool.bestFor.map((item) => (
+                      <li className="flex items-start gap-2" key={item}>
                         <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
                         <span className="text-foreground/80">{item}</span>
                       </li>

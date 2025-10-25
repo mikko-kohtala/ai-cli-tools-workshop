@@ -187,114 +187,79 @@ export function ConceptsSection() {
 
         <Card className="border-l-4 border-l-purple-500">
           <CardHeader>
-            <CardTitle className="text-2xl">Tools & Actions</CardTitle>
+            <CardTitle className="text-2xl">Tools: How the AI Actually Does Stuff</CardTitle>
             <CardDescription className="text-base">
-              How AI agents transform plans into real-world actions
+              The AI "thinks," then uses tools to act in your dev environment
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <p className="text-foreground/70">
-                <strong>Tools</strong> are functions that extend AI capabilities beyond text generation. They enable
-                agents to interact with external systems, execute code, modify files, search the web, and query
-                databases—transforming AI from knowledge retrieval into action-capable agents.
-              </p>
-
-              <div className="rounded-lg border border-purple-200 bg-purple-50 p-4 dark:border-purple-800 dark:bg-purple-950/30">
-                <p className="mb-2 font-semibold text-sm">🔧 How Tools Work</p>
-                <p className="text-foreground/70 text-sm">
-                  AI agents follow a four-step cycle: <strong>Assessment</strong> (can tools help?),{" "}
-                  <strong>Decision</strong> (construct tool request), <strong>Execution</strong> (run and get results),{" "}
-                  <strong>Integration</strong> (incorporate results into response). This enables complex workflows like
-                  planning → execution → verification.
-                </p>
-              </div>
-
               <div className="space-y-3">
-                <p className="font-semibold text-sm">Tool categories & ecosystem:</p>
+                <p className="font-semibold text-sm">The three core tools you'll use today:</p>
                 <div className="grid gap-3 md:grid-cols-3">
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Built-in Tools</p>
-                    <p className="text-foreground/70 text-xs">
-                      Core capabilities like Bash commands, file operations (read/write/edit), and code execution in
-                      multiple languages.
+                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                    <p className="mb-1 font-semibold text-sm">Terminal (shell)</p>
+                    <p className="text-foreground/70 text-xs">Run commands to build, test, or inspect.</p>
+                    <p className="mt-1 font-mono text-xs">
+                      e.g. <code>npm test</code>, <code>ls -la</code>
                     </p>
                   </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Server Tools</p>
+                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                    <p className="mb-1 font-semibold text-sm">Files</p>
                     <p className="text-foreground/70 text-xs">
-                      Provided by the AI service (e.g., web search, web fetch). No client-side implementation needed.
+                      Ask the AI to open, edit, and propose diffs—review before applying.
+                    </p>
+                    <p className="mt-1 font-mono text-xs">
+                      e.g. “Open <code>src/app.ts</code>” → “Propose a safe fix and show the diff”
                     </p>
                   </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Client Tools (MCP)</p>
-                    <p className="text-foreground/70 text-xs">
-                      Custom integrations via Model Context Protocol for services like Slack, GitHub, databases.
+                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                    <p className="mb-1 font-semibold text-sm">Web fetch/search</p>
+                    <p className="text-foreground/70 text-xs">Pull official docs or pages for quick context.</p>
+                    <p className="mt-1 font-mono text-xs">
+                      e.g. <code>search docs: express error handling</code>
                     </p>
                   </div>
                 </div>
               </div>
 
+              <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
+                <p className="mb-2 font-semibold text-sm">Try it now (2–3 min)</p>
+                <ol className="ml-6 list-decimal space-y-1 text-foreground/70 text-sm">
+                  <li>"Run the tests and show me any failures." (bash)</li>
+                  <li>"Open the failing file, propose a patch, and show me the diff before applying." (files)</li>
+                  <li>"Fetch a short doc snippet from official docs that explains the fix." (web)</li>
+                </ol>
+              </div>
+
               <div className="space-y-3">
-                <p className="font-semibold text-sm">Model Context Protocol (MCP):</p>
+                <p className="font-semibold text-sm">What about MCP?</p>
                 <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
-                  <p className="mb-2 text-foreground/70 text-sm">
-                    <strong>MCP is like "USB-C for AI"</strong>—a standardized protocol for connecting AI models to
-                    external tools and data sources. Introduced by Anthropic in Nov 2024, adopted by OpenAI (Mar 2025),
-                    Microsoft, and Google. Enables consistent integrations without custom OAuth flows or API wrappers.
+                  <p className="text-foreground/70 text-sm">
+                    MCP is a "universal adapter" that plugs services (GitHub, Slack, DBs) into your AI—no custom glue
+                    code—and can be added to Codex CLI with simple commands.
                   </p>
-                  <div className="mt-3 rounded bg-slate-50 p-2 dark:bg-slate-950/50">
+                  <div className="mt-2 rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                     <p className="font-mono text-xs">
-                      Example: <code className="text-purple-600 dark:text-purple-400">codex mcp add github</code> →
-                      instant access to GitHub repos, issues, PRs
+                      e.g. <code>codex mcp add github</code> → access issues, PRs, and repo data
                     </p>
                   </div>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="font-semibold text-sm">How CLI tools implement tools:</p>
-                <div className="space-y-2">
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Claude Code</p>
-                    <p className="text-foreground/70 text-xs">
-                      Built-in tools (Bash, file ops, code execution) + MCP client/server capabilities. Inherits your
-                      bash environment for maximum tool access.
-                    </p>
-                  </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Codex CLI</p>
-                    <p className="text-foreground/70 text-xs">
-                      MCP-first approach configured via{" "}
-                      <code className="rounded bg-white px-1 py-0.5 dark:bg-slate-800">~/.codex/config.toml</code>.
-                      Tracks complex work with todo lists, includes web search tool.
-                    </p>
-                  </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Gemini CLI</p>
-                    <p className="text-foreground/70 text-xs">
-                      Built-in tools (Google Search, file ops, shell, web fetch) + MCP + extensions. Uses ReAct loop
-                      (Reason and Act) for complex tasks.
-                    </p>
-                  </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
-                    <p className="mb-1 font-semibold text-sm">Amp</p>
-                    <p className="text-foreground/70 text-xs">
-                      Oracle subagent tool for complex reasoning tasks (uses GPT-5), plus autonomous subagent spawning
-                      for parallel work.
-                    </p>
-                  </div>
+                  <p className="mt-2 text-foreground/60 text-xs italic">
+                    Advanced (optional) for this workshop—start without it, add only if needed.
+                  </p>
                 </div>
               </div>
 
               <div className="rounded-lg border border-green-200 bg-green-50 p-3 dark:border-green-800 dark:bg-green-950/30">
-                <p className="mb-2 font-semibold text-green-700 text-sm dark:text-green-400">Best Practices:</p>
+                <p className="mb-2 font-semibold text-green-700 text-sm dark:text-green-400">Safety tips</p>
                 <ul className="list-inside list-disc space-y-1 text-green-900/70 text-xs dark:text-green-100/70">
-                  <li>Understand your tool ecosystem—know what capabilities are available</li>
-                  <li>Be cautious with MCP servers—they add context overhead</li>
-                  <li>Leverage parallel tool execution for independent operations</li>
-                  <li>Monitor tool calls during planning to understand agent reasoning</li>
-                  <li>Use specialized tools (Oracle, subagents) for appropriate tasks</li>
+                  <li>Watch context size; keep tasks focused.</li>
+                  <li>Limit active MCP servers to what you actually need.</li>
+                  <li>Prefer small, independent tool calls you can verify.</li>
+                  <li>
+                    Review diffs before applying and favor <code>--dry-run</code> flags where possible.
+                  </li>
+                  <li>When searching the web, prefer official docs or primary sources.</li>
                 </ul>
               </div>
             </div>

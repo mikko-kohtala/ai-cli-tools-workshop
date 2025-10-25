@@ -34,7 +34,7 @@ const architectureLayers = [
   },
 ];
 
-const exampleSteps = [
+const _exampleSteps = [
   {
     component: "User Interface",
     action: 'receives your request: "Add error handling to the API endpoints"',

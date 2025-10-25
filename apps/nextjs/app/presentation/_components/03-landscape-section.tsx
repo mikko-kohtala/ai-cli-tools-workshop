@@ -131,7 +131,6 @@ export function LandscapeSection() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }
