@@ -1,19 +1,21 @@
 import Link from "next/link";
 
-export default function Task1Page() {
+export default function Task2Page() {
   return (
     <div className="flex flex-col gap-8 p-8">
       <div className="space-y-4">
-        <h1 className="font-bold text-4xl">Task 1: Getting Started with Codex CLI</h1>
-        <p className="text-lg">Learn the basics of Codex CLI and verify your setup.</p>
+        <h1 className="font-bold text-4xl">Task 2: Scaffold a Project with Codex CLI</h1>
+        <p className="text-lg">
+          Practice directing Codex CLI to plan and build a small automation script inside a clean workspace.
+        </p>
       </div>
 
       <div className="space-y-6">
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Install Codex CLI, verify your setup, and learn how to start your first coding session with the AI
-            assistant.
+            Create a fresh directory, guide Codex CLI through planning, and generate a simple Python script that summarizes a
+            notes file. Finish by running the script with <code>codex exec</code> to validate the result.
           </p>
         </div>
 
@@ -23,41 +25,38 @@ export default function Task1Page() {
             <ol className="list-decimal space-y-4 pl-6">
               <li>
                 <p>
-                  Create a dedicated workspace directory (for example
-                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">~/codex-workshop/task-01-getting-started</code>)
+                  Create a dedicated workspace such as
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">~/codex-workshop/task-02-summary-script</code>
                   and change into it.
                 </p>
               </li>
               <li>
                 <p>
-                  Install Codex CLI by following the official documentation at{" "}
-                  <a
-                    className="text-blue-600 hover:underline dark:text-blue-400"
-                    href="https://developers.openai.com/codex/cli"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    developers.openai.com/codex/cli
-                  </a>
-                  .
-                </p>
-              </li>
-              <li>
-                <p>Verify your installation by running the version command in your terminal.</p>
-              </li>
-              <li>
-                <p>
-                  Start a new Codex CLI session and ask it to explain what it can do for you. Take note of its response.
+                  Add a seed file named <code>notes.txt</code> with a few sample bullet points that Codex can work from.
                 </p>
               </li>
               <li>
                 <p>
-                  Try asking Codex CLI to help you with a simple task, such as creating a new file or explaining a code
-                  snippet.
+                  Start Codex CLI in the directory and ask for a plan (for example by typing <code>/plan</code>) to create a
+                  README plus a Python script that summarizes <code>notes.txt</code> into a concise checklist.
                 </p>
               </li>
               <li>
-                <p>Experiment with ending the session and starting a new one.</p>
+                <p>
+                  Review the proposed plan, request adjustments if needed, and approve the steps that make sense. Ask Codex to
+                  implement the plan and generate <code>README.md</code> and <code>summarize_notes.py</code>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Once the files are generated, use <code>codex exec "python summarize_notes.py notes.txt"</code> to run the
+                  script and verify the output.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Have Codex provide a brief summary of what it created along with suggestions for next improvements.
+                </p>
               </li>
             </ol>
           </div>
@@ -67,11 +66,13 @@ export default function Task1Page() {
           <div className="space-y-4">
             <h2 className="font-semibold text-2xl">Key Concepts</h2>
             <ul className="list-disc space-y-2 pl-6">
-              <li>Codex CLI is a terminal-based AI coding assistant</li>
-              <li>It can read and modify files in your current directory</li>
-              <li>Sessions maintain context for better assistance</li>
-              <li>You can ask questions and request code changes</li>
-              <li>All changes require your approval before being applied</li>
+              <li>Working inside a task-specific directory keeps Codex focused</li>
+              <li>Use <code>/plan</code> to co-design the approach before edits happen</li>
+              <li>Approve changes deliberately to stay in control of file edits</li>
+              <li>
+                <code>codex exec</code> runs follow-up commands without leaving the session
+              </li>
+              <li>Ask for summaries to reinforce what the agent completed</li>
             </ul>
           </div>
 
@@ -82,11 +83,11 @@ export default function Task1Page() {
                 <strong>By the end of this task, you should:</strong>
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
-                <li>Know how to create a clean workspace directory for Codex sessions</li>
-                <li>Have Codex CLI installed and working</li>
-                <li>Understand how to start and end sessions</li>
-                <li>Know how to ask questions and request help</li>
-                <li>Be comfortable with the basic CLI interface</li>
+                <li>Have a scoped workspace containing notes, script, and README files</li>
+                <li>Feel confident asking Codex to draft and refine a plan</li>
+                <li>Know how to approve file creations and edits</li>
+                <li>Have executed your script via <code>codex exec</code></li>
+                <li>Captured a summary for later reference</li>
               </ul>
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Task1Page() {
               <p className="mb-3 text-muted-foreground text-sm">Your workspace for this task</p>
               <Link
                 className="inline-flex h-9 items-center justify-center rounded-md bg-primary px-3 font-medium text-primary-foreground text-sm hover:bg-primary/90"
-                href="/tasks/1/work"
+                href="/tasks/2/work"
               >
                 Open Work Area
               </Link>
@@ -110,7 +111,7 @@ export default function Task1Page() {
               <p className="mb-3 text-muted-foreground text-sm">Reference solution and guidance</p>
               <Link
                 className="inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-3 font-medium text-sm hover:bg-accent hover:text-accent-foreground"
-                href="/tasks/1/solution"
+                href="/tasks/2/solution"
               >
                 View Solution
               </Link>
@@ -121,13 +122,13 @@ export default function Task1Page() {
         <div className="flex justify-between pt-6">
           <Link
             className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 font-medium text-sm ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground"
-            href="/tasks"
+            href="/tasks/1"
           >
-            Back to Tasks
+            Previous Task
           </Link>
           <Link
             className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground text-sm ring-offset-background transition-colors hover:bg-primary/90"
-            href="/tasks/2"
+            href="/tasks/3"
           >
             Next Task
           </Link>

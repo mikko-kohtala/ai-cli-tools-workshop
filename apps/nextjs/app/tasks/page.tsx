@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const TOTAL_TASKS = 4;
+const TOTAL_TASKS = 3;
 
 export default function TasksPage() {
   return (
