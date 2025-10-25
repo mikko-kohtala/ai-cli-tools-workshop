@@ -1,6 +1,27 @@
 import Link from "next/link";
 
-const TOTAL_TASKS = 4;
+const TASKS = [
+  {
+    number: 1,
+    title: "Task 1: Getting Started with Codex CLI",
+    description: "Install Codex CLI, verify your setup, and explore the interactive session basics.",
+  },
+  {
+    number: 2,
+    title: "Task 2: Create Your Codex Workspace",
+    description: "Spin up a new Git repo, author AGENTS.md guidance, and let Codex scaffold starter files.",
+  },
+  {
+    number: 3,
+    title: "Task 3: Pair Program a JSON Helper",
+    description: "Collaborate with Codex to transform stand-up notes into a Markdown agenda and commit the results.",
+  },
+  {
+    number: 4,
+    title: "Task 4: Automate an Incident Snapshot",
+    description: "Use codex exec with schemas and resumes to convert logs into structured reports.",
+  },
+];
 
 export default function TasksPage() {
   return (
@@ -11,17 +32,15 @@ export default function TasksPage() {
       </div>
 
       <div className="grid gap-6">
-        {Array.from({ length: TOTAL_TASKS }, (_, i) => i + 1).map((taskNumber) => (
+        {TASKS.map((task) => (
           <Link
             className="group relative rounded-lg border p-6 transition-colors hover:border-foreground/50"
-            href={`/tasks/${taskNumber}`}
-            key={taskNumber}
+            href={`/tasks/${task.number}`}
+            key={task.number}
           >
             <div className="space-y-2">
-              <h2 className="font-semibold text-2xl tracking-tight">Task {taskNumber}</h2>
-              <p className="text-muted-foreground">
-                Learn and practice key Codex CLI features in this hands-on exercise.
-              </p>
+              <h2 className="font-semibold text-2xl tracking-tight">{task.title}</h2>
+              <p className="text-muted-foreground">{task.description}</p>
             </div>
           </Link>
         ))}

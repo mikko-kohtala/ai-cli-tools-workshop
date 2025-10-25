@@ -1,0 +1,8 @@
+[2025-10-14T09:12:03Z] ERROR payments.JobRunner - Failed to settle invoice 48392 (timeout)
+[2025-10-14T09:12:05Z] WARN  payments.RetryQueue - Scheduling retry for invoice 48392 in 15m
+[2025-10-14T09:18:47Z] ERROR billing.WebhookHandler - Stripe signature validation failed for event evt_01H9K9YVX5Y3
+[2025-10-14T09:18:47Z] INFO  billing.WebhookHandler - Request id req_9ad01 was quarantined for manual review
+[2025-10-14T09:21:12Z] ERROR payments.JobRunner - Failed to settle invoice 48393 (timeout)
+[2025-10-14T09:21:15Z] WARN  payments.RetryQueue - Scheduling retry for invoice 48393 in 15m
+[2025-10-14T09:22:41Z] ERROR reports.SnapshotTask - BigQuery export exceeded quota (job_20251014_092241)
+[2025-10-14T09:22:42Z] INFO  reports.SnapshotTask - Retrying export with incremental window

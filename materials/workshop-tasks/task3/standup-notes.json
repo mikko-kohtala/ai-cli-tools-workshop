@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2025-10-14",
+    "team": "Platform",
+    "updates": [
+      "Shipped caching layer refactor",
+      "Working on observability dashboards"
+    ],
+    "blockers": [
+      "Waiting on security review for new secrets manager"
+    ],
+    "action_items": [
+      {
+        "owner": "Kai",
+        "description": "Backfill metrics for slow endpoints",
+        "due": "2025-10-18"
+      },
+      {
+        "owner": "Mira",
+        "description": "Draft follow-up doc for dashboard rollout",
+        "due": "2025-10-16"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-15",
+    "team": "Application",
+    "updates": [
+      "Completed onboarding flow polish",
+      "Started mobile accessibility audit"
+    ],
+    "blockers": [],
+    "action_items": [
+      {
+        "owner": "Luis",
+        "description": "Coordinate QA sign-off for onboarding",
+        "due": "2025-10-17"
+      }
+    ]
+  }
+]
