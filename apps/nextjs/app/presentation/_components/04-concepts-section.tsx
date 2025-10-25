@@ -24,7 +24,7 @@ export function ConceptsSection() {
         </Card>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-12">
         <Card className="border-l-4 border-l-green-500">
           <CardHeader>
             <CardTitle className="text-2xl">Context Window & Management</CardTitle>
