@@ -131,9 +131,8 @@ export function ReasoningSection() {
                 <div>
                   <p className="mb-2 font-semibold text-sm">Default model (configurable)</p>
                   <p className="text-foreground/70 text-sm">
-                    Codex uses a sensible default model based on your configuration. You can switch providers and
-                    models depending on availability (e.g., OpenAI GPT-4.x / o-series, Anthropic Claude, Google
-                    Gemini).
+                    Codex uses a sensible default model based on your configuration. You can switch providers and models
+                    depending on availability (e.g., OpenAI GPT-5 / GPT-5-Codex, Anthropic Claude, Google Gemini).
                   </p>
                 </div>
                 <div>
@@ -148,7 +147,7 @@ export function ReasoningSection() {
                     <strong>Switch models:</strong>
                   </p>
                   <pre className="rounded border bg-slate-950 p-2 text-xs">
-                    <code className="text-slate-50">codex --model openai:gpt-4o</code>
+                    <code className="text-slate-50">codex --model gpt-5-codex</code>
                   </pre>
                 </div>
               </div>
@@ -183,7 +182,7 @@ export function ReasoningSection() {
                   <div>
                     <p className="mb-2 font-semibold text-sm">Switch to an OpenAI model with high reasoning:</p>
                     <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model openai:gpt-4o high</code>
+                      <code className="text-slate-50 text-sm">/model openai:gpt-5-codex high</code>
                     </pre>
                   </div>
                   <div>

@@ -1,7 +1,5 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: shadcn */
-import { ArrowRight, Check, Code, FileCode, Terminal, Users } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const decisionFactors = [
   {
@@ -58,72 +56,6 @@ const toolProfiles = [
     bestFor: ["Team collaboration", "Parallel task execution", "Complex debugging", "1M token context needs"],
     consider: "Auto-selects optimal models, thread sharing, subagents for parallel work, Oracle for complex reasoning",
     getStarted: "VS Code extension (works with Cursor, Windsurf) or CLI\nRequires: Amp account (free tier available)",
-  },
-];
-
-const gettingStartedSteps = [
-  {
-    icon: Terminal,
-    title: "Start small",
-    description: "Try your chosen tool on a small test project or sandbox first",
-    details: [
-      "Create a simple test project or use a non-critical codebase",
-      "Start with read-only mode to explore safely",
-      "Try basic tasks: explaining code, adding comments, writing tests",
-    ],
-  },
-  {
-    icon: Code,
-    title: "Learn the workflow",
-    description: "Understand how your tool handles plans, approvals, and execution",
-    details: [
-      "Request a plan for a complex task and review it",
-      "Test different approval policies to find what works for you",
-      "Learn the tool's commands and shortcuts",
-    ],
-  },
-  {
-    icon: FileCode,
-    title: "Build confidence gradually",
-    description: "Progress from simple to complex tasks as you learn the tool's strengths",
-    details: [
-      "Week 1: Code explanations, documentation, simple refactoring",
-      "Week 2: Feature additions, bug fixes, test writing",
-      "Week 3+: Complex refactoring, architecture changes, full features",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Share and learn",
-    description: "Document your learnings and help teammates adopt the tool",
-    details: [
-      "Create internal documentation about best practices",
-      "Share successful patterns and workflows",
-      "Help teammates with setup and initial usage",
-    ],
-  },
-];
-
-const commonQuestions = [
-  {
-    question: "Can I switch between tools?",
-    answer:
-      "Yes! The concepts and workflows are similar across tools. You can use different tools for different projects or even different tasks. Your skills transfer.",
-  },
-  {
-    question: "Do I need a paid subscription?",
-    answer:
-      "Most tools require API access from their respective providers (OpenAI, Anthropic, Google). Pricing varies—check each provider's pricing page for current rates.",
-  },
-  {
-    question: "How do I know which tool is right for my team?",
-    answer:
-      "Consider your team's existing subscriptions, the complexity of your codebase, your budget, and whether you need specific integrations. Many teams try multiple tools before standardizing.",
-  },
-  {
-    question: "Are these tools safe for production code?",
-    answer:
-      "Yes, with proper usage. Always review changes, use appropriate sandbox settings, enable approval flows for critical code, and treat them like junior developers who need oversight.",
   },
 ];
 
@@ -211,53 +143,6 @@ export function ChoosingToolSection() {
           ))}
         </div>
       </div>
-
-      <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">Getting Started: First Steps</h3>
-        <div className="grid gap-6 md:grid-cols-2">
-          {gettingStartedSteps.map((step) => (
-            <Card key={`step-${step.title}`}>
-              <CardHeader>
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
-                  <step.icon className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-                </div>
-                <CardTitle className="text-base">{step.title}</CardTitle>
-                <CardDescription>{step.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm">
-                  {step.details.map((detail, idx) => (
-                    <li className="flex items-start gap-2" key={`detail-${idx}`}>
-                      <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600 dark:text-emerald-400" />
-                      <span className="text-foreground/80">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <Tabs defaultValue="faq">
-        <TabsList className="grid w-full grid-cols-1">
-          <TabsTrigger value="faq">Frequently Asked Questions</TabsTrigger>
-        </TabsList>
-        <TabsContent className="mt-4" value="faq">
-          <div className="space-y-4">
-            {commonQuestions.map((item, idx) => (
-              <Card key={`faq-${idx}`}>
-                <CardHeader>
-                  <CardTitle className="text-base">{item.question}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-foreground/80 text-sm">{item.answer}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </TabsContent>
-      </Tabs>
     </section>
   );
 }
