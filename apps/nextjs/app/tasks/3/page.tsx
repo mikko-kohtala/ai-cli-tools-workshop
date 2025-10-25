@@ -6,7 +6,8 @@ export default function Task3Page() {
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 3: Ship a Helpful Automation Script</h1>
         <p className="text-lg">
-          Pair with Codex CLI to design, build, and iterate on a tiny automation that tidies your workshop follow-up list.
+          Pair with Codex CLI to design, build, and iterate on a tiny automation that tidies your workshop follow-up
+          list.
         </p>
       </div>
 
@@ -14,8 +15,8 @@ export default function Task3Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Practice guiding Codex through a complete loop: shaping requirements, generating code, reviewing changes, and
-            running the finished script to validate the results.
+            Practice guiding Codex through a complete loop: shaping requirements, generating code, reviewing changes,
+            and running the finished script to validate the results.
           </p>
         </div>
 
@@ -36,27 +37,34 @@ export default function Task3Page() {
               </li>
               <li>
                 <p>
-                  Ask Codex to generate <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">data/inbox.json</code>
-                  with five sample tasks. Include fields for <em>title</em>, <em>owner</em>, <em>status</em>, and <em>dueDate</em>.
+                  Ask Codex to generate{" "}
+                  <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">
+                    data/inbox.json
+                  </code>
+                  with five sample tasks. Include fields for <em>title</em>, <em>owner</em>, <em>status</em>, and{" "}
+                  <em>dueDate</em>.
                 </p>
               </li>
               <li>
                 <p>
                   Request a Node.js script named
-                  <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">scripts/agenda.js</code>
-                  that reads the JSON file, filters by an optional <code>--status</code> flag, and prints a formatted table to the terminal.
+                  <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">
+                    scripts/agenda.js
+                  </code>
+                  that reads the JSON file, filters by an optional <code>--status</code> flag, and prints a formatted
+                  table to the terminal.
                 </p>
               </li>
               <li>
                 <p>
-                  Collaborate with Codex to add a README section that explains how to run the script with and without the
-                  status filter.
+                  Collaborate with Codex to add a README section that explains how to run the script with and without
+                  the status filter.
                 </p>
               </li>
               <li>
                 <p>
-                  Run the script locally, confirm the output looks right, and ask Codex for any refinements you want (such as
-                  sorting by due date or highlighting overdue tasks).
+                  Run the script locally, confirm the output looks right, and ask Codex for any refinements you want
+                  (such as sorting by due date or highlighting overdue tasks).
                 </p>
               </li>
               <li>

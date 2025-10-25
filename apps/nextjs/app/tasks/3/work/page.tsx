@@ -12,10 +12,31 @@ export default function Task3WorkPage() {
         <h2 className="mb-3 font-semibold text-xl">🛠️ Task Checklist</h2>
         <p className="mb-4">Run these steps in your sandbox directory with Codex CLI:</p>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Set up <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">~/codex-workshop/task-03-automation</code> and enter it.</li>
-          <li>Describe the automation goal to Codex and co-create <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">data/inbox.json</code>.</li>
-          <li>Generate <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">scripts/agenda.js</code> that reads, filters, and prints the JSON data.</li>
-          <li>Add README instructions for running the script with and without <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">--status</code>.</li>
+          <li>
+            Set up{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">
+              ~/codex-workshop/task-03-automation
+            </code>{" "}
+            and enter it.
+          </li>
+          <li>
+            Describe the automation goal to Codex and co-create{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">
+              data/inbox.json
+            </code>
+            .
+          </li>
+          <li>
+            Generate{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">
+              scripts/agenda.js
+            </code>{" "}
+            that reads, filters, and prints the JSON data.
+          </li>
+          <li>
+            Add README instructions for running the script with and without{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">--status</code>.
+          </li>
           <li>Execute the script locally, review the output, and request improvements (sorting, colors, etc.).</li>
           <li>Log one future enhancement idea so you can continue iterating later.</li>
         </ol>
@@ -24,7 +45,8 @@ export default function Task3WorkPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">🧠 Reflection</h2>
         <p className="text-muted-foreground text-sm">
-          Capture what worked well, which prompts unlocked the best results, and anything you would tweak in your next Codex session.
+          Capture what worked well, which prompts unlocked the best results, and anything you would tweak in your next
+          Codex session.
         </p>
       </div>
 

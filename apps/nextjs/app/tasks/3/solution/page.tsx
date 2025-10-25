@@ -24,10 +24,13 @@ export default function Task3SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2 font-semibold">Prompt example:</p>
               <p className="text-muted-foreground">
-                "Create data/inbox.json with five action items. Include title, owner, status (todo, in-progress, done), and dueDate fields."
+                "Create data/inbox.json with five action items. Include title, owner, status (todo, in-progress, done),
+                and dueDate fields."
               </p>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Approve the diff after checking that the JSON structure matches your expectations.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Approve the diff after checking that the JSON structure matches your expectations.
+            </p>
           </div>
 
           <div>
@@ -35,10 +38,13 @@ export default function Task3SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2 font-semibold">Prompt example:</p>
               <p className="text-muted-foreground">
-                "Add scripts/agenda.js that reads data/inbox.json, supports an optional --status filter, and prints a table with columns for Title, Owner, Status, and Due Date."
+                "Add scripts/agenda.js that reads data/inbox.json, supports an optional --status filter, and prints a
+                table with columns for Title, Owner, Status, and Due Date."
               </p>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Ensure Codex includes nice column spacing and handles missing files gracefully.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Ensure Codex includes nice column spacing and handles missing files gracefully.
+            </p>
           </div>
 
           <div>
@@ -57,7 +63,9 @@ export default function Task3SolutionPage() {
               <div>node scripts/agenda.js</div>
               <div>node scripts/agenda.js --status todo</div>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">If the formatting needs polish, ask Codex to adjust column widths or add emojis for overdue work.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              If the formatting needs polish, ask Codex to adjust column widths or add emojis for overdue work.
+            </p>
           </div>
 
           <div>

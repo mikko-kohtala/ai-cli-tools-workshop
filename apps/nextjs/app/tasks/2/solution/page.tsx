@@ -17,7 +17,9 @@ export default function Task2SolutionPage() {
               <div>mkdir -p ~/codex-workshop/task-02-journal</div>
               <div>cd ~/codex-workshop/task-02-journal</div>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Keep all Codex experiments in a single parent folder for easy cleanup later.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Keep all Codex experiments in a single parent folder for easy cleanup later.
+            </p>
           </div>
 
           <div>
@@ -25,11 +27,13 @@ export default function Task2SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2 font-semibold">Prompt example:</p>
               <p className="text-muted-foreground">
-                "I want a small project journal for the AI CLI Tools Workshop. Suggest the files we should create to track goals,
-                questions, and decisions."
+                "I want a small project journal for the AI CLI Tools Workshop. Suggest the files we should create to
+                track goals, questions, and decisions."
               </p>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Let Codex propose an initial structure before asking for specific files.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Let Codex propose an initial structure before asking for specific files.
+            </p>
           </div>
 
           <div>
@@ -40,7 +44,9 @@ export default function Task2SolutionPage() {
                 "Draft README.md with sections for Workshop Goals, Environment Setup, and Questions to Revisit."
               </p>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Review the diff, ask for tweaks if wording feels off, then approve the change.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Review the diff, ask for tweaks if wording feels off, then approve the change.
+            </p>
           </div>
 
           <div>
@@ -52,7 +58,9 @@ export default function Task2SolutionPage() {
                 <li>"Add ideas.md with three brainstorm prompts I can revisit later."</li>
               </ul>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Ask Codex to confirm the files it created so you can double-check the structure.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Ask Codex to confirm the files it created so you can double-check the structure.
+            </p>
           </div>
 
           <div>
@@ -60,7 +68,9 @@ export default function Task2SolutionPage() {
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>ls -R</div>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">Confirm everything looks correct, then exit Codex with <code>exit</code> or <code>Ctrl+C</code>.</p>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Confirm everything looks correct, then exit Codex with <code>exit</code> or <code>Ctrl+C</code>.
+            </p>
           </div>
         </div>
       </div>

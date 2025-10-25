@@ -6,7 +6,8 @@ export default function Task2Page() {
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 2: Create a Project Journal with Codex</h1>
         <p className="text-lg">
-          Learn how to set up a fresh workspace and collaborate with Codex CLI to scaffold helpful project documentation.
+          Learn how to set up a fresh workspace and collaborate with Codex CLI to scaffold helpful project
+          documentation.
         </p>
       </div>
 
@@ -14,8 +15,8 @@ export default function Task2Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Create a dedicated directory for workshop experiments, then guide Codex CLI to generate a lightweight project
-            journal that captures goals, open questions, and next steps.
+            Create a dedicated directory for workshop experiments, then guide Codex CLI to generate a lightweight
+            project journal that captures goals, open questions, and next steps.
           </p>
         </div>
 
@@ -37,22 +38,26 @@ export default function Task2Page() {
               <li>
                 <p>
                   Ask Codex to outline the files that would help a teammate ramp up quickly, such as a README, a
-                  <code className="mx-1 rounded bg-white px-1 py-0.5 font-mono text-sm dark:bg-slate-950">notes/</code> folder,
-                  and a daily log.
+                  <code className="mx-1 rounded bg-white px-1 py-0.5 font-mono text-sm dark:bg-slate-950">notes/</code>{" "}
+                  folder, and a daily log.
                 </p>
               </li>
               <li>
                 <p>
                   Request that Codex drafts
                   <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">README.md</code>
-                  with sections for <em>Workshop Goals</em>, <em>Environment Setup</em>, and <em>Questions to Revisit</em>.
+                  with sections for <em>Workshop Goals</em>, <em>Environment Setup</em>, and{" "}
+                  <em>Questions to Revisit</em>.
                 </p>
               </li>
               <li>
                 <p>
                   Have Codex create
-                  <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">notes/decision-log.md</code>
-                  and populate it with a table that tracks the date, decision, and rationale. Review the diff before applying.
+                  <code className="mx-1 rounded bg-white px-2 py-1 font-mono text-sm dark:bg-slate-950">
+                    notes/decision-log.md
+                  </code>
+                  and populate it with a table that tracks the date, decision, and rationale. Review the diff before
+                  applying.
                 </p>
               </li>
               <li>

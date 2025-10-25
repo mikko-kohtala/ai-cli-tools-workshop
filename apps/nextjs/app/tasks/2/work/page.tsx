@@ -12,11 +12,30 @@ export default function Task2WorkPage() {
         <h2 className="mb-3 font-semibold text-xl">📝 Task Instructions</h2>
         <p className="mb-4">Complete the following steps in your local terminal with Codex CLI:</p>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Create <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">~/codex-workshop/task-02-journal</code> and change into it.</li>
+          <li>
+            Create{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">
+              ~/codex-workshop/task-02-journal
+            </code>{" "}
+            and change into it.
+          </li>
           <li>Launch Codex CLI, explain the goal, and ask it to propose a documentation structure.</li>
-          <li>Generate <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">README.md</code> covering goals, environment setup, and open questions.</li>
-          <li>Create <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">notes/decision-log.md</code> with a table for tracking choices.</li>
-          <li>Capture brainstorm prompts inside <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">ideas.md</code>.</li>
+          <li>
+            Generate{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">README.md</code>{" "}
+            covering goals, environment setup, and open questions.
+          </li>
+          <li>
+            Create{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">
+              notes/decision-log.md
+            </code>{" "}
+            with a table for tracking choices.
+          </li>
+          <li>
+            Capture brainstorm prompts inside{" "}
+            <code className="mx-1 rounded bg-white px-2 py-0.5 font-mono text-sm dark:bg-slate-950">ideas.md</code>.
+          </li>
           <li>Review Codex&apos;s diffs carefully before approving them.</li>
         </ol>
       </div>
@@ -24,7 +43,8 @@ export default function Task2WorkPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">💡 Notes</h2>
         <p className="text-muted-foreground text-sm">
-          Track observations, follow-up questions, or adjustments you asked Codex to make. Use this as a scratchpad while you work.
+          Track observations, follow-up questions, or adjustments you asked Codex to make. Use this as a scratchpad
+          while you work.
         </p>
       </div>
 

@@ -16,6 +16,11 @@ const TASKS = [
     number: 3,
     title: "Ship a Helpful Automation Script",
   },
+  {
+    description: "Build a playable browser-based arcade game through iterative AI-assisted development.",
+    number: 5,
+    title: "Build a Dino Runner Arcade Game",
+  },
 ];
 
 export default function TasksPage() {
@@ -34,7 +39,9 @@ export default function TasksPage() {
             key={task.number}
           >
             <div className="space-y-2">
-              <h2 className="font-semibold text-2xl tracking-tight">Task {task.number}: {task.title}</h2>
+              <h2 className="font-semibold text-2xl tracking-tight">
+                Task {task.number}: {task.title}
+              </h2>
               <p className="text-muted-foreground">{task.description}</p>
             </div>
           </Link>
