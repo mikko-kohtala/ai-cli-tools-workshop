@@ -21,6 +21,11 @@ const TASKS = [
     title: "Task 4: Automate an Incident Snapshot",
     description: "Use codex exec with schemas and resumes to convert logs into structured reports.",
   },
+  {
+    number: 5,
+    title: "Task 5: Build an Arcade Mini-Game",
+    description: "Iterate on a retro-inspired game with Codex CLI, layering features and comparing AI CLIs.",
+  },
 ];
 
 export default function TasksPage() {

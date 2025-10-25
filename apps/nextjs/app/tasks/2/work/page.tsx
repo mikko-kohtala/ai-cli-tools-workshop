@@ -11,10 +11,19 @@ export default function Task2WorkPage() {
       <div className="rounded-lg border bg-amber-50 p-6 dark:bg-amber-950/30">
         <h2 className="mb-3 font-semibold text-xl">🛠️ Steps to Complete</h2>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Create <code>~/codex-workshop/task-02-workspace</code> (or a similar folder) and run <code>git init</code>.</li>
-          <li>Add an <code>AGENTS.md</code> describing your goals, tone, and coding preferences.</li>
-          <li>Start Codex with <code>codex --cd ~/codex-workshop/task-02-workspace</code> (or by <code>cd</code>'ing first).</li>
-          <li>Ask Codex to draft a <code>README.md</code> plus a <code>.gitignore</code> and confirm the edits.</li>
+          <li>
+            Create <code>~/codex-workshop/task-02-workspace</code> (or a similar folder) and run <code>git init</code>.
+          </li>
+          <li>
+            Add an <code>AGENTS.md</code> describing your goals, tone, and coding preferences.
+          </li>
+          <li>
+            Start Codex with <code>codex --cd ~/codex-workshop/task-02-workspace</code> (or by <code>cd</code>'ing
+            first).
+          </li>
+          <li>
+            Ask Codex to draft a <code>README.md</code> plus a <code>.gitignore</code> and confirm the edits.
+          </li>
           <li>Capture the session summary or link for later reference.</li>
         </ol>
       </div>
@@ -22,7 +31,9 @@ export default function Task2WorkPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">🧠 Reflection Prompts</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
-          <li>What guidance did you put in <code>AGENTS.md</code> and how did it change Codex's output?</li>
+          <li>
+            What guidance did you put in <code>AGENTS.md</code> and how did it change Codex's output?
+          </li>
           <li>How did the approval workflow feel when Codex proposed multiple files?</li>
           <li>What would you tweak in your setup before starting a larger project?</li>
         </ul>

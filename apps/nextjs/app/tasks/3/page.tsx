@@ -14,8 +14,8 @@ export default function Task3Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Use Codex CLI as your coding partner to create a TypeScript script that reads meeting notes and outputs a concise
-            agenda. Practice iterating on generated code, running commands, and validating the results.
+            Use Codex CLI as your coding partner to create a TypeScript script that reads meeting notes and outputs a
+            concise agenda. Practice iterating on generated code, running commands, and validating the results.
           </p>
         </div>
 
@@ -24,32 +24,34 @@ export default function Task3Page() {
           <ol className="list-decimal space-y-4 pl-6">
             <li>
               <p>
-                Create a new folder such as <code>~/codex-workshop/task-03-json-helper</code>, initialise Git, and copy the
-                sample data: <code>cp -R ./materials/workshop-tasks/task3/standup-notes.json .</code>
+                Create a new folder such as <code>~/codex-workshop/task-03-json-helper</code>, initialise Git, and copy
+                the sample data: <code>cp -R ./materials/workshop-tasks/task3/standup-notes.json .</code>
               </p>
             </li>
             <li>
               <p>
-                Start Codex in the folder and paste a short design brief describing the expected behaviour. Include details
-                like: "Read the JSON file, group action items by owner, and print a Markdown agenda." Reference your
+                Start Codex in the folder and paste a short design brief describing the expected behaviour. Include
+                details like: "Read the JSON file, group action items by owner, and print a Markdown agenda." Reference
+                your
                 <code>AGENTS.md</code> guidance from Task 2 or create a new one.
               </p>
             </li>
             <li>
               <p>
-                Ask Codex to generate the TypeScript source (for example in <code>src/generate-agenda.ts</code>) along with a
-                matching <code>package.json</code> script (e.g. <code>npm run agenda</code>).</p>
-            </li>
-            <li>
-              <p>
-                Approve the proposed edits, install dependencies (<code>npm install</code>) if suggested, and use Codex to run
-                the script. Inspect the console output and request refinements until it meets your expectations.
+                Ask Codex to generate the TypeScript source (for example in <code>src/generate-agenda.ts</code>) along
+                with a matching <code>package.json</code> script (e.g. <code>npm run agenda</code>).
               </p>
             </li>
             <li>
               <p>
-                Capture the final agenda output in a new Markdown file (<code>agenda.md</code>) and commit the changes locally.
-                Ask Codex to help you craft a summary commit message.
+                Approve the proposed edits, install dependencies (<code>npm install</code>) if suggested, and use Codex
+                to run the script. Inspect the console output and request refinements until it meets your expectations.
+              </p>
+            </li>
+            <li>
+              <p>
+                Capture the final agenda output in a new Markdown file (<code>agenda.md</code>) and commit the changes
+                locally. Ask Codex to help you craft a summary commit message.
               </p>
             </li>
           </ol>
@@ -61,7 +63,9 @@ export default function Task3Page() {
             <ul className="list-disc space-y-2 pl-6">
               <li>Codex can write and refine multi-file changes in one conversation</li>
               <li>Use the approval queue to review diffs before they land on disk</li>
-              <li>Codex can run <code>npm</code> or <code>node</code> commands inside your workspace when you approve them</li>
+              <li>
+                Codex can run <code>npm</code> or <code>node</code> commands inside your workspace when you approve them
+              </li>
               <li>Providing concrete sample data improves the quality of generated code</li>
               <li>Let Codex draft commit messages after you stage changes</li>
             </ul>
@@ -74,7 +78,9 @@ export default function Task3Page() {
                 <strong>By the end of this task, you should:</strong>
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
-                <li>Have a working script that turns <code>standup-notes.json</code> into a Markdown agenda</li>
+                <li>
+                  Have a working script that turns <code>standup-notes.json</code> into a Markdown agenda
+                </li>
                 <li>Understand how to iterate on generated code within a single Codex session</li>
                 <li>Be comfortable approving command executions suggested by Codex</li>
                 <li>Practice summarising changes with Codex-generated commit messages</li>

@@ -11,10 +11,16 @@ export default function Task3WorkPage() {
       <div className="rounded-lg border bg-amber-50 p-6 dark:bg-amber-950/30">
         <h2 className="mb-3 font-semibold text-xl">🧭 Suggested Workflow</h2>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Copy <code>standup-notes.json</code> into your new Git repo and review its structure.</li>
+          <li>
+            Copy <code>standup-notes.json</code> into your new Git repo and review its structure.
+          </li>
           <li>Outline the goal for Codex (inputs, outputs, formatting) before asking for code.</li>
-          <li>Approve file edits for <code>src/generate-agenda.ts</code> and <code>package.json</code>.</li>
-          <li>Let Codex run <code>npm run agenda</code> (or similar) and inspect the output.</li>
+          <li>
+            Approve file edits for <code>src/generate-agenda.ts</code> and <code>package.json</code>.
+          </li>
+          <li>
+            Let Codex run <code>npm run agenda</code> (or similar) and inspect the output.
+          </li>
           <li>Request refinements until the Markdown agenda meets your needs, then save it.</li>
         </ol>
       </div>
@@ -24,7 +30,9 @@ export default function Task3WorkPage() {
         <ul className="list-disc space-y-2 pl-6 text-sm">
           <li>The generated agenda highlights action items grouped by owner.</li>
           <li>Dates are formatted consistently (e.g. ISO or long-form) per your instructions.</li>
-          <li>No uncommitted changes remain after you capture <code>agenda.md</code>.</li>
+          <li>
+            No uncommitted changes remain after you capture <code>agenda.md</code>.
+          </li>
         </ul>
       </div>
 

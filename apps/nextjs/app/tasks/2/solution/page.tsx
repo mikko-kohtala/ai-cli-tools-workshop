@@ -19,15 +19,15 @@ export default function Task2SolutionPage() {
               <div>git init</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Codex uses Git history to reason about your project, so initialising a repository is a best practice even for
-              quick experiments.
+              Codex uses Git history to reason about your project, so initialising a repository is a best practice even
+              for quick experiments.
             </p>
           </div>
 
           <div>
             <h3 className="mb-2 font-semibold">2. Draft guidance</h3>
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
-              <p className="mb-2 font-mono text-xs text-muted-foreground">AGENTS.md</p>
+              <p className="mb-2 font-mono text-muted-foreground text-xs">AGENTS.md</p>
               <p>
                 You can start with a few bullet points like:
                 <br />• Build a small CLI that summarises meeting notes
@@ -43,8 +43,8 @@ export default function Task2SolutionPage() {
               <div>codex --cd ~/codex-workshop/task-02-workspace</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              The <code>--cd</code> flag keeps your current shell location unchanged while giving Codex access to the new
-              workspace.
+              The <code>--cd</code> flag keeps your current shell location unchanged while giving Codex access to the
+              new workspace.
             </p>
           </div>
 
@@ -53,13 +53,13 @@ export default function Task2SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2">Example opening prompt:</p>
               <p className="text-muted-foreground">
-                "Review this empty repo, note the guidance in AGENTS.md, and propose a starter plan. Create a README that
-                outlines the CLI we discussed and add any initial files you recommend."
+                "Review this empty repo, note the guidance in AGENTS.md, and propose a starter plan. Create a README
+                that outlines the CLI we discussed and add any initial files you recommend."
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Approve the proposed edits in the TUI so Codex can write the files. You can ask it to make follow-up tweaks or
-              generate additional scaffolding once the basics are in place.
+              Approve the proposed edits in the TUI so Codex can write the files. You can ask it to make follow-up
+              tweaks or generate additional scaffolding once the basics are in place.
             </p>
           </div>
 
@@ -67,8 +67,8 @@ export default function Task2SolutionPage() {
             <h3 className="mb-2 font-semibold">5. Save context</h3>
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p>
-                Use the session menu (<kbd>Ctrl</kbd>+<kbd>S</kbd>) to copy a transcript link, or export the README to your
-                notes app. This makes it easy to resume later with <code>codex resume --last</code>.
+                Use the session menu (<kbd>Ctrl</kbd>+<kbd>S</kbd>) to copy a transcript link, or export the README to
+                your notes app. This makes it easy to resume later with <code>codex resume --last</code>.
               </p>
             </div>
           </div>
@@ -78,9 +78,13 @@ export default function Task2SolutionPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
-          <li>Codex respects <code>AGENTS.md</code> in the same way across the CLI and editor extensions</li>
+          <li>
+            Codex respects <code>AGENTS.md</code> in the same way across the CLI and editor extensions
+          </li>
           <li>You retain full control over every file edit through the approval workflow</li>
-          <li>The <code>--cd</code> flag is a simple way to manage multiple workspaces</li>
+          <li>
+            The <code>--cd</code> flag is a simple way to manage multiple workspaces
+          </li>
           <li>Capturing a transcript or session id helps you resume momentum quickly</li>
         </ul>
       </div>

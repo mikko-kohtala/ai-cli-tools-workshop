@@ -15,8 +15,8 @@ export default function Task2Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Create a fresh Git-backed workspace, add workshop guidance via <code>AGENTS.md</code>, and collaborate
-            with Codex CLI to produce a project README and useful starter files.
+            Create a fresh Git-backed workspace, add workshop guidance via <code>AGENTS.md</code>, and collaborate with
+            Codex CLI to produce a project README and useful starter files.
           </p>
         </div>
 
@@ -26,8 +26,8 @@ export default function Task2Page() {
             <li>
               <p>
                 In your terminal, create a new folder such as <code>~/codex-workshop/task-02-workspace</code> and
-                initialize it as a Git repository: <code>mkdir -p ~/codex-workshop/task-02-workspace &amp;&amp; cd</code>
-                {" "}
+                initialize it as a Git repository:{" "}
+                <code>mkdir -p ~/codex-workshop/task-02-workspace &amp;&amp; cd</code>{" "}
                 <code>~/codex-workshop/task-02-workspace</code>, then run <code>git init</code>.
               </p>
             </li>
@@ -40,16 +40,15 @@ export default function Task2Page() {
             <li>
               <p>
                 Launch Codex CLI pointed at the new folder. You can either <code>cd</code> into the directory before
-                running <code>codex</code>, or stay in your main repo and start Codex with the
-                {" "}
-                <code>--cd</code> flag: <code>codex --cd ~/codex-workshop/task-02-workspace</code>.
+                running <code>codex</code>, or stay in your main repo and start Codex with the <code>--cd</code> flag:{" "}
+                <code>codex --cd ~/codex-workshop/task-02-workspace</code>.
               </p>
             </li>
             <li>
               <p>
                 Ask Codex to inspect the folder, propose a project structure for a small automation you would like to
-                build (for example, a CLI that summarizes meeting notes), and generate a <code>README.md</code> outlining
-                the plan.
+                build (for example, a CLI that summarizes meeting notes), and generate a <code>README.md</code>{" "}
+                outlining the plan.
               </p>
             </li>
             <li>
@@ -91,11 +90,15 @@ export default function Task2Page() {
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
                 <li>Have a clean Codex-friendly project directory under version control</li>
-                <li>Provide Codex custom guidance with a hand-crafted <code>AGENTS.md</code></li>
+                <li>
+                  Provide Codex custom guidance with a hand-crafted <code>AGENTS.md</code>
+                </li>
                 <li>
                   Generate a <code>README.md</code>, <code>.gitignore</code>, and at least one starter file with Codex
                 </li>
-                <li>Know how to launch Codex in a specific folder using <code>--cd</code></li>
+                <li>
+                  Know how to launch Codex in a specific folder using <code>--cd</code>
+                </li>
               </ul>
             </div>
           </div>

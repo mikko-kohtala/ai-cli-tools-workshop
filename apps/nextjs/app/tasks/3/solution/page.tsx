@@ -24,10 +24,14 @@ export default function Task3SolutionPage() {
           <div>
             <h3 className="mb-2 font-semibold">2. Guidance for Codex</h3>
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
-              <p className="mb-2">Example snippet for <code>AGENTS.md</code>:</p>
+              <p className="mb-2">
+                Example snippet for <code>AGENTS.md</code>:
+              </p>
               <ul className="list-disc space-y-1 pl-6">
                 <li>Goal: Generate a Markdown agenda with sections for updates, blockers, and action items.</li>
-                <li>Prefer TypeScript with ES modules and <code>tsx</code> for execution.</li>
+                <li>
+                  Prefer TypeScript with ES modules and <code>tsx</code> for execution.
+                </li>
                 <li>Group action items by owner and include due dates.</li>
               </ul>
             </div>
@@ -38,8 +42,9 @@ export default function Task3SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2">Opening prompt (paste into Codex):</p>
               <p className="text-muted-foreground">
-                "Read standup-notes.json, create src/generate-agenda.ts that loads the file, summarises updates, groups action
-                items by owner, and prints Markdown to stdout. Add package.json scripts so I can run npm run agenda."
+                "Read standup-notes.json, create src/generate-agenda.ts that loads the file, summarises updates, groups
+                action items by owner, and prints Markdown to stdout. Add package.json scripts so I can run npm run
+                agenda."
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -55,8 +60,8 @@ export default function Task3SolutionPage() {
               <div>npm run agenda</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Review the Markdown printed to the terminal. Ask Codex for improvements (e.g. reorder sections, tweak formatting)
-              and approve follow-up diffs.
+              Review the Markdown printed to the terminal. Ask Codex for improvements (e.g. reorder sections, tweak
+              formatting) and approve follow-up diffs.
             </p>
           </div>
 
