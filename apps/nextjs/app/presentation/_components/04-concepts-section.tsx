@@ -241,7 +241,8 @@ export function ConceptsSection() {
                   </p>
                   <div className="mt-2 rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                     <p className="font-mono text-xs">
-                      e.g. <code>codex mcp add github</code> → access issues, PRs, and repo data
+                      e.g. <code>codex mcp add playwright npx @playwright/mcp@latest</code> → browser automation and
+                      testing
                     </p>
                   </div>
                   <p className="mt-2 text-foreground/60 text-xs italic">
