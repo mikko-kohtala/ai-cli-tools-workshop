@@ -11,20 +11,32 @@ export default function Task4WorkPage() {
       <div className="rounded-lg border bg-amber-50 p-6 dark:bg-amber-950/30">
         <h2 className="mb-3 font-semibold text-xl">⚙️ Automation Checklist</h2>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Collect two or more Markdown recap files in <code>~/codex-workshop/task-04-reports</code>.</li>
-          <li>Run <code>codex exec</code> to generate <code>summary.md</code> from the notes.</li>
-          <li>Run <code>codex exec --model high</code> to produce a follow-up <code>agenda.md</code>.</li>
-          <li>Add an <code>AGENTS.md</code> reminding Codex to keep source notes read-only.</li>
-          <li>Re-run <code>codex exec</code> and verify it writes new files without overwriting originals.</li>
-          <li>Ask Codex (interactive mode optional) to package the outputs into a <code>reports/</code> folder.</li>
+          <li>
+            Collect two or more Markdown recap files in <code>~/codex-workshop/task-04-reports</code>.
+          </li>
+          <li>
+            Run <code>codex exec</code> to generate <code>summary.md</code> from the notes.
+          </li>
+          <li>
+            Run <code>codex exec --model high</code> to produce a follow-up <code>agenda.md</code>.
+          </li>
+          <li>
+            Add an <code>AGENTS.md</code> reminding Codex to keep source notes read-only.
+          </li>
+          <li>
+            Re-run <code>codex exec</code> and verify it writes new files without overwriting originals.
+          </li>
+          <li>
+            Ask Codex (interactive mode optional) to package the outputs into a <code>reports/</code> folder.
+          </li>
         </ol>
       </div>
 
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">🗒️ Notes</h2>
         <p className="text-muted-foreground text-sm">
-          Use this page to track automation prompts, compare different <code>--model</code> settings, or outline how you&apos;ll
-          integrate <code>codex exec</code> into your own workflows.
+          Use this page to track automation prompts, compare different <code>--model</code> settings, or outline how
+          you&apos;ll integrate <code>codex exec</code> into your own workflows.
         </p>
       </div>
 

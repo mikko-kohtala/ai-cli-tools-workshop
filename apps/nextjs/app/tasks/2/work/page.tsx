@@ -11,20 +11,33 @@ export default function Task2WorkPage() {
       <div className="rounded-lg border bg-blue-50 p-6 dark:bg-blue-950/30">
         <h2 className="mb-3 font-semibold text-xl">🛠️ Terminal Flow</h2>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Create <code>~/codex-workshop/task-02-workspace</code> (or similar) and <code>cd</code> into it.</li>
-          <li>Add an <code>AGENTS.md</code> describing the guardrails you want Codex to respect.</li>
-          <li>Run <code>codex --cd ~/codex-workshop/task-02-workspace --ask-for-approval</code>.</li>
-          <li>Ask Codex to summarize the <code>AGENTS.md</code> instructions before doing anything else.</li>
-          <li>Let Codex draft a <code>README.md</code> that documents the sandbox and attendee checklist.</li>
-          <li>Experiment with <code>codex resume --last</code> or <code>codex --add-dir ..</code> to practice session control.</li>
+          <li>
+            Create <code>~/codex-workshop/task-02-workspace</code> (or similar) and <code>cd</code> into it.
+          </li>
+          <li>
+            Add an <code>AGENTS.md</code> describing the guardrails you want Codex to respect.
+          </li>
+          <li>
+            Run <code>codex --cd ~/codex-workshop/task-02-workspace --ask-for-approval</code>.
+          </li>
+          <li>
+            Ask Codex to summarize the <code>AGENTS.md</code> instructions before doing anything else.
+          </li>
+          <li>
+            Let Codex draft a <code>README.md</code> that documents the sandbox and attendee checklist.
+          </li>
+          <li>
+            Experiment with <code>codex resume --last</code> or <code>codex --add-dir ..</code> to practice session
+            control.
+          </li>
         </ol>
       </div>
 
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">🧠 Notes</h2>
         <p className="text-muted-foreground text-sm">
-          Capture interesting Codex responses, questions you want to ask during the workshop, or follow-up ideas below. Treat
-          this page as your scratchpad while you iterate in the terminal.
+          Capture interesting Codex responses, questions you want to ask during the workshop, or follow-up ideas below.
+          Treat this page as your scratchpad while you iterate in the terminal.
         </p>
       </div>
 

@@ -18,7 +18,8 @@ export default function Task2SolutionPage() {
               <div>cd ~/codex-workshop/task-02-workspace</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Feel free to name the folder however you like—the goal is to have an isolated workspace for Codex to explore.
+              Feel free to name the folder however you like—the goal is to have an isolated workspace for Codex to
+              explore.
             </p>
           </div>
 
@@ -65,7 +66,8 @@ export default function Task2SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-1 font-semibold">Example prompt:</p>
               <p className="text-muted-foreground">
-                "Draft a README.md for this sandbox. Include: purpose, the AGENTS.md rules, and a 4-item attendee checklist."
+                "Draft a README.md for this sandbox. Include: purpose, the AGENTS.md rules, and a 4-item attendee
+                checklist."
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -80,7 +82,8 @@ export default function Task2SolutionPage() {
               <div>codex --cd ~/codex-workshop/task-02-workspace --add-dir ..</div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Resume reopens the most recent conversation, while <code>--add-dir</code> exposes an extra folder (like a shared
+              Resume reopens the most recent conversation, while <code>--add-dir</code> exposes an extra folder (like a
+              shared
               <code>notes/</code> directory) without moving the primary workspace.
             </p>
           </div>
@@ -90,7 +93,9 @@ export default function Task2SolutionPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
-          <li>Codex immediately reads <code>AGENTS.md</code> files in your working tree</li>
+          <li>
+            Codex immediately reads <code>AGENTS.md</code> files in your working tree
+          </li>
           <li>Approval mode keeps a clear audit trail while you are learning</li>
           <li>Dedicated sandboxes make it easy to experiment without risking other repos</li>
           <li>Session resume lets you pause during the workshop and pick up where you left off</li>

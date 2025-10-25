@@ -35,7 +35,9 @@ export default function Task4SolutionPage() {
           <div>
             <h3 className="mb-2 font-semibold">2. Generate the summary</h3>
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
-              <div>codex exec --cd ~/codex-workshop/task-04-reports "Summarize every markdown file into summary.md"</div>
+              <div>
+                codex exec --cd ~/codex-workshop/task-04-reports "Summarize every markdown file into summary.md"
+              </div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
               Codex reads <code>day-*.md</code>, produces <code>summary.md</code>, and exits once the file is written.
@@ -46,11 +48,13 @@ export default function Task4SolutionPage() {
             <h3 className="mb-2 font-semibold">3. Generate the agenda with deeper reasoning</h3>
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>
-                codex exec --cd ~/codex-workshop/task-04-reports --model high "Create agenda.md with next-step action items based on the notes"
+                codex exec --cd ~/codex-workshop/task-04-reports --model high "Create agenda.md with next-step action
+                items based on the notes"
               </div>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              The <code>--model high</code> flag encourages a more thorough response—great for strategic follow-up lists.
+              The <code>--model high</code> flag encourages a more thorough response—great for strategic follow-up
+              lists.
             </p>
           </div>
 
@@ -77,7 +81,8 @@ export default function Task4SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-1 font-semibold">Example prompt (interactive session optional):</p>
               <p className="text-muted-foreground">
-                "Create a reports/ folder, move summary.md and agenda.md into it, and generate an index.md describing both files."
+                "Create a reports/ folder, move summary.md and agenda.md into it, and generate an index.md describing
+                both files."
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -90,9 +95,13 @@ export default function Task4SolutionPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
-          <li><code>codex exec</code> is perfect for repeatable workflows like summaries or report generation</li>
+          <li>
+            <code>codex exec</code> is perfect for repeatable workflows like summaries or report generation
+          </li>
           <li>Reasoning levels help you balance speed vs. depth for different outputs</li>
-          <li><code>AGENTS.md</code> remains in effect, even for one-off automation runs</li>
+          <li>
+            <code>AGENTS.md</code> remains in effect, even for one-off automation runs
+          </li>
           <li>You can chain exec runs with interactive sessions for quality control</li>
         </ul>
       </div>

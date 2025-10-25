@@ -14,8 +14,8 @@ export default function Task3Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Collaborate with Codex to design and implement a Node.js task tracker that stores its data locally, then validate the
-            behavior by running sample commands.
+            Collaborate with Codex to design and implement a Node.js task tracker that stores its data locally, then
+            validate the behavior by running sample commands.
           </p>
         </div>
 
@@ -31,14 +31,14 @@ export default function Task3Page() {
               </li>
               <li>
                 <p>
-                  Ask Codex for a step-by-step plan to build a Node.js script called <code>todo.js</code> that can add, list, and
-                  complete items using a local <code>tasks.json</code> file.
+                  Ask Codex for a step-by-step plan to build a Node.js script called <code>todo.js</code> that can add,
+                  list, and complete items using a local <code>tasks.json</code> file.
                 </p>
               </li>
               <li>
                 <p>
-                  Approve the plan, then prompt Codex to scaffold the project: initialize <code>package.json</code>, add a
-                  <code>README.md</code>, and create <code>todo.js</code> with clear functions.
+                  Approve the plan, then prompt Codex to scaffold the project: initialize <code>package.json</code>, add
+                  a<code>README.md</code>, and create <code>todo.js</code> with clear functions.
                 </p>
               </li>
               <li>
@@ -49,14 +49,14 @@ export default function Task3Page() {
               </li>
               <li>
                 <p>
-                  Ask Codex to add a lightweight test script (for example, using Node's built-in <code>assert</code> module) and
-                  run it via <code>npm test</code>.
+                  Ask Codex to add a lightweight test script (for example, using Node's built-in <code>assert</code>{" "}
+                  module) and run it via <code>npm test</code>.
                 </p>
               </li>
               <li>
                 <p>
-                  Review all diffs before applying them. If something looks off, request adjustments or edits until you are
-                  satisfied.
+                  Review all diffs before applying them. If something looks off, request adjustments or edits until you
+                  are satisfied.
                 </p>
               </li>
             </ol>
@@ -82,7 +82,9 @@ export default function Task3Page() {
                 <strong>By the end of this task, you should:</strong>
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
-                <li>Have a working <code>todo.js</code> CLI that persists data to <code>tasks.json</code></li>
+                <li>
+                  Have a working <code>todo.js</code> CLI that persists data to <code>tasks.json</code>
+                </li>
                 <li>See Codex execute Node scripts and share the captured output</li>
                 <li>Understand how to request and review automated tests</li>
                 <li>Feel comfortable approving or rejecting Codex-generated diffs</li>

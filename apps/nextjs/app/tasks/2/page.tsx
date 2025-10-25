@@ -6,8 +6,8 @@ export default function Task2Page() {
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 2: Shape Your Codex Workspace</h1>
         <p className="text-lg">
-          Practice creating a dedicated project folder, guiding Codex CLI with <code>AGENTS.md</code>, and confirming the
-          instructions are followed.
+          Practice creating a dedicated project folder, guiding Codex CLI with <code>AGENTS.md</code>, and confirming
+          the instructions are followed.
         </p>
       </div>
 
@@ -15,8 +15,8 @@ export default function Task2Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Build a clean sandbox for Codex CLI, add workshop-specific guardrails, and confirm the assistant is aware of the
-            context before making changes.
+            Build a clean sandbox for Codex CLI, add workshop-specific guardrails, and confirm the assistant is aware of
+            the context before making changes.
           </p>
         </div>
 
@@ -32,14 +32,16 @@ export default function Task2Page() {
               </li>
               <li>
                 <p>
-                  Add an <code>AGENTS.md</code> file that reminds Codex to write readable Markdown notes, run <code>npm test</code>
+                  Add an <code>AGENTS.md</code> file that reminds Codex to write readable Markdown notes, run{" "}
+                  <code>npm test</code>
                   before finishing, and ask for approval before changing dependencies.
                 </p>
               </li>
               <li>
                 <p>
-                  Launch Codex with the folder as its root: <code>codex --cd ~/codex-workshop/task-02-workspace --ask-for-approval</code>.
-                  Let the session boot and read the <code>AGENTS.md</code> guidance.
+                  Launch Codex with the folder as its root:{" "}
+                  <code>codex --cd ~/codex-workshop/task-02-workspace --ask-for-approval</code>. Let the session boot
+                  and read the <code>AGENTS.md</code> guidance.
                 </p>
               </li>
               <li>
@@ -49,14 +51,14 @@ export default function Task2Page() {
               </li>
               <li>
                 <p>
-                  Request a starter <code>README.md</code> that explains the task goals, what the <code>AGENTS.md</code> enforces, and
-                  a checklist for attendees.
+                  Request a starter <code>README.md</code> that explains the task goals, what the <code>AGENTS.md</code>{" "}
+                  enforces, and a checklist for attendees.
                 </p>
               </li>
               <li>
                 <p>
-                  Experiment with <code>codex resume --last</code> or <code>codex --add-dir ..</code> to understand how Codex keeps
-                  context when you expand the workspace.
+                  Experiment with <code>codex resume --last</code> or <code>codex --add-dir ..</code> to understand how
+                  Codex keeps context when you expand the workspace.
                 </p>
               </li>
             </ol>
@@ -67,11 +69,21 @@ export default function Task2Page() {
           <div className="space-y-4">
             <h2 className="font-semibold text-2xl">Key Concepts</h2>
             <ul className="list-disc space-y-2 pl-6">
-              <li>Use <code>--cd</code> to point Codex at a brand-new directory</li>
-              <li><code>AGENTS.md</code> files layer instructions from root to leaf folders</li>
-              <li><code>--ask-for-approval</code> keeps you in control of every change</li>
-              <li><code>codex resume</code> lets you hop back into previous sessions</li>
-              <li><code>--add-dir</code> exposes extra folders without leaving your workspace</li>
+              <li>
+                Use <code>--cd</code> to point Codex at a brand-new directory
+              </li>
+              <li>
+                <code>AGENTS.md</code> files layer instructions from root to leaf folders
+              </li>
+              <li>
+                <code>--ask-for-approval</code> keeps you in control of every change
+              </li>
+              <li>
+                <code>codex resume</code> lets you hop back into previous sessions
+              </li>
+              <li>
+                <code>--add-dir</code> exposes extra folders without leaving your workspace
+              </li>
             </ul>
           </div>
 
@@ -83,8 +95,12 @@ export default function Task2Page() {
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
                 <li>Have a dedicated Codex sandbox with workshop guardrails</li>
-                <li>See Codex acknowledge the <code>AGENTS.md</code> file you wrote</li>
-                <li>Own a <code>README.md</code> generated with your custom instructions</li>
+                <li>
+                  See Codex acknowledge the <code>AGENTS.md</code> file you wrote
+                </li>
+                <li>
+                  Own a <code>README.md</code> generated with your custom instructions
+                </li>
                 <li>Understand how to resume sessions and expand directories</li>
               </ul>
             </div>
