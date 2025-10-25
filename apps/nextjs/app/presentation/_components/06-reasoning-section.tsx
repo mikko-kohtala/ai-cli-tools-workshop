@@ -4,10 +4,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const reasoningComparison = [
   {
-    tool: "Claude-based CLIs",
+    tool: "Claude Code",
     method: "Thinking Keywords",
     levels: ["think", "think hard", "think harder", "ultrathink"],
-    description: "Some tools support natural language keywords to request deeper reasoning when needed",
+    description: "Use natural language keywords to request deeper reasoning when needed",
   },
   {
     tool: "Codex CLI",
@@ -131,9 +131,8 @@ export function ReasoningSection() {
                 <div>
                   <p className="mb-2 font-semibold text-sm">Default model (configurable)</p>
                   <p className="text-foreground/70 text-sm">
-                    Codex uses a sensible default model based on your configuration. You can switch providers and
-                    models depending on availability (e.g., OpenAI GPT-4.x / o-series, Anthropic Claude, Google
-                    Gemini).
+                    Codex uses a sensible default model based on your configuration. You can switch providers and models
+                    depending on availability (e.g., OpenAI GPT-5 / GPT-5-Codex, Anthropic Claude, Google Gemini).
                   </p>
                 </div>
                 <div>
@@ -148,7 +147,7 @@ export function ReasoningSection() {
                     <strong>Switch models:</strong>
                   </p>
                   <pre className="rounded border bg-slate-950 p-2 text-xs">
-                    <code className="text-slate-50">codex --model openai:gpt-4o</code>
+                    <code className="text-slate-50">codex --model gpt-5-codex</code>
                   </pre>
                 </div>
               </div>
@@ -183,7 +182,7 @@ export function ReasoningSection() {
                   <div>
                     <p className="mb-2 font-semibold text-sm">Switch to an OpenAI model with high reasoning:</p>
                     <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model openai:gpt-4o high</code>
+                      <code className="text-slate-50 text-sm">/model openai:gpt-5-codex high</code>
                     </pre>
                   </div>
                   <div>
@@ -204,7 +203,7 @@ export function ReasoningSection() {
 
       <Card className="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30">
         <CardHeader>
-          <CardTitle className="text-2xl">Claude-based CLIs: Thinking Mode</CardTitle>
+          <CardTitle className="text-2xl">Claude Code: Thinking Mode</CardTitle>
           <CardDescription className="text-base">
             Request deeper reasoning with natural language keywords
           </CardDescription>
@@ -212,8 +211,8 @@ export function ReasoningSection() {
         <CardContent>
           <div className="mb-4 space-y-4">
             <p className="text-foreground/70 text-sm">
-              Recent Claude models support extended reasoning, allowing you to request deeper thinking when needed. Use
-              these keywords to guide how thoroughly the model analyzes your problem:
+              Claude Code's thinking mode allows you to request extended reasoning when needed. Use these keywords to
+              guide how thoroughly the model analyzes your problem:
             </p>
             <div className="grid gap-3 md:grid-cols-2">
               <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
@@ -276,7 +275,7 @@ export function ReasoningSection() {
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
                   <div className="rounded-lg bg-cyan-50 p-3 dark:bg-cyan-950/30">
-                    <p className="mb-1 font-semibold text-xs">Claude-based CLIs</p>
+                    <p className="mb-1 font-semibold text-xs">Claude Code</p>
                     <code className="text-xs">{useCase.tools.claude}</code>
                   </div>
                   <div className="rounded-lg bg-blue-50 p-3 dark:bg-blue-950/30">

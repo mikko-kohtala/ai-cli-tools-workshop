@@ -3,25 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const agendaItems = [
   {
-    title: "Why AI CLI tools matter",
-    description:
-      "Understanding the paradigm shift in development workflows and the unique value proposition of terminal-based AI assistants",
+    title: "AI CLI tools landscape",
+    description: "Overview of available tools (Codex CLI, Claude Code, Gemini CLI, Amp) and common use cases",
   },
   {
-    title: "The AI CLI tools landscape",
-    description: "Overview of available tools, their capabilities, and when to use them for different scenarios",
+    title: "Key concepts: Context, Planning & Tools",
+    description: "Context window management, planning mode vs. execution, and how AI uses tools to take action",
   },
   {
-    title: "Core concepts and architecture patterns",
-    description: "How these tools work under the hood, from project context to security layers and agent runtimes",
+    title: "Architecture & Reasoning",
+    description: "How these tools work under the hood and how to control reasoning depth for different tasks",
   },
   {
-    title: "Security and control mechanisms",
-    description: "Understanding filesystem access, approval flows, and best practices for safe AI-assisted development",
+    title: "Security & Control",
+    description: "Filesystem access levels, approval flows, and best practices for safe AI-assisted development",
   },
   {
-    title: "Effective usage and choosing your tool",
-    description: "Practical strategies for working with AI CLI tools and selecting the right one for your needs",
+    title: "Choosing your tool & Q&A",
+    description: "Decision factors for selecting the right tool for your needs, followed by open discussion",
   },
 ];
 

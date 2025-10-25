@@ -1,33 +1,5 @@
-import { Brain, CheckCircle, Lightbulb, Terminal, Zap } from "lucide-react";
+import { CheckCircle, Zap } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const valueProps = [
-  {
-    icon: Terminal,
-    title: "Terminal-native workflow",
-    description: "Work in your natural development environment",
-    details: "No context switching between tools. Full access to your terminal, git, and local tooling.",
-  },
-  {
-    icon: Brain,
-    title: "Deep project understanding",
-    description: "Tools that understand your entire codebase",
-    details: "AI agents analyze your project structure, dependencies, and patterns to provide contextual assistance.",
-  },
-  {
-    icon: Zap,
-    title: "Autonomous task execution",
-    description: "From planning to implementation automatically",
-    details: "Describe what you want, and watch as the tool plans, implements, and tests changes autonomously.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Control and transparency",
-    description: "You approve changes, the AI executes them",
-    details: "Maintain full control with approval flows, sandboxing, and clear visibility into every action.",
-  },
-];
 
 const tools = [
   {
@@ -37,22 +9,22 @@ const tools = [
     highlights: ["Terminal-native workflow", "Plans + apply_patch diffs", "Approval flows and sandboxing"],
   },
   {
-    name: "Claude-based CLIs",
+    name: "Claude Code",
     provider: "Anthropic",
-    model: "Claude family (various)",
+    model: "Uses latest Claude models",
     highlights: ["Strong reasoning", "Helpful refactors", "Safety features"],
   },
   {
-    name: "Gemini-based CLIs",
+    name: "Gemini CLI",
     provider: "Google",
-    model: "Gemini family (various)",
+    model: "Uses latest Gemini models",
     highlights: ["Multimodal support", "Code search integrations", "Cloud ecosystem"],
   },
   {
-    name: "Aider",
-    provider: "Community",
-    model: "Multiple providers",
-    highlights: ["Git-aware diffs", "Fast prototyping", "Simple workflow"],
+    name: "Amp",
+    provider: "Sourcegraph",
+    model: "Auto-selects best model",
+    highlights: ["1M token context", "Subagent parallelization", "Oracle second opinions"],
   },
 ];
 
@@ -113,24 +85,6 @@ export function LandscapeSection() {
       </div>
 
       <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">Why Choose CLI Over IDE Plugins or Web Chat?</h3>
-        <div className="grid gap-6 md:grid-cols-2">
-          {valueProps.map((item) => (
-            <Card className="border-2 transition-colors hover:border-purple-200" key={`value-${item.title}`}>
-              <CardHeader>
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
-                  <item.icon className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-                </div>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-base">{item.description}</CardDescription>
-                <p className="pt-2 text-foreground/70 text-sm">{item.details}</p>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-12">
         <h3 className="mb-2 font-semibold text-2xl">Available Tools</h3>
         <p className="mb-4 text-foreground/70 text-sm">
           Examples only—this ecosystem moves quickly and names/models evolve. Focus on capabilities and fit.
@@ -177,74 +131,6 @@ export function LandscapeSection() {
           ))}
         </div>
       </div>
-
-      <Card className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950/30 dark:to-blue-950/30">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-            Getting Started: A Typical Workflow
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Tabs defaultValue="start">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="start">Starting a Session</TabsTrigger>
-              <TabsTrigger value="task">Making a Request</TabsTrigger>
-              <TabsTrigger value="review">Review & Approve</TabsTrigger>
-            </TabsList>
-            <TabsContent className="mt-4" value="start">
-              <div className="space-y-3">
-                <p className="text-foreground/70 text-sm">Navigate to your project and start the CLI tool:</p>
-                <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50">
-                  <code>
-                    cd my-project{"\n"}
-                    codex <span className="text-slate-400"># or: claude, gemini, aider</span>
-                  </code>
-                </pre>
-                <p className="mt-3 text-foreground/70 text-sm">
-                  The tool will analyze your project structure, git status, and environment before presenting an
-                  interactive prompt.
-                </p>
-              </div>
-            </TabsContent>
-            <TabsContent className="mt-4" value="task">
-              <div className="space-y-3">
-                <p className="text-foreground/70 text-sm">Describe your task in natural language:</p>
-                <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50 text-sm">
-                  <code className="text-green-400">You:</code>{" "}
-                  <code>
-                    Add input validation to the user registration form.{"\n"}Make sure to validate email format and
-                    password strength.{"\n"}
-                  </code>
-                  <code className="text-blue-400">{"\n"}AI:</code>{" "}
-                  <code>
-                    {" "}
-                    I'll add comprehensive validation. Here's my plan:{"\n"} 1. Create validation utility functions
-                    {"\n"} 2. Update registration form component{"\n"} 3. Add user feedback for validation errors
-                    {"\n"} 4. Write tests for validation logic{"\n"}
-                    {"\n"}Does this approach work for you?
-                  </code>
-                </pre>
-              </div>
-            </TabsContent>
-            <TabsContent className="mt-4" value="review">
-              <div className="space-y-3">
-                <p className="text-foreground/70 text-sm">Review the plan, then approve execution:</p>
-                <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-slate-50 text-sm">
-                  <code className="text-green-400">You:</code> <code>Yes, proceed{"\n"}</code>
-                  <code className="text-blue-400">{"\n"}AI:</code>{" "}
-                  <code>
-                    {" "}
-                    Great! Starting implementation...{"\n"} ✓ Created src/utils/validation.ts{"\n"} ✓ Updated
-                    components/RegistrationForm.tsx{"\n"} ✓ Added validation error messages{"\n"} ✓ Created tests in
-                    __tests__/validation.test.ts{"\n"} {"\n"}All changes complete. Run tests to verify!
-                  </code>
-                </pre>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </CardContent>
-      </Card>
     </section>
   );
 }

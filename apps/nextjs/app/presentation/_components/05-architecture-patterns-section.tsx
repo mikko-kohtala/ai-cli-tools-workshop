@@ -34,7 +34,7 @@ const architectureLayers = [
   },
 ];
 
-const exampleSteps = [
+const _exampleSteps = [
   {
     component: "User Interface",
     action: 'receives your request: "Add error handling to the API endpoints"',
@@ -162,26 +162,20 @@ export function ArchitecturePatternsSection() {
         </div>
       </div>
 
-      <Card className="border-2 border-indigo-200">
+      <Card className="border-2 border-indigo-200 bg-indigo-50 dark:bg-indigo-950/30">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5" />
-            Architecture in Action: Complete Workflow
+            <Lightbulb className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+            Typical Workflow Pattern
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-3 text-sm">
-            <p className="font-semibold">Example: Adding error handling to API endpoints</p>
-            <ol className="ml-2 list-inside list-decimal space-y-2">
-              {exampleSteps.map((step, index) => (
-                <li key={`example-${index}`}>
-                  <strong>{step.component}</strong> {step.action}
-                </li>
-              ))}
-            </ol>
-            <p className="mt-4 rounded-lg bg-indigo-50 p-3 text-foreground/70 dark:bg-indigo-950/30">
-              <strong>Note:</strong> The exact flow varies by tool, but the general pattern of analyze → plan → approve
-              → execute → present remains consistent across modern AI CLI tools.
+          <div className="text-center">
+            <p className="font-mono font-semibold text-indigo-700 text-lg dark:text-indigo-300">
+              Analyze → Plan → Approve → Execute → Present
+            </p>
+            <p className="mt-3 text-foreground/70 text-sm">
+              All modern AI CLI tools follow this pattern, though exact implementation varies by tool
             </p>
           </div>
         </CardContent>

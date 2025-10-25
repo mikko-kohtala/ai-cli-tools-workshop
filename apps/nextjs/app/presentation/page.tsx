@@ -9,8 +9,6 @@ import { ConceptsSection } from "./_components/04-concepts-section";
 import { ArchitecturePatternsSection } from "./_components/05-architecture-patterns-section";
 import { ReasoningSection } from "./_components/06-reasoning-section";
 import { SecuritySection } from "./_components/07-security-section";
-import { EffectiveUsageSection } from "./_components/08-effective-usage-section";
-import { DemoSection } from "./_components/09-demo-section";
 import { ChoosingToolSection } from "./_components/10-choosing-tool-section";
 import { QASection } from "./_components/11-qa-section";
 import { TableOfContents } from "./_components/12-table-of-contents";
@@ -19,12 +17,10 @@ const sections = [
   { id: "intro", title: "Introduction" },
   { id: "agenda", title: "Agenda" },
   { id: "landscape", title: "AI CLI Tools Landscape" },
-  { id: "concepts", title: "Core Concepts" },
+  { id: "concepts", title: "Key Concepts" },
   { id: "architecture", title: "Architecture & Design Patterns" },
   { id: "reasoning", title: "Models & Reasoning" },
   { id: "security", title: "Security & Control" },
-  { id: "effective-usage", title: "Effective Usage" },
-  { id: "demo", title: "Demo Flow" },
   { id: "choosing", title: "Choosing Your Tool" },
   { id: "qa", title: "Q & A" },
 ];
@@ -81,10 +77,6 @@ export default function PresentationPage() {
           <ReasoningSection />
           <Separator className="my-16" />
           <SecuritySection />
-          <Separator className="my-16" />
-          <EffectiveUsageSection />
-          <Separator className="my-16" />
-          <DemoSection />
           <Separator className="my-16" />
           <ChoosingToolSection />
           <Separator className="my-16" />

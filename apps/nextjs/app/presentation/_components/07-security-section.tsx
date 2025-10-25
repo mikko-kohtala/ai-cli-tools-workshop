@@ -1,7 +1,7 @@
 import { AlertTriangle, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 const securityPrinciples = [
   {
@@ -167,14 +167,14 @@ export function SecuritySection() {
         <TabsContent className="mt-4" value="access">
           <div className="space-y-4">
             {accessLevels.map((level) => {
-              const borderClass =
-                level.color === "green"
-                  ? "border-l-green-500"
-                  : level.color === "blue"
-                    ? "border-l-blue-500"
-                    : level.color === "red"
-                      ? "border-l-red-500"
-                      : "border-l-slate-300";
+              let borderClass = "border-l-slate-300";
+              if (level.color === "green") {
+                borderClass = "border-l-green-500";
+              } else if (level.color === "blue") {
+                borderClass = "border-l-blue-500";
+              } else if (level.color === "red") {
+                borderClass = "border-l-red-500";
+              }
               return (
                 <Card className={cn("border-l-4", borderClass)} key={`access-${level.level}`}>
                   <CardHeader>
@@ -223,14 +223,14 @@ export function SecuritySection() {
         <TabsContent className="mt-4" value="scenarios">
           <div className="space-y-4">
             {securityScenarios.map((scenario) => {
-              const statusClass =
-                scenario.statusColor === "green"
-                  ? "text-green-600 dark:text-green-400"
-                  : scenario.statusColor === "blue"
-                    ? "text-blue-600 dark:text-blue-400"
-                    : scenario.statusColor === "amber"
-                      ? "text-amber-600 dark:text-amber-400"
-                      : "text-red-600 dark:text-red-400";
+              let statusClass = "text-red-600 dark:text-red-400";
+              if (scenario.statusColor === "green") {
+                statusClass = "text-green-600 dark:text-green-400";
+              } else if (scenario.statusColor === "blue") {
+                statusClass = "text-blue-600 dark:text-blue-400";
+              } else if (scenario.statusColor === "amber") {
+                statusClass = "text-amber-600 dark:text-amber-400";
+              }
               return (
                 <Card key={`scenario-${scenario.title}`}>
                   <CardHeader>
