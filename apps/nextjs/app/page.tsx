@@ -100,36 +100,6 @@ export default function Page() {
               </ul>
             </div>
           </div>
-
-          <div className="rounded-lg border bg-blue-50 p-6 dark:bg-blue-950/30">
-            <h2 className="mb-4 font-semibold text-2xl tracking-tight">About Codex CLI</h2>
-            <div className="space-y-4">
-              <p>
-                <strong>Codex CLI</strong> is a coding agent that you can run locally from your terminal. Built by
-                OpenAI, it can read, modify, and run code on your machine in the chosen directory.
-              </p>
-              <p>
-                It's available through our existing OpenAI ChatGPT licensing and provides powerful capabilities for
-                automating development tasks while keeping you in control.
-              </p>
-              <div className="mt-4 rounded border bg-white p-4 dark:bg-slate-900">
-                <h3 className="mb-2 font-semibold text-foreground text-lg">🔗 Resources</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      className="text-blue-600 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-                      href="https://developers.openai.com/codex/cli"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Codex CLI Documentation
-                    </a>
-                  </li>
-                  <li>Setup instructions will be shared before the workshop</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </SidebarInset>
       <AppSidebar side="right" />
