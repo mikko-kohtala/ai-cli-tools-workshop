@@ -14,8 +14,8 @@ export default function Task2Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Create a fresh directory, guide Codex CLI through planning, and generate a simple Python script that summarizes a
-            notes file. Finish by running the script with <code>codex exec</code> to validate the result.
+            Create a fresh directory, guide Codex CLI through planning, and generate a simple Python script that
+            summarizes a notes file. Finish by running the script with <code>codex exec</code> to validate the result.
           </p>
         </div>
 
@@ -26,7 +26,9 @@ export default function Task2Page() {
               <li>
                 <p>
                   Create a dedicated workspace such as
-                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">~/codex-workshop/task-02-summary-script</code>
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">
+                    ~/codex-workshop/task-02-summary-script
+                  </code>
                   and change into it.
                 </p>
               </li>
@@ -37,20 +39,20 @@ export default function Task2Page() {
               </li>
               <li>
                 <p>
-                  Start Codex CLI in the directory and ask for a plan (for example by typing <code>/plan</code>) to create a
-                  README plus a Python script that summarizes <code>notes.txt</code> into a concise checklist.
+                  Start Codex CLI in the directory and ask for a plan (for example by typing <code>/plan</code>) to
+                  create a README plus a Python script that summarizes <code>notes.txt</code> into a concise checklist.
                 </p>
               </li>
               <li>
                 <p>
-                  Review the proposed plan, request adjustments if needed, and approve the steps that make sense. Ask Codex to
-                  implement the plan and generate <code>README.md</code> and <code>summarize_notes.py</code>.
+                  Review the proposed plan, request adjustments if needed, and approve the steps that make sense. Ask
+                  Codex to implement the plan and generate <code>README.md</code> and <code>summarize_notes.py</code>.
                 </p>
               </li>
               <li>
                 <p>
-                  Once the files are generated, use <code>codex exec "python summarize_notes.py notes.txt"</code> to run the
-                  script and verify the output.
+                  Once the files are generated, use <code>codex exec "python summarize_notes.py notes.txt"</code> to run
+                  the script and verify the output.
                 </p>
               </li>
               <li>
@@ -67,7 +69,9 @@ export default function Task2Page() {
             <h2 className="font-semibold text-2xl">Key Concepts</h2>
             <ul className="list-disc space-y-2 pl-6">
               <li>Working inside a task-specific directory keeps Codex focused</li>
-              <li>Use <code>/plan</code> to co-design the approach before edits happen</li>
+              <li>
+                Use <code>/plan</code> to co-design the approach before edits happen
+              </li>
               <li>Approve changes deliberately to stay in control of file edits</li>
               <li>
                 <code>codex exec</code> runs follow-up commands without leaving the session
@@ -86,7 +90,9 @@ export default function Task2Page() {
                 <li>Have a scoped workspace containing notes, script, and README files</li>
                 <li>Feel confident asking Codex to draft and refine a plan</li>
                 <li>Know how to approve file creations and edits</li>
-                <li>Have executed your script via <code>codex exec</code></li>
+                <li>
+                  Have executed your script via <code>codex exec</code>
+                </li>
                 <li>Captured a summary for later reference</li>
               </ul>
             </div>

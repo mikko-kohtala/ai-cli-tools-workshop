@@ -12,10 +12,16 @@ export default function Task2WorkPage() {
         <h2 className="mb-3 font-semibold text-xl">📝 Task Instructions</h2>
         <p className="mb-4">Follow these steps with Codex CLI in your local terminal:</p>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Prepare a new directory and add a simple <code>notes.txt</code> file</li>
+          <li>
+            Prepare a new directory and add a simple <code>notes.txt</code> file
+          </li>
           <li>Launch Codex CLI in the directory and request a plan to build a summary script</li>
-          <li>Approve the plan and have Codex generate <code>README.md</code> and <code>summarize_notes.py</code></li>
-          <li>Run <code>codex exec "python summarize_notes.py notes.txt"</code> to verify the script</li>
+          <li>
+            Approve the plan and have Codex generate <code>README.md</code> and <code>summarize_notes.py</code>
+          </li>
+          <li>
+            Run <code>codex exec "python summarize_notes.py notes.txt"</code> to verify the script
+          </li>
           <li>Ask Codex for a recap and suggested enhancements</li>
         </ol>
       </div>

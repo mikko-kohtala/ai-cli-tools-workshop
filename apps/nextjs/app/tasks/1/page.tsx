@@ -24,8 +24,10 @@ export default function Task1Page() {
               <li>
                 <p>
                   Create a dedicated workspace directory (for example
-                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">~/codex-workshop/task-01-getting-started</code>)
-                  and change into it.
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">
+                    ~/codex-workshop/task-01-getting-started
+                  </code>
+                  ) and change into it.
                 </p>
               </li>
               <li>

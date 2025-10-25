@@ -12,14 +12,20 @@ export default function Task3WorkPage() {
         <h2 className="mb-3 font-semibold text-xl">📝 Task Instructions</h2>
         <p className="mb-4">Guide Codex CLI through the refactor using these steps:</p>
         <ol className="list-decimal space-y-2 pl-6">
-          <li>Create a new directory and add the provided <code>converter.py</code> starter file</li>
+          <li>
+            Create a new directory and add the provided <code>converter.py</code> starter file
+          </li>
           <li>
             Launch Codex in that directory and raise reasoning depth with
             <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">/model reasoning high</code>
           </li>
           <li>Request a plan covering validation improvements and pytest-based tests</li>
-          <li>Approve changes to <code>converter.py</code> and the generated <code>test_converter.py</code></li>
-          <li>Execute <code>codex exec "python -m pytest"</code> and review the results with Codex</li>
+          <li>
+            Approve changes to <code>converter.py</code> and the generated <code>test_converter.py</code>
+          </li>
+          <li>
+            Execute <code>codex exec "python -m pytest"</code> and review the results with Codex
+          </li>
           <li>Capture Codex&apos;s summary and recommended follow-up actions</li>
         </ol>
       </div>

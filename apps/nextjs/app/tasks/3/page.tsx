@@ -6,8 +6,8 @@ export default function Task3Page() {
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 3: Refine Code and Tests with Codex CLI</h1>
         <p className="text-lg">
-          Learn how to steer Codex CLI through refactoring an existing script, adding tests, and validating the results with
-          higher reasoning depth.
+          Learn how to steer Codex CLI through refactoring an existing script, adding tests, and validating the results
+          with higher reasoning depth.
         </p>
       </div>
 
@@ -15,8 +15,8 @@ export default function Task3Page() {
         <div className="space-y-4">
           <h2 className="font-semibold text-2xl">Objective</h2>
           <p>
-            Start from a rough Python temperature converter, use Codex CLI with high reasoning to improve the implementation,
-            generate tests, and run them end-to-end inside the same session.
+            Start from a rough Python temperature converter, use Codex CLI with high reasoning to improve the
+            implementation, generate tests, and run them end-to-end inside the same session.
           </p>
         </div>
 
@@ -27,20 +27,20 @@ export default function Task3Page() {
             <div># converter.py</div>
             <div className="h-2" />
             <div>def to_fahrenheit(celsius):</div>
-            <div>    return celsius * 9 / 5 + 32</div>
+            <div> return celsius * 9 / 5 + 32</div>
             <div className="h-2" />
             <div>def to_celsius(fahrenheit):</div>
-            <div>    return (fahrenheit - 32) * 5 / 9</div>
+            <div> return (fahrenheit - 32) * 5 / 9</div>
             <div className="h-2" />
             <div>if __name__ == "__main__":</div>
-            <div>    mode = input("Mode (c2f/f2c): ")</div>
-            <div>    value = float(input("Value: "))</div>
-            <div>    if mode == "c2f":</div>
-            <div>        print(to_fahrenheit(value))</div>
-            <div>    elif mode == "f2c":</div>
-            <div>        print(to_celsius(value))</div>
-            <div>    else:</div>
-            <div>        print("unknown mode")</div>
+            <div> mode = input("Mode (c2f/f2c): ")</div>
+            <div> value = float(input("Value: "))</div>
+            <div> if mode == "c2f":</div>
+            <div> print(to_fahrenheit(value))</div>
+            <div> elif mode == "f2c":</div>
+            <div> print(to_celsius(value))</div>
+            <div> else:</div>
+            <div> print("unknown mode")</div>
           </div>
         </div>
 
@@ -51,15 +51,17 @@ export default function Task3Page() {
               <li>
                 <p>
                   Create a clean workspace such as
-                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">~/codex-workshop/task-03-quality-pass</code>
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">
+                    ~/codex-workshop/task-03-quality-pass
+                  </code>
                   and add <code>converter.py</code> using the starter code above.
                 </p>
               </li>
               <li>
                 <p>
                   Launch Codex CLI inside the directory and elevate reasoning depth by running the
-                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">/model reasoning high</code> command at the start
-                  of the session.
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">/model reasoning high</code> command at
+                  the start of the session.
                 </p>
               </li>
               <li>
@@ -70,14 +72,15 @@ export default function Task3Page() {
               </li>
               <li>
                 <p>
-                  Approve the plan, review the proposed edits, and let Codex refactor <code>converter.py</code> plus add a new
+                  Approve the plan, review the proposed edits, and let Codex refactor <code>converter.py</code> plus add
+                  a new
                   <code>test_converter.py</code> file.
                 </p>
               </li>
               <li>
                 <p>
-                  Run <code>codex exec "python -m pytest"</code> to execute the generated tests. If <code>pytest</code> is not
-                  installed, ask Codex for the recommended installation command.
+                  Run <code>codex exec "python -m pytest"</code> to execute the generated tests. If <code>pytest</code>{" "}
+                  is not installed, ask Codex for the recommended installation command.
                 </p>
               </li>
               <li>
@@ -152,10 +155,10 @@ export default function Task3Page() {
             Previous Task
           </Link>
           <Link
-            className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 font-medium text-sm ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground"
-            href="/tasks"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground text-sm ring-offset-background transition-colors hover:bg-primary/90"
+            href="/tasks/5"
           >
-            Back to Overview
+            Next Task
           </Link>
         </div>
       </div>

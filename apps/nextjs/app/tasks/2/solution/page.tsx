@@ -37,8 +37,10 @@ export default function Task2SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2 font-semibold">Example prompt:</p>
               <p className="text-muted-foreground">
-                /plan Create a README and a Python script named <code>summarize_notes.py</code> that reads <code>notes.txt</code>
-                and prints a concise checklist summary. Include an execution step that runs the script on the notes file.
+                /plan Create a README and a Python script named <code>summarize_notes.py</code> that reads{" "}
+                <code>notes.txt</code>
+                and prints a concise checklist summary. Include an execution step that runs the script on the notes
+                file.
               </p>
             </div>
           </div>
@@ -46,8 +48,8 @@ export default function Task2SolutionPage() {
           <div>
             <h3 className="mb-2 font-semibold">3. Implement the Plan</h3>
             <p className="text-muted-foreground text-sm">
-              Approve Codex creating <code>README.md</code> and <code>summarize_notes.py</code>. Ask it to show the diff before
-              applying.
+              Approve Codex creating <code>README.md</code> and <code>summarize_notes.py</code>. Ask it to show the diff
+              before applying.
             </p>
           </div>
 
@@ -77,8 +79,12 @@ export default function Task2SolutionPage() {
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
           <li>Start each exercise in a clean directory with only the context you need</li>
-          <li>Use <code>/plan</code> to co-design the workflow before Codex edits files</li>
-          <li><code>codex exec</code> keeps execution within the same conversational context</li>
+          <li>
+            Use <code>/plan</code> to co-design the workflow before Codex edits files
+          </li>
+          <li>
+            <code>codex exec</code> keeps execution within the same conversational context
+          </li>
           <li>Asking for summaries cements what the agent accomplished</li>
           <li>Iterate on the plan if it misses context from your notes</li>
         </ul>

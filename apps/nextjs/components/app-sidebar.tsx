@@ -41,20 +41,20 @@ const data = {
       icon: IconCheckbox,
       items: [
         {
-          title: "Task 1",
+          title: "Task 1: Getting Started",
           url: "/tasks/1",
         },
         {
-          title: "Task 2",
+          title: "Task 2: Scaffold Project",
           url: "/tasks/2",
         },
         {
-          title: "Task 3",
+          title: "Task 3: Refine & Test",
           url: "/tasks/3",
         },
         {
-          title: "Task 4",
-          url: "/tasks/4",
+          title: "Task 5: Arcade Game",
+          url: "/tasks/5",
         },
       ],
     },

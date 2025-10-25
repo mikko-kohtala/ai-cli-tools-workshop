@@ -18,20 +18,20 @@ export default function Task3SolutionPage() {
               <div>cd ~/codex-workshop/task-03-quality-pass</div>
               <div>cat &gt; converter.py &lt;&lt;'EOF'</div>
               <div>def to_fahrenheit(celsius):</div>
-              <div>    return celsius * 9 / 5 + 32</div>
+              <div> return celsius * 9 / 5 + 32</div>
               <div className="h-2" />
               <div>def to_celsius(fahrenheit):</div>
-              <div>    return (fahrenheit - 32) * 5 / 9</div>
+              <div> return (fahrenheit - 32) * 5 / 9</div>
               <div className="h-2" />
               <div>if __name__ == "__main__":</div>
-              <div>    mode = input("Mode (c2f/f2c): ")</div>
-              <div>    value = float(input("Value: "))</div>
-              <div>    if mode == "c2f":</div>
-              <div>        print(to_fahrenheit(value))</div>
-              <div>    elif mode == "f2c":</div>
-              <div>        print(to_celsius(value))</div>
-              <div>    else:</div>
-              <div>        print("unknown mode")</div>
+              <div> mode = input("Mode (c2f/f2c): ")</div>
+              <div> value = float(input("Value: "))</div>
+              <div> if mode == "c2f":</div>
+              <div> print(to_fahrenheit(value))</div>
+              <div> elif mode == "f2c":</div>
+              <div> print(to_celsius(value))</div>
+              <div> else:</div>
+              <div> print("unknown mode")</div>
               <div>EOF</div>
             </div>
           </div>
@@ -41,9 +41,7 @@ export default function Task3SolutionPage() {
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>codex</div>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">
-              Start the session from inside the workspace directory.
-            </p>
+            <p className="mt-2 text-muted-foreground text-sm">Start the session from inside the workspace directory.</p>
           </div>
 
           <div>
@@ -61,8 +59,8 @@ export default function Task3SolutionPage() {
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2 font-semibold">Example prompt:</p>
               <p className="text-muted-foreground">
-                /plan Improve converter.py by adding docstrings, validating inputs, handling invalid numbers gracefully, and
-                creating pytest tests that cover both conversion functions and CLI behavior.
+                /plan Improve converter.py by adding docstrings, validating inputs, handling invalid numbers gracefully,
+                and creating pytest tests that cover both conversion functions and CLI behavior.
               </p>
             </div>
           </div>
@@ -70,7 +68,8 @@ export default function Task3SolutionPage() {
           <div>
             <h3 className="mb-2 font-semibold">4. Implement Safely</h3>
             <p className="text-muted-foreground text-sm">
-              Approve each file change after reviewing the diff. Encourage Codex to explain tricky updates before applying.
+              Approve each file change after reviewing the diff. Encourage Codex to explain tricky updates before
+              applying.
             </p>
           </div>
 
@@ -112,7 +111,9 @@ export default function Task3SolutionPage() {
           <li>High reasoning mode is ideal for multi-step refactors and testing workflows</li>
           <li>Providing starter files keeps Codex anchored to your project structure</li>
           <li>Review diffs carefully—Codex relies on your approvals to proceed</li>
-          <li><code>codex exec</code> streamlines installing dependencies and running tests</li>
+          <li>
+            <code>codex exec</code> streamlines installing dependencies and running tests
+          </li>
           <li>Retrospectives reinforce learning and create a paper trail for teammates</li>
         </ul>
       </div>
