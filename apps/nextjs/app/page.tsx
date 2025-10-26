@@ -32,7 +32,7 @@ export default function Page() {
             >
               <div className="space-y-2">
                 <h2 className="font-semibold text-2xl tracking-tight">Presentation</h2>
-                <p>Learn about the landscape of AI CLI tools, with a focus on OpenAI's Codex CLI.</p>
+                <p>Learn about the landscape of AI CLI tools, with hands-on tasks using Codex CLI.</p>
               </div>
             </Link>
 
