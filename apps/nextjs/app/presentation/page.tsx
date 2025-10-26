@@ -63,7 +63,7 @@ export default function PresentationPage() {
     <div className="flex flex-1">
       {/* Main Content */}
       <div className="flex-1 overflow-auto">
-        <div className="mx-auto max-w-6xl p-8">
+        <div className="w-full p-8">
           <IntroSection />
           <Separator className="my-16" />
           <AgendaSection />
