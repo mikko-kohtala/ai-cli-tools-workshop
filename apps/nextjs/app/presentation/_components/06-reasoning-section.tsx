@@ -12,8 +12,8 @@ const reasoningComparison = [
   {
     tool: "Codex CLI",
     method: "Reasoning Settings",
-    levels: ["minimal", "medium", "high"],
-    description: "Switch model and reasoning level via CLI flags or in-chat commands",
+    levels: ["minimal", "low", "medium", "high"],
+    description: "Switch models and reasoning depth via CLI flags or in-chat commands",
   },
 ];
 
@@ -28,7 +28,7 @@ const useCases = [
     ],
     tools: {
       claude: '"Add comments to this function"',
-      codex: "Default medium level or use /model with low",
+      codex: "Stay on medium for balance or drop to minimal for quick edits",
     },
   },
   {
@@ -41,7 +41,7 @@ const useCases = [
     ],
     tools: {
       claude: '"think about the best approach to implement..."',
-      codex: "Default: medium; raise to high for nuanced tradeoffs",
+      codex: "Default: medium; raise to high when you need deeper tradeoffs",
     },
   },
   {
@@ -55,7 +55,7 @@ const useCases = [
     ],
     tools: {
       claude: '"think harder about the security implications..."',
-      codex: "Use /model or flags to select a stronger model and high reasoning",
+      codex: "Use /model or CLI flags for stronger models with high reasoning",
     },
   },
 ];
@@ -132,7 +132,7 @@ export function ReasoningSection() {
                   <p className="mb-2 font-semibold text-sm">Default model (configurable)</p>
                   <p className="text-foreground/70 text-sm">
                     Codex uses a sensible default model based on your configuration. You can switch providers and models
-                    depending on availability (e.g., OpenAI GPT-5 / GPT-5-Codex, Anthropic Claude, Google Gemini).
+                    across OpenAI, Anthropic, Google, and other supported platforms.
                   </p>
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export function ReasoningSection() {
                     <strong>Switch models:</strong>
                   </p>
                   <pre className="rounded border bg-slate-950 p-2 text-xs">
-                    <code className="text-slate-50">codex --model gpt-5-codex</code>
+                    <code className="text-slate-50">codex --model provider:model-id</code>
                   </pre>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function ReasoningSection() {
                   <div>
                     <p className="mb-2 font-semibold text-sm">Switch to an OpenAI model with high reasoning:</p>
                     <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model openai:gpt-5-codex high</code>
+                      <code className="text-slate-50 text-sm">/model openai:model-id high</code>
                     </pre>
                   </div>
                   <div>
@@ -193,7 +193,7 @@ export function ReasoningSection() {
                   </div>
                 </div>
                 <p className="mt-4 text-foreground/70 text-xs">
-                  You can also specify the model and reasoning level when launching Codex with the --model flag.
+                  You can also set the provider with --model and the depth with --reasoning-effort when launching Codex.
                 </p>
               </div>
             </TabsContent>
