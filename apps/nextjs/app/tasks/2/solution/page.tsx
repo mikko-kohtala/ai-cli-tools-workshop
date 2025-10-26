@@ -84,8 +84,8 @@ helpful feedback to users about how to improve their passwords.
               </p>
               <p className="text-muted-foreground">
                 &quot;Create a TODO.md file that breaks down the password strength checker project into specific
-                implementation tasks. Include sections for planning, implementation, and testing. Use markdown checkboxes
-                [ ] for tasks.&quot;
+                implementation tasks. Include sections for planning, implementation, and testing. Use markdown
+                checkboxes [ ] for tasks.&quot;
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
@@ -223,9 +223,7 @@ helpful feedback to users about how to improve their passwords.
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded bg-white p-3 dark:bg-slate-900">
             <p className="mb-1 font-semibold text-sm">🎨 ASCII Banner Generator</p>
-            <p className="text-muted-foreground text-xs">
-              Converts text to big ASCII art with multiple font styles
-            </p>
+            <p className="text-muted-foreground text-xs">Converts text to big ASCII art with multiple font styles</p>
           </div>
           <div className="rounded bg-white p-3 dark:bg-slate-900">
             <p className="mb-1 font-semibold text-sm">🌍 Time Zone Converter</p>

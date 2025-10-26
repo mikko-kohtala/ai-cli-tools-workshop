@@ -24,7 +24,7 @@ const tools = [
     name: "Amp",
     provider: "Sourcegraph",
     model: "Auto-selects best model",
-    highlights: ["1M token context", "Subagent parallelization", "Oracle second opinions"],
+    highlights: ["Handles enterprise-scale codebases", "Subagent parallelization", "Oracle second opinions"],
   },
 ];
 

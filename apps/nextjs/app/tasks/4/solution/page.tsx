@@ -65,9 +65,8 @@ codex`}
                 <p className="mb-2 font-medium text-sm">Prompt to use:</p>
                 <p className="font-mono text-xs">
                   &quot;Create index.html with a 400x400 Canvas showing a 20x20 grid. Draw a snake (3 segments) starting
-                  at center and one food item. Use inline CSS for centering and inline JS. Include
-                  requestAnimationFrame scaffold. No movement yet—just static rendering. Use retro green-on-black
-                  colors.&quot;
+                  at center and one food item. Use inline CSS for centering and inline JS. Include requestAnimationFrame
+                  scaffold. No movement yet—just static rendering. Use retro green-on-black colors.&quot;
                 </p>
               </div>
               <pre className="overflow-x-auto rounded bg-slate-950 p-3 text-xs">
@@ -83,9 +82,9 @@ index.html  # Contains everything: HTML, CSS, JS`}
               <div className="mb-2 rounded bg-white p-3 dark:bg-slate-900">
                 <p className="mb-2 font-medium text-sm">Prompt to use:</p>
                 <p className="font-mono text-xs">
-                  &quot;Add arrow key controls to change snake direction. Move snake forward one cell every 150ms. Prevent
-                  180-degree turns (can't go directly from up to down). Update head position and remove tail segment each
-                  frame to maintain length.&quot;
+                  &quot;Add arrow key controls to change snake direction. Move snake forward one cell every 150ms.
+                  Prevent 180-degree turns (can't go directly from up to down). Update head position and remove tail
+                  segment each frame to maintain length.&quot;
                 </p>
               </div>
             </div>
@@ -106,15 +105,16 @@ index.html  # Contains everything: HTML, CSS, JS`}
               <div className="mb-2 rounded bg-white p-3 dark:bg-slate-900">
                 <p className="mb-2 font-medium text-sm">Prompt to use:</p>
                 <p className="font-mono text-xs">
-                  &quot;Add collision detection: if snake head hits walls (x&lt;0, x&gt;=20, y&lt;0, y&gt;=20) or any body
-                  segment, set gameOver=true and stop movement. Show 'Game Over - Press Space to Restart' message.&quot;
+                  &quot;Add collision detection: if snake head hits walls (x&lt;0, x&gt;=20, y&lt;0, y&gt;=20) or any
+                  body segment, set gameOver=true and stop movement. Show 'Game Over - Press Space to Restart'
+                  message.&quot;
                 </p>
               </div>
               <div className="mt-2 rounded border border-purple-300 bg-white p-3 dark:border-purple-700 dark:bg-slate-900">
                 <p className="mb-1 font-medium text-sm">💡 If collision is buggy:</p>
                 <p className="text-xs">
-                  Switch to higher reasoning: <code className="rounded bg-muted px-1 py-0.5">/model high</code> then ask:
-                  &quot;Debug the collision detection—snake is dying unexpectedly. Add console logging to show head
+                  Switch to higher reasoning: <code className="rounded bg-muted px-1 py-0.5">/model high</code> then
+                  ask: &quot;Debug the collision detection—snake is dying unexpectedly. Add console logging to show head
                   position and body positions each frame.&quot;
                 </p>
               </div>
@@ -379,8 +379,8 @@ Built iteratively with AI assistance:
             <div className="rounded border border-red-200 bg-red-50 p-3 dark:border-red-900 dark:bg-red-950/30">
               <p className="mb-2 font-medium text-sm">❌ Controls feel unresponsive</p>
               <p className="text-xs">
-                <strong>Fix:</strong> &quot;Change keyboard event from 'keydown' to track key states in an object. Update
-                movement based on key states in the game loop instead of event handlers.&quot;
+                <strong>Fix:</strong> &quot;Change keyboard event from 'keydown' to track key states in an object.
+                Update movement based on key states in the game loop instead of event handlers.&quot;
               </p>
             </div>
 
@@ -405,9 +405,7 @@ Built iteratively with AI assistance:
 
         <div className="rounded-lg border border-cyan-200 bg-cyan-50 p-6 dark:border-cyan-900 dark:bg-cyan-950/30">
           <h2 className="mb-3 font-semibold text-xl">🎯 Presentation Tips</h2>
-          <p className="mb-3 text-sm">
-            When sharing your game with the workshop, be ready to talk about:
-          </p>
+          <p className="mb-3 text-sm">When sharing your game with the workshop, be ready to talk about:</p>
           <ul className="list-disc space-y-2 pl-6 text-sm">
             <li>
               <strong>What you built:</strong> Quick game description and core mechanic

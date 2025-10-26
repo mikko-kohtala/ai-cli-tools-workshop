@@ -1,5 +1,5 @@
+import { Camera, Gamepad2, Github, Video } from "lucide-react";
 import Link from "next/link";
-import { Gamepad2, Camera, Video, Github } from "lucide-react";
 
 export default function Task4Page() {
   return (
@@ -27,9 +27,7 @@ export default function Task4Page() {
             <Gamepad2 className="h-6 w-6" />
             Choose Your Game
           </h3>
-          <p className="mb-4 text-sm">
-            Pick any classic arcade game that interests you! Here are some ideas:
-          </p>
+          <p className="mb-4 text-sm">Pick any classic arcade game that interests you! Here are some ideas:</p>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border border-amber-200 bg-white p-3 dark:border-amber-800 dark:bg-slate-900">
               <p className="mb-1 font-semibold text-sm">🐍 Snake</p>
@@ -89,10 +87,10 @@ export default function Task4Page() {
                 </li>
                 <li>
                   <p>
-                    Create <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">AGENTS.md</code> with
-                    your game constraints:
+                    Create <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">AGENTS.md</code>{" "}
+                    with your game constraints:
                   </p>
-                  <ul className="ml-6 mt-2 list-disc space-y-1 text-sm">
+                  <ul className="mt-2 ml-6 list-disc space-y-1 text-sm">
                     <li>Technology choice (HTML5 Canvas, terminal game, etc.)</li>
                     <li>No external libraries (vanilla JS/Python/etc.)</li>
                     <li>Keep files under 200 lines</li>
@@ -126,19 +124,20 @@ export default function Task4Page() {
                 </li>
                 <li>
                   <p>
-                    <strong>Milestone 3 - Game Logic:</strong> Implement collision detection, win/lose conditions, scoring
+                    <strong>Milestone 3 - Game Logic:</strong> Implement collision detection, win/lose conditions,
+                    scoring
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Milestone 4 - Game Loop:</strong> Add restart functionality, game states (menu, playing, game
-                    over)
+                    <strong>Milestone 4 - Game Loop:</strong> Add restart functionality, game states (menu, playing,
+                    game over)
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>Milestone 5 - Polish:</strong> Add one enhancement (high score tracking, sound effects, visual
-                    effects, difficulty progression)
+                    <strong>Milestone 5 - Polish:</strong> Add one enhancement (high score tracking, sound effects,
+                    visual effects, difficulty progression)
                   </p>
                 </li>
               </ol>
@@ -269,12 +268,12 @@ export default function Task4Page() {
               graphics.
             </p>
             <p>
-              <strong>Scope Control:</strong> Use rectangles/circles instead of sprites. One feature well-done beats five
-              half-finished.
+              <strong>Scope Control:</strong> Use rectangles/circles instead of sprites. One feature well-done beats
+              five half-finished.
             </p>
             <p>
-              <strong>Debug Smart:</strong> If stuck for &gt;3 minutes on one issue, ask AI to simplify or try a different
-              approach.
+              <strong>Debug Smart:</strong> If stuck for &gt;3 minutes on one issue, ask AI to simplify or try a
+              different approach.
             </p>
           </div>
         </div>

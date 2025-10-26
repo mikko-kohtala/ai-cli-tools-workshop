@@ -45,7 +45,10 @@ export default function Task1Page() {
                 </p>
               </li>
               <li>
-                <p>Verify your installation by running the version command in your terminal.</p>
+                <p>
+                  Verify your installation by running{" "}
+                  <code className="rounded bg-muted px-1 py-0.5 text-sm">codex --version</code> in your terminal.
+                </p>
               </li>
               <li>
                 <p>
@@ -73,7 +76,7 @@ export default function Task1Page() {
               <li>It can read and modify files in your current directory</li>
               <li>Sessions maintain context for better assistance</li>
               <li>You can ask questions and request code changes</li>
-              <li>All changes require your approval before being applied</li>
+              <li>Approval modes let you decide when changes land (Suggest vs. Auto)</li>
             </ul>
           </div>
 

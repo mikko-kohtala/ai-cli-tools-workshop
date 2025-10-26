@@ -5,9 +5,7 @@ export default function Task3SolutionPage() {
     <div className="flex flex-col gap-8 p-8">
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 3: Solution & Reference</h1>
-        <p className="text-lg text-muted-foreground">
-          Detailed walkthrough and examples for advanced Codex features
-        </p>
+        <p className="text-lg text-muted-foreground">Detailed walkthrough and examples for advanced Codex features</p>
       </div>
 
       <div className="space-y-6">
@@ -182,9 +180,7 @@ cat action-items.md`}
                 </div>
                 <div className="rounded bg-white p-3 dark:bg-slate-900">
                   <p className="mb-1 font-medium text-sm">🧪 Code Analysis</p>
-                  <p className="text-muted-foreground text-xs">
-                    Security scans, complexity metrics, quality reports
-                  </p>
+                  <p className="text-muted-foreground text-xs">Security scans, complexity metrics, quality reports</p>
                 </div>
               </div>
             </div>
@@ -245,7 +241,7 @@ codex
                   <strong>Script Creation:</strong> Build automation scripts for browser tasks
                 </li>
               </ul>
-              <p className="mt-3 text-sm italic text-muted-foreground">
+              <p className="mt-3 text-muted-foreground text-sm italic">
                 Note: The MCP focuses on script generation and page analysis rather than real-time browser control.
               </p>
             </div>
@@ -262,7 +258,9 @@ codex
                 </div>
                 <div className="rounded bg-white p-3 dark:bg-slate-900">
                   <p className="mb-1 font-medium text-sm">📁 Filesystem MCP</p>
-                  <p className="mb-2 text-muted-foreground text-xs">Advanced file operations and directory management</p>
+                  <p className="mb-2 text-muted-foreground text-xs">
+                    Advanced file operations and directory management
+                  </p>
                   <code className="text-xs">codex mcp add filesystem npx @modelcontextprotocol/server-filesystem</code>
                 </div>
                 <div className="rounded bg-white p-3 dark:bg-slate-900">
@@ -291,7 +289,7 @@ codex
           <div className="space-y-3">
             <div>
               <h3 className="mb-2 font-medium text-sm">Custom Prompts</h3>
-              <ul className="list-disc space-y-1 pl-6 text-sm text-muted-foreground">
+              <ul className="list-disc space-y-1 pl-6 text-muted-foreground text-sm">
                 <li>Keep prompts focused on a single task or workflow</li>
                 <li>Use descriptive frontmatter for better discoverability</li>
                 <li>Test with various argument combinations</li>
@@ -300,7 +298,7 @@ codex
             </div>
             <div>
               <h3 className="mb-2 font-medium text-sm">codex exec</h3>
-              <ul className="list-disc space-y-1 pl-6 text-sm text-muted-foreground">
+              <ul className="list-disc space-y-1 pl-6 text-muted-foreground text-sm">
                 <li>Start with default reasoning, scale up only if needed</li>
                 <li>Use clear, specific prompts for best results</li>
                 <li>Combine with AGENTS.md for consistent outputs</li>
@@ -309,7 +307,7 @@ codex
             </div>
             <div>
               <h3 className="mb-2 font-medium text-sm">MCP Servers</h3>
-              <ul className="list-disc space-y-1 pl-6 text-sm text-muted-foreground">
+              <ul className="list-disc space-y-1 pl-6 text-muted-foreground text-sm">
                 <li>Only install MCP servers you actually need</li>
                 <li>Check MCP compatibility and maintenance status</li>
                 <li>Some MCPs require API keys—configure via environment variables</li>

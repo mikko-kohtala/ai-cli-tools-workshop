@@ -107,19 +107,23 @@ codex exec "Run the game and describe any console errors"
               <h3 className="mb-2 font-medium text-sm">Option 1: Screenshot</h3>
               <div className="space-y-1 text-sm">
                 <p>
-                  <strong>macOS:</strong> Press <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Cmd</kbd> +{" "}
+                  <strong>macOS:</strong> Press{" "}
+                  <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Cmd</kbd> +{" "}
                   <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Shift</kbd> +{" "}
-                  <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">4</kbd>, then click and drag to
-                  capture
+                  <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">4</kbd>, then click and drag
+                  to capture
                 </p>
                 <p>
-                  <strong>Windows:</strong> Press <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Win</kbd> +{" "}
+                  <strong>Windows:</strong> Press{" "}
+                  <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Win</kbd> +{" "}
                   <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">Shift</kbd> +{" "}
                   <kbd className="rounded bg-white px-1.5 py-0.5 text-xs dark:bg-slate-950">S</kbd>, then select area
                 </p>
                 <p>
                   <strong>Linux:</strong> Install Flameshot:{" "}
-                  <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">sudo apt install flameshot</code>
+                  <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">
+                    sudo apt install flameshot
+                  </code>
                 </p>
               </div>
             </div>
@@ -189,15 +193,11 @@ git push -u origin main
             </div>
             <div className="rounded bg-white p-3 dark:bg-slate-900">
               <p className="mb-1 font-medium">AI Tool Used:</p>
-              <p className="text-muted-foreground text-xs">
-                Codex CLI, Claude Code, Gemini CLI, Amp, or combination?
-              </p>
+              <p className="text-muted-foreground text-xs">Codex CLI, Claude Code, Gemini CLI, Amp, or combination?</p>
             </div>
             <div className="rounded bg-white p-3 dark:bg-slate-900">
               <p className="mb-1 font-medium">Challenges & Solutions:</p>
-              <p className="text-muted-foreground text-xs">
-                What was tricky? How did the AI help you solve it?
-              </p>
+              <p className="text-muted-foreground text-xs">What was tricky? How did the AI help you solve it?</p>
             </div>
             <div className="rounded bg-white p-3 dark:bg-slate-900">
               <p className="mb-1 font-medium">Features Implemented:</p>

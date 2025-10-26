@@ -6,8 +6,8 @@ export default function Task2Page() {
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 2: Build Your Own Project with Codex CLI</h1>
         <p className="text-lg">
-          Pick any project idea, configure AGENTS.md with constraints, and guide Codex to build it while respecting
-          your rules.
+          Pick any project idea, configure AGENTS.md with constraints, and guide Codex to build it while respecting your
+          rules.
         </p>
       </div>
 
@@ -36,8 +36,9 @@ export default function Task2Page() {
               </li>
               <li>
                 <p>
-                  Initialize a git repository with <code className="rounded bg-muted px-1 py-0.5 text-sm">git init</code>
-                  . Codex CLI works best in git-tracked directories.
+                  Initialize a git repository with{" "}
+                  <code className="rounded bg-muted px-1 py-0.5 text-sm">git init</code>. Codex CLI works best in
+                  git-tracked directories.
                 </p>
               </li>
               <li>
@@ -75,8 +76,8 @@ export default function Task2Page() {
               </li>
               <li>
                 <p>
-                  Test your project works! While still in your Codex session, ask Codex to run your code and show you the
-                  output. Or exit the session and test manually in your terminal.
+                  Test your project works! While still in your Codex session, ask Codex to run your code and show you
+                  the output. Or exit the session and test manually in your terminal.
                 </p>
               </li>
               <li>
@@ -159,7 +160,7 @@ export default function Task2Page() {
                 documentation
               </li>
               <li>Creative freedom within constraints teaches real AI collaboration</li>
-              <li>Codex CLI automatically reads and respects AGENTS.md instructions</li>
+              <li>Codex CLI automatically reads AGENTS.md at startup—confirm it followed your guardrails</li>
               <li>Verifying constraint compliance is part of the workflow</li>
               <li>Building real projects builds real confidence</li>
             </ul>
@@ -177,7 +178,8 @@ export default function Task2Page() {
                   A <code className="rounded bg-muted px-1 py-0.5 text-sm">TODO.md</code> showing your planning process
                 </li>
                 <li>
-                  An <code className="rounded bg-muted px-1 py-0.5 text-sm">AGENTS.md</code> that Codex actually followed
+                  An <code className="rounded bg-muted px-1 py-0.5 text-sm">AGENTS.md</code> that Codex actually
+                  followed
                 </li>
                 <li>Experience with plan-first workflow</li>
                 <li>Confidence in creative AI collaboration</li>
@@ -190,9 +192,10 @@ export default function Task2Page() {
         <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 dark:border-blue-900 dark:bg-blue-950/30">
           <h2 className="mb-3 font-semibold text-xl">💡 What is AGENTS.md?</h2>
           <p className="mb-3 text-sm">
-            <code className="rounded bg-white px-1 py-0.5 font-mono text-xs dark:bg-slate-950">AGENTS.md</code> is like a
-            README for AI coding assistants. While README.md is written for humans, AGENTS.md provides detailed context
-            that AI agents need: build steps, testing procedures, coding conventions, and project-specific constraints.
+            <code className="rounded bg-white px-1 py-0.5 font-mono text-xs dark:bg-slate-950">AGENTS.md</code> is like
+            a README for AI coding assistants. While README.md is written for humans, AGENTS.md provides detailed
+            context that AI agents need: build steps, testing procedures, coding conventions, and project-specific
+            constraints.
           </p>
           <p className="text-sm">
             Codex CLI (and other AI coding tools) automatically read AGENTS.md files to understand your project&apos;s

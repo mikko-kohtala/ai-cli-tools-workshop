@@ -97,9 +97,10 @@ Use simple, beginner-friendly language.`}
                 </li>
                 <li>
                   <p>
-                    Start Codex CLI with <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">codex</code>{" "}
-                    and type <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">/</code> to see your
-                    custom commands in the slash menu.
+                    Start Codex CLI with{" "}
+                    <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">codex</code> and type{" "}
+                    <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">/</code> to see your custom
+                    commands in the slash menu.
                   </p>
                 </li>
                 <li>
@@ -143,10 +144,15 @@ echo "# Day 2 Notes
                   </pre>
                 </li>
                 <li>
-                  <p>Try using higher reasoning for more thorough analysis:</p>
+                  <p>
+                    Try using higher reasoning for more thorough analysis (pair with{" "}
+                    <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">--model</code> if you want
+                    a different provider):
+                  </p>
                   <pre className="mt-2 overflow-x-auto rounded bg-slate-950 p-3 text-xs">
                     <code className="text-slate-50">
-                      codex exec --model high "Analyze the markdown files and create action-items.md with next steps"
+                      codex exec --reasoning-effort high "Analyze the markdown files and create action-items.md with
+                      next steps"
                     </code>
                   </pre>
                 </li>
@@ -162,7 +168,7 @@ echo "# Day 2 Notes
                 <li>
                   <p>Add the Playwright MCP server to Codex CLI for browser automation capabilities:</p>
                   <pre className="mt-2 overflow-x-auto rounded bg-slate-950 p-3 text-xs">
-                    <code className="text-slate-50">codex mcp add playwright npx @playwright/mcp@latest</code>
+                    <code className="text-slate-50">codex mcp add playwright -- npx @playwright/mcp@latest</code>
                   </pre>
                 </li>
                 <li>
@@ -179,14 +185,14 @@ echo "# Day 2 Notes
                 </li>
                 <li>
                   <p>Test the Playwright integration by asking Codex to:</p>
-                  <ul className="ml-6 mt-2 list-disc space-y-1 text-sm">
+                  <ul className="mt-2 ml-6 list-disc space-y-1 text-sm">
                     <li>"Navigate to example.com and describe what you see"</li>
                     <li>"Check the accessibility tree of the page"</li>
                     <li>"Write a Playwright script to test a simple form interaction"</li>
                   </ul>
                 </li>
                 <li>
-                  <p className="text-sm italic text-muted-foreground">
+                  <p className="text-muted-foreground text-sm italic">
                     Note: The Playwright MCP provides browser automation capabilities but may have limitations in
                     interactive browser control. It excels at generating test scripts and analyzing page structure.
                   </p>
@@ -216,7 +222,7 @@ echo "# Day 2 Notes
               </li>
               <li>
                 <strong>Reasoning Levels:</strong> Control analysis depth with{" "}
-                <code className="rounded bg-muted px-1 py-0.5 text-xs">--model</code> flag
+                <code className="rounded bg-muted px-1 py-0.5 text-xs">--reasoning-effort</code> flag
               </li>
             </ul>
           </div>
@@ -230,7 +236,8 @@ echo "# Day 2 Notes
               <ul className="list-disc space-y-1 pl-6 text-sm">
                 <li>Have 2+ custom slash commands in your Codex setup</li>
                 <li>
-                  Know how to use <code className="rounded bg-muted px-1 py-0.5 text-xs">codex exec</code> for automation
+                  Know how to use <code className="rounded bg-muted px-1 py-0.5 text-xs">codex exec</code> for
+                  automation
                 </li>
                 <li>Have Playwright MCP server integrated and tested</li>
                 <li>Understand when to use interactive vs. non-interactive modes</li>

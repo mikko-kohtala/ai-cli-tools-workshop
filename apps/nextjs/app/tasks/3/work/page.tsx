@@ -21,12 +21,13 @@ export default function Task3WorkPage() {
                   <code className="rounded bg-muted px-1 py-0.5 text-xs">~/.codex/prompts/*.md</code>
                 </p>
                 <p>
-                  <strong>Placeholders:</strong> <code className="rounded bg-muted px-1 py-0.5 text-xs">$1, $2, $3</code>{" "}
-                  or named like <code className="rounded bg-muted px-1 py-0.5 text-xs">$FILE</code>
+                  <strong>Placeholders:</strong>{" "}
+                  <code className="rounded bg-muted px-1 py-0.5 text-xs">$1, $2, $3</code> or named like{" "}
+                  <code className="rounded bg-muted px-1 py-0.5 text-xs">$FILE</code>
                 </p>
                 <p>
-                  <strong>Usage:</strong> Type <code className="rounded bg-muted px-1 py-0.5 text-xs">/</code> in Codex to
-                  see slash menu
+                  <strong>Usage:</strong> Type <code className="rounded bg-muted px-1 py-0.5 text-xs">/</code> in Codex
+                  to see slash menu
                 </p>
               </div>
             </div>
@@ -70,7 +71,9 @@ codex`}
           <p className="mb-3 text-sm">Use this space to document your experience:</p>
           <ul className="list-disc space-y-2 pl-6 text-sm">
             <li>What custom prompts did you create?</li>
-            <li>How did <code className="rounded bg-muted px-1 py-0.5 text-xs">codex exec</code> perform?</li>
+            <li>
+              How did <code className="rounded bg-muted px-1 py-0.5 text-xs">codex exec</code> perform?
+            </li>
             <li>What did you test with the Playwright MCP?</li>
             <li>Which features will you use in your daily workflow?</li>
           </ul>
