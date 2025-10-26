@@ -54,7 +54,7 @@ export function ConceptsSection() {
                 <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
                   <Image
                     alt="Claude Code context usage visualization showing 142k/200k tokens (71%) with breakdown"
-                    className="w-full"
+                    className="w-full max-w-4xl"
                     height={456}
                     src="/images/claude-code-context.png"
                     width={1138}
@@ -170,7 +170,7 @@ export function ConceptsSection() {
                 <div className="overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
                   <Image
                     alt="Claude Code interactive questions during planning - showing AI asking clarifying questions about implementation approach before executing changes"
-                    className="w-full"
+                    className="w-full max-w-4xl"
                     height={600}
                     src="/images/claude-code-interactive-questions.png"
                     width={1200}
