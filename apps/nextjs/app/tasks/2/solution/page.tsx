@@ -5,126 +5,149 @@ export default function Task2SolutionPage() {
     <div className="flex flex-col gap-8 p-8">
       <div className="space-y-4">
         <h1 className="font-bold text-4xl">Task 2: Solution</h1>
-        <p className="text-lg">Reference solution and guidance for completing the task.</p>
+        <p className="text-lg">Example walkthrough for building a project with Codex CLI and AGENTS.md.</p>
+      </div>
+
+      <div className="rounded-lg border bg-blue-50 p-6 dark:bg-blue-950/30">
+        <h2 className="mb-3 font-semibold text-xl">📌 Remember: Your Project Will Be Different!</h2>
+        <p className="text-sm">
+          This is just ONE example of how you might complete this task. The beauty of this exercise is that everyone
+          builds something unique. Use this as a reference for the workflow, not as something to copy exactly.
+        </p>
       </div>
 
       <div className="rounded-lg border bg-green-50 p-6 dark:bg-green-950/30">
-        <h2 className="mb-3 font-semibold text-xl">✅ Solution Steps</h2>
+        <h2 className="mb-3 font-semibold text-xl">✅ Example: Building a Password Strength Checker</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="mb-2 font-semibold">0. Prepare Workspace</h3>
+            <h3 className="mb-2 font-semibold">0. Workspace Setup</h3>
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
-              <div>mkdir -p ~/codex-workshop/task-02-agents-config</div>
-              <div>cd ~/codex-workshop/task-02-agents-config</div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-2 font-semibold">1. Initialize Git Repository</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
+              <div>mkdir -p ~/codex-workshop/task-02-password-checker</div>
+              <div>cd ~/codex-workshop/task-02-password-checker</div>
               <div>git init</div>
             </div>
-            <p className="mt-2 text-muted-foreground text-sm">
-              Codex CLI works best in git-tracked directories as it can show you diffs and manage changes safely.
-            </p>
           </div>
 
           <div>
-            <h3 className="mb-2 font-semibold">2. Create AGENTS.md</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
-              <div># Open your preferred text editor</div>
-              <div>nano AGENTS.md</div>
-              <div className="mt-2"># Or use vim, code, etc.</div>
-            </div>
-            <div className="mt-3 rounded bg-white p-3 text-sm dark:bg-slate-900">
-              <p className="mb-2 font-semibold">Example AGENTS.md content:</p>
-              <pre className="text-muted-foreground text-xs">
-                {`# Workshop Learning Environment
+            <h3 className="mb-2 font-semibold">1. Create AGENTS.md with Constraints</h3>
+            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
+              <pre className="whitespace-pre-wrap text-xs">
+                {`# Password Strength Checker
 
-## Goal
-Learning how to effectively use Codex CLI for AI-assisted
-software development.
+## Project Goal
+Build a CLI tool that evaluates password strength and provides
+helpful feedback to users about how to improve their passwords.
 
-## Preferences
-- Clear, educational code with comments
-- Python or JavaScript for examples
-- Simple solutions over complex ones
+## Constraints & Rules
+- Use only Python standard library (no external packages)
+- Add type hints to all function signatures
+- Keep files under 100 lines each
+- Always ask before installing dependencies
+- Include docstrings in Google style format
 
-## Rules
-- Ask before installing dependencies
-- Explain file purpose before creating
-- Show me diffs before applying changes
+## Coding Style
+- Use descriptive variable names
+- Add comments for complex logic
+- Prefer readability over cleverness
 
-## Context
-This is a learning workspace for an AI CLI tools workshop.
-Prioritize clarity and teaching over production-readiness.`}
+## Testing Requirements
+- Include at least 3 example passwords to test
+- Handle edge cases (empty string, very long passwords)
+- Provide clear, helpful feedback messages`}
               </pre>
             </div>
           </div>
 
           <div>
-            <h3 className="mb-2 font-semibold">3. Start Codex CLI</h3>
+            <h3 className="mb-2 font-semibold">2. Start Codex and Verify AGENTS.md</h3>
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div>codex</div>
             </div>
+            <div className="mt-2 rounded bg-white p-3 text-sm dark:bg-slate-900">
+              <p className="mb-2">
+                <strong>You:</strong>
+              </p>
+              <p className="text-muted-foreground">
+                &quot;Read the AGENTS.md file and confirm you understand all the constraints I&apos;ve set&quot;
+              </p>
+            </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              This launches Codex in the current directory. It will automatically detect and read your AGENTS.md file.
+              Codex should summarize your constraints and confirm it will follow them.
             </p>
           </div>
 
           <div>
-            <h3 className="mb-2 font-semibold">4. Verify AGENTS.md Recognition</h3>
+            <h3 className="mb-2 font-semibold">3. Create TODO.md Plan</h3>
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2">
                 <strong>Example prompt:</strong>
               </p>
               <p className="text-muted-foreground">
-                &quot;Can you read the AGENTS.md file and tell me what instructions I&apos;ve provided?&quot;
+                &quot;Create a TODO.md file that breaks down the password strength checker project into specific
+                implementation tasks. Include sections for planning, implementation, and testing. Use markdown checkboxes
+                [ ] for tasks.&quot;
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Codex should summarize your AGENTS.md content, confirming it understood your preferences and constraints.
+              Review the generated TODO.md. Ask Codex to add missing tasks or reorganize if needed.
             </p>
           </div>
 
           <div>
-            <h3 className="mb-2 font-semibold">5. Request README.md Creation</h3>
+            <h3 className="mb-2 font-semibold">4. Execute the Plan Step-by-Step</h3>
             <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
               <p className="mb-2">
-                <strong>Example prompt:</strong>
+                <strong>Example prompts:</strong>
+              </p>
+              <p className="mb-2 text-muted-foreground">
+                &quot;Let&apos;s start with the first task in TODO.md - create password_checker.py with the strength
+                evaluation function&quot;
               </p>
               <p className="text-muted-foreground">
-                &quot;Create a README.md that explains this is a learning workspace for Task 2 of the AI CLI Tools
-                Workshop. Include sections for: Project Goal, Setup Instructions, and a Task Checklist based on the
-                AGENTS.md file.&quot;
+                &quot;Now let&apos;s work on the next task - add the CLI interface&quot;
               </p>
             </div>
             <p className="mt-2 text-muted-foreground text-sm">
-              Review the proposed changes in the Codex interface before approving.
+              Work through each task, reviewing and approving changes. After each task, ask Codex to mark it complete in
+              TODO.md:
             </p>
-          </div>
-
-          <div>
-            <h3 className="mb-2 font-semibold">6. Request .gitignore Generation</h3>
-            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
-              <p className="mb-2">
-                <strong>Example prompt:</strong>
-              </p>
+            <div className="mt-2 rounded bg-white p-2 text-sm dark:bg-slate-900">
               <p className="text-muted-foreground">
-                &quot;Generate a .gitignore file for a Python project&quot; (or JavaScript, or your preferred language)
+                &quot;Mark the password_checker.py task as complete in TODO.md&quot;
               </p>
             </div>
           </div>
 
           <div>
-            <h3 className="mb-2 font-semibold">7. Exit and Verify</h3>
-            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
-              <div># In Codex, type:</div>
+            <h3 className="mb-2 font-semibold">5. Test the Project</h3>
+            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
+              <p className="mb-2">
+                <strong>While in Codex session, ask:</strong>
+              </p>
+              <p className="text-muted-foreground">
+                &quot;Run the password_checker.py script and show me what happens when I enter a weak password&quot;
+              </p>
+            </div>
+            <div className="mt-2 rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
+              <div># Or exit and test manually:</div>
               <div>exit</div>
-              <div className="mt-2"># Then verify files in your shell:</div>
-              <div>ls -la</div>
-              <div>cat AGENTS.md</div>
-              <div>cat README.md</div>
+              <div>python password_checker.py</div>
+            </div>
+            <p className="mt-2 text-muted-foreground text-sm">Try different passwords to verify it works correctly.</p>
+          </div>
+
+          <div>
+            <h3 className="mb-2 font-semibold">6. Verify Constraints and TODO Completion</h3>
+            <div className="rounded bg-white p-3 text-sm dark:bg-slate-900">
+              <p className="mb-2 font-semibold text-sm">Check that:</p>
+              <ul className="list-disc space-y-1 pl-6 text-xs">
+                <li>All tasks in TODO.md are marked as [x] complete</li>
+                <li>Only used standard library (no import statements for external packages)</li>
+                <li>Added type hints to function signatures</li>
+                <li>Kept files under 100 lines each</li>
+                <li>Included Google-style docstrings</li>
+                <li>Used descriptive variable names</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -134,46 +157,86 @@ Prioritize clarity and teaching over production-readiness.`}
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
           <li>
-            <strong>AGENTS.md is your AI assistant&apos;s onboarding document</strong> - Think of it as instructions you&apos;d
-            give a new team member
+            <strong>Planning prevents chaos</strong> - TODO.md helps you stay organized and prevents scope creep
           </li>
           <li>
-            <strong>Git integration is important</strong> - Codex can show diffs and manage changes safely in git repos
+            <strong>AGENTS.md as guardrails works</strong> - When you set clear, specific constraints, Codex generally
+            respects them
           </li>
           <li>
-            <strong>Always verify Codex understood your instructions</strong> - Ask it to summarize AGENTS.md content
+            <strong>Plan → Execute → Review cycle</strong> - This workflow mirrors real software development and keeps
+            you in control
           </li>
           <li>
-            <strong>Review before approving</strong> - Check proposed file contents before accepting changes
+            <strong>Creative freedom + constraints = better learning</strong> - Building something you care about makes
+            the workshop more engaging
           </li>
           <li>
-            <strong>AGENTS.md is flexible</strong> - Include whatever context helps: goals, preferences, constraints, or
-            project-specific details
+            <strong>Verification is crucial</strong> - Always check that the AI followed your rules; this builds trust
+            and understanding
           </li>
           <li>
-            <strong>Multiple AGENTS.md files</strong> - You can have them at different directory levels; Codex merges them
-            top-down
+            <strong>Incremental progress</strong> - Working through TODO tasks one at a time makes complex projects
+            manageable
+          </li>
+          <li>
+            <strong>Git tracking helps</strong> - Being in a git repo allows you to see exactly what changed with{" "}
+            <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-950">git diff</code>
           </li>
         </ul>
       </div>
 
-      <div className="rounded-lg border border-purple-200 bg-purple-50 p-6 dark:border-purple-900 dark:bg-purple-950/30">
-        <h2 className="mb-3 font-semibold text-xl">🚀 Going Further</h2>
-        <p className="mb-3 text-sm">After completing the basic task, try these additional experiments:</p>
-        <ul className="list-disc space-y-2 pl-6 text-sm">
-          <li>
-            Create a nested directory with its own AGENTS.md and see how Codex merges instructions from both levels
-          </li>
-          <li>Ask Codex to create a simple script (Python, JavaScript, etc.) and verify it follows your AGENTS.md style</li>
-          <li>
-            Experiment with different AGENTS.md constraints (e.g., &quot;always include type hints&quot;, &quot;add docstrings to
-            all functions&quot;)
-          </li>
-          <li>
-            Use <code className="rounded bg-white px-1 py-0.5 font-mono text-xs dark:bg-slate-950">codex resume</code>{" "}
-            to return to this session later
-          </li>
-        </ul>
+      <div className="grid gap-6 md:grid-cols-2">
+        <div className="rounded-lg border border-purple-200 bg-purple-50 p-6 dark:border-purple-900 dark:bg-purple-950/30">
+          <h2 className="mb-3 font-semibold text-xl">🚀 Going Further</h2>
+          <p className="mb-3 text-sm">If you finish early, try:</p>
+          <ul className="list-disc space-y-2 pl-6 text-sm">
+            <li>Add a new feature to your project</li>
+            <li>Ask Codex to refactor for better readability</li>
+            <li>Request automated tests</li>
+            <li>Try making the AGENTS.md constraints MORE strict</li>
+            <li>Build a second, completely different project</li>
+          </ul>
+        </div>
+
+        <div className="rounded-lg border border-orange-200 bg-orange-50 p-6 dark:border-orange-900 dark:bg-orange-950/30">
+          <h2 className="mb-3 font-semibold text-xl">⚠️ Common Issues</h2>
+          <ul className="list-disc space-y-2 pl-6 text-sm">
+            <li>
+              <strong>Codex suggests external packages:</strong> Remind it about your AGENTS.md constraint
+            </li>
+            <li>
+              <strong>Files too long:</strong> Ask Codex to split functionality into multiple files
+            </li>
+            <li>
+              <strong>Missing type hints:</strong> Explicitly request them again
+            </li>
+            <li>
+              <strong>Code doesn&apos;t run:</strong> Ask Codex to debug and explain the error
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="rounded-lg border border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950/30">
+        <h2 className="mb-3 font-semibold text-xl">💬 What Others Built (Examples from Past Workshops)</h2>
+        <div className="grid gap-3 md:grid-cols-3">
+          <div className="rounded bg-white p-3 dark:bg-slate-900">
+            <p className="mb-1 font-semibold text-sm">🎨 ASCII Banner Generator</p>
+            <p className="text-muted-foreground text-xs">
+              Converts text to big ASCII art with multiple font styles
+            </p>
+          </div>
+          <div className="rounded bg-white p-3 dark:bg-slate-900">
+            <p className="mb-1 font-semibold text-sm">🌍 Time Zone Converter</p>
+            <p className="text-muted-foreground text-xs">Converts meeting times across different time zones</p>
+          </div>
+          <div className="rounded bg-white p-3 dark:bg-slate-900">
+            <p className="mb-1 font-semibold text-sm">📊 Dice Roll Simulator</p>
+            <p className="text-muted-foreground text-xs">Simulates D&amp;D dice rolls with statistics tracking</p>
+          </div>
+        </div>
+        <p className="mt-3 text-muted-foreground text-xs italic">What will YOU build?</p>
       </div>
 
       <div className="flex justify-between pt-6">
