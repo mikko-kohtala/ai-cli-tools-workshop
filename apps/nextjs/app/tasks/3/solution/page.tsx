@@ -148,7 +148,7 @@ EOF
 codex exec "Read all markdown files and create summary.md with a consolidated list of key learnings and projects"
 
 # Generate action items with high reasoning
-codex exec --model high "Analyze the markdown files and create action-items.md with specific next steps, categorized by priority"
+codex exec --reasoning-effort high "Analyze the markdown files and create action-items.md with specific next steps, categorized by priority"
 
 # Check results
 cat summary.md
