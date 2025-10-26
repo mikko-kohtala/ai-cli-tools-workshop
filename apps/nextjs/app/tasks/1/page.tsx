@@ -23,6 +23,15 @@ export default function Task1Page() {
             <ol className="list-decimal space-y-4 pl-6">
               <li>
                 <p>
+                  Create a dedicated workspace directory (for example
+                  <code className="mx-1 rounded bg-muted px-1 py-0.5 text-sm">
+                    ~/codex-workshop/task-01-getting-started
+                  </code>
+                  ) and change into it.
+                </p>
+              </li>
+              <li>
+                <p>
                   Install Codex CLI by following the official documentation at{" "}
                   <a
                     className="text-blue-600 hover:underline dark:text-blue-400"
@@ -32,6 +41,7 @@ export default function Task1Page() {
                   >
                     developers.openai.com/codex/cli
                   </a>
+                  .
                 </p>
               </li>
               <li>
@@ -74,6 +84,7 @@ export default function Task1Page() {
                 <strong>By the end of this task, you should:</strong>
               </p>
               <ul className="list-disc space-y-1 pl-6 text-sm">
+                <li>Know how to create a clean workspace directory for Codex sessions</li>
                 <li>Have Codex CLI installed and working</li>
                 <li>Understand how to start and end sessions</li>
                 <li>Know how to ask questions and request help</li>

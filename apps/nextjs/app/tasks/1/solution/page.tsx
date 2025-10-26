@@ -12,6 +12,14 @@ export default function Task1SolutionPage() {
         <h2 className="mb-3 font-semibold text-xl">✅ Solution Steps</h2>
         <div className="space-y-4">
           <div>
+            <h3 className="mb-2 font-semibold">0. Prepare a Workspace</h3>
+            <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
+              <div>mkdir -p ~/codex-workshop/task-01-getting-started</div>
+              <div>cd ~/codex-workshop/task-01-getting-started</div>
+            </div>
+          </div>
+
+          <div>
             <h3 className="mb-2 font-semibold">1. Installation</h3>
             <div className="rounded bg-white p-3 font-mono text-sm dark:bg-slate-950">
               <div># Follow the official installation guide</div>
@@ -61,6 +69,7 @@ export default function Task1SolutionPage() {
       <div className="rounded-lg border p-6">
         <h2 className="mb-3 font-semibold text-xl">📚 Key Takeaways</h2>
         <ul className="list-disc space-y-2 pl-6 text-sm">
+          <li>Begin each session in a clean, task-specific directory</li>
           <li>Codex CLI is easy to install and set up</li>
           <li>Sessions are interactive and context-aware</li>
           <li>You can ask questions naturally in plain English</li>

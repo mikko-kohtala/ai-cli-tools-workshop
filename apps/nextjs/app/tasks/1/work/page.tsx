@@ -12,6 +12,7 @@ export default function Task1WorkPage() {
         <h2 className="mb-3 font-semibold text-xl">📝 Task Instructions</h2>
         <p className="mb-4">Follow these steps in your local terminal with Codex CLI:</p>
         <ol className="list-decimal space-y-2 pl-6">
+          <li>Create a fresh directory for the task and change into it</li>
           <li>Install Codex CLI if you haven't already</li>
           <li>Run the version check command to verify installation</li>
           <li>Start a new session and explore basic interactions</li>
