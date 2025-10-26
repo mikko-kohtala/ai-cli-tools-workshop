@@ -40,7 +40,7 @@ export default function Task3WorkPage() {
 codex exec "your prompt here"
 
 # With higher reasoning
-codex exec --model high "complex task"
+codex exec --reasoning-effort high "complex task"
 
 # Specify directory
 codex exec --cd /path/to/dir "task"`}
