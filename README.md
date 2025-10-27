@@ -1,6 +1,6 @@
 # AI CLI Tools Workshop
 
-> Master AI-powered command line tools for modern development workflows
+> Learn to use AI-powered command line tools in your development workflow
 
 **Live Workshop:** [ai-cli-tools-workshop.vercel.app](https://ai-cli-tools-workshop.vercel.app)
 
@@ -19,12 +19,12 @@ An interactive workshop exploring the landscape of AI command line tools, with h
 
 ### Workshop Structure
 
-| Task | Focus | What You'll Build |
-|------|-------|------------------|
-| **Task 1** | CLI Basics | Get started with Codex CLI, learn sessions and commands |
-| **Task 2** | Your Project | Build any project using AGENTS.md constraints |
-| **Task 3** | Power Tools | Custom prompts, automation, and MCP server integration |
-| **Task 4** | Arcade Game | Retro game using all techniques learned |
+| Task       | Focus        | What You'll Build                                       |
+| ---------- | ------------ | ------------------------------------------------------- |
+| **Task 1** | CLI Basics   | Get started with Codex CLI, learn sessions and commands |
+| **Task 2** | Your Project | Build any project using AGENTS.md constraints           |
+| **Task 3** | Power Tools  | Custom prompts, automation, and MCP server integration  |
+| **Task 4** | Arcade Game  | Retro game using all techniques learned                 |
 
 ## What You'll Learn
 
@@ -109,13 +109,3 @@ This is a workshop repository. If you find issues or have suggestions:
 1. Open an issue describing the problem
 2. For fixes, submit a PR with clear description
 3. Follow the existing code style (Biome configured)
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details
-
----
-
-**Repository:** [github.com/mikko-kohtala/ai-cli-tools-workshop](https://github.com/mikko-kohtala/ai-cli-tools-workshop)
-
-Built with ❤️ for the AI development community
