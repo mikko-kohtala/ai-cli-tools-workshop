@@ -76,15 +76,12 @@ export function SiteHeader() {
             {breadcrumbs.map((crumb, index) => {
               const isLast = index === breadcrumbs.length - 1;
               return (
-                <div key={crumb.href} className="flex items-center gap-1">
+                <div className="flex items-center gap-1" key={crumb.href}>
                   {isLast ? (
                     <span className="font-medium text-foreground">{crumb.label}</span>
                   ) : (
                     <>
-                      <Link
-                        href={crumb.href}
-                        className="text-muted-foreground transition-colors hover:text-foreground"
-                      >
+                      <Link className="text-muted-foreground transition-colors hover:text-foreground" href={crumb.href}>
                         {crumb.label}
                       </Link>
                       <IconChevronRight className="size-4 text-muted-foreground" />

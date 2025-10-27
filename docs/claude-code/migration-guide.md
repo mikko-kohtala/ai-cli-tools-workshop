@@ -24,13 +24,13 @@ The Claude Code SDK has been renamed to the **Claude Agent SDK** and its documen
 
 **1. Uninstall the old package:**
 
-```bash  theme={null}
+```bash theme={null}
 npm uninstall @anthropic-ai/claude-code
 ```
 
 **2. Install the new package:**
 
-```bash  theme={null}
+```bash theme={null}
 npm install @anthropic-ai/claude-agent-sdk
 ```
 
@@ -38,7 +38,7 @@ npm install @anthropic-ai/claude-agent-sdk
 
 Change all imports from `@anthropic-ai/claude-code` to `@anthropic-ai/claude-agent-sdk`:
 
-```typescript  theme={null}
+```typescript theme={null}
 // Before
 import { query, tool, createSdkMcpServer } from "@anthropic-ai/claude-code";
 
@@ -54,18 +54,18 @@ import {
 
 If you have the package listed in your `package.json`, update it:
 
-```json  theme={null}
+```json theme={null}
 // Before
 {
   "dependencies": {
-    "@anthropic-ai/claude-code": "^1.0.0"
+    "@anthropic-ai/claude-code": "1.0.0"
   }
 }
 
 // After
 {
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "^0.1.0"
+    "@anthropic-ai/claude-agent-sdk": "0.1.0"
   }
 }
 ```
@@ -76,13 +76,13 @@ That's it! No other code changes are required.
 
 **1. Uninstall the old package:**
 
-```bash  theme={null}
+```bash theme={null}
 pip uninstall claude-code-sdk
 ```
 
 **2. Install the new package:**
 
-```bash  theme={null}
+```bash theme={null}
 pip install claude-agent-sdk
 ```
 
@@ -90,7 +90,7 @@ pip install claude-agent-sdk
 
 Change all imports from `claude_code_sdk` to `claude_agent_sdk`:
 
-```python  theme={null}
+```python theme={null}
 # Before
 from claude_code_sdk import query, ClaudeCodeOptions
 
@@ -102,7 +102,7 @@ from claude_agent_sdk import query, ClaudeAgentOptions
 
 Change `ClaudeCodeOptions` to `ClaudeAgentOptions`:
 
-```python  theme={null}
+```python theme={null}
 # Before
 from claude_agent_sdk import query, ClaudeCodeOptions
 
@@ -134,7 +134,7 @@ Make any code changes needed to complete the migration.
 
 **Migration:**
 
-```python  theme={null}
+```python theme={null}
 # BEFORE (v0.0.x)
 from claude_agent_sdk import query, ClaudeCodeOptions
 
@@ -165,50 +165,52 @@ options = ClaudeAgentOptions(
   // BEFORE (v0.0.x) - Used Claude Code's system prompt by default
   const result = query({ prompt: "Hello" });
 
-  // AFTER (v0.1.0) - Uses empty system prompt by default
-  // To get the old behavior, explicitly request Claude Code's preset:
-  const result = query({
-    prompt: "Hello",
-    options: {
-      systemPrompt: { type: "preset", preset: "claude_code" }
-    }
-  });
+// AFTER (v0.1.0) - Uses empty system prompt by default
+// To get the old behavior, explicitly request Claude Code's preset:
+const result = query({
+prompt: "Hello",
+options: {
+systemPrompt: { type: "preset", preset: "claude_code" }
+}
+});
 
-  // Or use a custom system prompt:
-  const result = query({
-    prompt: "Hello",
-    options: {
-      systemPrompt: "You are a helpful coding assistant"
-    }
-  });
-  ```
+// Or use a custom system prompt:
+const result = query({
+prompt: "Hello",
+options: {
+systemPrompt: "You are a helpful coding assistant"
+}
+});
 
-  ```python Python theme={null}
-  # BEFORE (v0.0.x) - Used Claude Code's system prompt by default
-  async for message in query(prompt="Hello"):
-      print(message)
+````
 
-  # AFTER (v0.1.0) - Uses empty system prompt by default
-  # To get the old behavior, explicitly request Claude Code's preset:
-  from claude_agent_sdk import query, ClaudeAgentOptions
+```python Python theme={null}
+# BEFORE (v0.0.x) - Used Claude Code's system prompt by default
+async for message in query(prompt="Hello"):
+    print(message)
 
-  async for message in query(
-      prompt="Hello",
-      options=ClaudeAgentOptions(
-          system_prompt={"type": "preset", "preset": "claude_code"}  # Use the preset
-      )
-  ):
-      print(message)
+# AFTER (v0.1.0) - Uses empty system prompt by default
+# To get the old behavior, explicitly request Claude Code's preset:
+from claude_agent_sdk import query, ClaudeAgentOptions
 
-  # Or use a custom system prompt:
-  async for message in query(
-      prompt="Hello",
-      options=ClaudeAgentOptions(
-          system_prompt="You are a helpful coding assistant"
-      )
-  ):
-      print(message)
-  ```
+async for message in query(
+    prompt="Hello",
+    options=ClaudeAgentOptions(
+        system_prompt={"type": "preset", "preset": "claude_code"}  # Use the preset
+    )
+):
+    print(message)
+
+# Or use a custom system prompt:
+async for message in query(
+    prompt="Hello",
+    options=ClaudeAgentOptions(
+        system_prompt="You are a helpful coding assistant"
+    )
+):
+    print(message)
+````
+
 </CodeGroup>
 
 **Why this changed:** Provides better control and isolation for SDK applications. You can now build agents with custom behavior without inheriting Claude Code's CLI-focused instructions.
@@ -230,64 +232,66 @@ options = ClaudeAgentOptions(
   // - CLAUDE.md files
   // - Custom slash commands
 
-  // AFTER (v0.1.0) - No settings loaded by default
-  // To get the old behavior:
-  const result = query({
-    prompt: "Hello",
-    options: {
-      settingSources: ["user", "project", "local"]
-    }
-  });
+// AFTER (v0.1.0) - No settings loaded by default
+// To get the old behavior:
+const result = query({
+prompt: "Hello",
+options: {
+settingSources: ["user", "project", "local"]
+}
+});
 
-  // Or load only specific sources:
-  const result = query({
-    prompt: "Hello",
-    options: {
-      settingSources: ["project"]  // Only project settings
-    }
-  });
-  ```
+// Or load only specific sources:
+const result = query({
+prompt: "Hello",
+options: {
+settingSources: ["project"] // Only project settings
+}
+});
 
-  ```python Python theme={null}
-  # BEFORE (v0.0.x) - Loaded all settings automatically
-  async for message in query(prompt="Hello"):
-      print(message)
-  # Would read from:
-  # - ~/.claude/settings.json (user)
-  # - .claude/settings.json (project)
-  # - .claude/settings.local.json (local)
-  # - CLAUDE.md files
-  # - Custom slash commands
+````
 
-  # AFTER (v0.1.0) - No settings loaded by default
-  # To get the old behavior:
-  from claude_agent_sdk import query, ClaudeAgentOptions
+```python Python theme={null}
+# BEFORE (v0.0.x) - Loaded all settings automatically
+async for message in query(prompt="Hello"):
+    print(message)
+# Would read from:
+# - ~/.claude/settings.json (user)
+# - .claude/settings.json (project)
+# - .claude/settings.local.json (local)
+# - CLAUDE.md files
+# - Custom slash commands
 
-  async for message in query(
-      prompt="Hello",
-      options=ClaudeAgentOptions(
-          setting_sources=["user", "project", "local"]
-      )
-  ):
-      print(message)
+# AFTER (v0.1.0) - No settings loaded by default
+# To get the old behavior:
+from claude_agent_sdk import query, ClaudeAgentOptions
 
-  # Or load only specific sources:
-  async for message in query(
-      prompt="Hello",
-      options=ClaudeAgentOptions(
-          setting_sources=["project"]  # Only project settings
-      )
-  ):
-      print(message)
-  ```
+async for message in query(
+    prompt="Hello",
+    options=ClaudeAgentOptions(
+        setting_sources=["user", "project", "local"]
+    )
+):
+    print(message)
+
+# Or load only specific sources:
+async for message in query(
+    prompt="Hello",
+    options=ClaudeAgentOptions(
+        setting_sources=["project"]  # Only project settings
+    )
+):
+    print(message)
+````
+
 </CodeGroup>
 
 **Why this changed:** Ensures SDK applications have predictable behavior independent of local filesystem configurations. This is especially important for:
 
-* **CI/CD environments** - Consistent behavior without local customizations
-* **Deployed applications** - No dependency on filesystem settings
-* **Testing** - Isolated test environments
-* **Multi-tenant systems** - Prevent settings leakage between users
+- **CI/CD environments** - Consistent behavior without local customizations
+- **Deployed applications** - No dependency on filesystem settings
+- **Testing** - Isolated test environments
+- **Multi-tenant systems** - Prevent settings leakage between users
 
 <Note>
   **Backward compatibility:** If your application relied on filesystem settings (custom slash commands, CLAUDE.md instructions, etc.), add `settingSources: ['user', 'project', 'local']` to your options.
@@ -297,9 +301,9 @@ options = ClaudeAgentOptions(
 
 The Claude Code SDK was originally designed for coding tasks, but it has evolved into a powerful framework for building all types of AI agents. The new name "Claude Agent SDK" better reflects its capabilities:
 
-* Building business agents (legal assistants, finance advisors, customer support)
-* Creating specialized coding agents (SRE bots, security reviewers, code review agents)
-* Developing custom agents for any domain with tool use, MCP integration, and more
+- Building business agents (legal assistants, finance advisors, customer support)
+- Creating specialized coding agents (SRE bots, security reviewers, code review agents)
+- Developing custom agents for any domain with tool use, MCP integration, and more
 
 ## Getting Help
 
@@ -321,7 +325,7 @@ See the [Troubleshooting](/en/docs/claude-code/troubleshooting) guide for common
 
 ## Next Steps
 
-* Explore the [Agent SDK Overview](/en/api/agent-sdk/overview) to learn about available features
-* Check out the [TypeScript SDK Reference](/en/api/agent-sdk/typescript) for detailed API documentation
-* Review the [Python SDK Reference](/en/api/agent-sdk/python) for Python-specific documentation
-* Learn about [Custom Tools](/en/api/agent-sdk/custom-tools) and [MCP Integration](/en/api/agent-sdk/mcp)
+- Explore the [Agent SDK Overview](/en/api/agent-sdk/overview) to learn about available features
+- Check out the [TypeScript SDK Reference](/en/api/agent-sdk/typescript) for detailed API documentation
+- Review the [Python SDK Reference](/en/api/agent-sdk/python) for Python-specific documentation
+- Learn about [Custom Tools](/en/api/agent-sdk/custom-tools) and [MCP Integration](/en/api/agent-sdk/mcp)

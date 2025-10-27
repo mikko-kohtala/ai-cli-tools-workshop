@@ -14,7 +14,7 @@ export function IntroSection() {
         <div className="mx-auto flex max-w-2xl justify-center pt-6">
           <Image
             alt="Codex CLI in the terminal"
-            className="rounded-lg shadow-lg max-w-lg"
+            className="max-w-lg rounded-lg shadow-lg"
             height={400}
             src="/images/codex-cli-01.png"
             width={533}
