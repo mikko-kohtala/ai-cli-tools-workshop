@@ -4,8 +4,6 @@
 
 **Live Workshop:** [ai-cli-tools-workshop.vercel.app](https://ai-cli-tools-workshop.vercel.app)
 
-**Event:** October 28, 2025 | 14:00–15:30 (90 minutes)
-
 ---
 
 ## Overview
