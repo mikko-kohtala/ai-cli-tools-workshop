@@ -12,7 +12,7 @@ const decisionFactors = [
     factor: "Speed & Responsiveness",
     questions: ["Do you need instant feedback?", "Are you working on quick iterations?"],
     guidance:
-      "Some tools prioritize speed over depth. If you're prototyping rapidly or making many small changes, faster models may be better.",
+      "Tool responsiveness varies significantly. Codex CLI offers the fastest response times for rapid iteration, Gemini CLI provides balanced speed with a generous free tier, while Claude Code prioritizes quality over speed with advanced reasoning capabilities.",
   },
   {
     factor: "Ecosystem & Integration",
@@ -32,22 +32,25 @@ const toolProfiles = [
   {
     name: "Claude Code",
     provider: "Anthropic",
-    bestFor: ["Complex refactoring", "Architecture decisions", "Safety-critical code", "Deep reasoning tasks"],
-    consider: "Strong safety features, excellent at understanding context, may be slower for simple tasks",
+    bestFor: ["Good overall code quality", "Deep reasoning tasks", "Complex refactoring", "Architecture decisions"],
+    consider:
+      "Generally good quality output with advanced thinking modes (think, megathink, ultrathink). Excellent CLI UI and planner. Slower response times but superior reasoning capabilities and structured workflows. Strong safety features.",
     getStarted: "See the tool's documentation for installation and setup.\nRequires: Anthropic API key",
   },
   {
     name: "Codex CLI",
     provider: "OpenAI",
-    bestFor: ["Rapid prototyping", "Quick iterations", "Broad language support", "Fast execution"],
-    consider: "Very fast, versatile, large ecosystem, may need more guidance for complex tasks",
+    bestFor: ["Fastest response times", "Rapid prototyping", "Tight feedback loops", "GPT-5 and GPT-5-Codex access"],
+    consider:
+      "Open-source with fastest response times of major CLI tools. Excellent for rapid iteration and quick prototyping. Access to GPT-5 and GPT-5-Codex models (74.5% SWE-bench accuracy). CLI experience less refined than Claude Code but pretty good anyways.",
     getStarted: "See this workshop repo for setup details.\nRequires: API key for your chosen provider (e.g., OpenAI)",
   },
   {
     name: "Gemini CLI",
     provider: "Google",
-    bestFor: ["Multimodal tasks", "Google Cloud integration", "Code search", "Large context windows"],
-    consider: "Strong at code search, integrates well with Google Cloud",
+    bestFor: ["Multimodal tasks", "Best free tier", "Large context windows (1M tokens)", "Google Cloud integration"],
+    consider:
+      "Open-source with generous free tier (60 req/min, 1000/day). Balanced speed between Codex CLI and Claude Code. Strong at code search and multimodal support. Integrates well with Google Cloud ecosystem.",
     getStarted: "See Google AI Studio / Cloud documentation for setup.\nRequires: Google Cloud account",
   },
   {

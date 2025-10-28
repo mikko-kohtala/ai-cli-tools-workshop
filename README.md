@@ -96,7 +96,7 @@ apps/nextjs/
 
 ## Workshop Focus
 
-**Primary Tool:** [Codex CLI](https://developers.openai.com/codex/cli) (open-source, multi-provider support)
+**Primary Tool:** [Codex CLI](https://developers.openai.com/codex/cli) (open-source, by OpenAI)
 
 **Comparison Context:** Other tools like Claude Code, Gemini CLI, and Amp are discussed for ecosystem awareness
 

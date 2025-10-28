@@ -19,18 +19,21 @@ Built with Next.js 15 for presentation and interactive workshop tasks.
 When creating or updating content, follow these naming conventions:
 
 **Use Specific Product Names:**
+
 - ✅ **Claude Code** (by Anthropic) - NOT "Claude-based CLIs" or "Claude CLI"
-- ✅ **Codex CLI** (open-source, multi-provider support) - Primary workshop tool
+- ✅ **Codex CLI** (open-source, by OpenAI) - Primary workshop tool
 - ✅ **Gemini CLI** (by Google) - NOT "Gemini-based CLIs"
 - ✅ **Amp** (by Sourcegraph) - VS Code extension + CLI with subagent capabilities
 
 **Keep Descriptions General:**
+
 - Use capability-focused language: "uses latest Claude models" NOT "uses Claude Sonnet 4.5"
 - Focus on features, not version numbers: "strong reasoning capabilities" NOT "state-of-the-art GPT-5"
 - Avoid specific token limits or benchmarks that quickly become outdated
 
 **Include Ecosystem Disclaimer:**
 When listing tools or making comparisons, include:
+
 > "Examples only—this ecosystem moves quickly and names/models evolve. Focus on capabilities and fit."
 
 ### Workshop Focus
@@ -42,10 +45,12 @@ When listing tools or making comparisons, include:
 ### Reasoning & Model Selection
 
 **Claude Code:**
+
 - Features thinking mode with keywords: `think`, `think hard`, `think harder`, `ultrathink`
 - Describe as natural language reasoning control
 
 **Codex CLI:**
+
 - Uses reasoning levels: `minimal`, `medium`, `high`
 - Supports multiple model providers via configuration
 - Describe model switching via `--model` flag or `/model` command

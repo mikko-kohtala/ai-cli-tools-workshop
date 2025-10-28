@@ -1,6 +1,5 @@
 import { Brain, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const reasoningComparison = [
   {
@@ -12,8 +11,8 @@ const reasoningComparison = [
   {
     tool: "Codex CLI",
     method: "Reasoning Settings",
-    levels: ["minimal", "low", "medium", "high"],
-    description: "Switch models and reasoning depth via CLI flags or in-chat commands",
+    levels: ["minimal", "medium", "high"],
+    description: "Adjust models via CLI flags and set reasoning with config keys like model_reasoning_effort",
   },
 ];
 
@@ -64,8 +63,8 @@ export function ReasoningSection() {
   return (
     <section className="mb-16 scroll-mt-16" id="reasoning">
       <div className="mb-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-100 dark:bg-cyan-900/30">
-          <Brain className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
+          <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
         </div>
         <h2 className="font-bold text-4xl">Models & Reasoning</h2>
       </div>
@@ -86,14 +85,14 @@ export function ReasoningSection() {
         <h3 className="mb-6 font-semibold text-2xl">How Each Tool Handles Reasoning</h3>
         <div className="grid gap-6 md:grid-cols-2">
           {reasoningComparison.map((item) => (
-            <Card className="border-2 border-cyan-200 dark:border-cyan-800" key={`reasoning-${item.tool}`}>
+            <Card className="border-2 border-blue-200 dark:border-blue-800" key={`reasoning-${item.tool}`}>
               <CardHeader>
                 <CardTitle className="text-xl">{item.tool}</CardTitle>
                 <CardDescription className="text-base">{item.method}</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="mb-3 text-foreground/70 text-sm">{item.description}</p>
-                <div className="rounded-lg bg-cyan-50 p-3 dark:bg-cyan-950/30">
+                <div className="rounded-lg bg-blue-50 p-3 dark:bg-blue-950/30">
                   <p className="mb-2 font-semibold text-sm">Available levels:</p>
                   <div className="flex flex-wrap gap-2">
                     {item.levels.map((level) => (
@@ -112,92 +111,83 @@ export function ReasoningSection() {
         </div>
       </div>
 
-      <Card className="mb-8 bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950/30 dark:to-blue-950/30">
+      <Card className="mb-8 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30">
         <CardHeader>
           <CardTitle className="text-2xl">Codex CLI: Models & Configuration</CardTitle>
           <CardDescription className="text-base">
-            Understanding model selection and reasoning levels in Codex
+            Quick reference for tuning models and reasoning effort in Codex
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Tabs defaultValue="models">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="models">Models</TabsTrigger>
-              <TabsTrigger value="levels">Reasoning Levels</TabsTrigger>
-              <TabsTrigger value="switching">Switching</TabsTrigger>
-            </TabsList>
-            <TabsContent className="mt-4" value="models">
-              <div className="space-y-4">
-                <div>
-                  <p className="mb-2 font-semibold text-sm">Default model (configurable)</p>
-                  <p className="text-foreground/70 text-sm">
-                    Codex uses a sensible default model based on your configuration. You can switch providers and models
-                    across OpenAI, Anthropic, Google, and other supported platforms.
-                  </p>
-                </div>
-                <div>
-                  <p className="mb-2 font-semibold text-sm">Optimized for coding</p>
-                  <p className="text-foreground/70 text-sm">
-                    Some models are tuned for code and agentic workflows. Choose a code-optimized option for larger
-                    refactors or complex tasks when available.
-                  </p>
-                </div>
-                <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
-                  <p className="mb-2 text-sm">
-                    <strong>Switch models:</strong>
-                  </p>
-                  <pre className="rounded border bg-slate-950 p-2 text-xs">
-                    <code className="text-slate-50">codex --model provider:model-id</code>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg">Model Selection</h4>
+              <p className="text-foreground/70 text-sm">
+                Choose whichever provider fits the task—Codex lets you target OpenAI, Anthropic, Google, and more from
+                the same CLI.
+              </p>
+              <div className="rounded-lg bg-white p-4 dark:bg-slate-900">
+                <p className="mb-3 font-semibold text-foreground/70 text-xs uppercase tracking-wide">
+                  Example commands
+                </p>
+                <div className="space-y-2">
+                  <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-xs dark:border-slate-800">
+                    <code>codex --model gpt-5</code>
+                  </pre>
+                  <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-xs dark:border-slate-800">
+                    <code>codex --model gpt-5-codex</code>
+                  </pre>
+                  <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-xs dark:border-slate-800">
+                    <code>/model</code>
                   </pre>
                 </div>
               </div>
-            </TabsContent>
-            <TabsContent className="mt-4" value="levels">
-              <div className="space-y-3">
-                <p className="text-sm">Codex exposes a reasoning level setting with four tiers:</p>
-                <div className="space-y-2">
-                  <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
-                    <code className="text-sm">minimal</code>
-                    <span className="ml-2 text-foreground/70 text-xs">→ Fastest, minimal reasoning tokens</span>
-                  </div>
-                  <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
-                    <code className="text-sm">low</code>
-                    <span className="ml-2 text-foreground/70 text-xs">→ Lightweight reasoning</span>
-                  </div>
-                  <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
-                    <code className="text-sm">medium</code>
-                    <span className="ml-2 text-foreground/70 text-xs">→ Default balanced mode</span>
-                  </div>
-                  <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
-                    <code className="text-sm">high</code>
-                    <span className="ml-2 text-foreground/70 text-xs">→ Deep reasoning for complex tasks</span>
-                  </div>
+              <p className="text-foreground/70 text-xs">
+                Use general-purpose models for ideation, code-tuned options for deeper refactors, and the in-session{" "}
+                <code className="mx-1 rounded bg-slate-100 px-1 py-0.5 text-[0.65rem] uppercase tracking-wide text-slate-600 dark:bg-slate-900/60 dark:text-slate-300">/model</code>{" "}
+                command to pick a provider/model and reasoning effort interactively without leaving the chat.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg">Reasoning Effort</h4>
+              <p className="text-foreground/70 text-sm">
+                Codex exposes three reasoning tiers so you can balance speed and depth without leaving the terminal.
+              </p>
+              <div className="space-y-2">
+                <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
+                  <code className="text-sm">minimal</code>
+                  <span className="ml-2 text-foreground/70 text-xs">→ Fastest for straightforward edits</span>
+                </div>
+                <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
+                  <code className="text-sm">medium</code>
+                  <span className="ml-2 text-foreground/70 text-xs">→ Balanced default for most tasks</span>
+                </div>
+                <div className="rounded-lg bg-white p-3 dark:bg-slate-900">
+                  <code className="text-sm">high</code>
+                  <span className="ml-2 text-foreground/70 text-xs">→ Deep reasoning for complex work</span>
                 </div>
               </div>
-            </TabsContent>
-            <TabsContent className="mt-4" value="switching">
-              <div className="space-y-4">
-                <p className="text-sm">Use the /model command to switch between models and reasoning levels:</p>
-                <div className="space-y-3">
-                  <div>
-                    <p className="mb-2 font-semibold text-sm">Switch to an OpenAI model with high reasoning:</p>
-                    <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model openai:model-id high</code>
-                    </pre>
-                  </div>
-                  <div>
-                    <p className="mb-2 font-semibold text-sm">Return to your default model with medium reasoning:</p>
-                    <pre className="rounded-lg bg-slate-950 p-3">
-                      <code className="text-slate-50 text-sm">/model default medium</code>
-                    </pre>
-                  </div>
-                </div>
-                <p className="mt-4 text-foreground/70 text-xs">
-                  You can also set the provider with --model and the depth with --reasoning-effort when launching Codex.
+              <div className="rounded-lg bg-white p-4 dark:bg-slate-900">
+                <p className="mb-2 font-semibold text-sm">Set from the CLI or config:</p>
+                <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-xs dark:border-slate-800">
+                  <code>codex -c model_reasoning_effort='high'</code>
+                </pre>
+                <p className="mt-2 text-foreground/70 text-xs">
+                  The configuration key <code>model_reasoning_effort</code> accepts <code>minimal</code>,{" "}
+                  <code>medium</code>, or <code>high</code>.
                 </p>
               </div>
-            </TabsContent>
-          </Tabs>
+            </div>
+          </div>
+          <div className="mt-6 rounded-lg bg-white p-4 dark:bg-slate-900">
+            <p className="mb-2 font-semibold text-sm text-foreground/70 uppercase tracking-wide">All-in-one launch</p>
+            <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-sm dark:border-slate-800">
+              <code>codex --yolo --model='gpt-5-codex' -c model_reasoning_effort='high'</code>
+            </pre>
+            <p className="mt-2 text-foreground/70 text-xs">
+              Fire up Codex with experimental tools, the code-optimized model, and deeper reasoning in one command.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
@@ -267,14 +257,14 @@ export function ReasoningSection() {
                   <ul className="space-y-1">
                     {useCase.scenarios.map((scenario) => (
                       <li className="flex items-start gap-2 text-sm" key={scenario}>
-                        <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
+                        <span className="mt-1 text-blue-600 dark:text-blue-400">•</span>
                         <span className="text-foreground/70">{scenario}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="grid gap-3 md:grid-cols-2">
-                  <div className="rounded-lg bg-cyan-50 p-3 dark:bg-cyan-950/30">
+                  <div className="rounded-lg bg-blue-50 p-3 dark:bg-blue-950/30">
                     <p className="mb-1 font-semibold text-xs">Claude Code</p>
                     <code className="text-xs">{useCase.tools.claude}</code>
                   </div>
@@ -289,37 +279,37 @@ export function ReasoningSection() {
         </div>
       </div>
 
-      <Card className="border-2 border-cyan-200 dark:border-cyan-800">
+      <Card className="border-2 border-blue-200 dark:border-blue-800">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Lightbulb className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+            <Lightbulb className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             Best Practices
           </CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
-              <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
+              <span className="mt-1 text-blue-600 dark:text-blue-400">•</span>
               <span className="text-foreground/70">
                 <strong>Start light:</strong> Begin with default reasoning and scale up only when needed
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
+              <span className="mt-1 text-blue-600 dark:text-blue-400">•</span>
               <span className="text-foreground/70">
                 <strong>Match complexity:</strong> Use deeper reasoning for architecture decisions, security reviews,
                 and complex refactoring
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
+              <span className="mt-1 text-blue-600 dark:text-blue-400">•</span>
               <span className="text-foreground/70">
                 <strong>Speed vs. quality:</strong> Higher reasoning levels take longer but produce more thoughtful
                 solutions
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1 text-cyan-600 dark:text-cyan-400">•</span>
+              <span className="mt-1 text-blue-600 dark:text-blue-400">•</span>
               <span className="text-foreground/70">
                 <strong>Experiment:</strong> Try different levels to find what works best for your workflow and task
                 types
