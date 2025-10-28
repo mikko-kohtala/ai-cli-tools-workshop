@@ -197,9 +197,9 @@ export function ConceptsSection() {
               <div className="rounded-lg border border-purple-200 bg-purple-50 p-4 dark:border-purple-800 dark:bg-purple-950/30">
                 <p className="mb-2 font-semibold text-sm">💡 Why Tools Matter</p>
                 <p className="text-foreground/70 text-sm">
-                  Tools transform Claude Code from a "text generator" into an <strong>autonomous agent</strong>. With
-                  tools, it can execute code and verify results, navigate codebases intelligently, fetch up-to-date
-                  documentation, and automate entire workflows—all without leaving your terminal.
+                  Tools transform AI coding assistants from "text generators" into <strong>autonomous agents</strong>.
+                  With tools, they can execute code and verify results, navigate codebases intelligently, fetch
+                  up-to-date documentation, and automate entire workflows—all without leaving your terminal.
                 </p>
               </div>
 
