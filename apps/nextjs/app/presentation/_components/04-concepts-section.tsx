@@ -194,59 +194,149 @@ export function ConceptsSection() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="space-y-3">
-                <p className="font-semibold text-sm">The three core tools you'll use today:</p>
-                <div className="grid gap-3 md:grid-cols-3">
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
-                    <p className="mb-1 font-semibold text-sm">Terminal (shell)</p>
-                    <p className="text-foreground/70 text-xs">Run commands to build, test, or inspect.</p>
-                    <p className="mt-1 font-mono text-xs">
-                      e.g. <code>npm test</code>, <code>ls -la</code>
-                    </p>
+              <div className="rounded-lg border border-purple-200 bg-purple-50 p-4 dark:border-purple-800 dark:bg-purple-950/30">
+                <p className="mb-2 font-semibold text-sm">💡 Why Tools Matter</p>
+                <p className="text-foreground/70 text-sm">
+                  Tools transform Claude Code from a "text generator" into an <strong>autonomous agent</strong>. With
+                  tools, it can execute code and verify results, navigate codebases intelligently, fetch up-to-date
+                  documentation, and automate entire workflows—all without leaving your terminal.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <p className="mb-2 font-semibold text-sm">File System Tools</p>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">Read, Write, Edit</p>
+                      <p className="text-foreground/70 text-xs">
+                        View files, create new ones, or apply precise edits with diffs for review.
+                      </p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Fix the auth bug in <code>src/auth.ts</code> and show diff"
+                      </p>
+                    </div>
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">Glob & Grep</p>
+                      <p className="text-foreground/70 text-xs">
+                        Pattern search and content search across the codebase.
+                      </p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Find all React components using <code>useState</code>"
+                      </p>
+                    </div>
                   </div>
+                </div>
+
+                <div>
+                  <p className="mb-2 font-semibold text-sm">Shell/Terminal Tools</p>
                   <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
-                    <p className="mb-1 font-semibold text-sm">Files</p>
+                    <p className="mb-1 font-semibold text-xs">Bash Execution</p>
                     <p className="text-foreground/70 text-xs">
-                      Ask the AI to open, edit, and propose diffs—review before applying.
+                      Run commands to build, test, install packages, or inspect system state.
                     </p>
-                    <p className="mt-1 font-mono text-xs">
-                      e.g. “Open <code>src/app.ts</code>” → “Propose a safe fix and show the diff”
+                    <p className="mt-1 font-mono text-[10px]">
+                      "Run <code>npm test</code>, fix any failures, then re-run"
                     </p>
                   </div>
-                  <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
-                    <p className="mb-1 font-semibold text-sm">Web fetch/search</p>
-                    <p className="text-foreground/70 text-xs">Pull official docs or pages for quick context.</p>
-                    <p className="mt-1 font-mono text-xs">
-                      e.g. <code>search docs: express error handling</code>
-                    </p>
+                </div>
+
+                <div>
+                  <p className="mb-2 font-semibold text-sm">Web Access Tools</p>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">WebFetch</p>
+                      <p className="text-foreground/70 text-xs">Retrieve documentation and web pages for context.</p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Fetch Next.js 15 migration guide from official docs"
+                      </p>
+                    </div>
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">WebSearch</p>
+                      <p className="text-foreground/70 text-xs">Search the internet for latest information.</p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Search for React 19 breaking changes"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="mb-2 font-semibold text-sm">Advanced Tools (Claude Code)</p>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">Code Execution</p>
+                      <p className="text-foreground/70 text-xs">
+                        Run Python in sandbox: analyze data, create visualizations, complex calculations.
+                      </p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Analyze this CSV and create a bar chart"
+                      </p>
+                    </div>
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
+                      <p className="mb-1 font-semibold text-xs">Memory Tool</p>
+                      <p className="text-foreground/70 text-xs">
+                        Persistent storage for project context across sessions.
+                      </p>
+                      <p className="mt-1 font-mono text-[10px]">
+                        "Remember: we use Zod for validation"
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
-                <p className="mb-2 font-semibold text-sm">Try it now (2–3 min)</p>
-                <ol className="ml-6 list-decimal space-y-1 text-foreground/70 text-sm">
-                  <li>"Run the tests and show me any failures." (bash)</li>
-                  <li>"Open the failing file, propose a patch, and show me the diff before applying." (files)</li>
-                  <li>"Fetch a short doc snippet from official docs that explains the fix." (web)</li>
-                </ol>
-              </div>
-
               <div className="space-y-3">
-                <p className="font-semibold text-sm">What about MCP?</p>
+                <p className="font-semibold text-sm">Extensible Tools via MCP</p>
                 <div className="rounded-lg border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
                   <p className="text-foreground/70 text-sm">
-                    MCP is a "universal adapter" that plugs services (GitHub, Slack, DBs) into your AI—no custom glue
-                    code—and can be added to Codex CLI with simple commands.
+                    <strong>MCP (Model Context Protocol)</strong> is a universal adapter that connects external services
+                    to your AI—GitHub, databases, browsers, and more—with no custom glue code.
                   </p>
-                  <div className="mt-2 rounded bg-slate-50 p-2 dark:bg-slate-950/50">
-                    <p className="font-mono text-xs">
-                      e.g. <code>codex mcp add playwright npx @playwright/mcp@latest</code> → browser automation and
-                      testing
+
+                  <div className="mt-3 space-y-2">
+                    <p className="font-semibold text-xs">Popular MCP Servers:</p>
+                    <div className="grid gap-2 md:grid-cols-2">
+                      <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
+                        <p className="mb-0.5 font-semibold text-xs">🎭 Playwright</p>
+                        <p className="text-foreground/60 text-[10px]">
+                          Browser automation & testing—interact with web pages, scraping, workflows
+                        </p>
+                      </div>
+                      <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
+                        <p className="mb-0.5 font-semibold text-xs">🗄️ PostgreSQL/SQLite</p>
+                        <p className="text-foreground/60 text-[10px]">
+                          Query databases, inspect schemas, run business intelligence
+                        </p>
+                      </div>
+                      <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
+                        <p className="mb-0.5 font-semibold text-xs">🐙 GitHub</p>
+                        <p className="text-foreground/60 text-[10px]">
+                          PR reviews, issue management, repository operations
+                        </p>
+                        <p className="mt-1 text-amber-700 text-[10px] dark:text-amber-400">
+                          Note: Claude Code can use <code>gh</code> CLI directly—MCP optional
+                        </p>
+                      </div>
+                      <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
+                        <p className="mb-0.5 font-semibold text-xs">📁 Filesystem</p>
+                        <p className="text-foreground/60 text-[10px]">
+                          Advanced file operations with granular access controls
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 rounded bg-blue-50 p-2 dark:bg-blue-950/30">
+                    <p className="mb-1 font-semibold text-xs">Add to Codex CLI:</p>
+                    <p className="font-mono text-[10px]">
+                      <code>codex mcp add playwright npx @playwright/mcp@latest</code>
                     </p>
                   </div>
+
                   <p className="mt-2 text-foreground/60 text-xs italic">
-                    Advanced (optional) for this workshop—start without it, add only if needed.
+                    ⚠️ Advanced (optional) for this workshop—start without MCP, add only if you need specific
+                    integrations. MCP servers can bloat context rapidly.
                   </p>
                 </div>
               </div>
