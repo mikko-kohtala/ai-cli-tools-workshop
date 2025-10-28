@@ -48,11 +48,16 @@ export default function Task2Page() {
                   hints to all functions&quot;, &quot;Always ask before installing dependencies&quot;, &quot;Keep files
                   under 100 lines&quot;.
                 </p>
+                <p className="mt-2 text-muted-foreground text-sm">
+                  💡 Codex automatically reads AGENTS.md into context when you start a new session. You can refine and
+                  improve it later—just ask Codex to read it again after making changes to pick up your updated
+                  constraints.
+                </p>
               </li>
               <li>
                 <p>
-                  Choose a project to build (see project ideas below). Pick something that interests you—this is YOUR
-                  project!
+                  Choose a project to build (see project ideas below). Pick something crazy, but keep it somewhat
+                  simple.
                 </p>
               </li>
               <li>
@@ -97,52 +102,52 @@ export default function Task2Page() {
           </p>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🛠️ Echo CLI Tool</p>
-              <p className="text-muted-foreground text-xs">Command-line utility with colored output and formatting</p>
+              <p className="mb-1 font-semibold text-sm">🔀 Git Commit Message Generator</p>
+              <p className="text-muted-foreground text-xs">Parse git diffs and suggest conventional commit messages</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🎨 ASCII Art Generator</p>
-              <p className="text-muted-foreground text-xs">Convert text to fancy ASCII banners and art</p>
+              <p className="mb-1 font-semibold text-sm">✅ JSON/YAML Validator CLI</p>
+              <p className="text-muted-foreground text-xs">Validate and format config files with helpful error messages</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">📊 CSV Data Analyzer</p>
-              <p className="text-muted-foreground text-xs">Read CSV files and generate statistics</p>
+              <p className="mb-1 font-semibold text-sm">📝 TODO Comment Extractor</p>
+              <p className="text-muted-foreground text-xs">Scan codebase for TODO/FIXME comments and generate a report</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🎲 Random Quote Generator</p>
-              <p className="text-muted-foreground text-xs">Display inspirational quotes from a curated list</p>
+              <p className="mb-1 font-semibold text-sm">🔐 ENV File Generator</p>
+              <p className="text-muted-foreground text-xs">Create .env templates from .env.example with inline descriptions</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🧮 Unit Converter</p>
-              <p className="text-muted-foreground text-xs">Temperature, distance, and weight conversions</p>
+              <p className="mb-1 font-semibold text-sm">📋 Changelog Generator</p>
+              <p className="text-muted-foreground text-xs">Generate CHANGELOG.md from git commit history</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🎮 Text Adventure Game</p>
-              <p className="text-muted-foreground text-xs">Simple choose-your-own-adventure story</p>
+              <p className="mb-1 font-semibold text-sm">📦 Package Dependency Checker</p>
+              <p className="text-muted-foreground text-xs">Check for outdated npm/pip dependencies and show updates</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">📝 Markdown to Slides</p>
-              <p className="text-muted-foreground text-xs">Generate presentation slides from markdown</p>
+              <p className="mb-1 font-semibold text-sm">🌿 Git Branch Cleaner</p>
+              <p className="text-muted-foreground text-xs">Identify merged or stale branches for cleanup</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🚀 Einstein&apos;s Relativity Explainer</p>
-              <p className="text-muted-foreground text-xs">Educational content about physics concepts</p>
+              <p className="mb-1 font-semibold text-sm">🔗 Markdown Link Checker</p>
+              <p className="text-muted-foreground text-xs">Find and report broken links in documentation</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🎵 Playlist Randomizer</p>
-              <p className="text-muted-foreground text-xs">Shuffle and organize music playlists</p>
+              <p className="mb-1 font-semibold text-sm">🌐 API Response Formatter</p>
+              <p className="text-muted-foreground text-xs">Pretty-print and validate JSON API responses</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🌤️ Weather Formatter</p>
-              <p className="text-muted-foreground text-xs">Parse and display weather data nicely</p>
+              <p className="mb-1 font-semibold text-sm">🐳 Docker Compose Validator</p>
+              <p className="text-muted-foreground text-xs">Parse and validate docker-compose.yml files</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">🔐 Password Strength Checker</p>
-              <p className="text-muted-foreground text-xs">Evaluate password complexity and security</p>
+              <p className="mb-1 font-semibold text-sm">📊 Code Stats Reporter</p>
+              <p className="text-muted-foreground text-xs">Generate statistics about codebase (LOC, file types, etc.)</p>
             </div>
             <div className="rounded-lg border p-3">
-              <p className="mb-1 font-semibold text-sm">📅 Meeting Scheduler</p>
-              <p className="text-muted-foreground text-xs">Find common free time slots from calendars</p>
+              <p className="mb-1 font-semibold text-sm">🔍 Log File Analyzer</p>
+              <p className="text-muted-foreground text-xs">Parse logs, highlight errors, and count log levels</p>
             </div>
           </div>
           <p className="text-muted-foreground text-sm italic">Or build something completely different—surprise us!</p>
