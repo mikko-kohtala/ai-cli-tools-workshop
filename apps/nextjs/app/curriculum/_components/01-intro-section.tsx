@@ -11,9 +11,18 @@ export function IntroSection() {
           6-Week AI Development Curriculum
         </h1>
         <p className="mx-auto max-w-3xl pt-4 text-gray-600 text-xl dark:text-gray-400">
-          A comprehensive program for software developers to master AI-assisted development across the full software
-          development lifecycle
+          A comprehensive, hands-on program designed for software developers who want to transform their development
+          workflow by integrating AI tools and agentic workflows. This curriculum takes you from foundational concepts
+          through advanced practices, covering every phase of the software development lifecycle—from initial
+          requirements gathering to deployment and operations.
         </p>
+        <div className="mx-auto max-w-3xl pt-6">
+          <p className="text-base text-gray-600 dark:text-gray-400">
+            Whether you're a junior developer looking to accelerate your learning curve or a senior engineer seeking to
+            leverage AI for complex architectural decisions, this curriculum provides structured, practical guidance
+            that emphasizes understanding over speed, quality over quantity, and sustainable practices over quick wins.
+          </p>
+        </div>
 
         <div className="mx-auto max-w-3xl pt-12">
           <blockquote className="border-gray-800 border-l-4 bg-gray-50 p-6 text-gray-700 italic dark:border-gray-400 dark:bg-slate-900 dark:text-gray-300">
