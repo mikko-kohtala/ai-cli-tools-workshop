@@ -144,7 +144,9 @@ export function ReasoningSection() {
               </div>
               <p className="text-foreground/70 text-xs">
                 Use general-purpose models for ideation, code-tuned options for deeper refactors, and the in-session{" "}
-                <code className="mx-1 rounded bg-slate-100 px-1 py-0.5 text-[0.65rem] uppercase tracking-wide text-slate-600 dark:bg-slate-900/60 dark:text-slate-300">/model</code>{" "}
+                <code className="mx-1 rounded bg-slate-100 px-1 py-0.5 text-[0.65rem] text-slate-600 uppercase tracking-wide dark:bg-slate-900/60 dark:text-slate-300">
+                  /model
+                </code>{" "}
                 command to pick a provider/model and reasoning effort interactively without leaving the chat.
               </p>
             </div>
@@ -180,7 +182,7 @@ export function ReasoningSection() {
             </div>
           </div>
           <div className="mt-6 rounded-lg bg-white p-4 dark:bg-slate-900">
-            <p className="mb-2 font-semibold text-sm text-foreground/70 uppercase tracking-wide">All-in-one launch</p>
+            <p className="mb-2 font-semibold text-foreground/70 text-sm uppercase tracking-wide">All-in-one launch</p>
             <pre className="rounded border border-slate-200 bg-slate-950 p-2 text-slate-50 text-sm dark:border-slate-800">
               <code>codex --yolo --model='gpt-5-codex' -c model_reasoning_effort='high'</code>
             </pre>

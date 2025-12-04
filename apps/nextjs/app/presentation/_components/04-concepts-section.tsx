@@ -254,9 +254,7 @@ export function ConceptsSection() {
                     <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
                       <p className="mb-1 font-semibold text-xs">WebSearch</p>
                       <p className="text-foreground/70 text-xs">Search the internet for latest information.</p>
-                      <p className="mt-1 font-mono text-[10px]">
-                        "Search for React 19 breaking changes"
-                      </p>
+                      <p className="mt-1 font-mono text-[10px]">"Search for React 19 breaking changes"</p>
                     </div>
                   </div>
                 </div>
@@ -269,18 +267,14 @@ export function ConceptsSection() {
                       <p className="text-foreground/70 text-xs">
                         Run Python in sandbox: analyze data, create visualizations, complex calculations.
                       </p>
-                      <p className="mt-1 font-mono text-[10px]">
-                        "Analyze this CSV and create a bar chart"
-                      </p>
+                      <p className="mt-1 font-mono text-[10px]">"Analyze this CSV and create a bar chart"</p>
                     </div>
                     <div className="rounded bg-slate-50 p-3 dark:bg-slate-950/30">
                       <p className="mb-1 font-semibold text-xs">Memory Tool</p>
                       <p className="text-foreground/70 text-xs">
                         Persistent storage for project context across sessions.
                       </p>
-                      <p className="mt-1 font-mono text-[10px]">
-                        "Remember: we use Zod for validation"
-                      </p>
+                      <p className="mt-1 font-mono text-[10px]">"Remember: we use Zod for validation"</p>
                     </div>
                   </div>
                 </div>
@@ -299,28 +293,28 @@ export function ConceptsSection() {
                     <div className="grid gap-2 md:grid-cols-2">
                       <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                         <p className="mb-0.5 font-semibold text-xs">🎭 Playwright</p>
-                        <p className="text-foreground/60 text-[10px]">
+                        <p className="text-[10px] text-foreground/60">
                           Browser automation & testing—interact with web pages, scraping, workflows
                         </p>
                       </div>
                       <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                         <p className="mb-0.5 font-semibold text-xs">🗄️ PostgreSQL/SQLite</p>
-                        <p className="text-foreground/60 text-[10px]">
+                        <p className="text-[10px] text-foreground/60">
                           Query databases, inspect schemas, run business intelligence
                         </p>
                       </div>
                       <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                         <p className="mb-0.5 font-semibold text-xs">🐙 GitHub</p>
-                        <p className="text-foreground/60 text-[10px]">
+                        <p className="text-[10px] text-foreground/60">
                           PR reviews, issue management, repository operations
                         </p>
-                        <p className="mt-1 text-amber-700 text-[10px] dark:text-amber-400">
+                        <p className="mt-1 text-[10px] text-amber-700 dark:text-amber-400">
                           Note: Claude Code can use <code>gh</code> CLI directly—MCP optional
                         </p>
                       </div>
                       <div className="rounded bg-slate-50 p-2 dark:bg-slate-950/50">
                         <p className="mb-0.5 font-semibold text-xs">📁 Filesystem</p>
-                        <p className="text-foreground/60 text-[10px]">
+                        <p className="text-[10px] text-foreground/60">
                           Advanced file operations with granular access controls
                         </p>
                       </div>
