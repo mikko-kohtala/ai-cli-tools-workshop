@@ -167,7 +167,7 @@ export function LearningPathsSection() {
                     <div>
                       <CardTitle className="text-2xl">{path.name}</CardTitle>
                       <CardDescription className="text-base">{path.subtitle}</CardDescription>
-                      <p className="mt-1 text-sm text-foreground/70">{path.description}</p>
+                      <p className="mt-1 text-foreground/70 text-sm">{path.description}</p>
                     </div>
                   </div>
                 </CardHeader>

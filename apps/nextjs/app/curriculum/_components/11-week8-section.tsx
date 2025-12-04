@@ -1,5 +1,5 @@
-import { CheckCircle, Rocket, Target } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Rocket } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const capstoneSteps = [
   {
@@ -85,8 +85,8 @@ export function Week8Section() {
         <Card className="bg-emerald-50 dark:bg-emerald-950/30">
           <CardContent className="p-6">
             <p className="mb-6 text-base">
-              Run a mini full SDLC cycle applying everything you've learned. This capstone should demonstrate your ability
-              to use AI tools effectively across the entire software development lifecycle:
+              Run a mini full SDLC cycle applying everything you've learned. This capstone should demonstrate your
+              ability to use AI tools effectively across the entire software development lifecycle:
             </p>
             <div className="space-y-4">
               {capstoneSteps.map((step) => (
@@ -124,9 +124,9 @@ export function Week8Section() {
             <div className="mt-6 rounded-lg bg-emerald-100 p-4 dark:bg-emerald-900/30">
               <p className="mb-2 font-semibold text-sm">💡 Final Thoughts:</p>
               <p className="text-foreground/80 text-sm leading-relaxed">
-                This curriculum has equipped you with the knowledge and skills to be an AI-augmented developer. Remember:
-                AI tools are powerful, but they're tools. Your judgment, expertise, and understanding of your domain are
-                what make you valuable. Use AI to amplify your capabilities, not replace your thinking.
+                This curriculum has equipped you with the knowledge and skills to be an AI-augmented developer.
+                Remember: AI tools are powerful, but they're tools. Your judgment, expertise, and understanding of your
+                domain are what make you valuable. Use AI to amplify your capabilities, not replace your thinking.
               </p>
             </div>
           </CardContent>

@@ -39,8 +39,8 @@ export function ConvergenceSection() {
           <CardContent className="p-6">
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
               Weeks 5-8 bring all paths back together. After three weeks of specialized learning, everyone reconvenes to
-              learn advanced topics, cross-functional collaboration, and shared workflows. This convergence is crucial because real-world
-              projects require multiple roles working together.
+              learn advanced topics, cross-functional collaboration, and shared workflows. This convergence is crucial
+              because real-world projects require multiple roles working together.
             </p>
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
               <strong>Why convergence matters:</strong> While specialized paths ensure deep role-specific learning, most
@@ -51,7 +51,8 @@ export function ConvergenceSection() {
             <p className="text-base text-foreground/80 leading-relaxed">
               <strong>Learning approach:</strong> Weeks 5-8 combine lectures, workshops, and hands-on exercises where
               participants from different paths work together on cross-functional scenarios. You'll learn each other's
-              tools, workflows, and perspectives, building the foundation for effective collaboration in the final capstone project.
+              tools, workflows, and perspectives, building the foundation for effective collaboration in the final
+              capstone project.
             </p>
           </CardContent>
         </Card>

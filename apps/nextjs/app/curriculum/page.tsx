@@ -5,16 +5,16 @@ import { Separator } from "@/components/ui/separator";
 import { IntroSection } from "./_components/01-intro-section";
 import { OverviewSection } from "./_components/02-overview-section";
 import { DailyStructureSection } from "./_components/03-daily-structure-section";
-import { LearningPathsSection } from "./_components/12-learning-paths-section";
 import { Week1Section } from "./_components/04-week1-section";
 import { Week2Section } from "./_components/05-week2-section";
 import { Week3Section } from "./_components/06-week3-section";
 import { Week4Section } from "./_components/07-week4-section";
 import { Week5Section } from "./_components/08-week5-section";
 import { Week6Section } from "./_components/09-week6-section";
+import { TableOfContents } from "./_components/10-table-of-contents";
 import { Week7Section } from "./_components/10-week7-section";
 import { Week8Section } from "./_components/11-week8-section";
-import { TableOfContents } from "./_components/10-table-of-contents";
+import { LearningPathsSection } from "./_components/12-learning-paths-section";
 
 const sections = [
   { id: "intro", title: "Introduction" },

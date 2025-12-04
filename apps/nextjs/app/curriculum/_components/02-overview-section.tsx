@@ -82,13 +82,16 @@ export function OverviewSection() {
         <Card>
           <CardContent className="p-6">
             <p className="mb-4 text-lg leading-relaxed">
-              This 8-week intensive program is designed for software developers, product managers, and designers who want to integrate AI tools into
-              their workflow. Each week builds on the previous, taking you from basic tool setup through
-              advanced AI-assisted practices across the entire software development lifecycle.
+              This 8-week intensive program is designed for software developers, product managers, and designers who
+              want to integrate AI tools into their workflow. Each week builds on the previous, taking you from basic
+              tool setup through advanced AI-assisted practices across the entire software development lifecycle.
             </p>
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
-              The curriculum follows a progressive learning model with role-specific paths: you'll start by understanding the fundamentals of how
-              AI tools work and what they're capable of, then gradually build more sophisticated workflows. Week 1 provides a common foundation for all roles. Weeks 2-4 branch into specialized paths (Developer, Product, Design). Weeks 5-8 bring everyone together for advanced topics, cross-functional collaboration, and a comprehensive capstone project.
+              The curriculum follows a progressive learning model with role-specific paths: you'll start by
+              understanding the fundamentals of how AI tools work and what they're capable of, then gradually build more
+              sophisticated workflows. Week 1 provides a common foundation for all roles. Weeks 2-4 branch into
+              specialized paths (Developer, Product, Design). Weeks 5-8 bring everyone together for advanced topics,
+              cross-functional collaboration, and a comprehensive capstone project.
             </p>
             <p className="text-base text-foreground/80 leading-relaxed">
               <strong>What makes this curriculum unique:</strong> Rather than treating AI as a magic solution, we focus

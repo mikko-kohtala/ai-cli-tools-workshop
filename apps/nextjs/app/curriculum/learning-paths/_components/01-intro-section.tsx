@@ -17,7 +17,9 @@ export function IntroSection() {
         <div className="mx-auto max-w-3xl pt-6">
           <p className="text-base text-gray-600 dark:text-gray-400">
             This curriculum recognizes that different roles use AI tools differently. While everyone needs foundational
-            knowledge, developers, product managers, and designers have unique needs. Weeks 2-4 diverge into three specialized paths, then Weeks 5-8 bring everyone together for advanced topics, cross-functional collaboration, and capstone projects.
+            knowledge, developers, product managers, and designers have unique needs. Weeks 2-4 diverge into three
+            specialized paths, then Weeks 5-8 bring everyone together for advanced topics, cross-functional
+            collaboration, and capstone projects.
           </p>
         </div>
       </div>

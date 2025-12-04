@@ -37,7 +37,9 @@ export function Week6Section() {
         </div>
         <div>
           <h2 className="font-bold text-4xl">Week 6: Advanced Topics & Integration</h2>
-          <p className="font-medium text-foreground/70 text-sm">Theme: Advanced AI workflows and cross-functional integration</p>
+          <p className="font-medium text-foreground/70 text-sm">
+            Theme: Advanced AI workflows and cross-functional integration
+          </p>
         </div>
       </div>
 
@@ -93,9 +95,7 @@ export function Week6Section() {
         <h3 className="mb-6 font-semibold text-2xl">Week 6 Project Focus</h3>
         <Card className="bg-indigo-50 dark:bg-indigo-950/30">
           <CardContent className="p-6">
-            <p className="mb-4 text-base">
-              This week focuses on advanced integration and cross-functional workflows:
-            </p>
+            <p className="mb-4 text-base">This week focuses on advanced integration and cross-functional workflows:</p>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-sm">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />

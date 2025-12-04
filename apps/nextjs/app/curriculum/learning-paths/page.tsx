@@ -7,7 +7,6 @@ import { PathVisualization } from "./_components/02-path-visualization";
 import { CommonFoundationSection } from "./_components/03-common-foundation-section";
 import { PathDetailsSection } from "./_components/04-path-details-section";
 import { ConvergenceSection } from "./_components/05-convergence-section";
-import { CapstoneSection } from "./_components/06-capstone-section";
 import { TableOfContents } from "./_components/07-table-of-contents";
 
 const sections = [

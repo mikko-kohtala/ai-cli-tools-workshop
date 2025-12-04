@@ -220,7 +220,7 @@ export function PathVisualization() {
                   </div>
                   <CardTitle className="text-lg">{path.name}</CardTitle>
                   <CardDescription className="text-sm">{path.subtitle}</CardDescription>
-                  <p className="mt-2 text-sm text-foreground/70">{path.description}</p>
+                  <p className="mt-2 text-foreground/70 text-sm">{path.description}</p>
                 </CardHeader>
               </Card>
             );
