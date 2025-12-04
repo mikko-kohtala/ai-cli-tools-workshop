@@ -1,4 +1,4 @@
-import { Briefcase, Code2, Megaphone, Palette, Settings } from "lucide-react";
+import { Briefcase, Code2, Palette } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface PathData {
@@ -19,80 +19,39 @@ interface PathData {
 const pathsData: PathData[] = [
   {
     id: "dev",
-    name: "Developers",
+    name: "Developer",
     icon: Code2,
     color: "emerald",
     description: "Code generation, testing, debugging, and building production-ready AI integrations",
     weeks: [
       {
-        week: 2,
-        title: "Planning & Architecture",
-        topics: [
-          "AI-assisted requirements and design",
-          "Architecture exploration with Claude",
-          "ADRs and technical documentation",
-          "Code scaffolding and project setup",
-        ],
-      },
-      {
         week: 3,
-        title: "Implementation",
+        title: "Domain Fundamentals",
         topics: [
           "Code generation patterns",
+          "Tool use deep dive (files, shell, MCP)",
           "Multi-file editing workflows",
-          "Refactoring with AI",
-          "Working with existing codebases",
+          "Codebase navigation with AI",
         ],
       },
       {
         week: 4,
-        title: "Testing & Quality",
+        title: "Core Workflows",
         topics: ["Test generation strategies", "Debugging with AI", "Code review workflows", "Performance analysis"],
+      },
+      {
+        week: 5,
+        title: "Advanced Techniques",
+        topics: ["Complex refactoring", "API integration patterns", "Legacy migration", "Architecture review with AI"],
+      },
+      {
+        week: 6,
+        title: "Integration & Collaboration",
+        topics: ["Product collaboration", "Design implementation", "Team documentation", "AI workflow sharing"],
       },
     ],
     tools: ["Claude Code", "Codex CLI", "GitHub Copilot", "Cursor"],
     outcome: "Ship production code 2-3x faster with AI assistance",
-  },
-  {
-    id: "design",
-    name: "Designers",
-    icon: Palette,
-    color: "pink",
-    description: "User research, prototyping, design systems, and visual design with AI assistance",
-    weeks: [
-      {
-        week: 2,
-        title: "Research & Discovery",
-        topics: [
-          "AI-assisted user research synthesis",
-          "Persona and journey creation",
-          "Competitive analysis",
-          "Design brief generation",
-        ],
-      },
-      {
-        week: 3,
-        title: "Design & Prototyping",
-        topics: [
-          "AI image generation for concepts",
-          "Design system documentation",
-          "Copy and microcopy generation",
-          "Rapid prototyping workflows",
-        ],
-      },
-      {
-        week: 4,
-        title: "Iteration & Handoff",
-        topics: [
-          "Design critique with AI",
-          "Accessibility audits",
-          "Developer handoff documentation",
-          "Design token management",
-        ],
-      },
-    ],
-    tools: ["Figma AI", "Midjourney", "Claude", "Adobe Firefly"],
-    outcome: "From research to polished designs in half the time",
   },
   {
     id: "product",
@@ -102,8 +61,8 @@ const pathsData: PathData[] = [
     description: "Requirements, roadmaps, user stories, and strategic planning with AI",
     weeks: [
       {
-        week: 2,
-        title: "Discovery & Requirements",
+        week: 3,
+        title: "Domain Fundamentals",
         topics: [
           "User story generation",
           "PRD creation and refinement",
@@ -112,100 +71,74 @@ const pathsData: PathData[] = [
         ],
       },
       {
-        week: 3,
-        title: "Strategy & Analysis",
-        topics: [
-          "Competitive landscape analysis",
-          "Market research synthesis",
-          "OKR and metric definition",
-          "Risk assessment",
-        ],
+        week: 4,
+        title: "Core Workflows",
+        topics: ["Competitive analysis", "Market research synthesis", "OKR definition", "Risk assessment"],
       },
       {
-        week: 4,
-        title: "Communication",
+        week: 5,
+        title: "Advanced Techniques",
         topics: [
           "Roadmap presentations",
           "Stakeholder updates",
-          "Release notes and changelogs",
+          "Release communications",
           "Customer feedback synthesis",
         ],
+      },
+      {
+        week: 6,
+        title: "Integration & Collaboration",
+        topics: ["Engineering partnership", "Design alignment", "Cross-team planning", "AI culture building"],
       },
     ],
     tools: ["Claude", "Notion AI", "Linear", "Productboard"],
     outcome: "Double your output while improving strategic clarity",
   },
   {
-    id: "sales",
-    name: "Sales & Marketing",
-    icon: Megaphone,
-    color: "amber",
-    description: "Content creation, outreach, customer insights, and campaign optimization",
+    id: "design",
+    name: "Design",
+    icon: Palette,
+    color: "pink",
+    description: "User research, prototyping, design systems, and visual design with AI assistance",
     weeks: [
       {
-        week: 2,
-        title: "Content & Messaging",
-        topics: [
-          "Blog and article generation",
-          "Email sequence creation",
-          "Social media content",
-          "Brand voice consistency",
-        ],
-      },
-      {
         week: 3,
-        title: "Customer Intelligence",
+        title: "Domain Fundamentals",
         topics: [
-          "Prospect research automation",
-          "Call transcript analysis",
-          "Competitive positioning",
-          "Personalization at scale",
+          "AI-assisted research synthesis",
+          "Persona and journey creation",
+          "Competitive analysis",
+          "Design brief generation",
         ],
       },
       {
         week: 4,
-        title: "Analytics & Optimization",
-        topics: ["Campaign performance analysis", "A/B test interpretation", "Sales forecasting", "Report generation"],
-      },
-    ],
-    tools: ["Claude", "Jasper", "Copy.ai", "HubSpot AI"],
-    outcome: "10x content output, personalized at scale",
-  },
-  {
-    id: "ops",
-    name: "Operations",
-    icon: Settings,
-    color: "purple",
-    description: "Process documentation, support workflows, and operational automation",
-    weeks: [
-      {
-        week: 2,
-        title: "Documentation",
+        title: "Core Workflows",
         topics: [
-          "SOP and runbook creation",
-          "Knowledge base articles",
-          "Process documentation",
-          "Training material generation",
+          "Concept generation with AI",
+          "Design system documentation",
+          "Copy and microcopy generation",
+          "Rapid prototyping workflows",
         ],
       },
       {
-        week: 3,
-        title: "Support & Service",
+        week: 5,
+        title: "Advanced Techniques",
         topics: [
-          "Response template creation",
-          "Ticket categorization",
-          "FAQ generation from tickets",
-          "Escalation workflows",
+          "Design critique with AI",
+          "Accessibility audits",
+          "Developer handoff docs",
+          "Design token management",
         ],
       },
       {
-        week: 4,
-        title: "Analysis & Reporting",
-        topics: ["Operational metrics dashboards", "Trend analysis", "Capacity planning", "Incident postmortems"],
+        week: 6,
+        title: "Integration & Collaboration",
+        topics: ["Engineering partnership", "Product alignment", "Design knowledge sharing", "AI tools evangelism"],
       },
     ],
-    tools: ["Claude", "Notion AI", "Zendesk AI", "Confluence"],
-    outcome: "Automate routine work, focus on high-impact operations",
+    tools: ["Figma AI", "Midjourney", "Claude", "Adobe Firefly"],
+    outcome: "From research to polished designs in half the time",
   },
 ];
 
@@ -228,25 +161,13 @@ const colorClasses: Record<string, { bg: string; border: string; text: string; l
     text: "text-blue-700 dark:text-blue-400",
     light: "bg-blue-50 dark:bg-blue-950/30",
   },
-  amber: {
-    bg: "bg-amber-100 dark:bg-amber-900/40",
-    border: "border-l-amber-500",
-    text: "text-amber-700 dark:text-amber-400",
-    light: "bg-amber-50 dark:bg-amber-950/30",
-  },
-  purple: {
-    bg: "bg-purple-100 dark:bg-purple-900/40",
-    border: "border-l-purple-500",
-    text: "text-purple-700 dark:text-purple-400",
-    light: "bg-purple-50 dark:bg-purple-950/30",
-  },
 };
 
 export function PathDetailsSection() {
   return (
     <section className="mb-16">
-      <h2 className="mb-2 text-center font-bold text-2xl">Specialized Tracks (Weeks 2-4)</h2>
-      <p className="mb-8 text-center text-foreground/60">Each role follows a customized path during weeks 2-4</p>
+      <h2 className="mb-2 text-center font-bold text-2xl">Specialized Tracks (Weeks 3-6)</h2>
+      <p className="mb-8 text-center text-foreground/60">Each role follows a customized path during weeks 3-6</p>
 
       <div className="space-y-8">
         {pathsData.map((path) => {
@@ -268,7 +189,7 @@ export function PathDetailsSection() {
               </CardHeader>
               <CardContent>
                 {/* Weekly breakdown */}
-                <div className="mb-6 grid gap-4 md:grid-cols-3">
+                <div className="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {path.weeks.map((week) => (
                     <div className={`rounded-lg p-4 ${colors.light}`} key={week.week}>
                       <div className="mb-2 flex items-center gap-2">

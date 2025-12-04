@@ -21,17 +21,32 @@ const goals = [
 ];
 
 const weekSummary = [
-  { week: 1, title: "Foundations & Mindset", color: "bg-emerald-500", focus: "LLMs, agents, tool setup" },
+  { week: 1, title: "Foundations & Mindset", color: "bg-emerald-500", focus: "LLMs, agents, tool setup", shared: true },
   {
     week: 2,
-    title: "Planning & Agentic Patterns",
+    title: "AI Basics & First Steps",
     color: "bg-blue-500",
-    focus: "Workflows vs agents, 5 core patterns",
+    focus: "Prompting, workflows, patterns",
+    shared: true,
   },
-  { week: 3, title: "Implementation & Tool Use", color: "bg-purple-500", focus: "Coding with AI, agent tools" },
-  { week: 4, title: "Testing & Quality", color: "bg-indigo-500", focus: "Tests, debugging, code review" },
-  { week: 5, title: "Building Agents", color: "bg-amber-500", focus: "Claude Agent SDK, multi-agent systems" },
-  { week: 6, title: "Deploy & Capstone", color: "bg-rose-500", focus: "DevOps, governance, capstone with agent" },
+  { week: 3, title: "Domain Fundamentals", color: "bg-purple-500", focus: "Path-specific foundations", shared: false },
+  { week: 4, title: "Core Workflows", color: "bg-indigo-500", focus: "Path-specific techniques", shared: false },
+  { week: 5, title: "Advanced Techniques", color: "bg-cyan-500", focus: "Path-specific mastery", shared: false },
+  {
+    week: 6,
+    title: "Integration & Collaboration",
+    color: "bg-pink-500",
+    focus: "Cross-functional AI use",
+    shared: false,
+  },
+  {
+    week: 7,
+    title: "Building Agents",
+    color: "bg-amber-500",
+    focus: "Claude Agent SDK, multi-agent systems",
+    shared: true,
+  },
+  { week: 8, title: "Capstone & Deploy", color: "bg-rose-500", focus: "DevOps, governance, capstone", shared: true },
 ];
 
 export function CurriculumOverview() {
@@ -44,7 +59,7 @@ export function CurriculumOverview() {
         </div>
         <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-200">AI-Assisted Development</h1>
         <p className="mx-auto max-w-2xl text-gray-600 text-xl dark:text-gray-400">
-          6-week curriculum for software developers learning to work with AI coding assistants and build AI agents
+          8-week curriculum with specialized learning paths for developers, product managers, and designers
         </p>
       </div>
 
@@ -116,20 +131,21 @@ export function CurriculumOverview() {
           </div>
           <h2 className="font-bold text-3xl">Curriculum Overview</h2>
         </div>
-        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
           {weekSummary.map((week) => (
             <div
-              className="flex items-center gap-3 rounded-lg border p-4 transition-colors hover:bg-muted/50"
+              className={`flex items-center gap-3 rounded-lg border p-4 transition-colors hover:bg-muted/50 ${week.shared ? "" : "border-dashed"}`}
               key={week.week}
             >
               <div className={`h-10 w-10 rounded-lg ${week.color} flex shrink-0 items-center justify-center`}>
                 <span className="font-bold text-white">{week.week}</span>
               </div>
               <div>
-                <p className="font-medium">
+                <p className="font-medium text-sm">
                   Week {week.week}: {week.title}
                 </p>
                 <p className="text-foreground/60 text-xs">{week.focus}</p>
+                {!week.shared && <span className="text-purple-600 text-xs dark:text-purple-400">Path-specific</span>}
               </div>
             </div>
           ))}
@@ -150,11 +166,11 @@ export function CurriculumOverview() {
         <div className="rounded-lg border border-amber-200 bg-amber-50 p-6 dark:border-amber-800 dark:bg-amber-950/30">
           <div className="flex items-center gap-2">
             <Bot className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-            <p className="font-semibold text-amber-700 dark:text-amber-400">Agent Development Track</p>
+            <p className="font-semibold text-amber-700 dark:text-amber-400">Bookend Structure</p>
           </div>
           <p className="mt-2 text-foreground/70">
-            Week 5 is dedicated to building agents with the Claude Agent SDK. By the end, you'll have built a working
-            agent with custom tools, multi-agent orchestration, and proper safety guardrails.
+            Weeks 1-2 and 7-8 are shared across all paths. Weeks 3-6 diverge into role-specific tracks. Week 7 covers
+            building agents with the Claude Agent SDK, and Week 8 brings everyone together for capstone projects.
           </p>
         </div>
       </div>

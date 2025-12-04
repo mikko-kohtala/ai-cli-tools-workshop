@@ -9,15 +9,23 @@ const week1Topics = [
   "Hands-on: first AI-assisted task in your domain",
 ];
 
-const week5Topics = [
+const week2Topics = [
+  "Core prompting patterns and techniques",
+  "Introduction to agentic workflows",
+  "5 workflow patterns: chaining, routing, parallelization",
+  "Planning mode and structured reasoning",
+  "Building your first AI-assisted project",
+];
+
+const week7Topics = [
   "What makes an AI agent vs simple chat",
-  "Building custom tools for your domain",
-  "Agent workflows: automation patterns",
-  "Multi-agent collaboration concepts",
+  "Building custom tools with Claude Agent SDK",
+  "Agent loops and context management",
+  "Multi-agent collaboration patterns",
   "Safety: guardrails, approval flows, boundaries",
 ];
 
-const week6Topics = [
+const week8Topics = [
   "Capstone project: end-to-end AI workflow",
   "Include agent or automation component",
   "Cross-functional collaboration with AI",
@@ -31,29 +39,45 @@ export function SharedWeeksSection() {
       <h2 className="mb-8 text-center font-bold text-2xl">Shared Learning Weeks</h2>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        {/* Week 1 */}
+        {/* Weeks 1-2 */}
         <Card className="border-l-4 border-l-indigo-500">
           <CardHeader>
             <div className="mb-2 flex items-center gap-2">
               <span className="rounded bg-indigo-100 px-2 py-1 font-mono text-indigo-700 text-xs dark:bg-indigo-900/30 dark:text-indigo-400">
-                WEEK 1
+                WEEKS 1-2
               </span>
             </div>
             <CardTitle className="flex items-center gap-2 text-xl">
               <Lightbulb className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-              AI Foundations
+              Foundations & AI Basics
             </CardTitle>
             <CardDescription>Everyone starts together—building shared vocabulary and skills</CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2">
-              {week1Topics.map((topic) => (
-                <li className="flex items-start gap-2 text-foreground/70 text-sm" key={topic}>
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
-                  {topic}
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <p className="mb-2 font-semibold text-sm">Week 1: Foundations</p>
+                <ul className="space-y-1">
+                  {week1Topics.map((topic) => (
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm" key={topic}>
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="mb-2 font-semibold text-sm">Week 2: AI Basics</p>
+                <ul className="space-y-1">
+                  {week2Topics.map((topic) => (
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm" key={topic}>
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             <div className="mt-4 rounded-lg bg-indigo-50 p-3 dark:bg-indigo-950/30">
               <p className="text-indigo-700 text-sm dark:text-indigo-400">
                 <strong>Outcome:</strong> Common language for AI collaboration across roles
@@ -62,12 +86,12 @@ export function SharedWeeksSection() {
           </CardContent>
         </Card>
 
-        {/* Weeks 5-6 */}
+        {/* Weeks 7-8 */}
         <Card className="border-l-4 border-l-amber-500">
           <CardHeader>
             <div className="mb-2 flex items-center gap-2">
               <span className="rounded bg-amber-100 px-2 py-1 font-mono text-amber-700 text-xs dark:bg-amber-900/30 dark:text-amber-400">
-                WEEKS 5-6
+                WEEKS 7-8
               </span>
             </div>
             <CardTitle className="flex items-center gap-2 text-xl">
@@ -79,9 +103,9 @@ export function SharedWeeksSection() {
           <CardContent>
             <div className="space-y-4">
               <div>
-                <p className="mb-2 font-semibold text-sm">Week 5: Building Agents</p>
+                <p className="mb-2 font-semibold text-sm">Week 7: Building Agents</p>
                 <ul className="space-y-1">
-                  {week5Topics.map((topic) => (
+                  {week7Topics.map((topic) => (
                     <li className="flex items-start gap-2 text-foreground/70 text-sm" key={topic}>
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                       {topic}
@@ -90,9 +114,9 @@ export function SharedWeeksSection() {
                 </ul>
               </div>
               <div>
-                <p className="mb-2 font-semibold text-sm">Week 6: Capstone</p>
+                <p className="mb-2 font-semibold text-sm">Week 8: Capstone</p>
                 <ul className="space-y-1">
-                  {week6Topics.map((topic) => (
+                  {week8Topics.map((topic) => (
                     <li className="flex items-start gap-2 text-foreground/70 text-sm" key={topic}>
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
                       {topic}
@@ -113,8 +137,8 @@ export function SharedWeeksSection() {
             <p className="font-semibold text-emerald-700 dark:text-emerald-400">Why Everyone Learns Agents</p>
           </div>
           <p className="mt-2 text-foreground/70 text-sm">
-            Agents automate workflows in every domain—support tickets, design handoffs, sales outreach, product
-            feedback. Everyone benefits from understanding how to build and work with AI agents.
+            Agents automate workflows in every domain—support tickets, design handoffs, product feedback. Everyone
+            benefits from understanding how to build and work with AI agents.
           </p>
         </div>
 

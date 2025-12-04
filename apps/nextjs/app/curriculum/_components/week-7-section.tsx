@@ -88,15 +88,15 @@ const safetyChecklist = [
   { item: "Graceful degradation", description: "Handle failures without data loss" },
 ];
 
-export function Week5Section() {
+export function Week7Section() {
   return (
-    <section className="mb-16 scroll-mt-16" id="week-5">
+    <section className="mb-16 scroll-mt-16" id="week-7">
       <div className="mb-6 flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30">
           <Bot className="h-5 w-5 text-amber-600 dark:text-amber-400" />
         </div>
         <div>
-          <h2 className="font-bold text-4xl">Week 5: Building Agents</h2>
+          <h2 className="font-bold text-4xl">Week 7: Building Agents</h2>
           <p className="text-foreground/60">Creating production-ready agents with the Claude Agent SDK</p>
         </div>
       </div>
@@ -292,9 +292,9 @@ export function Week5Section() {
 
         {/* Project Milestone */}
         <div className="rounded-lg border-2 border-amber-300 border-dashed bg-amber-50/50 p-4 dark:border-amber-700 dark:bg-amber-950/20">
-          <p className="mb-2 font-semibold text-amber-700 dark:text-amber-400">Week 5 Milestone</p>
+          <p className="mb-2 font-semibold text-amber-700 dark:text-amber-400">Week 7 Milestone</p>
           <p className="text-foreground/70 text-sm">
-            By end of Week 5: You've built a working agent with custom tools, proper error handling, and safety
+            By end of Week 7: You've built a working agent with custom tools, proper error handling, and safety
             guardrails. The agent can be deployed and run autonomously within defined boundaries.
           </p>
         </div>
