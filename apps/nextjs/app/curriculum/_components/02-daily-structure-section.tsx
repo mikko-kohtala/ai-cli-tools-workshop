@@ -26,9 +26,9 @@ export function DailyStructureSection() {
       <div className="mt-6 text-gray-700 dark:text-gray-300">
         <h4 className="font-semibold text-gray-800 dark:text-gray-300">Wrap-up (15–30m)</h4>
         <ul className="mt-2 list-disc space-y-2 pl-6">
-          <li>Log: mistakes, fixes, learned constraints.</li>
+          <li>Log: mistakes, fixes, learned constraints, agent behaviors (success/failure modes).</li>
           <li>Optional: ask AI to summarize progress and propose tomorrow’s plan.</li>
-          <li>Update tickets/ADRs/docs to keep artifacts current.</li>
+          <li>Update tickets/ADRs/docs/runbooks to keep artifacts current.</li>
         </ul>
       </div>
     </section>
