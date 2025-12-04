@@ -1,20 +1,20 @@
 import {
+  BookOpen,
   Bot,
   CalendarClock,
   CheckCircle2,
+  ClipboardCheck,
   Clock3,
   Compass,
+  Cpu,
   Flag,
   Layers,
   Rocket,
   ShieldCheck,
   Sparkles,
   Target,
-  Workflow,
   Users,
-  BookOpen,
-  ClipboardCheck,
-  Cpu,
+  Workflow,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -243,14 +243,16 @@ export default function CurriculumPage() {
             >
               6-week AI SDLC curriculum
             </Badge>
-            <h1 className="font-bold text-4xl leading-tight md:text-5xl">Bring AI agents into every stage of the SDLC</h1>
+            <h1 className="font-bold text-4xl leading-tight md:text-5xl">
+              Bring AI agents into every stage of the SDLC
+            </h1>
             <p className="max-w-3xl text-lg text-muted-foreground">
               Practical, repeatable AI and agentic workflows—from ideation to operations—with daily prompts, safety
               guardrails, and a capstone that mirrors real product delivery.
             </p>
             <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900/50">
-              <p className="mb-3 text-sm font-medium text-slate-800 dark:text-slate-200">By Week 6 you will:</p>
-              <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+              <p className="mb-3 font-medium text-slate-800 text-sm dark:text-slate-200">By Week 6 you will:</p>
+              <ul className="space-y-2 text-slate-700 text-sm dark:text-slate-300">
                 {outcomes.map((item) => (
                   <li className="flex gap-2" key={item}>
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
@@ -260,7 +262,7 @@ export default function CurriculumPage() {
               </ul>
             </div>
           </div>
-          <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-700 shadow-inner dark:bg-slate-800/80 dark:text-slate-200 md:w-[320px]">
+          <div className="rounded-xl bg-slate-50 p-4 text-slate-700 text-sm shadow-inner md:w-[320px] dark:bg-slate-800/80 dark:text-slate-200">
             <div className="flex items-center gap-2 font-medium">
               <CalendarClock className="h-5 w-5" />
               <span>October 28, 2025 • 14:00–15:30</span>
@@ -300,7 +302,7 @@ export default function CurriculumPage() {
                 <CardDescription>{item.description}</CardDescription>
               </div>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">Example: {item.example}</CardContent>
+            <CardContent className="text-muted-foreground text-sm">Example: {item.example}</CardContent>
           </Card>
         ))}
       </section>
@@ -319,7 +321,7 @@ export default function CurriculumPage() {
                 </div>
                 <CardTitle className="text-base">{item.title}</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">{item.detail}</CardContent>
+              <CardContent className="text-muted-foreground text-sm">{item.detail}</CardContent>
             </Card>
           ))}
         </div>
@@ -339,7 +341,7 @@ export default function CurriculumPage() {
                 </div>
                 <CardTitle className="text-base">{pattern.title}</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">{pattern.description}</CardContent>
+              <CardContent className="text-muted-foreground text-sm">{pattern.description}</CardContent>
             </Card>
           ))}
         </div>
@@ -431,9 +433,9 @@ export default function CurriculumPage() {
               <CardTitle className="text-base">Prompt hygiene</CardTitle>
               <CardDescription>No secrets, minimal PII, and red-team suspicious inputs.</CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
-              Use local env files and mask tokens; review AI-suggested commands before execution; prefer read-only prompts
-              for production data.
+            <CardContent className="text-muted-foreground text-sm">
+              Use local env files and mask tokens; review AI-suggested commands before execution; prefer read-only
+              prompts for production data.
             </CardContent>
           </Card>
           <Card>
@@ -441,8 +443,9 @@ export default function CurriculumPage() {
               <CardTitle className="text-base">Human-in-the-loop</CardTitle>
               <CardDescription>Explicit review steps every day.</CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
-              Require human approval on diffs, CI configs, and migrations; pair AI-generated tests with manual edge cases.
+            <CardContent className="text-muted-foreground text-sm">
+              Require human approval on diffs, CI configs, and migrations; pair AI-generated tests with manual edge
+              cases.
             </CardContent>
           </Card>
           <Card>
@@ -450,7 +453,7 @@ export default function CurriculumPage() {
               <CardTitle className="text-base">Traceability</CardTitle>
               <CardDescription>Document AI decisions.</CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
+            <CardContent className="text-muted-foreground text-sm">
               Keep a lightweight log of prompts, outputs, and edits; link ADRs to the prompts that generated options.
             </CardContent>
           </Card>
@@ -471,7 +474,7 @@ export default function CurriculumPage() {
                 </div>
                 <CardTitle className="text-base">{phase.title}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
+              <CardContent className="space-y-2 text-muted-foreground text-sm">
                 {phase.items.map((item) => (
                   <div className="flex gap-2" key={item}>
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
@@ -495,7 +498,7 @@ export default function CurriculumPage() {
               <CardTitle className="text-base">Evidence of progress</CardTitle>
               <CardDescription>What “good” looks like each week.</CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
+            <CardContent className="text-muted-foreground text-sm">
               <ul className="space-y-2">
                 {success.map((item) => (
                   <li className="flex gap-2" key={item}>
@@ -511,7 +514,7 @@ export default function CurriculumPage() {
               <CardTitle className="text-base">Keep the loop tight</CardTitle>
               <CardDescription>Default workflow to reuse daily.</CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
+            <CardContent className="text-muted-foreground text-sm">
               <ol className="list-decimal space-y-1 pl-4">
                 <li>Summarize task + constraints to the agent (paste ticket + files).</li>
                 <li>Ask for a plan; trim to 3–6 steps; mark risky actions.</li>

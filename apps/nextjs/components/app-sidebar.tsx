@@ -43,17 +43,22 @@ const navMain = [
   },
 ];
 
+const curriculumTools = [
+  { name: "Claude", slug: "curriculum-claude" },
+  { name: "Codex", slug: "curriculum-codex" },
+  { name: "Codexmax", slug: "curriculum-codexmax" },
+  { name: "Copilot", slug: "curriculum-copilot" },
+  { name: "Cursor Agent", slug: "curriculum-cursor-agent" },
+];
+
 const curriculumNav = {
   title: "Curriculum",
   url: "/curriculum",
   icon: IconBook,
-  items: [
-    { title: "Claude", url: "/curriculum-claude" },
-    { title: "Codex", url: "/curriculum-codex" },
-    { title: "Codexmax", url: "/curriculum-codexmax" },
-    { title: "Copilot", url: "/curriculum-copilot" },
-    { title: "Cursor Agent", url: "/curriculum-cursor-agent" },
-  ],
+  items: curriculumTools.flatMap((tool) => [
+    { title: tool.name, url: `/${tool.slug}` },
+    { title: `${tool.name} Paths`, url: `/${tool.slug}/learning-paths` },
+  ]),
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
