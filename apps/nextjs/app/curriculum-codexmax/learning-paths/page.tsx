@@ -1,3 +1,6 @@
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import {
   BarChart3,
   Brain,
@@ -13,9 +16,6 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 
 const personas = [
   {
@@ -105,8 +105,8 @@ export default function LearningPathsPage() {
               Week 5–6 integration. All paths practice plan → act → verify with approvals and shared safety guardrails.
             </p>
             <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900/50">
-              <p className="mb-3 font-medium text-slate-800 text-sm dark:text-slate-200">How the paths flow</p>
-              <ul className="space-y-2 text-slate-700 text-sm dark:text-slate-300">
+              <p className="mb-3 text-sm font-medium text-slate-800 dark:text-slate-200">How the paths flow</p>
+              <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                 {convergence.map((item) => (
                   <li className="flex gap-2" key={item}>
                     <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
@@ -116,7 +116,7 @@ export default function LearningPathsPage() {
               </ul>
             </div>
           </div>
-          <div className="rounded-xl bg-slate-50 p-4 text-slate-700 text-sm shadow-inner md:w-[320px] dark:bg-slate-800/80 dark:text-slate-200">
+          <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-700 shadow-inner dark:bg-slate-800/80 dark:text-slate-200 md:w-[320px]">
             <div className="flex items-center gap-2 font-medium">
               <CalendarClock className="h-5 w-5" />
               <span>6-week schedule</span>
@@ -155,7 +155,7 @@ export default function LearningPathsPage() {
               <Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               <CardTitle className="text-base">Week 1: Shared foundation</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-2 text-muted-foreground text-sm">
+            <CardContent className="space-y-2 text-sm text-muted-foreground">
               <p>Safety, tooling installs, first plan → act → verify loop, and prompt hygiene.</p>
               <p className="flex items-center gap-1 text-blue-700 dark:text-blue-300">
                 <Sparkles className="h-4 w-4" /> Output: tiny agent + approved diff
@@ -168,7 +168,7 @@ export default function LearningPathsPage() {
               <GitBranch className="h-5 w-5 text-amber-600 dark:text-amber-400" />
               <CardTitle className="text-base">Weeks 2–4: Persona branches</CardTitle>
             </CardHeader>
-            <CardContent className="grid gap-3 text-muted-foreground text-sm md:grid-cols-2 lg:grid-cols-3">
+            <CardContent className="grid gap-3 text-sm text-muted-foreground md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
                 <p className="font-medium text-slate-800 dark:text-slate-100">Developers</p>
                 <p>Refactors, tests, tool use, architecture options.</p>
@@ -197,7 +197,7 @@ export default function LearningPathsPage() {
               <GitMerge className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <CardTitle className="text-base">Week 5–6: Reconverge and ship</CardTitle>
             </CardHeader>
-            <CardContent className="grid gap-3 text-muted-foreground text-sm md:grid-cols-3">
+            <CardContent className="grid gap-3 text-sm text-muted-foreground md:grid-cols-3">
               <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30">
                 <p className="font-medium text-emerald-900 dark:text-emerald-100">Week 5</p>
                 <p>CI/CD, dry-run agents, runbooks, deployment.</p>
@@ -232,7 +232,7 @@ export default function LearningPathsPage() {
                   <CardDescription>{persona.weeks}</CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-3 text-slate-700 text-sm dark:text-slate-200">
+              <CardContent className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
                 <ul className="space-y-2">
                   {persona.goals.map((goal) => (
                     <li className="flex gap-2" key={goal}>
@@ -241,7 +241,7 @@ export default function LearningPathsPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="rounded-lg bg-white/70 p-2 font-medium text-slate-800 text-xs shadow-inner dark:bg-slate-900/70 dark:text-slate-100">
+                <div className="rounded-lg bg-white/70 p-2 text-xs font-medium text-slate-800 shadow-inner dark:bg-slate-900/70 dark:text-slate-100">
                   Signature deliverable: {persona.deliverable}
                 </div>
               </CardContent>
@@ -261,9 +261,8 @@ export default function LearningPathsPage() {
               <CardTitle className="text-base">Safety</CardTitle>
               <CardDescription>PII/secret hygiene, sandboxed commands, approvals.</CardDescription>
             </CardHeader>
-            <CardContent className="text-muted-foreground text-sm">
-              All paths use the same safety checklist each day; risky actions require human sign-off and dry-runs by
-              default.
+            <CardContent className="text-sm text-muted-foreground">
+              All paths use the same safety checklist each day; risky actions require human sign-off and dry-runs by default.
             </CardContent>
           </Card>
           <Card>
@@ -271,7 +270,7 @@ export default function LearningPathsPage() {
               <CardTitle className="text-base">Traceability</CardTitle>
               <CardDescription>Prompt + diff logs for every agent run.</CardDescription>
             </CardHeader>
-            <CardContent className="text-muted-foreground text-sm">
+            <CardContent className="text-sm text-muted-foreground">
               Keep short run logs: task, prompt, output, human decision, follow-up tests. Needed for Week 6 demo.
             </CardContent>
           </Card>
@@ -280,7 +279,7 @@ export default function LearningPathsPage() {
               <CardTitle className="text-base">Quality gates</CardTitle>
               <CardDescription>Tests, lint, and peer/agent review.</CardDescription>
             </CardHeader>
-            <CardContent className="text-muted-foreground text-sm">
+            <CardContent className="text-sm text-muted-foreground">
               Before merge: run tests, have a second agent (or person) review diffs, and capture regression test ideas.
             </CardContent>
           </Card>
