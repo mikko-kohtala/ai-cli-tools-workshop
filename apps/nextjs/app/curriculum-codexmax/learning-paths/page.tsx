@@ -4,7 +4,7 @@ import {
   CalendarClock,
   CheckCircle2,
   Compass,
-  Flowchart,
+  Cpu,
   GitBranch,
   GitMerge,
   Layers,
@@ -20,7 +20,7 @@ const personas = [
   {
     name: "Developer path",
     role: "Software developers",
-    icon: Flowchart,
+    icon: Cpu,
     color: "bg-blue-50 dark:bg-blue-950/30",
     weeks: "Deep dives: Weeks 2–3; automation: Week 7",
     goals: [
