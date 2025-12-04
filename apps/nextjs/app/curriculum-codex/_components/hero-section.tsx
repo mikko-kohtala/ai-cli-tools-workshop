@@ -9,10 +9,10 @@ export function CurriculumHeroSection() {
             <Workflow className="h-3 w-3" />
             6-week AI-augmented development journey
           </p>
-          <h1 className="font-bold text-4xl md:text-5xl">6-Week AI Development Curriculum</h1>
+          <h1 className="font-bold text-4xl md:text-5xl">6-Week AI &amp; Agents Curriculum</h1>
           <p className="text-lg text-muted-foreground md:text-xl">
-            A structured program for &quot;normal&quot; software developers to integrate AI into everyday development
-            across the full software delivery lifecycle.
+            A structured program for &quot;normal&quot; software developers to integrate AI, agents, and agentic
+            workflows into everyday development across the full software delivery lifecycle.
           </p>
         </div>
 
@@ -44,8 +44,8 @@ export function CurriculumHeroSection() {
             </div>
             <h3 className="mb-1 font-semibold text-sm">Outcome</h3>
             <p className="text-muted-foreground text-xs">
-              Confident use of AI CLI tools across the SDLC and a clear view of how AI can support wider company
-              processes.
+              Confident use of AI CLI tools and agentic workflows across the SDLC, plus a clear view of how AI can
+              support wider company processes.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { BookOpen, Code, Shield, Terminal } from "lucide-react";
+import { BookOpen, Code, Shield, Terminal, Workflow } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const topics = [
@@ -25,6 +25,12 @@ const topics = [
       "Giving clear instructions, constraints, and examples. Supplying context: repo summaries, file snippets, error logs",
   },
   {
+    icon: Workflow,
+    title: "Agents & Agentic Workflows",
+    description:
+      "Creating specialized subagents for specific tasks. Understanding the plan → execute → observe → iterate loop. Building reusable agent workflows",
+  },
+  {
     icon: Shield,
     title: "Safety Basics",
     description: "No secrets in prompts, no production credentials, IP awareness. Security best practices from day one",
@@ -35,7 +41,9 @@ const projectFocus = [
   "Pick a small greenfield service or CLI app",
   "Use AI to scaffold repo (basic structure, README, starter code)",
   "Use AI to generate initial boilerplate, simple functions, and tests",
+  "Create your first specialized agent (e.g., code-reviewer or test-runner agent)",
   "Practice the review cycle: generate → review → refine",
+  "Understand agentic workflows: plan → execute → observe → iterate",
 ];
 
 export function Week1Section() {
@@ -68,6 +76,10 @@ export function Week1Section() {
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-600 dark:bg-green-400" />
                 <span>Learn basic prompting and context management for coding tasks</span>
               </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-600 dark:bg-green-400" />
+                <span>Create your first specialized agent and understand agentic workflow patterns</span>
+              </li>
             </ul>
           </CardContent>
         </Card>
@@ -75,7 +87,7 @@ export function Week1Section() {
 
       <div className="mb-12">
         <h3 className="mb-6 font-semibold text-2xl">Key Topics</h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => {
             const Icon = topic.icon;
             return (

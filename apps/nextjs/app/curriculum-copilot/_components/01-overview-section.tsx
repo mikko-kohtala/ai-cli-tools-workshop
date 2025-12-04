@@ -12,6 +12,7 @@ export function OverviewSection() {
           <h4 className="font-semibold text-gray-800 text-lg dark:text-gray-300">Outcomes</h4>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-gray-700 dark:text-gray-300">
             <li>Operate CLI assistants (Claude Code, Codex CLI) and switch models confidently.</li>
+            <li>Design and build simple Agents; orchestrate agentic workflows for coding tasks.</li>
             <li>Use AI in planning, design, coding, testing, DevOps, documentation, and ops runbooks.</li>
             <li>Adopt human-in-the-loop: verify diffs, add constraints, review for safety and quality.</li>
             <li>Communicate impact: how AI accelerates product, support, docs, analytics.</li>

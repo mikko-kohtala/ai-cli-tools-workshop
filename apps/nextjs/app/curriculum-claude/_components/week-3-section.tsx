@@ -1,4 +1,4 @@
-import { Code, FolderSearch, Layers, RefreshCw } from "lucide-react";
+import { Code, FolderSearch, Layers, RefreshCw, Wrench } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const dailyTopics = [
@@ -10,27 +10,73 @@ const dailyTopics = [
   },
   {
     day: "Day 2",
-    title: "Refactoring with AI",
-    description: "Extract functions, rename variables, improve code structure",
-    tasks: ["Refactor existing code with AI", "Make code more idiomatic"],
+    title: "Tool Use Deep Dive",
+    description: "Understanding how agents use tools: files, shell, web, MCP",
+    tasks: ["Observe tool calls in Claude Code", "Understand MCP basics"],
   },
   {
     day: "Day 3",
-    title: "Multi-File Editing",
-    description: "Coordinated changes across multiple files",
-    tasks: ["Implement feature spanning 3+ files", "Practice planning multi-file changes"],
+    title: "Multi-File Editing & Refactoring",
+    description: "Coordinated changes across multiple files with AI",
+    tasks: ["Implement feature spanning 3+ files", "Refactor with AI assistance"],
   },
   {
     day: "Day 4",
-    title: "Working with Existing Code",
-    description: "Understanding unfamiliar codebases, generating summaries",
+    title: "Working with Existing Codebases",
+    description: "Understanding unfamiliar code, generating summaries",
     tasks: ["Explore unfamiliar codebase with AI", "Generate module summaries"],
   },
   {
     day: "Day 5",
-    title: "Context Chunking",
-    description: "Managing large codebases, summarization strategies",
+    title: "Context & Tool Best Practices",
+    description: "Managing context, designing tool interfaces",
     tasks: ["Practice context management", "Implement core project features"],
+  },
+];
+
+const toolCategories = [
+  {
+    category: "File System",
+    tools: ["Read", "Write", "Edit", "Glob", "Grep"],
+    description: "Navigate and modify code files",
+    agentUse: "Core capability—every agent needs file access",
+  },
+  {
+    category: "Shell/Terminal",
+    tools: ["Bash", "Command execution"],
+    description: "Run commands, build, test, deploy",
+    agentUse: "Enables verification and iteration loops",
+  },
+  {
+    category: "Web Access",
+    tools: ["WebFetch", "WebSearch"],
+    description: "Retrieve docs, search for solutions",
+    agentUse: "Extends agent knowledge beyond training data",
+  },
+  {
+    category: "MCP Servers",
+    tools: ["Playwright", "Database", "GitHub", "Custom"],
+    description: "External integrations via Model Context Protocol",
+    agentUse: "Enables specialized domain capabilities",
+  },
+];
+
+const toolDesignPrinciples = [
+  {
+    principle: "Clear Documentation",
+    description: "Tools need thorough docs with examples—AI reads them just like developers do",
+  },
+  {
+    principle: "Minimize Overhead",
+    description: "Don't force the agent to track line counts, escape strings, or maintain complex state",
+  },
+  {
+    principle: "Atomic Operations",
+    description: "Prefer small, verifiable actions over large batch operations",
+  },
+  {
+    principle: "Error Messages Matter",
+    description: "Clear errors help agents self-correct—cryptic errors cause loops",
   },
 ];
 
@@ -45,21 +91,16 @@ const implementationPatterns = [
     ],
   },
   {
-    name: "Boilerplate Delegation",
-    steps: [
-      "Identify repetitive patterns",
-      "Have AI generate DTOs, mappers, configs",
-      "Review for consistency",
-      "Apply project conventions",
-    ],
+    name: "Verify-and-Iterate",
+    steps: ["Generate code", "Run tests/build", "AI analyzes failures", "Fix and repeat until green"],
   },
   {
-    name: "Incremental Building",
+    name: "Explore-then-Modify",
     steps: [
-      "Start with minimal implementation",
-      "Add features incrementally",
-      "Test each addition",
-      "Refactor as patterns emerge",
+      "AI reads and summarizes existing code",
+      "Propose changes",
+      "Human approves approach",
+      "Execute modifications",
     ],
   },
 ];
@@ -72,16 +113,17 @@ export function Week3Section() {
           <Code className="h-5 w-5 text-purple-600 dark:text-purple-400" />
         </div>
         <div>
-          <h2 className="font-bold text-4xl">Week 3: Implementation Workflows</h2>
-          <p className="text-foreground/60">Coding faster and safer with AI</p>
+          <h2 className="font-bold text-4xl">Week 3: Implementation & Tool Use</h2>
+          <p className="text-foreground/60">Coding with AI and understanding agent tools</p>
         </div>
       </div>
 
       <Card className="mb-8">
         <CardContent className="p-6">
           <p className="text-lg leading-relaxed">
-            This week is about integrating AI into your daily coding workflow. You'll learn patterns for code
-            generation, refactoring, and navigating codebases—implementing the main features of your core project.
+            This week is about integrating AI into your daily coding workflow and understanding how agents use tools.
+            Tool use is fundamental to agentic AI—it's what transforms an LLM from a text generator into an autonomous
+            agent that can take real actions.
           </p>
         </CardContent>
       </Card>
@@ -98,10 +140,10 @@ export function Week3Section() {
           <CardContent>
             <ul className="ml-4 list-disc space-y-2 text-foreground/70">
               <li>Master the describe → generate → refine → improve cycle</li>
-              <li>Use AI for refactoring: extract, rename, restructure</li>
-              <li>Handle multi-file edits effectively</li>
+              <li>Understand how agents use tools (file, shell, web, MCP)</li>
+              <li>Learn tool design principles for building your own agents</li>
+              <li>Handle multi-file edits and refactoring effectively</li>
               <li>Navigate and understand unfamiliar codebases</li>
-              <li>Manage context effectively for large projects</li>
               <li>
                 <strong>Core project</strong>: Implement main features
               </li>
@@ -109,11 +151,59 @@ export function Week3Section() {
           </CardContent>
         </Card>
 
-        {/* Implementation Loop Diagram */}
+        {/* Tool Categories */}
         <Card className="border-l-4 border-l-indigo-500">
           <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Wrench className="h-5 w-5" />
+              Agent Tool Categories
+            </CardTitle>
+            <CardDescription>Tools transform LLMs into agents that can take action</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {toolCategories.map((cat) => (
+                <div className="rounded-lg border p-4" key={cat.category}>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold">{cat.category}</h4>
+                    <div className="flex gap-1">
+                      {cat.tools.map((tool) => (
+                        <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs dark:bg-slate-800" key={tool}>
+                          {tool}
+                        </code>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="mt-1 text-foreground/70 text-sm">{cat.description}</p>
+                  <p className="mt-1 text-purple-600 text-sm dark:text-purple-400">{cat.agentUse}</p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Tool Design Principles */}
+        <div>
+          <h3 className="mb-4 font-semibold text-2xl">Tool Design Principles</h3>
+          <p className="mb-4 text-foreground/70">
+            When building agents, invest as much in tool design as prompt engineering. Well-designed tools make agents
+            more reliable.
+          </p>
+          <div className="grid gap-3 md:grid-cols-2">
+            {toolDesignPrinciples.map((item) => (
+              <div className="rounded-lg border p-4" key={item.principle}>
+                <p className="font-semibold">{item.principle}</p>
+                <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Implementation Loop */}
+        <Card className="border-l-4 border-l-emerald-500">
+          <CardHeader>
             <CardTitle className="text-2xl">The Implementation Loop</CardTitle>
-            <CardDescription>The core workflow for AI-assisted coding</CardDescription>
+            <CardDescription>Core workflows for AI-assisted coding</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap items-center justify-center gap-2 rounded-lg bg-slate-50 p-6 dark:bg-slate-900/30">
@@ -128,13 +218,13 @@ export function Week3Section() {
               </div>
               <span className="text-2xl text-foreground/30">→</span>
               <div className="rounded-lg bg-emerald-100 px-4 py-2 text-center dark:bg-emerald-900/50">
-                <p className="font-semibold text-emerald-700 text-sm dark:text-emerald-300">3. Review</p>
-                <p className="text-foreground/60 text-xs">Human checks</p>
+                <p className="font-semibold text-emerald-700 text-sm dark:text-emerald-300">3. Verify</p>
+                <p className="text-foreground/60 text-xs">Run tests/build</p>
               </div>
               <span className="text-2xl text-foreground/30">→</span>
               <div className="rounded-lg bg-amber-100 px-4 py-2 text-center dark:bg-amber-900/50">
-                <p className="font-semibold text-amber-700 text-sm dark:text-amber-300">4. Refine</p>
-                <p className="text-foreground/60 text-xs">Iterate & improve</p>
+                <p className="font-semibold text-amber-700 text-sm dark:text-amber-300">4. Iterate</p>
+                <p className="text-foreground/60 text-xs">Fix & improve</p>
               </div>
             </div>
           </CardContent>
@@ -204,16 +294,13 @@ export function Week3Section() {
         <div className="rounded-lg border border-purple-200 bg-purple-50 p-4 dark:border-purple-800 dark:bg-purple-950/30">
           <div className="flex items-center gap-2">
             <FolderSearch className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-            <p className="font-semibold text-purple-700 dark:text-purple-400">Context Chunking Strategy</p>
+            <p className="font-semibold text-purple-700 dark:text-purple-400">Context Management for Agents</p>
           </div>
           <ul className="mt-2 list-inside list-disc space-y-1 text-foreground/70 text-sm">
-            <li>Summarize large files before asking specific questions</li>
-            <li>
-              Use <code className="rounded bg-white px-1 dark:bg-slate-800">/clear</code> when switching between
-              unrelated tasks
-            </li>
-            <li>Keep one task per conversation for best results</li>
-            <li>Reference specific line numbers and file paths for precision</li>
+            <li>Agents need focused context—don't dump entire codebases</li>
+            <li>Use summarization before detailed exploration</li>
+            <li>Clear context between unrelated tasks</li>
+            <li>Design tools to return concise, actionable information</li>
           </ul>
         </div>
 
@@ -221,8 +308,8 @@ export function Week3Section() {
         <div className="rounded-lg border-2 border-purple-300 border-dashed bg-purple-50/50 p-4 dark:border-purple-700 dark:bg-purple-950/20">
           <p className="mb-2 font-semibold text-purple-700 dark:text-purple-400">Core Project Milestone</p>
           <p className="text-foreground/70 text-sm">
-            By end of Week 3: Core features implemented—routes, handlers, services, data layer. Code reviewed and
-            refactored. Ready for testing.
+            By end of Week 3: Core features implemented—routes, handlers, services, data layer. You understand how
+            Claude Code uses tools internally. Ready for testing.
           </p>
         </div>
       </div>

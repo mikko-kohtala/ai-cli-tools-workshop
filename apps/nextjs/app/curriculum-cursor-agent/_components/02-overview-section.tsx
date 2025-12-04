@@ -7,6 +7,11 @@ const learningGoals = [
     description: "Use AI tools (Claude Code, Codex CLI, etc.) confidently in daily coding workflows",
   },
   {
+    title: "Build Agents & Agentic Workflows",
+    description:
+      "Create specialized AI agents for specific tasks and build complex agentic workflows that automate multi-step processes",
+  },
+  {
     title: "Apply AI Across Full SDLC",
     description: "Leverage AI for requirements, planning, design, implementation, testing, deployment, and maintenance",
   },
@@ -24,7 +29,7 @@ const curriculumStructure = [
   {
     week: 1,
     theme: "Foundations & Tools",
-    focus: "Mindset + core AI dev tools",
+    focus: "Mindset + core AI dev tools + creating your first agents",
   },
   {
     week: 2,
@@ -34,12 +39,12 @@ const curriculumStructure = [
   {
     week: 3,
     theme: "Implementation Workflows",
-    focus: "Coding faster & safer with AI",
+    focus: "Coding faster & safer with AI + building agentic workflows",
   },
   {
     week: 4,
     theme: "Testing & Quality",
-    focus: "AI for reliability and maintainability",
+    focus: "AI for reliability + automated testing agents",
   },
   {
     week: 5,
@@ -49,7 +54,7 @@ const curriculumStructure = [
   {
     week: 6,
     theme: "Company Processes & Capstone",
-    focus: "Beyond code – AI for the whole company",
+    focus: "Beyond code – agents across departments + full SDLC capstone",
   },
 ];
 

@@ -5,16 +5,17 @@ const weeks = [
   {
     id: "week-1",
     icon: Lightbulb,
-    title: "Week 1 – Foundations & Tooling",
-    theme: "Mindset, AI CLI tools, and basic prompting",
+    title: "Week 1 – Foundations, Tools & Simple Agents",
+    theme: "Mindset, AI CLI tools, prompting, and first agents",
     focus: [
       "Mental model for LLMs: capabilities and limitations",
       "Set up Claude Code, Codex CLI, and other AI CLI tools",
-      "Prompting fundamentals and safe usage guidelines",
+      "Prompting fundamentals, context, and safe usage guidelines",
+      "Introduce the idea of agents: goal + tools + feedback loop",
       "Choose a simple but real project for the 6-week journey",
     ],
     outcome:
-      "Participants can install, configure, and confidently run core AI CLI tools for everyday development tasks.",
+      "Participants can install core AI CLI tools, understand what an agent is, and run a first simple agent-style workflow on their machine.",
   },
   {
     id: "week-2",
@@ -33,16 +34,17 @@ const weeks = [
   {
     id: "week-3",
     icon: Code2,
-    title: "Week 3 – Implementation Workflows",
-    theme: "Pair-programming with AI across the codebase",
+    title: "Week 3 – Implementation & Agentic Workflows",
+    theme: "Pair-programming with AI and building practical agents",
     focus: [
       "Use AI to scaffold features, modules, and boilerplate",
       "Navigate unfamiliar code using explanations and summaries",
       "Iterative loops: describe → generate → review → refine",
       "Feed context from files, diffs, and error messages effectively",
+      "Design small single-agent workflows that call tools and APIs",
     ],
     outcome:
-      "Participants can integrate AI into daily coding without losing code comprehension or ownership of design decisions.",
+      "Participants can integrate AI into daily coding and build simple, reliable agents that automate scoped development tasks.",
   },
   {
     id: "week-4",
@@ -61,16 +63,17 @@ const weeks = [
   {
     id: "week-5",
     icon: Database,
-    title: "Week 5 – DevOps, Deployment & Operations",
-    theme: "AI-assisted infrastructure, CI/CD, and observability",
+    title: "Week 5 – DevOps, Orchestration & Agent Operations",
+    theme: "AI-assisted infrastructure, CI/CD, and running agents in production-like environments",
     focus: [
       "Draft Dockerfiles, CI pipelines, and basic infrastructure-as-code",
       "Use AI to reason about configuration, environments, and secrets (without sharing real credentials)",
       "Interpret logs, metrics, and incidents with AI support",
+      "Orchestrate recurring and event-driven agent workflows safely",
       "Generate runbooks and operational documentation from real scenarios",
     ],
     outcome:
-      "Participants can lean on AI to accelerate deployment and operations while respecting security and reliability constraints.",
+      "Participants can lean on AI and agents to accelerate deployment and operations while respecting security and reliability constraints.",
   },
   {
     id: "week-6",

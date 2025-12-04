@@ -30,6 +30,12 @@ const dailyCadence = [
     accent: "bg-emerald-100 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300",
   },
   {
+    title: "Agent drill",
+    description: "Run a small plan → act → verify loop with an agent on today’s feature.",
+    icon: Bot,
+    accent: "bg-indigo-100 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300",
+  },
+  {
     title: "Ship & reflect",
     description: "Checkpoint, human review, and a quick log of what AI helped vs. missed.",
     icon: Flag,
@@ -39,64 +45,64 @@ const dailyCadence = [
 
 const weeks = [
   {
-    title: "Week 1 — Foundations & Tooling",
-    theme: "Mindset, safety, and installing the core AI CLIs.",
+    title: "Week 1 — Foundations & Agentic Basics",
+    theme: "Mindset, safety, and building your first terminal agent.",
     focus: [
-      "LLM capabilities/limits; safe prompting habits",
+      "LLM limits, safe prompting, and AGENT.md-style instructions",
       "Install & configure Codex CLI, Claude Code, Gemini CLI, Amp",
-      "Context management and reasoning-depth controls",
+      "First agent: simple plan → act → verify loop with tool calls",
     ],
-    build: "Scaffold a small service/CLI with AI-generated boilerplate and tests.",
+    build: "Ship a tiny agent that reads a file, proposes a change, drafts a diff; review and merge.",
   },
   {
-    title: "Week 2 — Requirements & Architecture",
-    theme: "Use AI to clarify scope and propose designs.",
+    title: "Week 2 — Discovery, Planning & Multi-Agent Patterns",
+    theme: "Use agents to clarify scope and decompose work.",
     focus: [
-      "Turn ideas into user stories, acceptance criteria, edge-case lists",
-      "Have AI propose architecture options and justify trade-offs",
-      "Draft ADRs and a lean design doc with AI, then human edit",
+      "Stakeholder questions, user stories, edge-case mining via agents",
+      "Structured task decomposition and ticket drafts from agent plans",
+      "Architecture options + ADR drafts with an agent as co-author",
     ],
-    build: "Adopt one architecture, commit ADR, and stub the main components.",
+    build: "Adopt an architecture, commit an ADR, and wire a planning agent that outputs tasks.",
   },
   {
-    title: "Week 3 — Implementation Loops",
-    theme: "Tight human+AI coding cycles and repo navigation.",
+    title: "Week 3 — Agent-led Implementation & Refactors",
+    theme: "ReAct-style loops, tool use, and repo navigation with agents.",
     focus: [
-      "Describe → generate → review → improve loop",
-      "Refactors and idiomatic code suggestions via CLI commands",
-      "Feeding diffs/logs/errors as context for targeted help",
+      "Describe → generate → review → improve with guardrails",
+      "Function calling/tool use (e.g., apply_patch) and context chunking",
+      "Refactors, explanations, and prompt libraries for repeatable asks",
     ],
-    build: "Implement core features; maintain running changelog of AI prompts that worked best.",
+    build: "Implement core features; keep a prompt/agent cookbook with best commands.",
   },
   {
-    title: "Week 4 — Testing & Debugging",
-    theme: "Reliability with AI-generated tests and faster root-cause hunts.",
+    title: "Week 4 — Evaluation, Testing & Guardrails",
+    theme: "Reliability and safety for agent outputs.",
     focus: [
-      "Ask AI for test plans and boundary cases",
-      "Generate unit/integration tests, then harden them manually",
-      "Use stack traces/logs to have AI hypothesize and propose fixes",
+      "Test plans and regression cases auto-suggested by agents",
+      "Red-teaming prompts, safety filters, and approval checkpoints",
+      "Observability: logging agent steps and ensuring reproducible runs",
     ],
-    build: "Increase coverage on the project; fix 2–3 seeded bugs with AI assistance.",
+    build: "Increase coverage; add contract tests for agent outputs and fix 2–3 seeded bugs.",
   },
   {
-    title: "Week 5 — DevOps & Operations",
-    theme: "AI for shipping and running software.",
+    title: "Week 5 — Delivery & Operations for Agents",
+    theme: "Run agents in CI/CD and operations.",
     focus: [
-      "Generate Dockerfiles/CI configs and review for safety",
-      "Deployment walk-through with AI as copilot (no secrets in prompts)",
-      "Observability prompts: metrics, logs, runbooks",
+      "Containerize agents; schedule or trigger via CI",
+      "Quality gates: diff review policies, dry-runs, sandboxed commands",
+      "Ops prompts: runbooks, alert triage, postmortem drafting",
     ],
-    build: "Containerize and deploy a demo; add a minimal runbook drafted by AI, edited by humans.",
+    build: "Ship the service plus an ops-ready agent job (dry-run by default) with runbook.",
   },
   {
-    title: "Week 6 — Company Impact & Capstone",
-    theme: "AI beyond code plus a full-SDLC mini project.",
+    title: "Week 6 — Capstone: Multi-Agent Feature",
+    theme: "Full SDLC with an agentic workflow.",
     focus: [
-      "AI for docs, support macros, analytics queries, and product copy",
-      "Governance: data privacy, IP, prompt-injection awareness",
-      "Capstone planning: scope, milestones, demo script",
+      "Select a feature/internal tool that benefits from agent orchestration",
+      "Plan, implement, and evaluate using agents with human review",
+      "Document: ADRs, runbooks, user docs, and reflection",
     ],
-    build: "Ship the capstone feature/tool with docs, ADRs, runbook, and a short reflection.",
+    build: "Deliver demo + docs + reflection on where agents helped vs. struggled.",
   },
 ];
 
@@ -105,8 +111,8 @@ const tools = [
     name: "Codex CLI",
     tagline: "Open-source, multi-provider CLI with reasoning levels (minimal/medium/high).",
     highlights: [
-      "Terminal-native edits and apply_patch diffs",
-      "Sandbox/approval flows for safer execution",
+      "Terminal-native edits, apply_patch diffs, and plan flows",
+      "Sandbox/approval controls for safer agent execution",
       "Switch providers via --model flag or /model command",
     ],
     tone: "bg-slate-50 dark:bg-slate-900",
@@ -116,18 +122,18 @@ const tools = [
     tagline: "Anthropic's coding agent with natural-language thinking controls (think → ultrathink).",
     highlights: [
       "Great at refactors and code explanations",
-      "Deep reasoning toggle for harder problems",
-      "Works in terminal and IDE contexts",
+      "Deep reasoning toggle (ultrathink) for harder problems",
+      "Plan/explore modes for agentic edits in terminal and IDE",
     ],
     tone: "bg-purple-50 dark:bg-purple-950/20",
   },
   {
     name: "Gemini CLI",
-    tagline: "Google's multimodal CLI that pairs code with images or logs when needed.",
+    tagline: "Google's multimodal CLI with built-in agent that handles text, code, and images.",
     highlights: [
       "Tight fit with Google Cloud developer tooling",
-      "Good at mixed text+image debugging",
-      "Fast first-pass generations with reasoning boost option",
+      "Mixed text+image debugging plus MCP-style plugins",
+      "Open-source agent with ReAct-style loops and reasoning boost",
     ],
     tone: "bg-blue-50 dark:bg-blue-950/20",
   },
@@ -136,10 +142,33 @@ const tools = [
     tagline: "Codebase-scale assistant with subagents and code search baked in.",
     highlights: [
       "Understands large monorepos via search index",
-      "Oracle/second-opinion checks for risky changes",
-      "CLI + VS Code extension for the same workflows",
+      "Oracle/second-opinion subagent for risky changes",
+      "CLI + VS Code extension share agentic workflows",
     ],
     tone: "bg-emerald-50 dark:bg-emerald-950/20",
+  },
+];
+
+const agentPatterns = [
+  {
+    title: "Plan → Act → Verify",
+    description: "Use planning prompts, execute in sandbox, and require human approval on risky steps.",
+    icon: Compass,
+  },
+  {
+    title: "Tools & APIs",
+    description: "Function calls, MCP tools, shell/diff commands, and model switching when tasks change.",
+    icon: Workflow,
+  },
+  {
+    title: "Memory & Context",
+    description: "Repo summaries, scratchpads, and AGENT.md-style instructions to keep agents on-brief.",
+    icon: Layers,
+  },
+  {
+    title: "Safety gates",
+    description: "Approval flows, rate limits, PII stripping, and reproducible logs for every run.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -178,10 +207,13 @@ export default function CurriculumPage() {
             >
               6-week AI SDLC curriculum
             </Badge>
-            <h1 className="font-bold text-4xl leading-tight md:text-5xl">Bring AI into every stage of the SDLC</h1>
+            <h1 className="font-bold text-4xl leading-tight md:text-5xl">
+              Bring AI agents into every stage of the SDLC
+            </h1>
             <p className="max-w-3xl text-lg text-muted-foreground">
-              Designed for experienced software developers who want practical, repeatable AI workflows—from ideation to
-              operations—with daily prompts, safety guardrails, and a capstone that mirrors real product delivery.
+              Designed for experienced software developers who want practical, repeatable AI and agentic workflows—from
+              ideation to operations—with daily prompts, safety guardrails, and a capstone that mirrors real product
+              delivery.
             </p>
           </div>
           <div className="rounded-xl bg-slate-50 p-4 text-slate-700 text-sm shadow-inner dark:bg-slate-800/80 dark:text-slate-200">
@@ -201,6 +233,10 @@ export default function CurriculumPage() {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <span>Agentic workflows start Week 1 (plan → act → verify) with human approval on changes</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Focus on capability-based choices; models and names evolve fast</span>
               </li>
             </ul>
@@ -208,7 +244,7 @@ export default function CurriculumPage() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
+      <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {dailyCadence.map((item) => (
           <Card className="h-full" key={item.title}>
             <CardHeader className="flex flex-row items-center gap-3">
@@ -222,6 +258,26 @@ export default function CurriculumPage() {
             </CardHeader>
           </Card>
         ))}
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-center gap-3">
+          <Layers className="h-5 w-5 text-slate-700 dark:text-slate-200" />
+          <h2 className="font-semibold text-2xl">Agent building blocks</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {agentPatterns.map((pattern) => (
+            <Card className="h-full" key={pattern.title}>
+              <CardHeader className="flex flex-row items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800">
+                  <pattern.icon className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-base">{pattern.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-muted-foreground text-sm">{pattern.description}</CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
 
       <section className="space-y-6">
@@ -261,7 +317,7 @@ export default function CurriculumPage() {
       <section className="space-y-4">
         <div className="flex items-center gap-3">
           <Layers className="h-5 w-5 text-slate-700 dark:text-slate-200" />
-          <h2 className="font-semibold text-2xl">Tooling threads (used throughout)</h2>
+          <h2 className="font-semibold text-2xl">Tooling threads (agents everywhere)</h2>
         </div>
         <p className="text-muted-foreground text-sm">
           Examples only—this ecosystem moves quickly and names/models evolve. Focus on capabilities and fit.

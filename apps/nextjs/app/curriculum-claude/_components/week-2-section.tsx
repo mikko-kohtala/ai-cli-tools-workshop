@@ -1,30 +1,30 @@
-import { FileText, GitBranch, Map as MapIcon, Search } from "lucide-react";
+import { FileText, GitBranch, Map as MapIcon, Workflow } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const dailyTopics = [
   {
     day: "Day 1",
-    title: "Requirements Gathering",
-    description: "Using AI to clarify vague requirements and discover edge cases",
-    tasks: ["Turn vague idea into user stories with AI", "Generate questions for stakeholders"],
+    title: "Requirements & Workflows vs Agents",
+    description: "When to use structured workflows vs autonomous agents",
+    tasks: ["Understand workflow vs agent tradeoffs", "Turn vague idea into user stories with AI"],
   },
   {
     day: "Day 2",
-    title: "Planning Mode",
-    description: "Claude Code's Shift+Tab planning mode, read-only exploration",
+    title: "Planning Mode & ReAct Pattern",
+    description: "Claude Code's planning mode and reasoning-before-acting",
     tasks: ["Practice planning mode on a feature", "Iterate on plan through follow-up questions"],
   },
   {
     day: "Day 3",
-    title: "Architecture Exploration",
-    description: "Using AI to propose and compare architectural options",
-    tasks: ["Generate 2-3 architecture options", "Evaluate tradeoffs with AI assistance"],
+    title: "Agentic Workflow Patterns",
+    description: "Core patterns: chaining, routing, parallelization, orchestration",
+    tasks: ["Study workflow pattern examples", "Design a multi-step workflow"],
   },
   {
     day: "Day 4",
-    title: "Documentation Generation",
-    description: "ADRs, design documents, and technical specifications",
-    tasks: ["Draft an ADR with AI", "Create design doc for project feature"],
+    title: "Architecture & Documentation",
+    description: "Using AI to propose architectures and generate ADRs",
+    tasks: ["Generate 2-3 architecture options", "Draft an ADR with AI"],
   },
   {
     day: "Day 5",
@@ -34,23 +34,44 @@ const dailyTopics = [
   },
 ];
 
-const planningPatterns = [
+const workflowPatterns = [
   {
-    pattern: "ReAct Pattern",
-    description: "Reasoning and Acting—alternate between thinking and doing instead of jumping to execution",
+    name: "Prompt Chaining",
+    description: "Break tasks into sequential steps where each LLM call processes the output of the previous one",
+    example: "Generate outline → Write sections → Review and edit",
+    when: "Well-defined tasks with clear sequence",
   },
   {
-    pattern: "Explore First",
-    description: "Let AI read and understand the codebase before proposing changes",
+    name: "Routing",
+    description: "Classify inputs and direct to specialized handlers—use smaller models for simple tasks",
+    example: "Categorize query → Route to specialist agent",
+    when: "Distinct task categories with different requirements",
   },
   {
-    pattern: "Iterate on Plans",
-    description: "Refine through follow-up questions before approving any plan",
+    name: "Parallelization",
+    description: "Run independent subtasks simultaneously, then combine results",
+    example: "Analyze multiple files in parallel → Synthesize findings",
+    when: "Independent subtasks that can run concurrently",
   },
   {
-    pattern: "Document Decisions",
-    description: "Use ADRs to capture why, not just what, for future reference",
+    name: "Orchestrator-Workers",
+    description: "One LLM breaks down tasks, delegates to workers, and synthesizes results",
+    example: "Planner identifies files → Workers implement → Planner reviews",
+    when: "Complex tasks where scope isn't known upfront",
   },
+  {
+    name: "Evaluator-Optimizer",
+    description: "Generator produces output, evaluator provides feedback in iterative loops",
+    example: "Write code → Run tests → Fix failures → Repeat",
+    when: "Clear success criteria and iterative improvement needed",
+  },
+];
+
+const workflowVsAgent = [
+  { aspect: "Predictability", workflow: "High—defined code paths", agent: "Lower—dynamic decisions" },
+  { aspect: "Flexibility", workflow: "Limited to predefined paths", agent: "Adapts to novel situations" },
+  { aspect: "Cost/Latency", workflow: "More efficient", agent: "Higher—more LLM calls" },
+  { aspect: "Best For", workflow: "Well-defined, repeatable tasks", agent: "Open-ended, exploratory tasks" },
 ];
 
 export function Week2Section() {
@@ -61,16 +82,17 @@ export function Week2Section() {
           <MapIcon className="h-5 w-5 text-blue-600 dark:text-blue-400" />
         </div>
         <div>
-          <h2 className="font-bold text-4xl">Week 2: Planning & Discovery</h2>
-          <p className="text-foreground/60">Using AI at the front of the SDLC</p>
+          <h2 className="font-bold text-4xl">Week 2: Planning & Agentic Patterns</h2>
+          <p className="text-foreground/60">Workflows, planning, and when to use agents</p>
         </div>
       </div>
 
       <Card className="mb-8">
         <CardContent className="p-6">
           <p className="text-lg leading-relaxed">
-            This week focuses on the "front" of software development: understanding requirements, exploring architecture
-            options, and planning before coding. You'll start your core project that continues through Week 5.
+            This week covers the critical decision of when to use structured workflows vs autonomous agents, and the
+            core patterns that power agentic systems. You'll learn planning mode, the ReAct pattern, and start your core
+            project.
           </p>
         </CardContent>
       </Card>
@@ -86,11 +108,11 @@ export function Week2Section() {
           </CardHeader>
           <CardContent>
             <ul className="ml-4 list-disc space-y-2 text-foreground/70">
-              <li>Use AI to clarify requirements and discover edge cases</li>
+              <li>Understand when to use workflows vs autonomous agents</li>
+              <li>Learn the 5 core agentic workflow patterns</li>
               <li>Master Claude Code's planning mode (Shift+Tab)</li>
               <li>Understand the ReAct pattern: reasoning before acting</li>
-              <li>Generate architecture proposals and evaluate tradeoffs</li>
-              <li>Create ADRs and design documents with AI assistance</li>
+              <li>Generate architecture proposals and ADRs</li>
               <li>
                 <strong>Start core project</strong>: scaffold, requirements, architecture
               </li>
@@ -98,7 +120,74 @@ export function Week2Section() {
           </CardContent>
         </Card>
 
-        {/* Planning Mode Deep Dive */}
+        {/* Workflows vs Agents */}
+        <Card className="border-l-4 border-l-purple-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Workflow className="h-5 w-5" />
+              Workflows vs Agents
+            </CardTitle>
+            <CardDescription>Start simple—add complexity only when needed</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <p className="text-foreground/70">
+                <strong>Anthropic's key insight:</strong> Most successful agent implementations use simple, composable
+                patterns. Don't build agents when a workflow will do.
+              </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-2 text-left font-semibold">Aspect</th>
+                      <th className="py-2 text-left font-semibold text-blue-600 dark:text-blue-400">Workflow</th>
+                      <th className="py-2 text-left font-semibold text-purple-600 dark:text-purple-400">Agent</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {workflowVsAgent.map((row) => (
+                      <tr className="border-slate-100 border-b dark:border-slate-800" key={row.aspect}>
+                        <td className="py-2 font-medium">{row.aspect}</td>
+                        <td className="py-2 text-blue-600 dark:text-blue-400">{row.workflow}</td>
+                        <td className="py-2 text-purple-600 dark:text-purple-400">{row.agent}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Workflow Patterns */}
+        <div>
+          <h3 className="mb-4 font-semibold text-2xl">5 Core Agentic Workflow Patterns</h3>
+          <div className="space-y-3">
+            {workflowPatterns.map((pattern) => (
+              <Card key={pattern.name}>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">{pattern.name}</CardTitle>
+                  <CardDescription>{pattern.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded bg-slate-50 p-3 dark:bg-slate-900/30">
+                      <p className="mb-1 font-semibold text-foreground/50 text-xs uppercase">Example</p>
+                      <p className="text-foreground/70 text-sm">{pattern.example}</p>
+                    </div>
+                    <div className="rounded bg-blue-50 p-3 dark:bg-blue-950/30">
+                      <p className="mb-1 font-semibold text-foreground/50 text-xs uppercase">When to Use</p>
+                      <p className="text-foreground/70 text-sm">{pattern.when}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Planning Mode */}
         <Card className="border-l-4 border-l-indigo-500">
           <CardHeader>
             <CardTitle className="text-2xl">Planning Mode in Claude Code</CardTitle>
@@ -110,8 +199,8 @@ export function Week2Section() {
           <CardContent>
             <div className="space-y-4">
               <p className="text-foreground/70">
-                Planning mode is <strong>read-only exploration</strong>. The AI researches your codebase, reasons about
-                the task, and creates a comprehensive plan—all before making any changes.
+                Planning mode implements the <strong>ReAct pattern</strong>—Reasoning and Acting. The AI researches your
+                codebase and creates a plan before making changes.
               </p>
               <div className="grid gap-3 md:grid-cols-2">
                 <div className="rounded bg-emerald-50 p-3 dark:bg-emerald-950/30">
@@ -167,22 +256,6 @@ export function Week2Section() {
           </div>
         </div>
 
-        {/* Planning Patterns */}
-        <div>
-          <h3 className="mb-4 font-semibold text-2xl">Planning Patterns</h3>
-          <div className="grid gap-3 md:grid-cols-2">
-            {planningPatterns.map((item) => (
-              <div className="rounded-lg border p-4" key={item.pattern}>
-                <div className="flex items-center gap-2">
-                  <Search className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                  <p className="font-semibold">{item.pattern}</p>
-                </div>
-                <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Documentation */}
         <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 dark:border-blue-800 dark:bg-blue-950/30">
           <div className="flex items-center gap-2">
@@ -201,7 +274,7 @@ export function Week2Section() {
           <p className="mb-2 font-semibold text-blue-700 dark:text-blue-400">Core Project Milestone</p>
           <p className="text-foreground/70 text-sm">
             By end of Week 2: Project scaffolded, requirements documented, architecture decided (with ADR), and design
-            doc drafted. Ready to implement.
+            doc drafted. You've identified which workflow patterns apply to your project.
           </p>
         </div>
       </div>

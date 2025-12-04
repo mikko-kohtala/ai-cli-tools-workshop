@@ -1,4 +1,4 @@
-import { Code, FileSearch, RefreshCw, Terminal } from "lucide-react";
+import { Code, FileSearch, RefreshCw, Terminal, Workflow } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const topics = [
@@ -7,6 +7,12 @@ const topics = [
     title: "AI-Assisted Implementation Patterns",
     description:
       "'Describe → generate scaffold → manually refine → ask AI for improvements.' Using AI to fill in 'boring' boilerplate: DTOs, mappers, configs",
+  },
+  {
+    icon: Workflow,
+    title: "Building Agentic Workflows",
+    description:
+      "Creating multi-step agent workflows: plan → execute → validate → iterate. Chaining agents for complex tasks. Building reusable implementation agents",
   },
   {
     icon: RefreshCw,
@@ -29,6 +35,8 @@ const topics = [
 
 const projectFocus = [
   "Implement core features of the project using AI",
+  "Create specialized implementation agents (e.g., API builder agent, database agent)",
+  "Build agentic workflows that chain multiple agents together",
   "Generate routes, handlers, services, data access layer",
   "Continuous cycle: human plans → AI generates → human reviews → AI improves",
   "Practice context management: how much code to paste, when to summarize vs. show details",
@@ -64,6 +72,10 @@ export function Week3Section() {
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
                 <span>Learn how to feed context effectively (files, error outputs, partial diffs)</span>
               </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
+                <span>Build advanced agentic workflows for complex implementation tasks</span>
+              </li>
             </ul>
           </CardContent>
         </Card>
@@ -71,7 +83,7 @@ export function Week3Section() {
 
       <div className="mb-12">
         <h3 className="mb-6 font-semibold text-2xl">Key Topics</h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => {
             const Icon = topic.icon;
             return (

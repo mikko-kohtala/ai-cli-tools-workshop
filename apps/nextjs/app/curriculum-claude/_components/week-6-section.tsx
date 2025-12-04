@@ -1,69 +1,87 @@
-import { Building2, FileCheck, Lightbulb, Shield, Trophy, Users } from "lucide-react";
+import { Building2, Container, FileCheck, Lightbulb, Shield, Trophy, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const dailyTopics = [
   {
     day: "Day 1",
-    title: "AI in Product & UX",
-    description: "Brainstorming features, UX copy, error messages",
-    tasks: ["Brainstorm feature ideas with AI", "Generate UX copy for a flow"],
+    title: "CI/CD & Docker Essentials",
+    description: "Automated pipelines and containerization basics",
+    tasks: ["Generate GitHub Actions workflow with AI", "Containerize an application"],
   },
   {
     day: "Day 2",
-    title: "AI in Documentation",
-    description: "Converting specs to docs, FAQs, knowledge bases",
-    tasks: ["Generate user documentation", "Create FAQ from support patterns"],
+    title: "AI Across Company Processes",
+    description: "How AI helps product, support, docs, and analytics",
+    tasks: ["Brainstorm AI applications for different teams", "Generate documentation with AI"],
   },
   {
     day: "Day 3",
     title: "Governance & Security",
-    description: "Data privacy, secure prompting, human-in-the-loop",
+    description: "Enterprise considerations for AI and agents",
     tasks: ["Review security best practices", "Define approval workflows"],
   },
   {
     day: "Day 4-5",
     title: "Capstone Project",
-    description: "Full SDLC cycle on a new mini-project",
-    tasks: ["Plan → Design → Implement → Test → Deploy", "Document everything"],
+    description: "Full SDLC cycle with an agent component",
+    tasks: ["Design → Implement → Test → Deploy", "Include agent or agentic workflow"],
+  },
+];
+
+const devopsEssentials = [
+  {
+    topic: "CI/CD with GitHub Actions",
+    description: "Automated testing, building, and deployment pipelines",
+    aiHelp: "AI generates workflow files and troubleshoots failures",
+  },
+  {
+    topic: "Docker Basics",
+    description: "Containerize applications for consistent deployment",
+    aiHelp: "AI generates Dockerfiles and multi-stage builds",
+  },
+  {
+    topic: "Environment Configuration",
+    description: "Managing configs across environments safely",
+    aiHelp: "AI helps structure config files (without secrets)",
   },
 ];
 
 const companyProcesses = [
   {
     area: "Product",
-    uses: ["Feature brainstorming", "User story refinement", "Competitive analysis", "UX copy generation"],
+    uses: ["Feature brainstorming", "User story refinement", "Competitive analysis"],
   },
   {
     area: "Support",
-    uses: ["KB article drafting", "Response macros", "Incident summaries", "Escalation triage"],
+    uses: ["KB article drafting", "Response templates", "Ticket triage agents"],
   },
   {
     area: "Documentation",
-    uses: ["API docs from code", "User guides", "FAQ generation", "Release notes"],
+    uses: ["API docs from code", "User guides", "Release notes"],
   },
   {
     area: "Analytics",
-    uses: ["SQL query help", "Dashboard interpretation", "Trend summarization", "Report drafting"],
+    uses: ["SQL query help", "Report interpretation", "Dashboard agents"],
   },
 ];
 
 const governanceChecklist = [
   { item: "No secrets in prompts", description: "Never include API keys, passwords, or credentials" },
-  { item: "Review before commit", description: "Human reviews all AI-generated code before merging" },
+  { item: "Review before commit", description: "Human reviews all AI-generated code" },
   { item: "IP awareness", description: "Understand what data is sent to AI providers" },
-  { item: "Human-in-the-loop", description: "Define what requires human approval vs. auto-approval" },
-  { item: "Prompt injection awareness", description: "Understand risks when AI processes user input" },
+  { item: "Agent boundaries", description: "Define what agents can and cannot do" },
+  { item: "Human-in-the-loop", description: "Approval flows for critical actions" },
 ];
 
 const capstoneRequirements = [
   "Define requirements with AI assistance",
-  "Create architecture plan and ADR",
-  "Implement core functionality",
+  "Create architecture plan (with ADR)",
+  "Implement using agentic workflows",
+  "Build or integrate an agent component",
   "Add tests (unit + integration)",
   "Containerize and set up CI/CD",
   "Deploy to a platform",
-  "Write user documentation",
-  "Present what you built",
+  "Document and present",
 ];
 
 export function Week6Section() {
@@ -71,19 +89,20 @@ export function Week6Section() {
     <section className="mb-16 scroll-mt-16" id="week-6">
       <div className="mb-6 flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 dark:bg-rose-900/30">
-          <Building2 className="h-5 w-5 text-rose-600 dark:text-rose-400" />
+          <Trophy className="h-5 w-5 text-rose-600 dark:text-rose-400" />
         </div>
         <div>
-          <h2 className="font-bold text-4xl">Week 6: Enterprise & Capstone</h2>
-          <p className="text-foreground/60">Beyond code—AI across the company</p>
+          <h2 className="font-bold text-4xl">Week 6: Deploy & Capstone</h2>
+          <p className="text-foreground/60">DevOps essentials, enterprise AI, and your capstone project</p>
         </div>
       </div>
 
       <Card className="mb-8">
         <CardContent className="p-6">
           <p className="text-lg leading-relaxed">
-            The final week expands beyond coding: how AI helps across company processes, governance considerations, and
-            a capstone project where you apply everything learned in a full SDLC cycle.
+            The final week brings it all together: essential DevOps skills for deployment, understanding AI across
+            company processes, and a capstone project that demonstrates your full SDLC capabilities—including an agent
+            component.
           </p>
         </CardContent>
       </Card>
@@ -93,18 +112,40 @@ export function Week6Section() {
         <Card className="border-l-4 border-l-rose-500">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl">
-              <Trophy className="h-5 w-5" />
+              <Building2 className="h-5 w-5" />
               Week Objectives
             </CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="ml-4 list-disc space-y-2 text-foreground/70">
+              <li>Set up CI/CD pipelines and containerize applications</li>
               <li>Understand AI applications across company processes</li>
               <li>Learn governance, security, and IP considerations</li>
-              <li>Complete a capstone project demonstrating full SDLC</li>
-              <li>Reflect on where AI helped and where it struggled</li>
-              <li>Develop personal best practices for AI-assisted work</li>
+              <li>Complete capstone project with agent component</li>
+              <li>Reflect on AI-assisted development practices</li>
             </ul>
+          </CardContent>
+        </Card>
+
+        {/* DevOps Essentials */}
+        <Card className="border-l-4 border-l-cyan-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Container className="h-5 w-5" />
+              DevOps Essentials
+            </CardTitle>
+            <CardDescription>What every developer needs to deploy</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {devopsEssentials.map((item) => (
+                <div className="rounded-lg border p-4" key={item.topic}>
+                  <h4 className="font-semibold">{item.topic}</h4>
+                  <p className="mt-1 text-foreground/70 text-sm">{item.description}</p>
+                  <p className="mt-1 text-cyan-600 text-sm dark:text-cyan-400">{item.aiHelp}</p>
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
 
@@ -131,30 +172,6 @@ export function Week6Section() {
             ))}
           </div>
         </div>
-
-        {/* Governance */}
-        <Card className="border-l-4 border-l-amber-500">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-2xl">
-              <Shield className="h-5 w-5" />
-              Governance & Security
-            </CardTitle>
-            <CardDescription>Essential considerations for enterprise AI use</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {governanceChecklist.map((item) => (
-                <div className="flex items-start gap-3 rounded-lg border p-3" key={item.item}>
-                  <div className="mt-0.5 h-5 w-5 shrink-0 rounded border-2 border-amber-500" />
-                  <div>
-                    <p className="font-semibold text-sm">{item.item}</p>
-                    <p className="text-foreground/70 text-sm">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
 
         {/* Daily Breakdown */}
         <div>
@@ -186,6 +203,30 @@ export function Week6Section() {
           </div>
         </div>
 
+        {/* Governance */}
+        <Card className="border-l-4 border-l-amber-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl">
+              <Shield className="h-5 w-5" />
+              Governance & Security
+            </CardTitle>
+            <CardDescription>Enterprise considerations for AI and agents</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {governanceChecklist.map((item) => (
+                <div className="flex items-start gap-3 rounded-lg border p-3" key={item.item}>
+                  <div className="mt-0.5 h-5 w-5 shrink-0 rounded border-2 border-amber-500" />
+                  <div>
+                    <p className="font-semibold text-sm">{item.item}</p>
+                    <p className="text-foreground/70 text-sm">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Capstone */}
         <Card className="border-l-4 border-l-indigo-500">
           <CardHeader>
@@ -193,12 +234,12 @@ export function Week6Section() {
               <FileCheck className="h-5 w-5" />
               Capstone Project
             </CardTitle>
-            <CardDescription>Demonstrate mastery across the full SDLC</CardDescription>
+            <CardDescription>Demonstrate mastery across the full SDLC—with agents</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              Build a small but meaningful feature or tool using everything you've learned. The capstone should
-              demonstrate AI assistance at every stage:
+              Build a small but meaningful feature or tool. The capstone must include an agent component or agentic
+              workflow, demonstrating your ability to build autonomous AI systems:
             </p>
             <div className="grid gap-2 md:grid-cols-2">
               {capstoneRequirements.map((req, i) => (
@@ -220,10 +261,10 @@ export function Week6Section() {
             <p className="font-semibold text-rose-700 dark:text-rose-400">Reflection Questions</p>
           </div>
           <ul className="mt-2 list-inside list-disc space-y-1 text-foreground/70 text-sm">
-            <li>Where did AI help the most? The least?</li>
-            <li>What prompting patterns worked best for you?</li>
-            <li>What would you do differently next time?</li>
-            <li>How will you incorporate AI into your daily work going forward?</li>
+            <li>Where did AI and agents help the most? The least?</li>
+            <li>What patterns worked best for your workflow?</li>
+            <li>How will you design agents for your team's needs?</li>
+            <li>What guardrails are essential for your domain?</li>
           </ul>
         </div>
 
@@ -231,9 +272,9 @@ export function Week6Section() {
         <div className="rounded-lg border-2 border-rose-300 border-dashed bg-rose-50/50 p-4 dark:border-rose-700 dark:bg-rose-950/20">
           <p className="mb-2 font-semibold text-rose-700 dark:text-rose-400">Curriculum Outcome</p>
           <p className="text-foreground/70 text-sm">
-            You are now an <strong>AI-augmented developer</strong>: able to use AI tools confidently across the full
-            SDLC, understanding both capabilities and limitations, working safely and effectively, and ready to help
-            your team adopt AI-assisted practices.
+            You are now an <strong>AI-augmented developer</strong> who can build agents. You understand agentic
+            workflows, the Claude Agent SDK, and how to deploy autonomous systems safely. You're ready to help your team
+            adopt AI-assisted practices and build custom agents for your domain.
           </p>
         </div>
       </div>

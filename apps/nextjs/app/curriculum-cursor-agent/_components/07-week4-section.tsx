@@ -1,4 +1,4 @@
-import { Bug, CheckCircle, Shield, TestTube } from "lucide-react";
+import { Bug, CheckCircle, Shield, TestTube, Workflow } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const topics = [
@@ -7,6 +7,12 @@ const topics = [
     title: "Test Strategy",
     description:
       "Using AI to suggest a test plan for a feature. Generating unit tests & integration tests from function signatures/user stories",
+  },
+  {
+    icon: Workflow,
+    title: "Testing Agents & Workflows",
+    description:
+      "Creating specialized test-runner agents that automatically run tests and fix failures. Building quality assurance workflows with chained agents",
   },
   {
     icon: Bug,
@@ -28,6 +34,8 @@ const topics = [
 ];
 
 const projectFocus = [
+  "Create specialized testing agents (test-runner, code-reviewer, debugger agents)",
+  "Build automated quality workflows that chain testing → review → fix agents",
   "Expand test coverage of the project - AI-generated tests, reviewed and refined by the dev",
   "Use AI to investigate at least 2–3 deliberately introduced bugs",
   "Use AI to perform a structured review of a module and refactor accordingly",
@@ -64,6 +72,10 @@ export function Week4Section() {
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-600 dark:bg-orange-400" />
                 <span>Improve code quality and maintainability using AI suggestions</span>
               </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-600 dark:bg-orange-400" />
+                <span>Build automated testing and quality assurance agent workflows</span>
+              </li>
             </ul>
           </CardContent>
         </Card>
@@ -71,7 +83,7 @@ export function Week4Section() {
 
       <div className="mb-12">
         <h3 className="mb-6 font-semibold text-2xl">Key Topics</h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => {
             const Icon = topic.icon;
             return (

@@ -1,4 +1,4 @@
-import { BookOpen, Clock, Target, Users } from "lucide-react";
+import { BookOpen, Bot, Clock, Target, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const goals = [
@@ -7,26 +7,31 @@ const goals = [
     description: "Use Claude Code and Codex CLI confidently in daily coding",
   },
   {
-    title: "Full SDLC Coverage",
-    description: "Apply AI across requirements, design, implementation, testing, and deployment",
+    title: "Build AI Agents",
+    description: "Create autonomous agents using the Claude Agent SDK",
   },
   {
-    title: "Company-Wide Impact",
-    description: "Understand how AI development supports broader company processes",
+    title: "Full SDLC Coverage",
+    description: "Apply AI and agents across requirements, design, implementation, testing, and deployment",
   },
   {
     title: "Work Safely",
-    description: "Handle security, IP, data privacy, and AI limitations properly",
+    description: "Handle security, governance, and agent boundaries properly",
   },
 ];
 
 const weekSummary = [
-  { week: 1, title: "Foundations & Mindset", color: "bg-emerald-500" },
-  { week: 2, title: "Planning & Discovery", color: "bg-blue-500" },
-  { week: 3, title: "Implementation Workflows", color: "bg-purple-500" },
-  { week: 4, title: "Testing & Quality", color: "bg-indigo-500" },
-  { week: 5, title: "DevOps Essentials", color: "bg-amber-500" },
-  { week: 6, title: "Enterprise & Capstone", color: "bg-rose-500" },
+  { week: 1, title: "Foundations & Mindset", color: "bg-emerald-500", focus: "LLMs, agents, tool setup" },
+  {
+    week: 2,
+    title: "Planning & Agentic Patterns",
+    color: "bg-blue-500",
+    focus: "Workflows vs agents, 5 core patterns",
+  },
+  { week: 3, title: "Implementation & Tool Use", color: "bg-purple-500", focus: "Coding with AI, agent tools" },
+  { week: 4, title: "Testing & Quality", color: "bg-indigo-500", focus: "Tests, debugging, code review" },
+  { week: 5, title: "Building Agents", color: "bg-amber-500", focus: "Claude Agent SDK, multi-agent systems" },
+  { week: 6, title: "Deploy & Capstone", color: "bg-rose-500", focus: "DevOps, governance, capstone with agent" },
 ];
 
 export function CurriculumOverview() {
@@ -39,7 +44,7 @@ export function CurriculumOverview() {
         </div>
         <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-200">AI-Assisted Development</h1>
         <p className="mx-auto max-w-2xl text-gray-600 text-xl dark:text-gray-400">
-          6-week curriculum for software developers learning to work effectively with AI coding assistants
+          6-week curriculum for software developers learning to work with AI coding assistants and build AI agents
         </p>
       </div>
 
@@ -117,12 +122,14 @@ export function CurriculumOverview() {
               className="flex items-center gap-3 rounded-lg border p-4 transition-colors hover:bg-muted/50"
               key={week.week}
             >
-              <div className={`h-10 w-10 rounded-lg ${week.color} flex items-center justify-center`}>
+              <div className={`h-10 w-10 rounded-lg ${week.color} flex shrink-0 items-center justify-center`}>
                 <span className="font-bold text-white">{week.week}</span>
               </div>
               <div>
-                <p className="font-medium">Week {week.week}</p>
-                <p className="text-foreground/70 text-sm">{week.title}</p>
+                <p className="font-medium">
+                  Week {week.week}: {week.title}
+                </p>
+                <p className="text-foreground/60 text-xs">{week.focus}</p>
               </div>
             </div>
           ))}
@@ -130,13 +137,26 @@ export function CurriculumOverview() {
       </div>
 
       {/* Key Insight */}
-      <div className="rounded-lg border border-indigo-200 bg-indigo-50 p-6 dark:border-indigo-800 dark:bg-indigo-950/30">
-        <p className="mb-2 font-semibold text-indigo-700 dark:text-indigo-400">Primary Tool Focus</p>
-        <p className="text-foreground/70">
-          This curriculum uses <strong>Claude Code</strong> as the primary tool, with Codex CLI introduced for
-          comparison. Principles taught apply across all AI coding assistants—focus on capabilities and workflows that
-          transfer.
-        </p>
+      <div className="space-y-4">
+        <div className="rounded-lg border border-indigo-200 bg-indigo-50 p-6 dark:border-indigo-800 dark:bg-indigo-950/30">
+          <p className="mb-2 font-semibold text-indigo-700 dark:text-indigo-400">Primary Tool Focus</p>
+          <p className="text-foreground/70">
+            This curriculum uses <strong>Claude Code</strong> as the primary tool and the{" "}
+            <strong>Claude Agent SDK</strong>
+            for building agents. Principles apply across AI tools—focus on capabilities and workflows that transfer.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-amber-200 bg-amber-50 p-6 dark:border-amber-800 dark:bg-amber-950/30">
+          <div className="flex items-center gap-2">
+            <Bot className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+            <p className="font-semibold text-amber-700 dark:text-amber-400">Agent Development Track</p>
+          </div>
+          <p className="mt-2 text-foreground/70">
+            Week 5 is dedicated to building agents with the Claude Agent SDK. By the end, you'll have built a working
+            agent with custom tools, multi-agent orchestration, and proper safety guardrails.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export function ToolsAndCompanyImpactSection() {
               <Terminal className="h-5 w-5 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <h2 className="font-semibold text-xl">Core AI CLI tools</h2>
+              <h2 className="font-semibold text-xl">Core AI CLI tools &amp; agents</h2>
               <p className="text-muted-foreground text-xs">
                 The curriculum uses a small set of focused tools so participants build durable workflows rather than
                 tool hype.
@@ -25,7 +25,8 @@ export function ToolsAndCompanyImpactSection() {
             </li>
             <li>
               <span className="font-medium text-slate-900 dark:text-slate-100">Codex CLI</span> – open-source CLI for
-              working with multiple model providers from your terminal.
+              working with multiple model providers from your terminal, including support for agentic workflows via
+              configuration and commands.
             </li>
             <li>
               <span className="font-medium text-slate-900 dark:text-slate-100">Gemini CLI</span> – Google&apos;s command
@@ -34,6 +35,11 @@ export function ToolsAndCompanyImpactSection() {
             <li>
               <span className="font-medium text-slate-900 dark:text-slate-100">Amp</span> – Sourcegraph&apos;s VS Code
               extension and CLI with powerful code navigation and reasoning.
+            </li>
+            <li>
+              <span className="font-medium text-slate-900 dark:text-slate-100">Agent runtimes &amp; frameworks</span> –
+              libraries and services that let you define tools, goals, and control loops so agents can act on your
+              behalf within clear guardrails.
             </li>
           </ul>
 

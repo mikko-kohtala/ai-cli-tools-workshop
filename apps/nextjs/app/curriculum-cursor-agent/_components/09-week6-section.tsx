@@ -1,4 +1,4 @@
-import { BarChart, FileText, MessageSquare, Shield, Users } from "lucide-react";
+import { BarChart, FileText, MessageSquare, Shield, Users, Workflow } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const topics = [
@@ -6,6 +6,12 @@ const topics = [
     icon: Users,
     title: "AI in Product & UX",
     description: "Brainstorming features with AI. Using AI to create UX copy, error messages, onboarding flows",
+  },
+  {
+    icon: Workflow,
+    title: "Cross-Functional Agent Workflows",
+    description:
+      "Building agents for different departments: product research agents, documentation agents, analytics agents. Creating workflows that span multiple business functions",
   },
   {
     icon: MessageSquare,
@@ -36,17 +42,19 @@ const capstoneSteps = [
     step: 1,
     title: "Define",
     description:
-      "Define a small but meaningful feature or internal tool that uses AI in some way (or is at least heavily built with AI assistance)",
+      "Define a small but meaningful feature or internal tool that uses AI in some way (or is at least heavily built with AI assistance). Consider building agents for specific workflows",
   },
   {
     step: 2,
     title: "Plan",
-    description: "Plan requirements, user stories, architecture — all co-created with AI, documented",
+    description:
+      "Plan requirements, user stories, architecture — all co-created with AI, documented. Design agent workflows that span the full SDLC",
   },
   {
     step: 3,
     title: "Implement",
-    description: "Implement using AI dev tools for code, tests, and infra",
+    description:
+      "Implement using AI dev tools for code, tests, and infra. Create and use specialized agents throughout the implementation process",
   },
   {
     step: 4,
@@ -91,6 +99,10 @@ export function Week6Section() {
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
                 <span>Consolidate everything in a capstone that follows full SDLC</span>
               </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+                <span>Build and deploy agent workflows that demonstrate AI's value across company processes</span>
+              </li>
             </ul>
           </CardContent>
         </Card>
@@ -98,7 +110,7 @@ export function Week6Section() {
 
       <div className="mb-12">
         <h3 className="mb-6 font-semibold text-2xl">Key Topics</h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => {
             const Icon = topic.icon;
             return (
