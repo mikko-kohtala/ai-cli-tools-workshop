@@ -1,11 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import { TableOfContents } from "../presentation/_components/12-table-of-contents";
 import { OverviewSection } from "./_components/01-overview-section";
 import { DailyStructureSection } from "./_components/02-daily-structure-section";
 import { WeekSections } from "./_components/03-weeks";
-import { TableOfContents } from "../presentation/_components/12-table-of-contents";
-import { useEffect, useState } from "react";
 
 const sections = [
   { id: "overview", title: "Curriculum Overview" },
@@ -40,7 +40,9 @@ export default function CurriculumPage() {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (

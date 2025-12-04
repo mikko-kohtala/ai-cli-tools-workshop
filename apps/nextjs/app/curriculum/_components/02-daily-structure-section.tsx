@@ -1,7 +1,7 @@
 export function DailyStructureSection() {
   return (
-    <section id="daily-structure" className="mb-16">
-      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-300">Daily Structure</h2>
+    <section className="mb-16" id="daily-structure">
+      <h2 className="font-semibold text-2xl text-gray-800 dark:text-gray-300">Daily Structure</h2>
       <div className="mt-4 grid gap-6 md:grid-cols-2">
         <div className="space-y-3 text-gray-700 dark:text-gray-300">
           <h4 className="font-semibold text-gray-800 dark:text-gray-300">Learning (1–2h)</h4>

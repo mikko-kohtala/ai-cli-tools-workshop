@@ -1,7 +1,7 @@
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <section id={id} className="mb-16">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">{title}</h3>
+    <section className="mb-16" id={id}>
+      <h3 className="font-semibold text-gray-800 text-xl dark:text-gray-300">{title}</h3>
       <div className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">{children}</div>
     </section>
   );
@@ -66,7 +66,9 @@ export function WeekSections() {
           <li>Support/docs: draft macros, KB articles; convert specs to user docs and FAQs.</li>
           <li>Analytics: help write queries, interpret dashboards, summarize trends.</li>
           <li>Governance: privacy, secure prompting, approvals; human-in-the-loop policies.</li>
-          <li>Capstone: full mini SDLC—define, plan, implement, test, deploy, document, present; reflection on impact.</li>
+          <li>
+            Capstone: full mini SDLC—define, plan, implement, test, deploy, document, present; reflection on impact.
+          </li>
         </ul>
       </Section>
     </section>
