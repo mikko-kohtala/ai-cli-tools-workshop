@@ -71,7 +71,9 @@ export function WeekSections() {
           <li>Support/docs: draft macros, KB articles; convert specs to user docs and FAQs.</li>
           <li>Analytics: help write queries, interpret dashboards, summarize trends.</li>
           <li>Governance: privacy, secure prompting, approvals; human-in-the-loop policies.</li>
-          <li>Capstone: build a small agentic feature or internal tool and run full SDLC; present outcomes and risks.</li>
+          <li>
+            Capstone: build a small agentic feature or internal tool and run full SDLC; present outcomes and risks.
+          </li>
         </ul>
       </Section>
     </section>
