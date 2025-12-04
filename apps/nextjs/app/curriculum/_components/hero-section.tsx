@@ -1,4 +1,5 @@
 import { Calendar, Compass, GraduationCap, Workflow } from "lucide-react";
+import Link from "next/link";
 
 export function CurriculumHeroSection() {
   return (
@@ -48,6 +49,15 @@ export function CurriculumHeroSection() {
               support wider company processes.
             </p>
           </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3 text-xs">
+          <Link
+            href="/curriculum/learning-paths"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1 font-medium text-slate-800 transition-colors hover:border-slate-400 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/40 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-900"
+          >
+            Explore role-based learning paths
+          </Link>
         </div>
       </div>
     </section>
