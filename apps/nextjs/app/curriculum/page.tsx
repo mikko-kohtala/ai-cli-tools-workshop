@@ -15,6 +15,8 @@ import {
   BookOpen,
   ClipboardCheck,
   Cpu,
+  GitBranch,
+  Brush,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,6 +35,45 @@ const audience = [
   { title: "Team leads/ICs", detail: "Need repeatable patterns they can roll out to squads.", icon: ClipboardCheck },
   { title: "DevOps/SRE", detail: "Want agents that stay safe in CI/CD and on-call contexts.", icon: ShieldCheck },
   { title: "Product-minded devs", detail: "Care about end-to-end delivery, not just code generation.", icon: BookOpen },
+];
+
+const paths = [
+  {
+    title: "Developer path",
+    audience: "Software developers",
+    icon: Cpu,
+    accent: "bg-blue-50 dark:bg-blue-950/30",
+    focus: [
+      "Ship refactors and features with plan → act → verify loops.",
+      "Use AI CLIs for diffs, tests, and repo navigation with approvals.",
+      "Pair with product/design prompts to keep scope and UX aligned.",
+    ],
+    deliverable: "Feature slice with tests, ADR, and an ops-ready runbook.",
+  },
+  {
+    title: "Product path",
+    audience: "Product managers & owners",
+    icon: Compass,
+    accent: "bg-amber-50 dark:bg-amber-950/30",
+    focus: [
+      "Backlog shaping: epics, slices, and acceptance criteria with agents.",
+      "Risk/assumption mapping plus stakeholder updates and release notes.",
+      "Translate design/dev feedback into crisp tickets and success metrics.",
+    ],
+    deliverable: "Prioritized backlog, lean spec, and decision log ready for build.",
+  },
+  {
+    title: "Design path",
+    audience: "Designers & UX",
+    icon: Brush,
+    accent: "bg-rose-50 dark:bg-rose-950/30",
+    focus: [
+      "UX copy, flows, and accessibility checks co-written with agents.",
+      "Variant prompts for empty states, errors, onboarding, and tone.",
+      "Developer-ready notes with tokens, states, and acceptance snapshots.",
+    ],
+    deliverable: "Flow map + UX copy deck + accessibility checklist for the feature.",
+  },
 ];
 
 const success = [
@@ -86,59 +127,81 @@ const weeks = [
     artifacts: "Tiny agent that reads a file, proposes a change, drafts a diff; human-reviewed merge.",
   },
   {
-    title: "Week 2 — Discovery, Planning & Multi-Agent Patterns",
-    theme: "Use agents to clarify scope and decompose work.",
+    title: "Week 2 — Path Discovery & Scoping",
+    theme: "Branch into Developer/Product/Design paths to map needs.",
     focus: [
-      "Stakeholder Qs, user stories, acceptance criteria via agents",
-      "Task decomposition and ticket drafts from agent plans",
-      "Architecture options + ADR drafts with an agent as co-author",
+      "Persona-specific discovery: repo map (dev), outcomes & constraints (product), flows & UX edges (design)",
+      "Backlog shaping with agents: epics, slices, acceptance criteria",
+      "Assumption/risk log seeded by agent Q&A and stakeholder prompts",
     ],
-    agentFocus: ["Planner + executor pairing", "Chain-of-thought vs. terse plans", "Ticket templating"],
-    artifacts: "Chosen architecture, ADR committed, planning agent that outputs a task list with owners.",
+    agentFocus: ["Path context kits", "Assumption and risk logging prompts", "Planner + executor pairing per path"],
+    artifacts: "Path discovery packet: goals, prioritized backlog, risks, and acceptance criteria.",
   },
   {
-    title: "Week 3 — Agent-led Implementation & Refactors",
-    theme: "ReAct loops, tool use, and repo navigation.",
+    title: "Week 3 — Architecture & Prototyping",
+    theme: "Choose approaches and spike with agents.",
     focus: [
-      "Describe → generate → review → improve with guardrails",
-      "Function calling/tool use (apply_patch, tests) and context chunking",
-      "Refactors, explanations, and prompt libraries for repeatable asks",
+      "Architecture options + ADR drafts with agents as co-authors",
+      "Prototypes for CLI flows, UX copy, or story maps depending on path",
+      "Decision reviews with cross-path feedback loops",
     ],
-    agentFocus: ["Diff-aware editing", "Refactor suggestions", "Context chunking for large files"],
-    artifacts: "Core features implemented; prompt/agent cookbook with proven commands and patterns.",
+    agentFocus: ["Architecture optioning", "Rapid spike loops (generate → run → reflect)", "Context chunking for mocks and code"],
+    artifacts: "Prototype or spike per path plus ADR and decision log.",
   },
   {
-    title: "Week 4 — Evaluation, Testing & Guardrails",
-    theme: "Reliability and safety for agent outputs.",
+    title: "Week 4 — Implementation & Pairing",
+    theme: "Ship slices with path pairings.",
+    focus: [
+      "ReAct loops for code, UX copy, and acceptance tests",
+      "Design and product reviews feeding dev tasks and regression tests",
+      "Refactors and dependency updates with agent guardrails",
+    ],
+    agentFocus: ["Diff-aware editing", "Prompt libraries for code and UX copy", "Traceable plans with approvals"],
+    artifacts: "Feature slices shipped with tests, UX notes, and updated tickets.",
+  },
+  {
+    title: "Week 5 — Evaluation, Testing & Guardrails",
+    theme: "Harden what you built.",
     focus: [
       "Test plans and regression cases auto-suggested by agents",
-      "Red-teaming prompts, safety filters, and approval checkpoints",
-      "Observability: logging agent steps and ensuring reproducible runs",
+      "Red-team prompts for safety, secrets, and misuse",
+      "Observability: logs, dry-run defaults, approvals, and rollback notes",
     ],
-    agentFocus: ["Self-check prompts", "PII/secret hygiene", "Contract tests for agent output"],
-    artifacts: "Higher coverage, contract tests for agent outputs, 2–3 seeded bugs found and fixed.",
+    agentFocus: ["Self-check prompts", "Contract tests for agent output", "Safety filters and rate limits"],
+    artifacts: "Higher coverage, safety checklist signed off, seeded bugs found and fixed.",
   },
   {
-    title: "Week 5 — Delivery & Operations for Agents",
-    theme: "Run agents in CI/CD and operations.",
+    title: "Week 6 — Delivery & Operations",
+    theme: "Run agents in CI/CD and on-call contexts.",
     focus: [
-      "Containerize agents; schedule or trigger via CI",
-      "Quality gates: diff review policies, dry-runs, sandboxed commands",
-      "Ops prompts: runbooks, alert triage, postmortem drafting",
+      "Containerize/schedule agents; dry-run in CI",
+      "Quality gates for diffs, migrations, and configs",
+      "Runbooks, alert triage, and postmortem drafting with agents",
     ],
-    agentFocus: ["Dry-run modes", "Rollback checklists", "Chat-to-runbook workflows"],
-    artifacts: "Service deployed with an ops-ready agent job (dry-run default) and a runbook.",
+    agentFocus: ["Dry-run modes", "CI hooks with approvals", "Chat-to-runbook workflows"],
+    artifacts: "Ops-ready agent job (dry-run default), runbook, and release plan.",
   },
   {
-    title: "Week 6 — Capstone: Multi-Agent Feature",
-    theme: "Full SDLC with an agentic workflow.",
+    title: "Week 7 — Automation & Scale",
+    theme: "Make path playbooks repeatable and cost-aware.",
     focus: [
-      "Select a feature/internal tool that benefits from agent orchestration",
-      "Plan, implement, and evaluate using agents with human review",
-      "Document: ADRs, runbooks, user docs, and reflection",
+      "Schedule recurring tasks (lint, copy checks, backlog hygiene)",
+      "Template prompts and context kits for each path",
+      "Cost/latency tuning, fallbacks, and retries",
     ],
-    agentFocus: ["Orchestrating planners + executors", "Eval loops", "Demo scripting with agents"],
-    artifacts: "Demo + docs + reflection on where agents helped vs. struggled; dry-run and rollback paths documented.",
+    agentFocus: ["Tool orchestration and schedulers", "Cost/latency controls", "Reusable prompt kits per path"],
+    artifacts: "Automated agent playbook with run logs and rollback steps.",
+  },
+  {
+    title: "Week 8 — Capstone & Showcase",
+    theme: "Blend paths into a final demo.",
+    focus: [
+      "Integrate dev, product, and design outputs into one feature",
+      "Demo scripting, metrics, and user narrative",
+      "Postmortem: what to automate next and adoption plan",
+    ],
+    agentFocus: ["Demo scripting with agents", "Evaluation loops for adoption metrics", "Rollout and rollback storytelling"],
+    artifacts: "Capstone demo with docs, runbook, and adoption plan.",
   },
 ];
 
@@ -241,7 +304,7 @@ export default function CurriculumPage() {
               className="w-fit bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200"
               variant="secondary"
             >
-              6-week AI SDLC curriculum
+              8-week AI SDLC curriculum
             </Badge>
             <h1 className="font-bold text-4xl leading-tight md:text-5xl">Bring AI agents into every stage of the SDLC</h1>
             <p className="max-w-3xl text-lg text-muted-foreground">
@@ -249,7 +312,7 @@ export default function CurriculumPage() {
               guardrails, and a capstone that mirrors real product delivery.
             </p>
             <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900/50">
-              <p className="mb-3 text-sm font-medium text-slate-800 dark:text-slate-200">By Week 6 you will:</p>
+              <p className="mb-3 text-sm font-medium text-slate-800 dark:text-slate-200">By Week 8 you will:</p>
               <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                 {outcomes.map((item) => (
                   <li className="flex gap-2" key={item}>
@@ -320,6 +383,45 @@ export default function CurriculumPage() {
                 <CardTitle className="text-base">{item.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">{item.detail}</CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="flex items-center gap-3">
+          <GitBranch className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+          <h2 className="font-semibold text-2xl">Learning paths</h2>
+        </div>
+        <p className="text-muted-foreground text-sm">
+          Weeks 2–3 dive into the Developer, Product, and Design paths; we reconverge each week to share artifacts and
+          keep scope, UX, and delivery aligned.
+        </p>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {paths.map((path) => (
+            <Card className={`h-full border-0 shadow-sm ${path.accent}`} key={path.title}>
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/70 dark:bg-slate-900/70">
+                  <path.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle className="text-base">{path.title}</CardTitle>
+                  <CardDescription>{path.audience}</CardDescription>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
+                <ul className="space-y-2">
+                  {path.focus.map((item) => (
+                    <li className="flex gap-2" key={item}>
+                      <Sparkles className="mt-0.5 h-4 w-4 text-indigo-600 dark:text-indigo-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="rounded-lg bg-white/70 p-2 text-xs font-medium text-slate-800 shadow-inner dark:bg-slate-900/70 dark:text-slate-100">
+                  Signature deliverable: {path.deliverable}
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>
@@ -460,7 +562,7 @@ export default function CurriculumPage() {
       <section className="space-y-4">
         <div className="flex items-center gap-3">
           <Rocket className="h-5 w-5 text-rose-600 dark:text-rose-400" />
-          <h2 className="font-semibold text-2xl">Capstone path (Week 6)</h2>
+          <h2 className="font-semibold text-2xl">Capstone path (Weeks 7–8)</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-4">
           {capstone.map((phase) => (

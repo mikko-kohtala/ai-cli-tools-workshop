@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  BarChart3,
   Brain,
   Brush,
   CalendarClock,
@@ -13,78 +12,60 @@ import {
   GitMerge,
   Layers,
   PanelRightOpen,
+  Rocket,
   Sparkles,
-  Users,
 } from "lucide-react";
 
 const personas = [
   {
-    name: "Developers",
+    name: "Developer path",
+    role: "Software developers",
     icon: Flowchart,
     color: "bg-blue-50 dark:bg-blue-950/30",
-    weeks: "Weeks 2–4 focus",
+    weeks: "Deep dives: Weeks 2–3; automation: Week 7",
     goals: [
-      "Repo navigation, refactors, test generation",
-      "Tool use: apply_patch, stack-trace triage, CI-ready diffs",
-      "Architecture optioning with agent planners",
+      "Repo navigation, refactors, tests with plan → act → verify",
+      "apply_patch, stack-trace triage, CI-ready diffs with approvals",
+      "Architecture optioning and code reviews with agent planners",
     ],
-    deliverable: "Refactored service + regression tests + ADR",
+    deliverable: "Feature slice + tests + ADR + ops checklist",
   },
   {
-    name: "Product Managers",
+    name: "Product path",
+    role: "Product managers & owners",
     icon: Compass,
     color: "bg-amber-50 dark:bg-amber-950/30",
-    weeks: "Weeks 2–4 focus",
+    weeks: "Deep dives: Weeks 2–3; alignment: Week 4",
     goals: [
-      "Backlog shaping: epics, tickets, acceptance criteria",
-      "Risk/assumption mapping with agent Q&A",
-      "Lean specs and stakeholder updates drafted by agents",
+      "Backlog shaping: epics, slices, acceptance criteria",
+      "Risk/assumption mapping and stakeholder comms with agents",
+      "Lean specs, launch notes, and success metrics drafts",
     ],
-    deliverable: "Prioritized backlog + spec + decision log",
+    deliverable: "Prioritized backlog + lean spec + decision log",
   },
   {
-    name: "Design/UX",
+    name: "Design path",
+    role: "Designers & UX",
     icon: Brush,
     color: "bg-rose-50 dark:bg-rose-950/30",
-    weeks: "Weeks 2–4 focus",
+    weeks: "Deep dives: Weeks 2–3; cross-reviews: Week 4",
     goals: [
       "UX copy, flows, and empty-state ideas co-written with agents",
-      "Proto prompts: generate variants, accessibility checks",
-      "Design-to-dev handoff notes with component tokens",
+      "Variants and accessibility checks with prompt libraries",
+      "Developer-ready handoff notes with tokens and states",
     ],
     deliverable: "Flow map + UX copy deck + accessibility checklist",
-  },
-  {
-    name: "Data/Analytics",
-    icon: BarChart3,
-    color: "bg-emerald-50 dark:bg-emerald-950/30",
-    weeks: "Weeks 2–4 focus",
-    goals: [
-      "Questions-to-metrics prompts, event design, guardrails",
-      "SQL generation/verification; data-quality test ideas",
-      "Dashboard narrative summaries and experiment plans",
-    ],
-    deliverable: "Metric definitions + queries + QA checks",
-  },
-  {
-    name: "Sales / CS / Solutions",
-    icon: Users,
-    color: "bg-purple-50 dark:bg-purple-950/30",
-    weeks: "Weeks 2–4 focus",
-    goals: [
-      "Discovery questions, objection handling, ROI snippets",
-      "Proposal/SoW drafting with playbooks for verticals",
-      "Demo scripts with live data safety prompts",
-    ],
-    deliverable: "Demo script + objection/ROI library + tailored SoW outline",
   },
 ];
 
 const convergence = [
   "Week 1: Shared foundations — safety, agent loops, tool setup.",
-  "Weeks 2–4: Split by persona for focused practice and deliverables.",
-  "Week 5: Paths rejoin — shipping, CI/CD, and ops-ready agents.",
-  "Week 6: Capstone demo that combines the best ideas from each path.",
+  "Weeks 2–3: Split into Developer / Product / Design labs.",
+  "Week 4: Cross-reviews to align scope, flows, and feasibility.",
+  "Week 5: Reconverge on quality gates, evals, and observability.",
+  "Week 6: Delivery and operations with dry-run agents.",
+  "Week 7: Automation and path-specific bots with guardrails.",
+  "Week 8: Capstone demo blending all three perspectives.",
 ];
 
 export default function LearningPathsPage() {
@@ -101,8 +82,9 @@ export default function LearningPathsPage() {
             </Badge>
             <h1 className="font-bold text-4xl leading-tight md:text-5xl">Learning paths for every role</h1>
             <p className="max-w-3xl text-lg text-muted-foreground">
-              Same 6-week cadence; Weeks 2–4 pivot into persona-specific tracks while keeping Week 1 foundations and
-              Week 5–6 integration. All paths practice plan → act → verify with approvals and shared safety guardrails.
+              8-week cadence: Week 1 foundations, Weeks 2–3 path-specific labs, Week 4 alignment, Weeks 5–6 quality and
+              delivery, Week 7 automation, Week 8 showcase. All paths practice plan → act → verify with approvals and
+              shared safety guardrails.
             </p>
             <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900/50">
               <p className="mb-3 text-sm font-medium text-slate-800 dark:text-slate-200">How the paths flow</p>
@@ -119,7 +101,7 @@ export default function LearningPathsPage() {
           <div className="rounded-xl bg-slate-50 p-4 text-sm text-slate-700 shadow-inner dark:bg-slate-800/80 dark:text-slate-200 md:w-[320px]">
             <div className="flex items-center gap-2 font-medium">
               <CalendarClock className="h-5 w-5" />
-              <span>6-week schedule</span>
+              <span>8-week schedule</span>
             </div>
             <Separator className="my-3" />
             <ul className="space-y-2">
@@ -129,15 +111,15 @@ export default function LearningPathsPage() {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Weeks 2–4 branch by persona</span>
+                <span>Weeks 2–3 branch by path (Dev/Product/Design)</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Week 5 reconverge: ship, CI/CD, ops-ready agents</span>
+                <span>Week 4 align interfaces and shared scope</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Week 6 capstone demos</span>
+                <span>Weeks 5–6 quality + delivery; Week 7 automation; Week 8 capstone</span>
               </li>
             </ul>
           </div>
@@ -149,7 +131,7 @@ export default function LearningPathsPage() {
           <GitBranch className="h-5 w-5 text-purple-600 dark:text-purple-400" />
           <h2 className="font-semibold text-2xl">Branching visualization</h2>
         </div>
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-4">
           <Card className="h-full border-dashed">
             <CardHeader className="flex items-center gap-2">
               <Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -163,52 +145,61 @@ export default function LearningPathsPage() {
             </CardContent>
           </Card>
 
-          <Card className="h-full border-dashed lg:col-span-2">
+          <Card className="h-full border-dashed">
             <CardHeader className="flex items-center gap-2">
               <GitBranch className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-              <CardTitle className="text-base">Weeks 2–4: Persona branches</CardTitle>
+              <CardTitle className="text-base">Weeks 2–3: Path labs</CardTitle>
             </CardHeader>
-            <CardContent className="grid gap-3 text-sm text-muted-foreground md:grid-cols-2 lg:grid-cols-3">
+            <CardContent className="grid gap-3 text-sm text-muted-foreground">
               <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
-                <p className="font-medium text-slate-800 dark:text-slate-100">Developers</p>
-                <p>Refactors, tests, tool use, architecture options.</p>
+                <p className="font-medium text-slate-800 dark:text-slate-100">Developer</p>
+                <p>Refactors, tests, repo mapping, and code review prompts.</p>
               </div>
               <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
-                <p className="font-medium text-slate-800 dark:text-slate-100">PMs</p>
-                <p>Backlog shaping, risk/assumption mapping, lean specs.</p>
+                <p className="font-medium text-slate-800 dark:text-slate-100">Product</p>
+                <p>Backlog shaping, risks, acceptance criteria, and release notes.</p>
               </div>
               <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
-                <p className="font-medium text-slate-800 dark:text-slate-100">Design/UX</p>
-                <p>Copy, flows, accessibility prompts, handoff notes.</p>
-              </div>
-              <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
-                <p className="font-medium text-slate-800 dark:text-slate-100">Data/Analytics</p>
-                <p>Metrics, SQL, data QA, experiment prompts.</p>
-              </div>
-              <div className="rounded-lg bg-slate-50 p-3 dark:bg-slate-900/40">
-                <p className="font-medium text-slate-800 dark:text-slate-100">Sales/CS</p>
-                <p>Discovery, ROI, objection handling, demo scripts.</p>
+                <p className="font-medium text-slate-800 dark:text-slate-100">Design</p>
+                <p>Flows, UX copy, accessibility and handoff notes.</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="h-full border-dashed lg:col-span-3">
+          <Card className="h-full border-dashed">
             <CardHeader className="flex items-center gap-2">
               <GitMerge className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-              <CardTitle className="text-base">Week 5–6: Reconverge and ship</CardTitle>
+              <CardTitle className="text-base">Week 4–6: Align & harden</CardTitle>
             </CardHeader>
-            <CardContent className="grid gap-3 text-sm text-muted-foreground md:grid-cols-3">
+            <CardContent className="grid gap-3 text-sm text-muted-foreground">
+              <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30">
+                <p className="font-medium text-emerald-900 dark:text-emerald-100">Week 4</p>
+                <p>Cross-reviews, interface contracts, shared scope.</p>
+              </div>
               <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30">
                 <p className="font-medium text-emerald-900 dark:text-emerald-100">Week 5</p>
-                <p>CI/CD, dry-run agents, runbooks, deployment.</p>
+                <p>Quality gates, evals, observability, dry-runs.</p>
               </div>
               <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30">
                 <p className="font-medium text-emerald-900 dark:text-emerald-100">Week 6</p>
-                <p>Capstone demo with safety + rollback and metrics.</p>
+                <p>Delivery + ops: CI hooks, runbooks, rollback paths.</p>
               </div>
-              <div className="rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30">
-                <p className="font-medium text-emerald-900 dark:text-emerald-100">Shared showcase</p>
-                <p>Each persona presents: what their agents solved, limits, and next improvements.</p>
+            </CardContent>
+          </Card>
+
+          <Card className="h-full border-dashed">
+            <CardHeader className="flex items-center gap-2">
+              <Rocket className="h-5 w-5 text-rose-600 dark:text-rose-400" />
+              <CardTitle className="text-base">Weeks 7–8: Automate & showcase</CardTitle>
+            </CardHeader>
+            <CardContent className="grid gap-3 text-sm text-muted-foreground">
+              <div className="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/30">
+                <p className="font-medium text-rose-900 dark:text-rose-100">Week 7</p>
+                <p>Automation: scheduled agents, cost/latency tuning, reuse of path kits.</p>
+              </div>
+              <div className="rounded-lg bg-rose-50 p-3 dark:bg-rose-950/30">
+                <p className="font-medium text-rose-900 dark:text-rose-100">Week 8</p>
+                <p>Capstone demo: blended story, metrics, and adoption plan.</p>
               </div>
             </CardContent>
           </Card>
@@ -218,9 +209,9 @@ export default function LearningPathsPage() {
       <section className="space-y-4">
         <div className="flex items-center gap-3">
           <PanelRightOpen className="h-5 w-5 text-slate-700 dark:text-slate-200" />
-          <h2 className="font-semibold text-2xl">Persona-specific tracks (Weeks 2–4)</h2>
+          <h2 className="font-semibold text-2xl">Path-specific tracks (Weeks 2–3 deep dives)</h2>
         </div>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {personas.map((persona) => (
             <Card className={`h-full border-0 shadow-sm ${persona.color}`} key={persona.name}>
               <CardHeader className="flex flex-row items-start gap-3">
@@ -229,7 +220,9 @@ export default function LearningPathsPage() {
                 </div>
                 <div>
                   <CardTitle className="text-base">{persona.name}</CardTitle>
-                  <CardDescription>{persona.weeks}</CardDescription>
+                  <CardDescription>
+                    {persona.role} • {persona.weeks}
+                  </CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-slate-700 dark:text-slate-200">
