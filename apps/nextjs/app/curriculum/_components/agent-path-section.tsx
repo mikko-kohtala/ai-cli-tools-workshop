@@ -52,8 +52,8 @@ export function AgentPathSection() {
               Weeks 5–6
             </div>
             <p className="text-muted-foreground">
-              Explore how agents fit into CI/CD, data workflows, and operations: scheduled jobs, event-driven
-              workflows, and safe guardrails around infrastructure, data, and secrets.
+              Explore how agents fit into CI/CD, data workflows, and operations: scheduled jobs, event-driven workflows,
+              and safe guardrails around infrastructure, data, and secrets.
             </p>
           </div>
 

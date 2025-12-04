@@ -44,7 +44,7 @@ export function LearningPathsSummarySection() {
           {paths.map((path) => {
             const Icon = path.icon;
             return (
-              <Card key={path.id} className="h-full">
+              <Card className="h-full" key={path.id}>
                 <CardHeader className="flex flex-row items-center gap-3">
                   <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${path.colorClass}`}>
                     <Icon className="h-4 w-4" />

@@ -47,8 +47,7 @@ const weeks = [
       "Capture reusable prompts and workflows that fit your team norms.",
       "Document how AI fits into your existing review and deployment process.",
     ],
-    outcome:
-      "Participants can integrate AI into daily coding and ship meaningful features with AI support.",
+    outcome: "Participants can integrate AI into daily coding and ship meaningful features with AI support.",
   },
   {
     id: "week-4",
@@ -87,16 +86,14 @@ const weeks = [
     icon: GitBranch,
     title: "Week 6 – Agents in the SDLC",
     theme: "Designing, running, and governing agents across the lifecycle",
-    summary:
-      "Zoom out to real company processes and design how agents support work end-to-end.",
+    summary: "Zoom out to real company processes and design how agents support work end-to-end.",
     steps: [
       "Map where AI and agents could help in product, support, docs, analytics, or operations.",
       "Define one or two agent-style workflows that fit your team’s reality.",
       "Implement and iterate on those workflows with AI support and clear guardrails.",
       "Capture operational runbooks and review practices that keep humans in control.",
     ],
-    outcome:
-      "Participants can design, implement, and safely operate small, reliable agents that support real work.",
+    outcome: "Participants can design, implement, and safely operate small, reliable agents that support real work.",
   },
   {
     id: "week-7",
@@ -111,8 +108,7 @@ const weeks = [
       "Run cross-functional working sessions where AI supports, but does not replace, team dialogue.",
       "Refine your shared project or feature based on combined feedback from all paths.",
     ],
-    outcome:
-      "Participants experience AI as a collaboration layer across roles, not just an individual coding helper.",
+    outcome: "Participants experience AI as a collaboration layer across roles, not just an individual coding helper.",
   },
   {
     id: "week-8",
