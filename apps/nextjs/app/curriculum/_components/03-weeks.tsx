@@ -66,15 +66,29 @@ export function WeekSections() {
         </ul>
       </Section>
 
-      <Section id="week-6" title="Week 6 – AI Across Company & Capstone (Agentic Feature)">
+      <Section id="week-6" title="Week 6 – AI Across Company & Governance">
         <ul className="list-disc space-y-2 pl-6">
           <li>Product/UX: brainstorm features, generate UX copy and error messages with AI.</li>
           <li>Support/docs: draft macros, KB articles; convert specs to user docs and FAQs.</li>
           <li>Analytics: help write queries, interpret dashboards, summarize trends.</li>
           <li>Governance: privacy, secure prompting, approvals; human-in-the-loop policies.</li>
-          <li>
-            Capstone: build a small agentic feature or internal tool and run full SDLC; present outcomes and risks.
-          </li>
+          <li>Preparation: finalize capstone scopes, risks, and success criteria.</li>
+        </ul>
+      </Section>
+
+      <Section id="week-7" title="Week 7 – Capstone Build (Agentic Feature)">
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Implement capstone with agent-assisted workflows and quality gates.</li>
+          <li>Cross-functional collaboration across learning paths; integrate ops and monitoring.</li>
+          <li>Dry runs, user feedback, and iteration loops.</li>
+        </ul>
+      </Section>
+
+      <Section id="week-8" title="Week 8 – Capstone Presentations & Retrospective">
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Present outcomes, demos, and risk assessments.</li>
+          <li>Retrospective: what worked, what to improve; write-up and action items.</li>
+          <li>Next steps: roadmap proposals and adoption plans.</li>
         </ul>
       </Section>
     </section>

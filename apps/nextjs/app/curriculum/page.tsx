@@ -6,11 +6,13 @@ import { TableOfContents } from "../presentation/_components/12-table-of-content
 import { OverviewSection } from "./_components/01-overview-section";
 import { DailyStructureSection } from "./_components/02-daily-structure-section";
 import { WeekSections } from "./_components/03-weeks";
+import { PathsDetails } from "./learning-paths/_components/03-paths-details";
 
 const sections = [
   { id: "overview", title: "Curriculum Overview" },
   { id: "daily-structure", title: "Daily Structure" },
-  { id: "weeks", title: "Weeks 1–6" },
+  { id: "learning-paths", title: "Learning Paths" },
+  { id: "weeks", title: "Weeks 1–8" },
 ];
 
 const SCROLL_OFFSET = 100;
@@ -52,6 +54,10 @@ export default function CurriculumPage() {
           <OverviewSection />
           <Separator className="my-16" />
           <DailyStructureSection />
+          <Separator className="my-16" />
+          <section id="learning-paths">
+            <PathsDetails />
+          </section>
           <Separator className="my-16" />
           <WeekSections />
         </div>
