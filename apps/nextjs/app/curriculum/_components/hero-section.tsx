@@ -8,12 +8,12 @@ export function CurriculumHeroSection() {
         <div className="space-y-3">
           <p className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-700 text-xs dark:bg-blue-950/30 dark:text-blue-300">
             <Workflow className="h-3 w-3" />
-            6-week AI-augmented development journey
+            8-week AI-augmented development journey
           </p>
-          <h1 className="font-bold text-4xl md:text-5xl">6-Week AI &amp; Agents Curriculum</h1>
+          <h1 className="font-bold text-4xl md:text-5xl">8-Week AI &amp; Agents Curriculum</h1>
           <p className="text-lg text-muted-foreground md:text-xl">
-            A structured program for &quot;normal&quot; software developers to integrate AI, agents, and agentic
-            workflows into everyday development across the full software delivery lifecycle.
+            A structured program for software developers, product managers, and designers to integrate AI, agents, and
+            agentic workflows into everyday development across the full software delivery lifecycle.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export function CurriculumHeroSection() {
             </div>
             <h3 className="mb-1 font-semibold text-sm">Time commitment</h3>
             <p className="text-muted-foreground text-xs">
-              6 weeks • 5 days/week. Each day: 1–2 hours of guided learning plus several hours of hands-on project work.
+              8 weeks • 5 days/week. Each day: 1–2 hours of guided learning plus several hours of hands-on project work.
             </p>
           </div>
 

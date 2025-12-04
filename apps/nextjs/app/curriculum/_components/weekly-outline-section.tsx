@@ -37,18 +37,18 @@ const weeks = [
   {
     id: "week-3",
     icon: Code2,
-    title: "Week 3 – Implementation & Agentic Workflows",
-    theme: "Pair-programming with AI and building practical agents",
+    title: "Week 3 – Implementation & Core Workflows",
+    theme: "Pair-programming with AI and integrating into daily development",
     summary:
       "Start shipping real code by pairing with AI and introducing focused agents that can safely work on your codebase.",
     steps: [
       "Implement core features using AI-generated scaffolds plus manual review.",
       "Use AI to explain unfamiliar parts of the project and suggest refactors.",
-      "Design a small agent workflow that can search the repo and propose changes.",
-      "Write down an “agent contract” that defines what your agent is allowed to do.",
+      "Capture reusable prompts and workflows that fit your team norms.",
+      "Document how AI fits into your existing review and deployment process.",
     ],
     outcome:
-      "Participants can integrate AI into daily coding and build simple, reliable agents that automate scoped development tasks.",
+      "Participants can integrate AI into daily coding and ship meaningful features with AI support.",
   },
   {
     id: "week-4",
@@ -69,31 +69,63 @@ const weeks = [
   {
     id: "week-5",
     icon: Database,
-    title: "Week 5 – DevOps, Orchestration & Agent Operations",
-    theme: "AI-assisted infrastructure, CI/CD, and running agents in production-like environments",
+    title: "Week 5 – DevOps, Data & Orchestration",
+    theme: "AI-assisted infrastructure, data flows, and light-weight automation",
     summary:
-      "Connect your project to infrastructure, CI/CD, and operations, and see how agents can run safely in automation contexts.",
+      "Connect your project to infrastructure, CI/CD, and basic analytics, and see how agents can run safely in automation contexts.",
     steps: [
-      "Draft a Dockerfile and simple CI pipeline with AI assistance.",
-      "Talk through configuration and environment questions with AI (without sharing real secrets).",
-      "Design a small recurring or event-driven agent workflow, such as a health check or docs refresher.",
-      "Create at least one runbook where AI helps describe how to handle a simulated incident.",
+      "Draft a Dockerfile, CI pipeline, or deployment script with AI assistance.",
+      "Use AI to reason about configuration, environments, and observability (without sharing real secrets).",
+      "Design a small recurring or event-driven agent workflow, such as a health check, data check, or docs refresher.",
+      "Create at least one runbook where AI helps describe how to handle a simulated incident or data issue.",
     ],
     outcome:
-      "Participants can lean on AI and agents to accelerate deployment and operations while respecting security and reliability constraints.",
+      "Participants can lean on AI and agents to accelerate deployment, analytics, and operations while respecting security and reliability constraints.",
   },
   {
     id: "week-6",
     icon: GitBranch,
-    title: "Week 6 – Company Processes & Capstone",
-    theme: "AI beyond code and a full SDLC capstone",
+    title: "Week 6 – Agents in the SDLC",
+    theme: "Designing, running, and governing agents across the lifecycle",
     summary:
-      "Zoom out to real company processes and deliver a capstone that shows how AI and agents could help your team.",
+      "Zoom out to real company processes and design how agents support work end-to-end.",
     steps: [
       "Map where AI and agents could help in product, support, docs, analytics, or operations.",
-      "Define a small capstone feature or internal tool and plan it with AI support.",
-      "Build and (optionally) deploy a demo that showcases the workflow.",
-      "Write lightweight docs and a short reflection on how you would use this at work.",
+      "Define one or two agent-style workflows that fit your team’s reality.",
+      "Implement and iterate on those workflows with AI support and clear guardrails.",
+      "Capture operational runbooks and review practices that keep humans in control.",
+    ],
+    outcome:
+      "Participants can design, implement, and safely operate small, reliable agents that support real work.",
+  },
+  {
+    id: "week-7",
+    icon: Users,
+    title: "Week 7 – Cross-Functional Collaboration",
+    theme: "Bringing developers, product, and design together with AI",
+    summary:
+      "Align work across roles, using AI to improve communication, shared understanding, and handoffs while keeping responsibilities clear.",
+    steps: [
+      "Connect role-based artefacts (requirements, designs, code, and docs) into one shared view.",
+      "Use AI to draft specs, UX narratives, and technical notes that all roles can understand.",
+      "Run cross-functional working sessions where AI supports, but does not replace, team dialogue.",
+      "Refine your shared project or feature based on combined feedback from all paths.",
+    ],
+    outcome:
+      "Participants experience AI as a collaboration layer across roles, not just an individual coding helper.",
+  },
+  {
+    id: "week-8",
+    icon: GitBranch,
+    title: "Week 8 – Company Processes & Capstone",
+    theme: "AI beyond code and a full SDLC capstone",
+    summary:
+      "Deliver a capstone that shows how AI and agents could help your team’s real processes, with clear ownership and safeguards.",
+    steps: [
+      "Choose a realistic capstone feature or internal tool that matters to your team.",
+      "Plan, implement, and (optionally) deploy a demo that showcases AI-augmented workflows.",
+      "Write lightweight docs, FAQs, and a simple onboarding guide for teammates.",
+      "Reflect on how you will use AI and agents at work over the next 3–6 months.",
     ],
     outcome:
       "Participants finish with a capstone project, a realistic view of AI across the company, and a personal adoption playbook.",
