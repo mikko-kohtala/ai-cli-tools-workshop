@@ -1,10 +1,11 @@
-import { Code, Palette, ShoppingCart, Users, Wrench } from "lucide-react";
+import { Code, Palette, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const pathDetails = [
   {
-    id: "developers",
-    name: "Developers",
+    id: "developer",
+    name: "Developer Path",
+    subtitle: "Software developers",
     icon: Code,
     color: "green",
     weeks: [
@@ -26,31 +27,9 @@ const pathDetails = [
     ],
   },
   {
-    id: "designers",
-    name: "Designers",
-    icon: Palette,
-    color: "purple",
-    weeks: [
-      {
-        week: 2,
-        title: "Design Research & Ideation",
-        focus: "Using AI for user research synthesis, design ideation, and concept generation",
-      },
-      {
-        week: 3,
-        title: "Design Execution",
-        focus: "AI tools for UI generation, design system creation, and design workflow automation",
-      },
-      {
-        week: 4,
-        title: "Prototyping & Testing",
-        focus: "AI-assisted prototyping, user testing analysis, and design iteration workflows",
-      },
-    ],
-  },
-  {
     id: "product",
-    name: "Product Managers",
+    name: "Product Path",
+    subtitle: "Product managers & owners",
     icon: Users,
     color: "blue",
     weeks: [
@@ -72,48 +51,26 @@ const pathDetails = [
     ],
   },
   {
-    id: "sales",
-    name: "Sales & Marketing",
-    icon: ShoppingCart,
-    color: "orange",
+    id: "design",
+    name: "Design Path",
+    subtitle: "Designers & UX",
+    icon: Palette,
+    color: "purple",
     weeks: [
       {
         week: 2,
-        title: "Content Creation & Messaging",
-        focus: "AI for sales emails, marketing copy, presentations, and content generation",
+        title: "Design Research & Ideation",
+        focus: "Using AI for user research synthesis, design ideation, and concept generation",
       },
       {
         week: 3,
-        title: "Customer Engagement",
-        focus: "AI tools for customer research, personalized outreach, and sales workflow automation",
+        title: "Design Execution",
+        focus: "AI tools for UI generation, design system creation, and design workflow automation",
       },
       {
         week: 4,
-        title: "Analytics & Optimization",
-        focus: "AI for sales analytics, conversion optimization, and marketing performance analysis",
-      },
-    ],
-  },
-  {
-    id: "operations",
-    name: "Operations & Support",
-    icon: Wrench,
-    color: "cyan",
-    weeks: [
-      {
-        week: 2,
-        title: "Process Documentation & Training",
-        focus: "AI for creating runbooks, training materials, and operational documentation",
-      },
-      {
-        week: 3,
-        title: "Support & Troubleshooting",
-        focus: "AI-assisted customer support, troubleshooting workflows, and knowledge base creation",
-      },
-      {
-        week: 4,
-        title: "Automation & Efficiency",
-        focus: "AI for process automation, workflow optimization, and operational efficiency improvements",
+        title: "Prototyping & Testing",
+        focus: "AI-assisted prototyping, user testing analysis, and design iteration workflows",
       },
     ],
   },
@@ -161,25 +118,13 @@ export function PathDetailsSection() {
               bg: "bg-purple-50 dark:bg-purple-950/30",
               border: "border-purple-200 dark:border-purple-800",
               text: "text-purple-600 dark:text-purple-400",
-              dot: "bg-purple-600 dark:text-purple-400",
+              dot: "bg-purple-600 dark:bg-purple-400",
             },
             blue: {
               bg: "bg-blue-50 dark:bg-blue-950/30",
               border: "border-blue-200 dark:border-blue-800",
               text: "text-blue-600 dark:text-blue-400",
               dot: "bg-blue-600 dark:bg-blue-400",
-            },
-            orange: {
-              bg: "bg-orange-50 dark:bg-orange-950/30",
-              border: "border-orange-200 dark:border-orange-800",
-              text: "text-orange-600 dark:text-orange-400",
-              dot: "bg-orange-600 dark:text-orange-400",
-            },
-            cyan: {
-              bg: "bg-cyan-50 dark:bg-cyan-950/30",
-              border: "border-cyan-200 dark:border-cyan-800",
-              text: "text-cyan-600 dark:text-cyan-400",
-              dot: "bg-cyan-600 dark:text-cyan-400",
             },
           };
           const colors = colorClasses[path.color as keyof typeof colorClasses];
@@ -191,10 +136,8 @@ export function PathDetailsSection() {
                     <Icon className={`h-6 w-6 ${colors.text}`} />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">{path.name} Path</CardTitle>
-                    <CardDescription className="text-base">
-                      Specialized learning for {path.name.toLowerCase()} during Weeks 2-4
-                    </CardDescription>
+                    <CardTitle className="text-2xl">{path.name}</CardTitle>
+                    <CardDescription className="text-base">{path.subtitle}</CardDescription>
                   </div>
                 </div>
               </CardHeader>

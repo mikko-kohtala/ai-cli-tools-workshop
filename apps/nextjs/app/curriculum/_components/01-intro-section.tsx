@@ -8,13 +8,10 @@ export function IntroSection() {
           <GraduationCap className="h-10 w-10 text-gray-100" />
         </div>
         <h1 className="font-bold text-5xl text-gray-800 md:text-6xl dark:text-gray-300">
-          6-Week AI Development Curriculum
+          8-Week AI Development Curriculum
         </h1>
         <p className="mx-auto max-w-3xl pt-4 text-gray-600 text-xl dark:text-gray-400">
-          A comprehensive, hands-on program designed for software developers who want to transform their development
-          workflow by integrating AI tools and agentic workflows. This curriculum takes you from foundational concepts
-          through advanced practices, covering every phase of the software development lifecycle—from initial
-          requirements gathering to deployment and operations.
+          A comprehensive, hands-on program designed for software developers, product managers, and designers who want to transform their workflow by integrating AI tools and agentic workflows. This curriculum takes you from foundational concepts through advanced practices, covering every phase of the software development lifecycle—from initial requirements gathering to deployment and operations, with role-specific learning paths.
         </p>
         <div className="mx-auto max-w-3xl pt-6">
           <p className="text-base text-gray-600 dark:text-gray-400">

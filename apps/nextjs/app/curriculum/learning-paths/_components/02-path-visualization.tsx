@@ -1,43 +1,32 @@
 "use client";
 
-import { Code, Palette, Route, ShoppingCart, Users, Wrench } from "lucide-react";
+import { Code, Palette, Route, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const paths = [
   {
-    id: "developers",
-    name: "Developers",
+    id: "developer",
+    name: "Developer Path",
+    subtitle: "Software developers",
     icon: Code,
     color: "green",
     description: "Software engineers building applications, APIs, and systems",
   },
   {
-    id: "designers",
-    name: "Designers",
-    icon: Palette,
-    color: "purple",
-    description: "UX/UI designers creating user experiences and interfaces",
-  },
-  {
     id: "product",
-    name: "Product Managers",
+    name: "Product Path",
+    subtitle: "Product managers & owners",
     icon: Users,
     color: "blue",
     description: "Product managers defining features, roadmaps, and strategy",
   },
   {
-    id: "sales",
-    name: "Sales & Marketing",
-    icon: ShoppingCart,
-    color: "orange",
-    description: "Sales and marketing professionals engaging customers",
-  },
-  {
-    id: "operations",
-    name: "Operations & Support",
-    icon: Wrench,
-    color: "cyan",
-    description: "Operations, support, and customer success teams",
+    id: "design",
+    name: "Design Path",
+    subtitle: "Designers & UX",
+    icon: Palette,
+    color: "purple",
+    description: "UX/UI designers creating user experiences and interfaces",
   },
 ];
 
@@ -76,14 +65,8 @@ export function PathVisualization() {
               <li className="flex items-start gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
                 <span>
-                  <strong>Week 5:</strong> Path convergence—all paths come together to learn cross-functional
-                  collaboration and shared workflows
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-                <span>
-                  <strong>Week 6:</strong> Capstone—teams work together on projects that require multiple roles
+                  <strong>Weeks 5-8:</strong> Convergence and capstone—all paths come together for advanced topics,
+                  cross-functional collaboration, and final projects
                 </span>
               </li>
             </ul>
@@ -121,8 +104,6 @@ export function PathVisualization() {
                         green: "bg-green-600 dark:bg-green-500",
                         purple: "bg-purple-600 dark:bg-purple-500",
                         blue: "bg-blue-600 dark:bg-blue-500",
-                        orange: "bg-orange-600 dark:bg-orange-500",
-                        cyan: "bg-cyan-600 dark:bg-cyan-500",
                       };
                       return (
                         <div className="flex flex-col items-center" key={path.id}>
@@ -149,8 +130,6 @@ export function PathVisualization() {
                         green: "bg-green-600 dark:bg-green-500",
                         purple: "bg-purple-600 dark:bg-purple-500",
                         blue: "bg-blue-600 dark:bg-blue-500",
-                        orange: "bg-orange-600 dark:bg-orange-500",
-                        cyan: "bg-cyan-600 dark:bg-cyan-500",
                       };
                       return (
                         <div
@@ -170,8 +149,6 @@ export function PathVisualization() {
                         green: "bg-green-600 dark:bg-green-500",
                         purple: "bg-purple-600 dark:bg-purple-500",
                         blue: "bg-blue-600 dark:bg-blue-500",
-                        orange: "bg-orange-600 dark:bg-orange-500",
-                        cyan: "bg-cyan-600 dark:bg-cyan-500",
                       };
                       return (
                         <div
@@ -189,7 +166,7 @@ export function PathVisualization() {
                 </div>
               </div>
 
-              {/* Week 5 - Convergence */}
+              {/* Weeks 5-8 - Convergence */}
               <div className="mb-8">
                 <div className="mb-4 flex items-center justify-center gap-2">
                   <div className="h-2 w-16 bg-indigo-600 dark:bg-indigo-500" />
@@ -200,8 +177,6 @@ export function PathVisualization() {
                         green: "bg-green-600 dark:bg-green-500",
                         purple: "bg-purple-600 dark:bg-purple-500",
                         blue: "bg-blue-600 dark:bg-blue-500",
-                        orange: "bg-orange-600 dark:bg-orange-500",
-                        cyan: "bg-cyan-600 dark:bg-cyan-500",
                       };
                       return (
                         <div
@@ -214,20 +189,11 @@ export function PathVisualization() {
                 </div>
                 <div className="mb-4 flex items-center justify-center">
                   <div className="rounded-lg bg-indigo-600 px-6 py-3 text-white dark:bg-indigo-500">
-                    <span className="font-semibold text-lg">Week 5: Path Convergence</span>
+                    <span className="font-semibold text-lg">Weeks 5-8: Convergence & Capstone</span>
                   </div>
                 </div>
                 <div className="flex justify-center">
                   <div className="h-2 w-32 bg-indigo-600 dark:bg-indigo-500" />
-                </div>
-              </div>
-
-              {/* Week 6 - Capstone */}
-              <div>
-                <div className="flex items-center justify-center">
-                  <div className="rounded-lg bg-indigo-600 px-6 py-3 text-white dark:bg-indigo-500">
-                    <span className="font-semibold text-lg">Week 6: Capstone</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -237,16 +203,14 @@ export function PathVisualization() {
 
       {/* Path Cards */}
       <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">Five Learning Paths</h3>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <h3 className="mb-6 font-semibold text-2xl">Three Learning Paths</h3>
+        <div className="grid gap-4 md:grid-cols-3">
           {paths.map((path) => {
             const Icon = path.icon;
             const colorClasses = {
               green: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
               purple: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
               blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
-              orange: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400",
-              cyan: "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400",
             };
             return (
               <Card key={path.id}>
@@ -255,7 +219,8 @@ export function PathVisualization() {
                     <Icon className={`h-5 w-5 ${colorClasses[path.color as keyof typeof colorClasses]}`} />
                   </div>
                   <CardTitle className="text-lg">{path.name}</CardTitle>
-                  <CardDescription className="text-sm">{path.description}</CardDescription>
+                  <CardDescription className="text-sm">{path.subtitle}</CardDescription>
+                  <p className="mt-2 text-sm text-foreground/70">{path.description}</p>
                 </CardHeader>
               </Card>
             );
