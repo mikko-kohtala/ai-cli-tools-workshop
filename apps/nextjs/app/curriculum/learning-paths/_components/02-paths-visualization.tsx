@@ -10,14 +10,30 @@ export function PathsVisualization() {
           <title id="pathsTitle">Learning paths timeline: branch in weeks 2–6 and merge in week 7</title>
           {/* Weeks labels */}
           <g fill="#9CA3AF" fontSize="12">
-            <text x="40" y="20">Week 1</text>
-            <text x="160" y="20">Week 2</text>
-            <text x="280" y="20">Week 3</text>
-            <text x="400" y="20">Week 4</text>
-            <text x="520" y="20">Week 5</text>
-            <text x="640" y="20">Week 6</text>
-            <text x="760" y="20">Week 7</text>
-            <text x="860" y="20">Week 8</text>
+            <text x="40" y="20">
+              Week 1
+            </text>
+            <text x="160" y="20">
+              Week 2
+            </text>
+            <text x="280" y="20">
+              Week 3
+            </text>
+            <text x="400" y="20">
+              Week 4
+            </text>
+            <text x="520" y="20">
+              Week 5
+            </text>
+            <text x="640" y="20">
+              Week 6
+            </text>
+            <text x="760" y="20">
+              Week 7
+            </text>
+            <text x="860" y="20">
+              Week 8
+            </text>
           </g>
 
           {/* Common baseline (Week 1) */}
@@ -35,7 +51,9 @@ export function PathsVisualization() {
               {/* Weeks 2–6 horizontal path */}
               <line stroke={r.color} strokeWidth="3" x1="160" x2="640" y1={r.y} y2={r.y} />
               {/* Labels */}
-              <text fill="#6B7280" fontSize="11" x="165" y={r.y - 6}>{r.label}</text>
+              <text fill="#6B7280" fontSize="11" x="165" y={r.y - 6}>
+                {r.label}
+              </text>
               {/* Merge into week 7 */}
               <line stroke={r.color} strokeWidth="3" x1="640" x2="760" y1={r.y} y2={120} />
             </g>

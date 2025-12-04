@@ -14,7 +14,8 @@ export function PathsDetails() {
         Role-Specific Path Details (Weeks 2–6)
       </h2>
       <p className="mt-2 text-gray-700 dark:text-gray-300">
-        Three roles: Developer, Product, Design. All share Week 1 foundations and Weeks 7–8 for integration and capstone.
+        Three roles: Developer, Product, Design. All share Week 1 foundations and Weeks 7–8 for integration and
+        capstone.
       </p>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <PathSection title="Developer (Weeks 2–6)">
@@ -38,7 +39,6 @@ export function PathsDetails() {
             <li>Agentic planning: role definitions, review gates, governance and escalation.</li>
           </ul>
         </PathSection>
-
       </div>
       <div className="mt-8 text-gray-700 dark:text-gray-300">
         <h3 className="font-semibold text-gray-800 text-xl dark:text-gray-300">Weeks 7–8 (Shared)</h3>
