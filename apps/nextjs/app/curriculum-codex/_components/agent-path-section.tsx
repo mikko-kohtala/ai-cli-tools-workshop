@@ -8,18 +8,18 @@ export function AgentPathSection() {
           <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/40">
             <Bot className="h-5 w-5 text-purple-600 dark:text-purple-300" />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h2 className="font-semibold text-2xl">Agent Learning Path</h2>
             <p className="text-muted-foreground text-sm">
               Agents are AI-powered components that can observe context, call tools, and take actions towards a goal.
               This curriculum introduces them early in a safe, controlled way and then gradually expands their
               responsibilities.
             </p>
-            <p className="text-muted-foreground text-xs">
-              You don&apos;t need to adopt a full agent platform on day one. Instead, you will start with simple
-              agent-like workflows (scripted tool calls guided by AI) and evolve towards more autonomous, orchestrated
-              agents where it makes sense.
-            </p>
+            <ul className="space-y-1 text-muted-foreground text-xs">
+              <li>Start with simple, scripted &quot;agent-like&quot; workflows around your local project.</li>
+              <li>Gradually introduce tools and APIs that agents can call under clear guardrails.</li>
+              <li>Only move towards more autonomous or orchestrated agents when the use case is well understood.</li>
+            </ul>
           </div>
         </div>
 
