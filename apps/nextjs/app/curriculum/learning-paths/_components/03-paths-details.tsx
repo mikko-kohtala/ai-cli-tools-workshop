@@ -1,7 +1,7 @@
 function PathSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-slate-900">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">{title}</h3>
+      <h3 className="font-semibold text-gray-800 text-xl dark:text-gray-300">{title}</h3>
       <div className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">{children}</div>
     </div>
   );
@@ -9,10 +9,13 @@ function PathSection({ title, children }: { title: string; children: React.React
 
 export function PathsDetails() {
   return (
-    <section id="details" className="mb-16">
-      <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-300">Role-Specific Path Details (Weeks 2–4)</h2>
+    <section className="mb-16" id="details">
+      <h2 className="font-semibold text-2xl text-gray-800 dark:text-gray-300">
+        Role-Specific Path Details (Weeks 2–4)
+      </h2>
       <p className="mt-2 text-gray-700 dark:text-gray-300">
-        Five roles: Developer, Designer, Product, Sales/Customer Success, Data/Analytics. All share Week 1 foundations and Week 5–6.
+        Five roles: Developer, Designer, Product, Sales/Customer Success, Data/Analytics. All share Week 1 foundations
+        and Week 5–6.
       </p>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <PathSection title="Developer (Weeks 2–4)">
@@ -52,7 +55,7 @@ export function PathsDetails() {
         </PathSection>
       </div>
       <div className="mt-8 text-gray-700 dark:text-gray-300">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-300">Week 5–6 (Shared)</h3>
+        <h3 className="font-semibold text-gray-800 text-xl dark:text-gray-300">Week 5–6 (Shared)</h3>
         <ul className="mt-2 list-disc space-y-2 pl-6">
           <li>Week 5: CI/CD, deployment, observability, agentic ops and runbooks.</li>
           <li>Week 6: Capstone per role—agentic feature or internal tool; present outcomes and risks.</li>

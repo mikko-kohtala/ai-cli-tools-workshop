@@ -1,7 +1,9 @@
 export function PathsIntro() {
   return (
-    <section id="intro" className="mb-16">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-300">Learning Paths: 6-Week Curriculum with Role Pivots</h1>
+    <section className="mb-16" id="intro">
+      <h1 className="font-bold text-3xl text-gray-800 dark:text-gray-300">
+        Learning Paths: 6-Week Curriculum with Role Pivots
+      </h1>
       <p className="mt-4 text-gray-700 dark:text-gray-300">
         Same 6-week scaffold as the core curriculum. Weeks 2–4 pivot into role-specific learning paths, then converge in
         Week 5 for shared DevOps/operations, and complete a joint capstone in Week 6.

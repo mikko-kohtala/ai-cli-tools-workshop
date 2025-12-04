@@ -1,11 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
+import { TableOfContents } from "../../presentation/_components/12-table-of-contents";
 import { PathsIntro } from "./_components/01-paths-intro";
 import { PathsVisualization } from "./_components/02-paths-visualization";
 import { PathsDetails } from "./_components/03-paths-details";
-import { TableOfContents } from "../../presentation/_components/12-table-of-contents";
-import { useEffect, useState } from "react";
 
 const sections = [
   { id: "intro", title: "Learning Paths Overview" },
