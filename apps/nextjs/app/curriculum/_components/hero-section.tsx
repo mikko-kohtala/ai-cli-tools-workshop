@@ -11,8 +11,8 @@ export function CurriculumHeroSection() {
           </p>
           <h1 className="font-bold text-4xl md:text-5xl">6-Week AI &amp; Agents Curriculum</h1>
           <p className="text-lg text-muted-foreground md:text-xl">
-            A structured program for &quot;normal&quot; software developers to integrate AI, agents, and agentic workflows
-            into everyday development across the full software delivery lifecycle.
+            A structured program for &quot;normal&quot; software developers to integrate AI, agents, and agentic
+            workflows into everyday development across the full software delivery lifecycle.
           </p>
         </div>
 

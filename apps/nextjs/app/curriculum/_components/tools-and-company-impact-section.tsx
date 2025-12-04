@@ -37,9 +37,9 @@ export function ToolsAndCompanyImpactSection() {
               extension and CLI with powerful code navigation and reasoning.
             </li>
             <li>
-              <span className="font-medium text-slate-900 dark:text-slate-100">Agent runtimes &amp; frameworks</span> – libraries and
-              services that let you define tools, goals, and control loops so agents can act on your behalf within clear
-              guardrails.
+              <span className="font-medium text-slate-900 dark:text-slate-100">Agent runtimes &amp; frameworks</span> –
+              libraries and services that let you define tools, goals, and control loops so agents can act on your
+              behalf within clear guardrails.
             </li>
           </ul>
 
