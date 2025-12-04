@@ -11,15 +11,15 @@ export function IntroSection() {
           Learning Paths: Role-Specific AI Mastery
         </h1>
         <p className="mx-auto max-w-3xl pt-4 text-gray-600 text-xl dark:text-gray-400">
-          A flexible 6-week curriculum that starts with common foundations, branches into role-specific paths, then
-          converges for collaborative capstone projects
+          A flexible 8-week curriculum that starts with common foundations, branches into role-specific paths, then
+          converges for advanced topics and collaborative capstone projects
         </p>
         <div className="mx-auto max-w-3xl pt-6">
           <p className="text-base text-gray-600 dark:text-gray-400">
             This curriculum recognizes that different roles use AI tools differently. While everyone needs foundational
-            knowledge, developers, designers, product managers, sales professionals, and operations teams have unique
-            needs. Weeks 2-4 diverge into specialized paths, then Week 5 brings everyone together to learn
-            cross-functional collaboration.
+            knowledge, developers, product managers, and designers have unique needs. Weeks 2-4 diverge into three
+            specialized paths, then Weeks 5-8 bring everyone together for advanced topics, cross-functional
+            collaboration, and capstone projects.
           </p>
         </div>
       </div>

@@ -33,18 +33,18 @@ const curriculumStructure = [
   },
   {
     week: 2,
-    theme: "Requirements & Architecture",
-    focus: "Using AI at the front of the SDLC",
+    theme: "Role-Specific Paths",
+    focus: "Developer, Product, or Design path specialization",
   },
   {
     week: 3,
-    theme: "Implementation Workflows",
-    focus: "Coding faster & safer with AI + building agentic workflows",
+    theme: "Role-Specific Paths",
+    focus: "Continued specialization in your chosen path",
   },
   {
     week: 4,
-    theme: "Testing & Quality",
-    focus: "AI for reliability + automated testing agents",
+    theme: "Role-Specific Paths",
+    focus: "Final week of role-specific learning",
   },
   {
     week: 5,
@@ -53,8 +53,18 @@ const curriculumStructure = [
   },
   {
     week: 6,
-    theme: "Company Processes & Capstone",
-    focus: "Beyond code – agents across departments + full SDLC capstone",
+    theme: "Advanced Topics",
+    focus: "Advanced agentic workflows and integration",
+  },
+  {
+    week: 7,
+    theme: "Company Processes",
+    focus: "Beyond code – AI across departments",
+  },
+  {
+    week: 8,
+    theme: "Capstone",
+    focus: "Full SDLC capstone project",
   },
 ];
 
@@ -72,15 +82,16 @@ export function OverviewSection() {
         <Card>
           <CardContent className="p-6">
             <p className="mb-4 text-lg leading-relaxed">
-              This 6-week intensive program is designed for software developers who want to integrate AI tools into
-              their development workflow. Each week builds on the previous, taking you from basic tool setup through
-              advanced AI-assisted development practices across the entire software development lifecycle.
+              This 8-week intensive program is designed for software developers, product managers, and designers who
+              want to integrate AI tools into their workflow. Each week builds on the previous, taking you from basic
+              tool setup through advanced AI-assisted practices across the entire software development lifecycle.
             </p>
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
-              The curriculum follows a progressive learning model: you'll start by understanding the fundamentals of how
-              AI tools work and what they're capable of, then gradually build more sophisticated workflows. By Week 3,
-              you'll be creating specialized agents for specific tasks. By Week 6, you'll orchestrate complex agentic
-              workflows that span multiple departments and business functions.
+              The curriculum follows a progressive learning model with role-specific paths: you'll start by
+              understanding the fundamentals of how AI tools work and what they're capable of, then gradually build more
+              sophisticated workflows. Week 1 provides a common foundation for all roles. Weeks 2-4 branch into
+              specialized paths (Developer, Product, Design). Weeks 5-8 bring everyone together for advanced topics,
+              cross-functional collaboration, and a comprehensive capstone project.
             </p>
             <p className="text-base text-foreground/80 leading-relaxed">
               <strong>What makes this curriculum unique:</strong> Rather than treating AI as a magic solution, we focus
@@ -113,8 +124,8 @@ export function OverviewSection() {
       </div>
 
       <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">6-Week Structure</h3>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <h3 className="mb-6 font-semibold text-2xl">8-Week Structure</h3>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {curriculumStructure.map((item) => (
             <Card key={`week-${item.week}`}>
               <CardHeader>

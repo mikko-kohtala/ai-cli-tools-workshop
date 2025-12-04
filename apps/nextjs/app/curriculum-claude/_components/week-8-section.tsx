@@ -84,15 +84,15 @@ const capstoneRequirements = [
   "Document and present",
 ];
 
-export function Week6Section() {
+export function Week8Section() {
   return (
-    <section className="mb-16 scroll-mt-16" id="week-6">
+    <section className="mb-16 scroll-mt-16" id="week-8">
       <div className="mb-6 flex items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-100 dark:bg-rose-900/30">
           <Trophy className="h-5 w-5 text-rose-600 dark:text-rose-400" />
         </div>
         <div>
-          <h2 className="font-bold text-4xl">Week 6: Deploy & Capstone</h2>
+          <h2 className="font-bold text-4xl">Week 8: Capstone & Deploy</h2>
           <p className="text-foreground/60">DevOps essentials, enterprise AI, and your capstone project</p>
         </div>
       </div>
@@ -101,8 +101,8 @@ export function Week6Section() {
         <CardContent className="p-6">
           <p className="text-lg leading-relaxed">
             The final week brings it all together: essential DevOps skills for deployment, understanding AI across
-            company processes, and a capstone project that demonstrates your full SDLC capabilities—including an agent
-            component.
+            company processes, and a capstone project that demonstrates your full capabilities—including an agent
+            component tailored to your learning path.
           </p>
         </CardContent>
       </Card>
@@ -134,7 +134,7 @@ export function Week6Section() {
               <Container className="h-5 w-5" />
               DevOps Essentials
             </CardTitle>
-            <CardDescription>What every developer needs to deploy</CardDescription>
+            <CardDescription>What every team member needs to deploy</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -234,12 +234,12 @@ export function Week6Section() {
               <FileCheck className="h-5 w-5" />
               Capstone Project
             </CardTitle>
-            <CardDescription>Demonstrate mastery across the full SDLC—with agents</CardDescription>
+            <CardDescription>Demonstrate mastery from your learning path—with agents</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-foreground/70">
-              Build a small but meaningful feature or tool. The capstone must include an agent component or agentic
-              workflow, demonstrating your ability to build autonomous AI systems:
+              Build a project relevant to your role. The capstone must include an agent component or agentic workflow,
+              demonstrating your ability to build autonomous AI systems:
             </p>
             <div className="grid gap-2 md:grid-cols-2">
               {capstoneRequirements.map((req, i) => (
@@ -263,7 +263,7 @@ export function Week6Section() {
           <ul className="mt-2 list-inside list-disc space-y-1 text-foreground/70 text-sm">
             <li>Where did AI and agents help the most? The least?</li>
             <li>What patterns worked best for your workflow?</li>
-            <li>How will you design agents for your team's needs?</li>
+            <li>How will you apply what you learned to your team?</li>
             <li>What guardrails are essential for your domain?</li>
           </ul>
         </div>
@@ -272,7 +272,7 @@ export function Week6Section() {
         <div className="rounded-lg border-2 border-rose-300 border-dashed bg-rose-50/50 p-4 dark:border-rose-700 dark:bg-rose-950/20">
           <p className="mb-2 font-semibold text-rose-700 dark:text-rose-400">Curriculum Outcome</p>
           <p className="text-foreground/70 text-sm">
-            You are now an <strong>AI-augmented developer</strong> who can build agents. You understand agentic
+            You are now an <strong>AI-augmented professional</strong> who can build agents. You understand agentic
             workflows, the Claude Agent SDK, and how to deploy autonomous systems safely. You're ready to help your team
             adopt AI-assisted practices and build custom agents for your domain.
           </p>

@@ -49,22 +49,22 @@ export function AgentPathSection() {
           <div className="space-y-2 rounded-md border bg-slate-50 p-4 text-xs dark:border-slate-800 dark:bg-slate-900/60">
             <div className="mb-1 flex items-center gap-2 font-semibold text-slate-700 uppercase tracking-wide dark:text-slate-200">
               <Layers className="h-4 w-4" />
-              Week 5
+              Weeks 5–6
             </div>
             <p className="text-muted-foreground">
-              Explore how agents fit into CI/CD and operations: scheduled jobs, event-driven workflows, and safe
-              guardrails around infrastructure and secrets.
+              Explore how agents fit into CI/CD, data workflows, and operations: scheduled jobs, event-driven workflows,
+              and safe guardrails around infrastructure, data, and secrets.
             </p>
           </div>
 
           <div className="space-y-2 rounded-md border bg-slate-50 p-4 text-xs dark:border-slate-800 dark:bg-slate-900/60">
             <div className="mb-1 flex items-center gap-2 font-semibold text-slate-700 uppercase tracking-wide dark:text-slate-200">
               <Bot className="h-4 w-4" />
-              Week 6
+              Weeks 7–8
             </div>
             <p className="text-muted-foreground">
-              Design a capstone that uses agents to support a real company process (e.g., reporting, documentation, or
-              operations), with clear ownership and human review.
+              Design and run a capstone that uses agents to support a real company process (e.g., reporting,
+              documentation, or operations), with clear ownership, runbooks, and human review.
             </p>
           </div>
         </div>

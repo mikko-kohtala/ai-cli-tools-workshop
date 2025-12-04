@@ -12,17 +12,23 @@ import { Week4Section } from "./_components/07-week4-section";
 import { Week5Section } from "./_components/08-week5-section";
 import { Week6Section } from "./_components/09-week6-section";
 import { TableOfContents } from "./_components/10-table-of-contents";
+import { Week7Section } from "./_components/10-week7-section";
+import { Week8Section } from "./_components/11-week8-section";
+import { LearningPathsSection } from "./_components/12-learning-paths-section";
 
 const sections = [
   { id: "intro", title: "Introduction" },
   { id: "overview", title: "Curriculum Overview" },
   { id: "daily-structure", title: "Daily Structure" },
+  { id: "learning-paths", title: "Learning Paths" },
   { id: "week1", title: "Week 1: Foundations & Tools" },
   { id: "week2", title: "Week 2: Requirements & Architecture" },
   { id: "week3", title: "Week 3: Implementation Workflows" },
   { id: "week4", title: "Week 4: Testing & Quality" },
   { id: "week5", title: "Week 5: DevOps & Deployment" },
-  { id: "week6", title: "Week 6: Company Processes & Capstone" },
+  { id: "week6", title: "Week 6: Advanced Topics" },
+  { id: "week7", title: "Week 7: Company Processes" },
+  { id: "week8", title: "Week 8: Capstone" },
 ];
 
 const SCROLL_OFFSET = 100;
@@ -70,6 +76,8 @@ export default function CurriculumPage() {
           <Separator className="my-16" />
           <DailyStructureSection />
           <Separator className="my-16" />
+          <LearningPathsSection />
+          <Separator className="my-16" />
           <Week1Section />
           <Separator className="my-16" />
           <Week2Section />
@@ -81,6 +89,10 @@ export default function CurriculumPage() {
           <Week5Section />
           <Separator className="my-16" />
           <Week6Section />
+          <Separator className="my-16" />
+          <Week7Section />
+          <Separator className="my-16" />
+          <Week8Section />
         </div>
       </div>
 

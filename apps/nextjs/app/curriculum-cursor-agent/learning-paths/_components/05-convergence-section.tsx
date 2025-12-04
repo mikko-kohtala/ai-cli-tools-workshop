@@ -31,28 +31,28 @@ export function ConvergenceSection() {
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/30">
           <Network className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
         </div>
-        <h2 className="font-bold text-4xl">Week 5: Path Convergence</h2>
+        <h2 className="font-bold text-4xl">Weeks 5-8: Convergence & Capstone</h2>
       </div>
 
       <div className="mb-8 space-y-6">
         <Card>
           <CardContent className="p-6">
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
-              Week 5 brings all paths back together. After three weeks of specialized learning, everyone reconvenes to
-              learn cross-functional collaboration and shared workflows. This convergence is crucial because real-world
-              projects require multiple roles working together.
+              Weeks 5-8 bring all paths back together. After three weeks of specialized learning, everyone reconvenes to
+              learn advanced topics, cross-functional collaboration, and shared workflows. This convergence is crucial
+              because real-world projects require multiple roles working together.
             </p>
             <p className="mb-4 text-base text-foreground/80 leading-relaxed">
               <strong>Why convergence matters:</strong> While specialized paths ensure deep role-specific learning, most
-              real-world projects require collaboration across functions. Week 5 teaches you how to work effectively
+              real-world projects require collaboration across functions. Weeks 5-8 teach you how to work effectively
               with team members from other roles, understand their AI workflows, and create shared processes that
               leverage everyone's expertise.
             </p>
             <p className="text-base text-foreground/80 leading-relaxed">
-              <strong>Learning approach:</strong> Week 5 combines lectures, workshops, and hands-on exercises where
+              <strong>Learning approach:</strong> Weeks 5-8 combine lectures, workshops, and hands-on exercises where
               participants from different paths work together on cross-functional scenarios. You'll learn each other's
-              tools, workflows, and perspectives, building the foundation for effective collaboration in Week 6's
-              capstone projects.
+              tools, workflows, and perspectives, building the foundation for effective collaboration in the final
+              capstone project.
             </p>
           </CardContent>
         </Card>
@@ -76,30 +76,30 @@ export function ConvergenceSection() {
 
       <Card className="bg-indigo-50 dark:bg-indigo-950/30">
         <CardContent className="p-6">
-          <h3 className="mb-3 font-semibold text-xl">Week 5 Activities</h3>
+          <h3 className="mb-3 font-semibold text-xl">Weeks 5-8 Structure</h3>
           <ul className="space-y-2 text-base">
             <li className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
               <span>
-                <strong>Tool demos:</strong> Each path presents their specialized tools and workflows to the group
+                <strong>Week 5:</strong> DevOps & Deployment - AI across build, deploy & run
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
               <span>
-                <strong>Cross-functional workshops:</strong> Mixed teams work on scenarios requiring multiple roles
+                <strong>Week 6:</strong> Advanced Topics - Advanced agentic workflows and integration
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
               <span>
-                <strong>Shared workflow design:</strong> Teams create agentic workflows that span multiple functions
+                <strong>Week 7:</strong> Company Processes - AI across departments and cross-functional collaboration
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400" />
               <span>
-                <strong>Capstone preparation:</strong> Form teams and begin planning Week 6 capstone projects
+                <strong>Week 8:</strong> Capstone - Full SDLC capstone project with cross-functional teams
               </span>
             </li>
           </ul>

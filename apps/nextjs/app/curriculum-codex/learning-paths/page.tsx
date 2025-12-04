@@ -1,7 +1,7 @@
-import { BarChart3, Code2, Palette, Share2, Users } from "lucide-react";
+import { Code2, Palette, Share2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const weekLabels = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"] as const;
+const weekLabels = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8"] as const;
 
 type WeekLabel = (typeof weekLabels)[number];
 
@@ -30,8 +30,12 @@ const paths: LearningPath[] = [
         "Use AI to turn feature ideas into user stories, acceptance criteria, and simple architecture sketches.",
       "Week 3": "Pair-program with AI to implement core features, refactor existing code, and keep tests green.",
       "Week 4": "Lean on AI for tests, debugging, and code review while you stay accountable for quality.",
-      "Week 5": "Collaborate with other paths to ship a shared feature, using AI and simple agents in CI or tooling.",
-      "Week 6": "Complete a capstone feature and reflect on how you will use AI and agents in your daily dev workflow.",
+      "Week 5": "Lean on AI and simple agents for DevOps, data tasks, and light-weight automation.",
+      "Week 6": "Collaborate with other paths to ship a shared feature across the SDLC.",
+      "Week 7":
+        "Use AI to improve cross-functional workflows, handoffs, and shared documentation with product and design.",
+      "Week 8":
+        "Complete a capstone feature or internal tool and reflect on how you will use AI and agents in your daily dev workflow.",
     },
   },
   {
@@ -47,8 +51,10 @@ const paths: LearningPath[] = [
       "Week 3": "Refine specs and acceptance criteria with AI; use it to simulate edge cases and user scenarios.",
       "Week 4": "Draft release notes, launch checklists, and experiment ideas with AI, then tighten them manually.",
       "Week 5":
-        "Coordinate the shared feature across all paths, using AI for planning, status updates, and stakeholder comms.",
-      "Week 6":
+        "Coordinate with developers and designers on DevOps, data, and operational questions using AI for planning and status updates.",
+      "Week 6": "Shape a shared feature with clear scope, success metrics, and stakeholder comms supported by AI.",
+      "Week 7": "Use AI to improve discovery artefacts, UX narratives, and cross-functional decision-making.",
+      "Week 8":
         "Define a capstone internal or external feature and document how AI will support your product practice.",
     },
   },
@@ -66,45 +72,12 @@ const paths: LearningPath[] = [
         "Generate UI variations and low-fidelity prototype ideas with AI, then refine and critique them yourself.",
       "Week 4": "Use AI to test clarity of flows, improve microcopy, and surface accessibility or usability issues.",
       "Week 5":
-        "Shape the UX of the shared feature, using AI to support flows, copy, and simple prototype descriptions.",
-      "Week 6": "Create a capstone UX narrative showing how AI supports your design process from idea to handoff.",
-    },
-  },
-  {
-    id: "sales",
-    name: "Sales & customer path",
-    roleLabel: "Sales, CS & go-to-market",
-    icon: Users,
-    colorClass: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-    description: "Focus on messaging, outreach, preparation, and customer insight using AI safely.",
-    weeks: {
-      "Week 1":
-        "Foundations: set up tools, learn safe prompting, and pick a product or offer to use as a running example.",
-      "Week 2": "Use AI to describe ICPs, draft outreach sequences, and tailor messaging for key segments.",
-      "Week 3":
-        "Practice with AI as a role-play partner for calls, demos, and objection handling; refine question playbooks.",
-      "Week 4": "Feed meeting notes or call summaries (sanitised) to AI to extract insights and next-step suggestions.",
-      "Week 5":
-        "Prepare story, talk tracks, and enablement assets for the shared feature in collaboration with other paths.",
-      "Week 6": "Design a capstone workflow where AI helps you prepare, run, and follow up on customer conversations.",
-    },
-  },
-  {
-    id: "data-ops",
-    name: "Data & ops path",
-    roleLabel: "Data, analytics & operations",
-    icon: BarChart3,
-    colorClass: "bg-slate-200 text-slate-800 dark:bg-slate-800/60 dark:text-slate-100",
-    description: "Focus on questions, metrics, dashboards, and operational runbooks with AI support.",
-    weeks: {
-      "Week 1": "Foundations: align on AI/agents language, set up tools, and pick a simple analytics or ops scenario.",
-      "Week 2": "Use AI to turn business questions into metrics, events, and initial dashboard or report designs.",
-      "Week 3":
-        "Generate and review example queries or analytics code with AI, and iterate on a small dashboard or report.",
-      "Week 4": "Use AI to debug data issues, annotate dashboards, and draft metric definitions and checklists.",
-      "Week 5":
-        "Define metrics, logs, and checks for the shared feature, with AI helping design instrumentation and alerts.",
-      "Week 6": "Create a capstone where AI supports an ongoing analytics or operations process end-to-end.",
+        "Shape the UX of DevOps, analytics, and operational surfaces, using AI to support flows, copy, and simple prototype descriptions.",
+      "Week 6":
+        "Create a UX narrative around shared features and operational surfaces, showing how AI supports your design process from idea to handoff.",
+      "Week 7": "Use AI to support collaborative design reviews, specs, and cross-functional documentation.",
+      "Week 8":
+        "Create a capstone UX narrative and simple prototype showing how AI supports your design process from idea to handoff.",
     },
   },
 ];
@@ -117,13 +90,13 @@ export default function LearningPathsPage() {
           <div className="mx-auto max-w-4xl space-y-4">
             <h1 className="font-bold text-3xl md:text-4xl">Role-based Learning Paths</h1>
             <p className="text-muted-foreground text-sm md:text-base">
-              The core curriculum runs for 6 weeks. Week 1 gives everyone the same foundations in AI, agents, and tools.
-              Weeks 2–4 branch into role-specific paths, and Weeks 5–6 bring the group back together around a shared
+              The core curriculum runs for 8 weeks. Week 1 gives everyone the same foundations in AI, agents, and tools.
+              Weeks 2–6 branch into role-specific paths, and Weeks 7–8 bring the group back together around a shared
               project and capstone.
             </p>
             <p className="text-muted-foreground text-xs md:text-sm">
-              You can run this with mixed teams—developers, product, design, sales, and data/ops—who share one project
-              but follow different emphasis in the middle of the program.
+              You can run this with mixed teams—developers, product, and design—who share one project but follow
+              different emphasis in the middle of the program.
             </p>
           </div>
         </section>
@@ -157,9 +130,9 @@ export default function LearningPathsPage() {
 
         <section className="w-full px-8">
           <div className="mx-auto max-w-5xl space-y-4">
-            <h2 className="font-semibold text-xl">6-week branching paths</h2>
+            <h2 className="font-semibold text-xl">8-week branching paths</h2>
             <p className="text-muted-foreground text-sm">
-              Week 1 and Weeks 5–6 are shared across all roles. Weeks 2–4 pivot into distinct paths so each role can
+              Week 1 and Weeks 7–8 are shared across all roles. Weeks 2–6 pivot into distinct paths so each role can
               practice AI and agents directly in their day-to-day work, then re-align on a shared feature and capstone.
             </p>
             <div className="overflow-x-auto rounded-lg border bg-white dark:border-slate-800 dark:bg-slate-950/40">
@@ -195,8 +168,8 @@ export default function LearningPathsPage() {
                       </div>
                       {weekLabels.map((week, index) => {
                         const text = path.weeks[week];
-                        const isBranchWeek = index >= 1 && index <= 3; // Weeks 2–4
-                        const sharedLabel = index === 0 || index >= 4;
+                        const isBranchWeek = index >= 1 && index <= 5; // Weeks 2–6
+                        const sharedLabel = index === 0 || index >= 6; // Week 1 and Weeks 7–8
                         return (
                           <div
                             className={`flex flex-1 flex-col gap-1 border-slate-100 border-r px-3 py-3 text-[10px] leading-snug last:border-r-0 dark:border-slate-800 ${

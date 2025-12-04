@@ -10,12 +10,12 @@ export function LearningPathsHero() {
         Role-Based Learning Paths
       </h1>
       <p className="mx-auto max-w-2xl text-gray-600 text-lg dark:text-gray-400">
-        One curriculum, five specialized tracks. Everyone starts together, diverges into role-specific learning, then
+        One curriculum, three specialized tracks. Everyone starts together, diverges into role-specific learning, then
         converges to build with AI agents.
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">
-        {["Developers", "Designers", "Product", "Sales & Marketing", "Operations"].map((role) => (
+        {["Developers", "Product", "Designers"].map((role) => (
           <span
             className="rounded-full bg-slate-100 px-4 py-2 font-medium text-slate-700 text-sm dark:bg-slate-800 dark:text-slate-300"
             key={role}

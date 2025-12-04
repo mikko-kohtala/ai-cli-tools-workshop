@@ -75,7 +75,7 @@ export function ToolsAndCompanyImpactSection() {
               <span className="font-semibold">Capstone focus</span>
             </div>
             <p>
-              In the final week, each participant designs a capstone feature or internal tool, following a mini
+              In the final weeks, each participant designs a capstone feature or internal tool, following a mini
               end-to-end SDLC with AI support—from requirements through deployment and documentation.
             </p>
           </div>
