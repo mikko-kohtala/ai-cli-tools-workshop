@@ -58,23 +58,63 @@ export function Week3Section() {
       <div className="mb-8 space-y-6">
         <Card>
           <CardContent className="p-6">
-            <h3 className="mb-3 font-semibold text-xl">Objectives</h3>
-            <ul className="space-y-2 text-base">
-              <li className="flex items-start gap-2">
+            <p className="mb-4 text-base text-foreground/80 leading-relaxed">
+              Week 3 is where you transition from planning to building. This is when AI tools really shine—generating
+              code, refactoring, and helping you navigate complex codebases. You'll learn to integrate AI seamlessly
+              into your daily coding workflow while maintaining code quality and architectural integrity.
+            </p>
+            <h3 className="mb-4 font-semibold text-xl">Week 3 Objectives</h3>
+            <p className="mb-4 text-foreground/70 text-sm leading-relaxed">
+              By the end of this week, you should be able to:
+            </p>
+            <ul className="space-y-3 text-base">
+              <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
-                <span>Incorporate AI into daily coding loops</span>
+                <div>
+                  <span className="font-medium">Incorporate AI into daily coding loops:</span>
+                  <span className="text-foreground/70">
+                    {" "}
+                    Make AI tools a natural part of your development workflow. Learn when to use AI for different types
+                    of tasks (boilerplate generation, refactoring, debugging, documentation). Develop muscle memory for
+                    effective AI-assisted coding patterns.
+                  </span>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
-                <span>Use CLI tools for refactoring, code generation, and navigation</span>
+                <div>
+                  <span className="font-medium">Use CLI tools for refactoring, code generation, and navigation:</span>
+                  <span className="text-foreground/70">
+                    {" "}
+                    Master CLI commands for common tasks: editing files, generating code, refactoring patterns, and
+                    navigating codebases. Learn tool-specific workflows and shortcuts that accelerate development
+                    without sacrificing quality.
+                  </span>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
-                <span>Learn how to feed context effectively (files, error outputs, partial diffs)</span>
+                <div>
+                  <span className="font-medium">Learn how to feed context effectively:</span>
+                  <span className="text-foreground/70">
+                    {" "}
+                    Understand what context to provide (files, error outputs, partial diffs, architecture docs) and how
+                    much. Learn to summarize large codebases, identify relevant files, and structure context for optimal
+                    AI performance. Master the art of context management.
+                  </span>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:bg-purple-400" />
-                <span>Build advanced agentic workflows for complex implementation tasks</span>
+                <div>
+                  <span className="font-medium">Build advanced agentic workflows:</span>
+                  <span className="text-foreground/70">
+                    {" "}
+                    Create specialized agents for implementation tasks (API builders, database agents, frontend
+                    components). Chain multiple agents together for complex workflows. Learn to orchestrate agentic
+                    systems that handle multi-step implementation tasks autonomously.
+                  </span>
+                </div>
               </li>
             </ul>
           </CardContent>
@@ -95,7 +135,7 @@ export function Week3Section() {
                   <CardTitle className="text-lg">{topic.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-foreground/70 text-sm">{topic.description}</p>
+                  <p className="text-foreground/80 text-sm leading-relaxed">{topic.description}</p>
                 </CardContent>
               </Card>
             );
@@ -104,20 +144,36 @@ export function Week3Section() {
       </div>
 
       <div className="mb-12">
-        <h3 className="mb-6 font-semibold text-2xl">Project Focus</h3>
+        <h3 className="mb-6 font-semibold text-2xl">Week 3 Project Focus</h3>
         <Card className="bg-purple-50 dark:bg-purple-950/30">
           <CardContent className="p-6">
-            <p className="mb-4 text-base">
-              This week, you'll implement the core features of your project using AI assistance:
+            <p className="mb-4 text-base leading-relaxed">
+              This week, you'll implement the core features of your project using AI assistance. This is where you put
+              everything you've learned into practice—using AI to generate code while maintaining quality and
+              architectural integrity.
             </p>
-            <ul className="space-y-2">
+            <p className="mb-4 text-foreground/70 text-sm leading-relaxed">
+              <strong>Implementation strategy:</strong> Use AI to generate initial implementations, then review,
+              refactor, and improve. Don't accept the first AI suggestion—iterate until the code meets your standards.
+              This process teaches you to work effectively with AI while maintaining code quality.
+            </p>
+            <h4 className="mb-3 font-semibold text-base">Implementation Tasks:</h4>
+            <ul className="space-y-3">
               {projectFocus.map((item) => (
-                <li className="flex items-start gap-2 text-sm" key={item}>
+                <li className="flex items-start gap-3 text-sm" key={item}>
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-600 dark:text-purple-400" />
-                  <span>{item}</span>
+                  <span className="leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
+            <div className="mt-6 rounded-lg bg-purple-100 p-4 dark:bg-purple-900/30">
+              <p className="mb-2 font-semibold text-sm">💡 Pro Tip:</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Create agents for repetitive implementation patterns (e.g., API endpoint agent, database model agent).
+                Once you've built these agents, you can reuse them across projects, dramatically accelerating future
+                development while maintaining consistency.
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>

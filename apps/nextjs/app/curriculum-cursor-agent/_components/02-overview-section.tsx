@@ -71,10 +71,23 @@ export function OverviewSection() {
       <div className="mb-8 space-y-6">
         <Card>
           <CardContent className="p-6">
-            <p className="text-lg leading-relaxed">
+            <p className="mb-4 text-lg leading-relaxed">
               This 6-week intensive program is designed for software developers who want to integrate AI tools into
               their development workflow. Each week builds on the previous, taking you from basic tool setup through
               advanced AI-assisted development practices across the entire software development lifecycle.
+            </p>
+            <p className="mb-4 text-base text-foreground/80 leading-relaxed">
+              The curriculum follows a progressive learning model: you'll start by understanding the fundamentals of how
+              AI tools work and what they're capable of, then gradually build more sophisticated workflows. By Week 3,
+              you'll be creating specialized agents for specific tasks. By Week 6, you'll orchestrate complex agentic
+              workflows that span multiple departments and business functions.
+            </p>
+            <p className="text-base text-foreground/80 leading-relaxed">
+              <strong>What makes this curriculum unique:</strong> Rather than treating AI as a magic solution, we focus
+              on building your expertise as an AI-augmented developer. You'll learn when to trust AI suggestions, when
+              to verify, and how to maintain code quality and architectural integrity while leveraging AI's
+              capabilities. Every concept is reinforced through hands-on projects that mirror real-world development
+              scenarios.
             </p>
           </CardContent>
         </Card>
@@ -92,7 +105,7 @@ export function OverviewSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/70 text-sm">{goal.description}</p>
+                <p className="text-foreground/80 text-sm leading-relaxed">{goal.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -109,7 +122,7 @@ export function OverviewSection() {
                 <CardDescription className="font-medium text-base">{item.theme}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/70 text-sm">{item.focus}</p>
+                <p className="text-foreground/80 text-sm leading-relaxed">{item.focus}</p>
               </CardContent>
             </Card>
           ))}
@@ -118,11 +131,26 @@ export function OverviewSection() {
 
       <Card className="bg-blue-50 dark:bg-blue-950/30">
         <CardContent className="p-6">
-          <h3 className="mb-3 font-semibold text-xl">Time Commitment</h3>
-          <p className="text-base text-foreground/80 leading-relaxed">
+          <h3 className="mb-3 font-semibold text-xl">Time Commitment & Structure</h3>
+          <p className="mb-4 text-base text-foreground/80 leading-relaxed">
             Each weekday includes <strong>1–2 hours</strong> of focused learning and reading, followed by hands-on tasks
             for the rest of the day. This structure ensures you understand concepts deeply before applying them
             practically.
+          </p>
+          <p className="mb-4 text-base text-foreground/80 leading-relaxed">
+            <strong>Learning Block (1–2 hours):</strong> Start each day with focused reading, watching tutorials, or
+            exploring documentation. This is when you absorb new concepts, understand tool capabilities, and see
+            examples of best practices. Take notes, experiment with simple examples, and ask questions.
+          </p>
+          <p className="mb-4 text-base text-foreground/80 leading-relaxed">
+            <strong>Deep Work Block (Rest of Day):</strong> Apply what you've learned to your ongoing project. This is
+            where real learning happens—through practice, mistakes, and iteration. Use AI tools heavily, but always with
+            explicit checkpoints for human review and verification.
+          </p>
+          <p className="text-base text-foreground/80 leading-relaxed">
+            <strong>Wrap-up (15–30 minutes):</strong> End each day by reflecting on what worked, what didn't, and what
+            you'll do differently tomorrow. Document successful prompts, note where AI struggled, and update your
+            learning journal. This reflection time is crucial for building your personal AI development playbook.
           </p>
         </CardContent>
       </Card>

@@ -84,7 +84,7 @@ export function Week5Section() {
                   <CardTitle className="text-lg">{topic.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-foreground/70 text-sm">{topic.description}</p>
+                  <p className="text-foreground/80 text-sm leading-relaxed">{topic.description}</p>
                 </CardContent>
               </Card>
             );

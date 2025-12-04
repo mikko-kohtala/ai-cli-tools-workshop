@@ -122,7 +122,7 @@ export function Week6Section() {
                   <CardTitle className="text-lg">{topic.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-foreground/70 text-sm">{topic.description}</p>
+                  <p className="text-foreground/80 text-sm leading-relaxed">{topic.description}</p>
                 </CardContent>
               </Card>
             );
@@ -143,7 +143,7 @@ export function Week6Section() {
                   </div>
                   <div className="flex-1">
                     <h4 className="mb-1 font-semibold text-base">{step.title}</h4>
-                    <p className="text-foreground/70 text-sm">{step.description}</p>
+                    <p className="text-foreground/80 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}

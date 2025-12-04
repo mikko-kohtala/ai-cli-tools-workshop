@@ -27,6 +27,7 @@ export function WeekSections() {
           <li>Planning: milestones, tickets, estimates; AI-drafted backlog refined by humans.</li>
           <li>Architecture: propose options, compare trade-offs; generate diagrams and data models.</li>
           <li>Agentic workflows: task decomposition, role definitions, routing prompts, review gates.</li>
+          <li>Agent safety: tool permissions, guardrails, escalation paths to humans.</li>
           <li>ADRs: draft decisions with AI, then edit; record constraints and alternatives.</li>
           <li>Deliverables: design doc, chosen architecture, initial backlog, agent workflow sketch.</li>
         </ul>
