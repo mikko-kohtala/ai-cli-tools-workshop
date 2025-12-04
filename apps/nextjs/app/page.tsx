@@ -131,7 +131,7 @@ export default function Page() {
         </div>
 
         {/* Main Navigation */}
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           <Link
             className="group relative rounded-lg border-2 p-6 transition-all hover:border-purple-300 hover:bg-purple-50/50 dark:hover:border-purple-800 dark:hover:bg-purple-950/20"
             href="/presentation"
@@ -155,6 +155,21 @@ export default function Page() {
             <div className="space-y-2">
               <h2 className="font-semibold text-2xl tracking-tight">Workshop Tasks</h2>
               <p className="text-muted-foreground">1-hour hands-on exercises with Codex CLI and practical projects</p>
+            </div>
+          </Link>
+
+          <Link
+            className="group relative rounded-lg border-2 p-6 transition-all hover:border-emerald-300 hover:bg-emerald-50/50 dark:hover:border-emerald-800 dark:hover:bg-emerald-950/20"
+            href="/curriculum"
+          >
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 transition-colors group-hover:bg-emerald-200 dark:bg-emerald-900/30 dark:group-hover:bg-emerald-900/50">
+              <Sparkles className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <div className="space-y-2">
+              <h2 className="font-semibold text-2xl tracking-tight">6-Week Curriculum</h2>
+              <p className="text-muted-foreground">
+                High-level program for learning AI-assisted development across the full SDLC.
+              </p>
             </div>
           </Link>
         </div>

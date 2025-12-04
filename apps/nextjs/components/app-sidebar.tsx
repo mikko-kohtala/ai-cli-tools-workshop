@@ -53,6 +53,11 @@ const data = {
         },
       ],
     },
+    {
+      title: "Curriculum",
+      url: "/curriculum",
+      icon: IconPresentation,
+    },
   ],
 };
 
