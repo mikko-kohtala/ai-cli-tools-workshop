@@ -1,8 +1,9 @@
 /** biome-ignore-all lint/a11y/useValidAnchor: TODO: Fix this */
 "use client";
 
-import { IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
+import { IconBook, IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type * as React from "react";
 import {
   Sidebar,
@@ -18,45 +19,49 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
-const data = {
-  navMain: [
-    {
-      title: "Home",
-      url: "/",
-      icon: IconHome,
-    },
-    {
-      title: "Presentation",
-      url: "/presentation",
-      icon: IconPresentation,
-    },
-    {
-      title: "Tasks",
-      url: "/tasks",
-      icon: IconCheckbox,
-      items: [
-        {
-          title: "Task 1",
-          url: "/tasks/1",
-        },
-        {
-          title: "Task 2",
-          url: "/tasks/2",
-        },
-        {
-          title: "Task 3",
-          url: "/tasks/3",
-        },
-        {
-          title: "Task 4",
-          url: "/tasks/4",
-        },
-      ],
-    },
+const navMain = [
+  {
+    title: "Home",
+    url: "/",
+    icon: IconHome,
+  },
+  {
+    title: "Presentation",
+    url: "/presentation",
+    icon: IconPresentation,
+  },
+  {
+    title: "Tasks",
+    url: "/tasks",
+    icon: IconCheckbox,
+    items: [
+      { title: "Task 1", url: "/tasks/1" },
+      { title: "Task 2", url: "/tasks/2" },
+      { title: "Task 3", url: "/tasks/3" },
+      { title: "Task 4", url: "/tasks/4" },
+    ],
+  },
+];
+
+const curriculumNav = {
+  title: "Curriculum",
+  url: "/curriculum",
+  icon: IconBook,
+  items: [
+    { title: "Claude", url: "/curriculum-claude" },
+    { title: "Codex", url: "/curriculum-codex" },
+    { title: "Codexmax", url: "/curriculum-codexmax" },
+    { title: "Copilot", url: "/curriculum-copilot" },
+    { title: "Cursor Agent", url: "/curriculum-cursor-agent" },
   ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname();
+  const showCurriculum = pathname.startsWith("/curriculum");
+
+  const navItems = showCurriculum ? [...navMain, curriculumNav] : navMain;
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -75,7 +80,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {data.navMain.map((item) => {
+              {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <SidebarMenuItem key={item.title}>

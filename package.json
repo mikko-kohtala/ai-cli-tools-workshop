@@ -10,7 +10,8 @@
     "format": "biome format --write .",
     "typecheck": "turbo typecheck",
     "check": "turbo check",
-    "clean": "turbo clean && rm -rf node_modules .turbo"
+    "clean": "turbo clean && rm -rf node_modules .turbo",
+    "copy-curriculum": "tsx scripts/copy-curriculum.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.7",

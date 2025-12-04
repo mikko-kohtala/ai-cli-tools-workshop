@@ -107,15 +107,21 @@ export default function Task2Page() {
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">✅ JSON/YAML Validator CLI</p>
-              <p className="text-muted-foreground text-xs">Validate and format config files with helpful error messages</p>
+              <p className="text-muted-foreground text-xs">
+                Validate and format config files with helpful error messages
+              </p>
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">📝 TODO Comment Extractor</p>
-              <p className="text-muted-foreground text-xs">Scan codebase for TODO/FIXME comments and generate a report</p>
+              <p className="text-muted-foreground text-xs">
+                Scan codebase for TODO/FIXME comments and generate a report
+              </p>
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">🔐 ENV File Generator</p>
-              <p className="text-muted-foreground text-xs">Create .env templates from .env.example with inline descriptions</p>
+              <p className="text-muted-foreground text-xs">
+                Create .env templates from .env.example with inline descriptions
+              </p>
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">📋 Changelog Generator</p>
@@ -143,7 +149,9 @@ export default function Task2Page() {
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">📊 Code Stats Reporter</p>
-              <p className="text-muted-foreground text-xs">Generate statistics about codebase (LOC, file types, etc.)</p>
+              <p className="text-muted-foreground text-xs">
+                Generate statistics about codebase (LOC, file types, etc.)
+              </p>
             </div>
             <div className="rounded-lg border p-3">
               <p className="mb-1 font-semibold text-sm">🔍 Log File Analyzer</p>
