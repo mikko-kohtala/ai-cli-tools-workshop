@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/a11y/useValidAnchor: TODO: Fix this */
 "use client";
 
-import { IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation, IconGitBranch } from "@tabler/icons-react";
+import { IconCheckbox, IconGitBranch, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";
 import Link from "next/link";
 import type * as React from "react";
 import {
