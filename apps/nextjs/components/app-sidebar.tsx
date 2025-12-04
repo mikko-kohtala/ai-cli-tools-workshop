@@ -34,6 +34,16 @@ const data = {
       title: "Curriculum",
       url: "/curriculum",
       icon: IconSchool,
+      items: [
+        {
+          title: "Overview",
+          url: "/curriculum",
+        },
+        {
+          title: "Learning Paths",
+          url: "/curriculum/learning-paths",
+        },
+      ],
     },
     {
       title: "Tasks",
