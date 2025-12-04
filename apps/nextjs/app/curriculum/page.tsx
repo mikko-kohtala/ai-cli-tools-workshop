@@ -207,7 +207,9 @@ export default function CurriculumPage() {
             >
               6-week AI SDLC curriculum
             </Badge>
-            <h1 className="font-bold text-4xl leading-tight md:text-5xl">Bring AI agents into every stage of the SDLC</h1>
+            <h1 className="font-bold text-4xl leading-tight md:text-5xl">
+              Bring AI agents into every stage of the SDLC
+            </h1>
             <p className="max-w-3xl text-lg text-muted-foreground">
               Designed for experienced software developers who want practical, repeatable AI and agentic workflows—from
               ideation to operations—with daily prompts, safety guardrails, and a capstone that mirrors real product
@@ -272,7 +274,7 @@ export default function CurriculumPage() {
                 </div>
                 <CardTitle className="text-base">{pattern.title}</CardTitle>
               </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">{pattern.description}</CardContent>
+              <CardContent className="text-muted-foreground text-sm">{pattern.description}</CardContent>
             </Card>
           ))}
         </div>
