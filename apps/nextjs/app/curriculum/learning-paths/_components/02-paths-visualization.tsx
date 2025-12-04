@@ -6,7 +6,7 @@ export function PathsVisualization() {
         Visualization: Pivot Weeks 2–4, Merge in Week 5
       </h2>
       <div className="mt-4 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-slate-900">
-        <svg aria-labelledby="pathsTitle" role="img" className="h-auto w-full" viewBox="0 0 800 240">
+        <svg aria-labelledby="pathsTitle" className="h-auto w-full" role="img" viewBox="0 0 800 240">
           <title id="pathsTitle">Learning paths timeline: branch in weeks 2–4 and merge in week 5</title>
           {/* Weeks labels */}
           <g fill="#9CA3AF" fontSize="12">
