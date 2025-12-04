@@ -26,6 +26,11 @@ const data = {
       icon: IconHome,
     },
     {
+      title: "Curriculum",
+      url: "/curriculum",
+      icon: IconPresentation,
+    },
+    {
       title: "Presentation",
       url: "/presentation",
       icon: IconPresentation,
