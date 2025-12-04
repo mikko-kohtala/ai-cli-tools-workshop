@@ -7,7 +7,7 @@ export function DailyStructureSection() {
           <h4 className="font-semibold text-gray-800 dark:text-gray-300">Learning (1–2h)</h4>
           <ul className="list-disc space-y-2 pl-6">
             <li>Concept brief: core idea, when to use it, pitfalls.</li>
-            <li>Demo: 2–3 prompts or CLI commands with expected outputs.</li>
+            <li>Demo: 2–3 prompts or CLI commands with expected outputs (include an agent or tool-use example when relevant).</li>
             <li>Reading: short docs/ADRs/examples; note constraints and best practices.</li>
           </ul>
         </div>
