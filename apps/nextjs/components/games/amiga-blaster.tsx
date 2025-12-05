@@ -252,7 +252,7 @@ export function AmigaBlaster() {
         return;
       }
 
-      frameCount++;
+      frameCount += 1;
 
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
       gradient.addColorStop(0, AMIGA_COLORS.shadow);
@@ -330,7 +330,7 @@ export function AmigaBlaster() {
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].x += particles[i].vx;
         particles[i].y += particles[i].vy;
-        particles[i].life--;
+        particles[i].life -= 1;
 
         const alpha = particles[i].life / 30;
         ctx.fillStyle = particles[i].color;
@@ -373,7 +373,7 @@ export function AmigaBlaster() {
               { x: enemies[i].x, y: enemies[i].y, width: 28, height: 28 }
             )
           ) {
-            enemies[i].health--;
+            enemies[i].health -= 1;
             bullets.splice(j, 1);
             if (enemies[i].health <= 0) {
               score += 10;

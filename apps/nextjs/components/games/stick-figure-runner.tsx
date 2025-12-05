@@ -135,7 +135,7 @@ export function StickFigureRunner() {
 
         if (obstacles[i].x + obstacles[i].width < 0) {
           obstacles.splice(i, 1);
-          score++;
+          score += 1;
         }
       }
 
