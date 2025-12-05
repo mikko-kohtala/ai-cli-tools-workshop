@@ -4,20 +4,21 @@ import { SlideContainer } from "./slide-container";
 
 const goals = [
   {
-    title: "Master AI CLI Tools",
-    description: "Use Claude Code and Codex CLI confidently in daily coding",
+    title: "Accelerate Your Development",
+    description: "Ship production code faster with AI-powered workflows and intelligent code generation",
   },
   {
     title: "Build AI Agents",
-    description: "Create autonomous agents using the Claude Agent SDK",
+    description: "Create autonomous agents using the Claude Agent SDK that extend your development capabilities",
   },
   {
-    title: "Full SDLC Coverage",
-    description: "Apply AI and agents across requirements, design, implementation, testing, and deployment",
+    title: "Full Software Development Life Cycle",
+    description:
+      "Apply AI assistance across requirements, design, implementation, testing, code review, and deployment",
   },
   {
     title: "Work Safely",
-    description: "Handle security, governance, and agent boundaries properly",
+    description: "Handle security, governance, and agent boundaries properly with production-ready practices",
   },
 ];
 

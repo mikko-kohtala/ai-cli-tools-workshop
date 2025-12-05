@@ -31,6 +31,7 @@ export interface DivergentWeekData {
   title: string;
   subtitle: string;
   color: string;
+  overview: Record<LearningPath, string>;
   paths: Record<LearningPath, PathWeekContent>;
 }
 
@@ -161,6 +162,14 @@ export const divergentWeeks: DivergentWeekData[] = [
     title: "Domain Fundamentals",
     subtitle: "Building foundational skills for your role",
     color: "purple",
+    overview: {
+      developer:
+        "This week focuses on the core skills of AI-assisted coding. You'll master the describe-generate-refine cycle for code generation, understand how agents use tools, and learn to navigate and edit code across multiple files with AI assistance.",
+      product:
+        "This week introduces AI-assisted product management fundamentals including user story generation, PRD creation, and stakeholder interview synthesis.",
+      design:
+        "This week covers AI-assisted design research including research synthesis, persona creation, journey mapping, and competitive analysis.",
+    },
     paths: {
       developer: {
         objectives: [
@@ -295,6 +304,14 @@ export const divergentWeeks: DivergentWeekData[] = [
     title: "Core Workflows",
     subtitle: "Mastering essential techniques for your role",
     color: "indigo",
+    overview: {
+      developer:
+        "This week deepens your AI-assisted development skills with a focus on quality. You'll learn to generate comprehensive test suites, debug systematically with AI assistance, implement AI-powered code review workflows, and analyze application performance.",
+      product:
+        "This week covers strategic product workflows including competitive analysis, market research synthesis, OKR definition, and risk assessment.",
+      design:
+        "This week focuses on design execution including concept generation, design system documentation, copy and microcopy creation, and rapid prototyping.",
+    },
     paths: {
       developer: {
         objectives: [
@@ -429,6 +446,14 @@ export const divergentWeeks: DivergentWeekData[] = [
     title: "Advanced Techniques",
     subtitle: "Pushing boundaries in your domain",
     color: "cyan",
+    overview: {
+      developer:
+        "This week tackles advanced development challenges. You'll learn to execute complex refactoring with AI guidance, build integrations efficiently, migrate legacy codebases, and optimize application architecture with AI-assisted analysis and recommendations.",
+      product:
+        "This week covers advanced product communication including roadmap presentations, stakeholder updates, release communications, and customer feedback synthesis.",
+      design:
+        "This week focuses on design quality including design critique processes, accessibility audits, developer handoff documentation, and design token management.",
+    },
     paths: {
       developer: {
         objectives: [
@@ -563,6 +588,14 @@ export const divergentWeeks: DivergentWeekData[] = [
     title: "Integration & Collaboration",
     subtitle: "Working across teams with AI",
     color: "pink",
+    overview: {
+      developer:
+        "This week focuses on collaboration and team workflows. You'll learn to work effectively with product and design teams using AI, create comprehensive documentation for other developers, and establish team AI workflows and best practices.",
+      product:
+        "This week covers cross-functional product leadership including engineering partnership, design alignment, cross-team planning, and building AI culture in organizations.",
+      design:
+        "This week focuses on design collaboration including engineering partnership, product alignment, design knowledge sharing, and AI tool evangelism.",
+    },
     paths: {
       developer: {
         objectives: [
@@ -709,7 +742,11 @@ export interface SharedWeekData {
   title: string;
   subtitle: string;
   color: string;
+  overview: string;
   objectives: string[];
+  dailyTopics: DailyTopic[];
+  tools: string[];
+  milestone: string;
 }
 
 export const sharedWeeks: SharedWeekData[] = [
@@ -718,19 +755,57 @@ export const sharedWeeks: SharedWeekData[] = [
     title: "Foundations & Mindset",
     subtitle: "Understanding AI, agents, and the right mental model",
     color: "emerald",
+    overview:
+      "This week establishes the mental models needed for effective AI-assisted development. You'll understand what LLMs can and cannot do, learn the difference between chat interfaces and agentic tools, and set up your development environment with Claude Code.",
     objectives: [
       "Understand what LLMs are and are not good at",
       "Learn what makes AI 'agentic' vs simple chat",
-      "Install and configure Claude Code and Codex CLI",
+      "Install and configure Claude Code",
       "Set up project configuration (CLAUDE.md)",
       "Understand safety: approval modes and sandboxing",
     ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "What Are LLMs?",
+        description: "Understanding language models, tokens, context windows, and capabilities",
+        tasks: ["Explore model capabilities", "Understand context limits"],
+      },
+      {
+        day: "Day 2",
+        title: "Agentic vs Chat",
+        description: "The difference between chat interfaces and agentic tool-using systems",
+        tasks: ["Compare chat vs agent interactions", "Identify agentic patterns"],
+      },
+      {
+        day: "Day 3",
+        title: "Tool Setup",
+        description: "Installing and configuring Claude Code for your development workflow",
+        tasks: ["Install Claude Code", "Configure API keys and settings"],
+      },
+      {
+        day: "Day 4",
+        title: "Project Configuration",
+        description: "Setting up CLAUDE.md and project-specific AI configuration",
+        tasks: ["Create CLAUDE.md", "Define project context and rules"],
+      },
+      {
+        day: "Day 5",
+        title: "Safety & Boundaries",
+        description: "Approval modes, sandboxing, and establishing safe AI workflows",
+        tasks: ["Configure approval modes", "Understand sandboxing options"],
+      },
+    ],
+    tools: ["Claude Code"],
+    milestone: "Development environment configured with initial project setup",
   },
   {
     weekNumber: 2,
     title: "Planning & Agentic Patterns",
     subtitle: "Workflows, planning, and when to use agents",
     color: "blue",
+    overview:
+      "This week introduces the core patterns for AI-assisted development. You'll learn when to use structured workflows versus autonomous agents, master Claude Code's planning mode, and understand the ReAct pattern that underlies effective agent behavior.",
     objectives: [
       "Understand workflows vs autonomous agents",
       "Learn the 5 core agentic workflow patterns",
@@ -738,12 +813,48 @@ export const sharedWeeks: SharedWeekData[] = [
       "Understand ReAct: reasoning before acting",
       "Start core project: scaffold and architecture",
     ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Workflows vs Agents",
+        description: "When to use deterministic workflows versus autonomous agent behavior",
+        tasks: ["Compare workflow and agent approaches", "Identify appropriate use cases"],
+      },
+      {
+        day: "Day 2",
+        title: "Agentic Patterns",
+        description: "The 5 core patterns: prompt chaining, routing, parallelization, orchestration, evaluation",
+        tasks: ["Study each pattern", "Identify patterns in real tools"],
+      },
+      {
+        day: "Day 3",
+        title: "Planning Mode",
+        description: "Using Claude Code's planning mode (Shift+Tab) for complex tasks",
+        tasks: ["Practice planning mode", "Plan a multi-step feature"],
+      },
+      {
+        day: "Day 4",
+        title: "ReAct Pattern",
+        description: "Reasoning and acting: how agents think before they act",
+        tasks: ["Observe ReAct in Claude Code", "Understand thought/action cycles"],
+      },
+      {
+        day: "Day 5",
+        title: "Project Kickoff",
+        description: "Starting your core project with AI-assisted scaffolding and architecture",
+        tasks: ["Scaffold project structure", "Generate initial architecture"],
+      },
+    ],
+    tools: ["Claude Code"],
+    milestone: "Core project scaffolded with architecture decisions documented",
   },
   {
     weekNumber: 7,
     title: "Building Agents",
     subtitle: "Creating production-ready agents with Claude Agent SDK",
     color: "amber",
+    overview:
+      "This week transitions from using AI tools to building them. You'll learn the Claude Agent SDK, create custom tools for your agents, implement robust agent loops, and explore multi-agent architectures for complex workflows.",
     objectives: [
       "Set up and understand the Claude Agent SDK",
       "Build custom tools for your agents",
@@ -751,21 +862,141 @@ export const sharedWeeks: SharedWeekData[] = [
       "Create multi-agent systems with orchestration",
       "Add safety guardrails and approval workflows",
     ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Agent SDK Setup",
+        description: "Installing and understanding the Claude Agent SDK architecture",
+        tasks: ["Install Agent SDK", "Understand core concepts"],
+      },
+      {
+        day: "Day 2",
+        title: "Custom Tools",
+        description: "Building tools that agents can use: file operations, APIs, databases",
+        tasks: ["Create custom tools", "Define tool schemas"],
+      },
+      {
+        day: "Day 3",
+        title: "Agent Loops",
+        description: "Implementing robust agent loops with automatic context management",
+        tasks: ["Build agent loop", "Handle context overflow"],
+      },
+      {
+        day: "Day 4",
+        title: "Multi-Agent Systems",
+        description: "Orchestrating multiple agents for complex workflows",
+        tasks: ["Design multi-agent architecture", "Implement agent handoffs"],
+      },
+      {
+        day: "Day 5",
+        title: "Safety & Guardrails",
+        description: "Adding approval workflows, rate limits, and safety boundaries",
+        tasks: ["Implement guardrails", "Add human-in-the-loop approval"],
+      },
+    ],
+    tools: ["Claude Agent SDK", "Claude Code"],
+    milestone: "Working agent with custom tools and safety guardrails",
   },
   {
     weekNumber: 8,
     title: "Capstone & Deploy",
     subtitle: "DevOps essentials, enterprise AI, and capstone",
     color: "rose",
+    overview:
+      "The final week brings everything together. You'll learn to deploy AI-assisted applications, understand enterprise considerations for AI governance, and complete your capstone project that demonstrates your mastery of AI-assisted development.",
     objectives: [
       "Set up CI/CD pipelines and containerization",
       "Understand AI governance and security",
       "Complete capstone project with agent component",
       "Reflect on AI-assisted development practices",
     ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "CI/CD for AI Apps",
+        description: "Setting up continuous integration and deployment for AI-assisted applications",
+        tasks: ["Configure CI pipeline", "Add AI-specific tests"],
+      },
+      {
+        day: "Day 2",
+        title: "Containerization",
+        description: "Containerizing applications and agents for consistent deployment",
+        tasks: ["Create Dockerfiles", "Set up container orchestration"],
+      },
+      {
+        day: "Day 3",
+        title: "AI Governance",
+        description: "Enterprise considerations: security, compliance, and responsible AI use",
+        tasks: ["Review governance frameworks", "Implement security practices"],
+      },
+      {
+        day: "Day 4",
+        title: "Capstone Work",
+        description: "Focused time on completing your capstone project",
+        tasks: ["Complete capstone features", "Add agent component"],
+      },
+      {
+        day: "Day 5",
+        title: "Presentation & Reflection",
+        description: "Presenting your capstone and reflecting on the learning journey",
+        tasks: ["Present capstone", "Document learnings"],
+      },
+    ],
+    tools: ["Claude Code", "Claude Agent SDK", "Docker", "GitHub Actions"],
+    milestone: "Deployed capstone project with integrated AI agent",
   },
 ];
 
 export function getSharedWeek(weekNumber: number): SharedWeekData | undefined {
   return sharedWeeks.find((w) => w.weekNumber === weekNumber);
+}
+
+// Unified week data for developer path
+export interface DeveloperWeekData {
+  weekNumber: number;
+  title: string;
+  subtitle: string;
+  color: string;
+  overview: string;
+  objectives: string[];
+  dailyTopics: DailyTopic[];
+  tools: string[];
+  milestone: string;
+}
+
+export function getDeveloperWeek(weekNumber: number): DeveloperWeekData | undefined {
+  // Shared weeks: 1, 2, 7, 8
+  const sharedWeek = getSharedWeek(weekNumber);
+  if (sharedWeek) {
+    return {
+      weekNumber: sharedWeek.weekNumber,
+      title: sharedWeek.title,
+      subtitle: sharedWeek.subtitle,
+      color: sharedWeek.color,
+      overview: sharedWeek.overview,
+      objectives: sharedWeek.objectives,
+      dailyTopics: sharedWeek.dailyTopics,
+      tools: sharedWeek.tools,
+      milestone: sharedWeek.milestone,
+    };
+  }
+
+  // Divergent weeks: 3, 4, 5, 6
+  const divergentWeek = getDivergentWeek(weekNumber);
+  if (divergentWeek) {
+    const devContent = divergentWeek.paths.developer;
+    return {
+      weekNumber: divergentWeek.weekNumber,
+      title: divergentWeek.title,
+      subtitle: divergentWeek.subtitle,
+      color: divergentWeek.color,
+      overview: divergentWeek.overview.developer,
+      objectives: devContent.objectives,
+      dailyTopics: devContent.dailyTopics,
+      tools: devContent.tools,
+      milestone: devContent.milestone,
+    };
+  }
+
+  return;
 }
