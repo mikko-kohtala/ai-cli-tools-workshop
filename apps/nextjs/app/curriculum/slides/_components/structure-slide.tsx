@@ -32,9 +32,9 @@ export function StructureSlide() {
             <p className="font-medium text-purple-600 text-xs uppercase tracking-wide dark:text-purple-400">
               Weeks 3-6
             </p>
-            <p className="mt-1 font-semibold text-purple-700 dark:text-purple-400">Developer Skills</p>
+            <p className="mt-1 font-semibold text-purple-700 dark:text-purple-400">Role-Specific Skills</p>
             <p className="mt-1 text-foreground/70 text-sm">
-              Code generation, testing, debugging, refactoring, and collaboration
+              Domain fundamentals, core workflows, advanced techniques, and collaboration
             </p>
           </div>
           <div className="rounded-lg border-amber-500 border-l-4 bg-amber-50 p-4 dark:bg-amber-950/30">

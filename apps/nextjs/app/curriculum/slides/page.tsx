@@ -1,9 +1,9 @@
-import { GoalsSlide } from "../_components/goals-slide";
-import { StructureSlide } from "../_components/structure-slide";
-import { TitleSlide } from "../_components/title-slide";
-import { WeekSlide } from "../_components/week-slide";
+import { GoalsSlide } from "./_components/goals-slide";
+import { StructureSlide } from "./_components/structure-slide";
+import { TitleSlide } from "./_components/title-slide";
+import { WeekSlide } from "./_components/week-slide";
 
-export default function DeveloperSlidesPage() {
+export default function SlidesPage() {
   return (
     <div className="flex-1 overflow-auto">
       <div className="mx-auto max-w-4xl space-y-8 p-8">

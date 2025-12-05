@@ -951,37 +951,232 @@ export function getSharedWeek(weekNumber: number): SharedWeekData | undefined {
   return sharedWeeks.find((w) => w.weekNumber === weekNumber);
 }
 
-// Unified week data for developer path
-export interface DeveloperWeekData {
-  weekNumber: number;
-  title: string;
-  subtitle: string;
-  color: string;
-  overview: string;
-  objectives: string[];
-  dailyTopics: DailyTopic[];
-  tools: string[];
-  milestone: string;
+// Unified week data (generic, all paths)
+export type UnifiedWeekData = SharedWeekData;
+
+// Generic content for weeks 3-6 (applicable to all paths)
+export const unifiedWeeks36: SharedWeekData[] = [
+  {
+    weekNumber: 3,
+    title: "Domain Fundamentals",
+    subtitle: "Building foundational skills for your role",
+    color: "purple",
+    overview:
+      "Master the core AI-assisted workflows specific to your domain. Learn the generation patterns, tool integrations, and techniques that accelerate your daily work. This week establishes the foundation for using AI effectively in your role.",
+    objectives: [
+      "Master core generation patterns for your domain",
+      "Understand how AI tools integrate with your workflow",
+      "Handle multi-artifact workflows efficiently",
+      "Navigate and analyze existing work with AI",
+    ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Core Generation Patterns",
+        description: "Creating artifacts with AI assistance using describe-generate-refine cycles",
+        tasks: ["Practice generation patterns", "Refine outputs iteratively"],
+      },
+      {
+        day: "Day 2",
+        title: "Tool Integration",
+        description: "Connecting AI to your workflow tools and understanding tool use",
+        tasks: ["Explore tool capabilities", "Build integration workflows"],
+      },
+      {
+        day: "Day 3",
+        title: "Multi-Artifact Work",
+        description: "Coordinated changes across multiple deliverables",
+        tasks: ["Work across related artifacts", "Maintain consistency"],
+      },
+      {
+        day: "Day 4",
+        title: "Navigation & Analysis",
+        description: "Understanding existing work and codebases with AI",
+        tasks: ["Analyze existing materials", "Generate summaries and insights"],
+      },
+      {
+        day: "Day 5",
+        title: "Context Management",
+        description: "Managing context for better AI outputs",
+        tasks: ["Practice context strategies", "Optimize prompt structures"],
+      },
+    ],
+    tools: ["Claude", "Role-specific tools"],
+    milestone: "Core deliverables created with AI assistance",
+  },
+  {
+    weekNumber: 4,
+    title: "Core Workflows",
+    subtitle: "Mastering essential techniques for your role",
+    color: "indigo",
+    overview:
+      "Deepen your AI-assisted skills with a focus on quality and efficiency. Learn to generate, review, and iterate on your work systematically. This week builds the workflows you'll use daily.",
+    objectives: [
+      "Master quality-focused generation strategies",
+      "Review and improve work with AI assistance",
+      "Implement efficient review workflows",
+      "Analyze and optimize your outputs",
+    ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Quality Generation",
+        description: "Creating high-quality outputs with systematic approaches",
+        tasks: ["Generate comprehensive artifacts", "Apply quality criteria"],
+      },
+      {
+        day: "Day 2",
+        title: "AI-Assisted Review",
+        description: "Using AI to review and improve your work",
+        tasks: ["Review work with AI", "Identify improvement areas"],
+      },
+      {
+        day: "Day 3",
+        title: "Feedback Workflows",
+        description: "Processing and incorporating feedback efficiently",
+        tasks: ["Synthesize feedback", "Iterate on deliverables"],
+      },
+      {
+        day: "Day 4",
+        title: "Performance Analysis",
+        description: "Analyzing effectiveness and finding bottlenecks",
+        tasks: ["Measure output quality", "Identify optimization opportunities"],
+      },
+      {
+        day: "Day 5",
+        title: "Quality Standards",
+        description: "Establishing and maintaining quality benchmarks",
+        tasks: ["Define quality criteria", "Create review checklists"],
+      },
+    ],
+    tools: ["Claude", "Role-specific tools"],
+    milestone: "Quality workflows established with review processes in place",
+  },
+  {
+    weekNumber: 5,
+    title: "Advanced Techniques",
+    subtitle: "Pushing boundaries in your domain",
+    color: "cyan",
+    overview:
+      "Tackle complex challenges in your domain. Learn advanced AI techniques for large-scale work, system improvements, and handling complexity. This week prepares you for sophisticated AI-assisted workflows.",
+    objectives: [
+      "Handle complex, large-scale work with AI",
+      "Build sophisticated integrations and workflows",
+      "Manage legacy and existing systems",
+      "Optimize processes with AI analysis",
+    ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Complex Transformations",
+        description: "Large-scale changes and transformations",
+        tasks: ["Plan complex changes", "Execute with AI assistance"],
+      },
+      {
+        day: "Day 2",
+        title: "Advanced Integration",
+        description: "Building sophisticated integrations",
+        tasks: ["Design integration architecture", "Implement with AI help"],
+      },
+      {
+        day: "Day 3",
+        title: "Working with Legacy",
+        description: "Modernizing and improving existing systems",
+        tasks: ["Analyze existing systems", "Plan improvements"],
+      },
+      {
+        day: "Day 4",
+        title: "System Optimization",
+        description: "Optimizing processes and systems with AI",
+        tasks: ["Identify optimization opportunities", "Implement improvements"],
+      },
+      {
+        day: "Day 5",
+        title: "Documentation & Knowledge",
+        description: "Creating comprehensive documentation with AI",
+        tasks: ["Generate documentation", "Build knowledge bases"],
+      },
+    ],
+    tools: ["Claude", "Role-specific tools"],
+    milestone: "Complex deliverables completed with comprehensive documentation",
+  },
+  {
+    weekNumber: 6,
+    title: "Integration & Collaboration",
+    subtitle: "Working across teams with AI",
+    color: "pink",
+    overview:
+      "Focus on collaboration and cross-functional work. Learn to work effectively with other roles using AI, share knowledge, and establish team practices for AI-assisted work.",
+    objectives: [
+      "Collaborate effectively across roles with AI",
+      "Share and transfer knowledge efficiently",
+      "Build team AI workflows and practices",
+      "Present and communicate AI-assisted work",
+    ],
+    dailyTopics: [
+      {
+        day: "Day 1",
+        title: "Cross-Role Collaboration",
+        description: "Working with other roles using AI",
+        tasks: ["Bridge role perspectives", "Create shared artifacts"],
+      },
+      {
+        day: "Day 2",
+        title: "Requirements & Handoffs",
+        description: "Smooth handoffs between roles",
+        tasks: ["Create clear handoff docs", "Ensure alignment"],
+      },
+      {
+        day: "Day 3",
+        title: "Team Knowledge",
+        description: "Sharing knowledge and best practices",
+        tasks: ["Document learnings", "Share with team"],
+      },
+      {
+        day: "Day 4",
+        title: "Team AI Practices",
+        description: "Establishing team AI workflows",
+        tasks: ["Define team guidelines", "Share effective prompts"],
+      },
+      {
+        day: "Day 5",
+        title: "Presentation & Demo",
+        description: "Presenting work to stakeholders",
+        tasks: ["Prepare presentation", "Demo to stakeholders"],
+      },
+    ],
+    tools: ["Claude", "Role-specific tools"],
+    milestone: "Team AI workflows documented and shared",
+  },
+];
+
+export function getUnifiedWeek36(weekNumber: number): SharedWeekData | undefined {
+  return unifiedWeeks36.find((w) => w.weekNumber === weekNumber);
 }
+
+// Get unified week data for any week (all paths)
+export function getUnifiedWeek(weekNumber: number): UnifiedWeekData | undefined {
+  // Shared weeks: 1, 2, 7, 8
+  const sharedWeek = getSharedWeek(weekNumber);
+  if (sharedWeek) {
+    return sharedWeek;
+  }
+
+  // Unified weeks 3-6 (generic content)
+  return getUnifiedWeek36(weekNumber);
+}
+
+// Legacy: Developer-specific week data
+export type DeveloperWeekData = SharedWeekData;
 
 export function getDeveloperWeek(weekNumber: number): DeveloperWeekData | undefined {
   // Shared weeks: 1, 2, 7, 8
   const sharedWeek = getSharedWeek(weekNumber);
   if (sharedWeek) {
-    return {
-      weekNumber: sharedWeek.weekNumber,
-      title: sharedWeek.title,
-      subtitle: sharedWeek.subtitle,
-      color: sharedWeek.color,
-      overview: sharedWeek.overview,
-      objectives: sharedWeek.objectives,
-      dailyTopics: sharedWeek.dailyTopics,
-      tools: sharedWeek.tools,
-      milestone: sharedWeek.milestone,
-    };
+    return sharedWeek;
   }
 
-  // Divergent weeks: 3, 4, 5, 6
+  // Divergent weeks: 3, 4, 5, 6 (developer-specific)
   const divergentWeek = getDivergentWeek(weekNumber);
   if (divergentWeek) {
     const devContent = divergentWeek.paths.developer;
@@ -998,5 +1193,5 @@ export function getDeveloperWeek(weekNumber: number): DeveloperWeekData | undefi
     };
   }
 
-  return;
+  return undefined;
 }

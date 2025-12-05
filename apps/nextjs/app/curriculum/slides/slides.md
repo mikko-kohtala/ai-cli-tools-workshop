@@ -1,21 +1,22 @@
-# AI-Assisted Development: Developer Path
+# AI-Assisted Work
 
-8-week intensive curriculum for shipping production code faster with AI-powered development workflows
+8-week curriculum for accelerating your work with AI-powered workflows
 
+**Paths:** Developer, Product, Design
 **Tools:** Claude Code, Claude Agent SDK
 
 ---
 
 ## Slide 2: Learning Goals
 
-### Accelerate Your Development
-Ship production code faster with AI-powered workflows and intelligent code generation
+### Accelerate Your Work
+Work faster with AI-powered workflows and intelligent generation in your domain
 
 ### Build AI Agents
-Create autonomous agents using the Claude Agent SDK that extend your development capabilities
+Create autonomous agents using the Claude Agent SDK that extend your capabilities
 
-### Full Software Development Life Cycle
-Apply AI assistance across requirements, design, implementation, testing, code review, and deployment
+### Full Work Lifecycle
+Apply AI across your entire workflow: research, creation, review, and delivery
 
 ### Work Safely
 Handle security, governance, and agent boundaries properly with production-ready practices
@@ -27,8 +28,8 @@ Handle security, governance, and agent boundaries properly with production-ready
 ### Foundations (Weeks 1-2)
 AI fundamentals, tool setup, agentic patterns, and planning
 
-### Developer Skills (Weeks 3-6)
-Code generation, testing, debugging, refactoring, and collaboration
+### Role-Specific Skills (Weeks 3-6)
+Domain fundamentals, core workflows, advanced techniques, and collaboration
 
 ### Agents & Capstone (Weeks 7-8)
 Claude Agent SDK, multi-agent systems, and capstone project
@@ -98,25 +99,25 @@ This week introduces the core patterns for AI-assisted development. You'll learn
 
 *Building foundational skills for your role*
 
-This week focuses on the core skills of AI-assisted coding. You'll master the describe-generate-refine cycle for code generation, understand how agents use tools, and learn to navigate and edit code across multiple files with AI assistance.
+Master the core AI-assisted workflows specific to your domain. Learn the generation patterns, tool integrations, and techniques that accelerate your daily work. This week establishes the foundation for using AI effectively in your role.
 
 ### Learning Objectives
-- Master code generation patterns
-- Understand tool use for coding agents
-- Handle multi-file editing workflows
-- Navigate unfamiliar codebases with AI
+- Master core generation patterns for your domain
+- Understand how AI tools integrate with your workflow
+- Handle multi-artifact workflows efficiently
+- Navigate and analyze existing work with AI
 
 ### Daily Topics
 | Day | Topic | Description |
 |-----|-------|-------------|
-| Day 1 | Code Generation Patterns | Describe → generate → refine cycle |
-| Day 2 | Tool Use Deep Dive | How agents use tools: files, shell, web, MCP |
-| Day 3 | Multi-File Editing | Coordinated changes across multiple files |
-| Day 4 | Codebase Navigation | Understanding unfamiliar code with AI |
-| Day 5 | Context Management | Managing context and tool interfaces |
+| Day 1 | Core Generation Patterns | Creating artifacts with AI assistance using describe-generate-refine cycles |
+| Day 2 | Tool Integration | Connecting AI to your workflow tools and understanding tool use |
+| Day 3 | Multi-Artifact Work | Coordinated changes across multiple deliverables |
+| Day 4 | Navigation & Analysis | Understanding existing work and codebases with AI |
+| Day 5 | Context Management | Managing context for better AI outputs |
 
-**Tools:** Claude Code, Codex CLI
-**Milestone:** Core features implemented with AI assistance
+**Tools:** Claude, Role-specific tools
+**Milestone:** Core deliverables created with AI assistance
 
 ---
 
@@ -124,25 +125,25 @@ This week focuses on the core skills of AI-assisted coding. You'll master the de
 
 *Mastering essential techniques for your role*
 
-This week deepens your AI-assisted development skills with a focus on quality. You'll learn to generate comprehensive test suites, debug systematically with AI assistance, implement AI-powered code review workflows, and analyze application performance.
+Deepen your AI-assisted skills with a focus on quality and efficiency. Learn to generate, review, and iterate on your work systematically. This week builds the workflows you'll use daily.
 
 ### Learning Objectives
-- Master test generation strategies
-- Debug effectively with AI assistance
-- Implement code review workflows
-- Analyze performance with AI
+- Master quality-focused generation strategies
+- Review and improve work with AI assistance
+- Implement efficient review workflows
+- Analyze and optimize your outputs
 
 ### Daily Topics
 | Day | Topic | Description |
 |-----|-------|-------------|
-| Day 1 | Test Generation | AI-generated unit and integration tests |
-| Day 2 | Debugging with AI | Systematic debugging approaches |
-| Day 3 | Code Review Workflows | AI-assisted code review |
-| Day 4 | Performance Analysis | Finding and fixing bottlenecks |
-| Day 5 | Quality Gates | Automated quality checks |
+| Day 1 | Quality Generation | Creating high-quality outputs with systematic approaches |
+| Day 2 | AI-Assisted Review | Using AI to review and improve your work |
+| Day 3 | Feedback Workflows | Processing and incorporating feedback efficiently |
+| Day 4 | Performance Analysis | Analyzing effectiveness and finding bottlenecks |
+| Day 5 | Quality Standards | Establishing and maintaining quality benchmarks |
 
-**Tools:** Claude Code, GitHub Copilot
-**Milestone:** Test suite with 80%+ coverage, quality gates in place
+**Tools:** Claude, Role-specific tools
+**Milestone:** Quality workflows established with review processes in place
 
 ---
 
@@ -150,25 +151,25 @@ This week deepens your AI-assisted development skills with a focus on quality. Y
 
 *Pushing boundaries in your domain*
 
-This week tackles advanced development challenges. You'll learn to execute complex refactoring with AI guidance, build integrations efficiently, migrate legacy codebases, and optimize application architecture with AI-assisted analysis and recommendations.
+Tackle complex challenges in your domain. Learn advanced AI techniques for large-scale work, system improvements, and handling complexity. This week prepares you for sophisticated AI-assisted workflows.
 
 ### Learning Objectives
-- Implement complex refactoring
-- Build integrations with AI assistance
-- Handle legacy code migration
-- Optimize architecture with AI
+- Handle complex, large-scale work with AI
+- Build sophisticated integrations and workflows
+- Manage legacy and existing systems
+- Optimize processes with AI analysis
 
 ### Daily Topics
 | Day | Topic | Description |
 |-----|-------|-------------|
-| Day 1 | Complex Refactoring | Large-scale code transformations |
-| Day 2 | API Integration | Building external integrations |
-| Day 3 | Legacy Migration | Modernizing existing code |
-| Day 4 | Architecture Review | System design with AI |
-| Day 5 | Technical Documentation | AI-assisted docs |
+| Day 1 | Complex Transformations | Large-scale changes and transformations |
+| Day 2 | Advanced Integration | Building sophisticated integrations |
+| Day 3 | Working with Legacy | Modernizing and improving existing systems |
+| Day 4 | System Optimization | Optimizing processes and systems with AI |
+| Day 5 | Documentation & Knowledge | Creating comprehensive documentation with AI |
 
-**Tools:** Claude Code, Cursor
-**Milestone:** Major refactoring complete with documentation
+**Tools:** Claude, Role-specific tools
+**Milestone:** Complex deliverables completed with comprehensive documentation
 
 ---
 
@@ -176,24 +177,24 @@ This week tackles advanced development challenges. You'll learn to execute compl
 
 *Working across teams with AI*
 
-This week focuses on collaboration and team workflows. You'll learn to work effectively with product and design teams using AI, create comprehensive documentation for other developers, and establish team AI workflows and best practices.
+Focus on collaboration and cross-functional work. Learn to work effectively with other roles using AI, share knowledge, and establish team practices for AI-assisted work.
 
 ### Learning Objectives
-- Collaborate with product using AI
-- Support design implementation
-- Document for other developers
-- Build team AI workflows
+- Collaborate effectively across roles with AI
+- Share and transfer knowledge efficiently
+- Build team AI workflows and practices
+- Present and communicate AI-assisted work
 
 ### Daily Topics
 | Day | Topic | Description |
 |-----|-------|-------------|
-| Day 1 | Product Collaboration | Working with PMs on requirements |
-| Day 2 | Design Implementation | Translating designs to code |
-| Day 3 | Team Documentation | Knowledge sharing |
-| Day 4 | AI Workflows | Team AI processes |
-| Day 5 | Cross-Team Demo | Presenting technical work |
+| Day 1 | Cross-Role Collaboration | Working with other roles using AI |
+| Day 2 | Requirements & Handoffs | Smooth handoffs between roles |
+| Day 3 | Team Knowledge | Sharing knowledge and best practices |
+| Day 4 | Team AI Practices | Establishing team AI workflows |
+| Day 5 | Presentation & Demo | Presenting work to stakeholders |
 
-**Tools:** Claude Code, GitHub Copilot
+**Tools:** Claude, Role-specific tools
 **Milestone:** Team AI workflows documented and shared
 
 ---

@@ -4,17 +4,16 @@ import { SlideContainer } from "./slide-container";
 
 const goals = [
   {
-    title: "Accelerate Your Development",
-    description: "Ship production code faster with AI-powered workflows and intelligent code generation",
+    title: "Accelerate Your Work",
+    description: "Work faster with AI-powered workflows and intelligent generation in your domain",
   },
   {
     title: "Build AI Agents",
-    description: "Create autonomous agents using the Claude Agent SDK that extend your development capabilities",
+    description: "Create autonomous agents using the Claude Agent SDK that extend your capabilities",
   },
   {
-    title: "Full Software Development Life Cycle",
-    description:
-      "Apply AI assistance across requirements, design, implementation, testing, code review, and deployment",
+    title: "Full Work Lifecycle",
+    description: "Apply AI across your entire workflow: research, creation, review, and delivery",
   },
   {
     title: "Work Safely",

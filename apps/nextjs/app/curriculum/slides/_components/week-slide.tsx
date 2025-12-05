@@ -1,6 +1,6 @@
 import { Calendar, CheckCircle2, Milestone, Wrench } from "lucide-react";
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { colorClasses, getDeveloperWeek } from "../../_data/curriculum-data";
+import { colorClasses, getUnifiedWeek } from "../../_data/curriculum-data";
 import { SlideContainer } from "./slide-container";
 
 interface WeekSlideProps {
@@ -9,7 +9,7 @@ interface WeekSlideProps {
 }
 
 export function WeekSlide({ weekNumber, slideNumber }: WeekSlideProps) {
-  const week = getDeveloperWeek(weekNumber);
+  const week = getUnifiedWeek(weekNumber);
   if (!week) return null;
 
   const colors = colorClasses[week.color];
