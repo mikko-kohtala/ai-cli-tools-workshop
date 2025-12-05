@@ -18,7 +18,7 @@ export function PathSelector() {
           const Icon = path.icon;
 
           return (
-            <Link href={`/curriculum-claude/${pathId}`} key={pathId}>
+            <Link href={`/curriculum/${pathId}`} key={pathId}>
               <Card
                 className={`group h-full cursor-pointer border-2 transition-all hover:shadow-lg ${colors.border} hover:scale-[1.02]`}
               >

@@ -22,7 +22,8 @@
       "style": {
         "useFilenamingConvention": "off",
         "noMagicNumbers": "off",
-        "useConsistentTypeDefinitions": "off"
+        "useConsistentTypeDefinitions": "off",
+        "useBlockStatements": "off"
       },
       "performance": {
         "noNamespaceImport": "off"

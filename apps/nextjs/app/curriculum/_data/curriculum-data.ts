@@ -702,3 +702,70 @@ export function getPathContent(weekNumber: number, path: LearningPath): PathWeek
   const week = getDivergentWeek(weekNumber);
   return week?.paths[path];
 }
+
+// Shared weeks data (weeks 1, 2, 7, 8)
+export interface SharedWeekData {
+  weekNumber: number;
+  title: string;
+  subtitle: string;
+  color: string;
+  objectives: string[];
+}
+
+export const sharedWeeks: SharedWeekData[] = [
+  {
+    weekNumber: 1,
+    title: "Foundations & Mindset",
+    subtitle: "Understanding AI, agents, and the right mental model",
+    color: "emerald",
+    objectives: [
+      "Understand what LLMs are and are not good at",
+      "Learn what makes AI 'agentic' vs simple chat",
+      "Install and configure Claude Code and Codex CLI",
+      "Set up project configuration (CLAUDE.md)",
+      "Understand safety: approval modes and sandboxing",
+    ],
+  },
+  {
+    weekNumber: 2,
+    title: "Planning & Agentic Patterns",
+    subtitle: "Workflows, planning, and when to use agents",
+    color: "blue",
+    objectives: [
+      "Understand workflows vs autonomous agents",
+      "Learn the 5 core agentic workflow patterns",
+      "Master Claude Code's planning mode",
+      "Understand ReAct: reasoning before acting",
+      "Start core project: scaffold and architecture",
+    ],
+  },
+  {
+    weekNumber: 7,
+    title: "Building Agents",
+    subtitle: "Creating production-ready agents with Claude Agent SDK",
+    color: "amber",
+    objectives: [
+      "Set up and understand the Claude Agent SDK",
+      "Build custom tools for your agents",
+      "Implement agent loops with context management",
+      "Create multi-agent systems with orchestration",
+      "Add safety guardrails and approval workflows",
+    ],
+  },
+  {
+    weekNumber: 8,
+    title: "Capstone & Deploy",
+    subtitle: "DevOps essentials, enterprise AI, and capstone",
+    color: "rose",
+    objectives: [
+      "Set up CI/CD pipelines and containerization",
+      "Understand AI governance and security",
+      "Complete capstone project with agent component",
+      "Reflect on AI-assisted development practices",
+    ],
+  },
+];
+
+export function getSharedWeek(weekNumber: number): SharedWeekData | undefined {
+  return sharedWeeks.find((w) => w.weekNumber === weekNumber);
+}

@@ -44,7 +44,7 @@ const navMain = [
 ];
 
 const curriculumTools = [
-  { name: "Claude", slug: "curriculum-claude" },
+  { name: "Claude", slug: "curriculum" },
   { name: "Codex", slug: "curriculum-codex" },
   { name: "Codexmax", slug: "curriculum-codexmax" },
   { name: "Copilot", slug: "curriculum-copilot" },
