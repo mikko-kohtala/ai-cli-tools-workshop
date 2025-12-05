@@ -2,7 +2,10 @@
   "name": "ai-cli-tools-workshop",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "initialize": "bun install && tsx scripts/initialize.ts",
     "dev": "bun install && turbo dev",
