@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FDF8F3; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #E8A54B; padding: 14pt 32pt; display: flex; align-items: center; gap: 14pt;
+}
+.week-badge {
+  background: #ffffff; padding: 5pt 10pt; border-radius: 4pt;
+}
+.week-badge p { color: #E8A54B; font-size: 11pt; margin: 0; font-weight: bold; }
+.header h1 { color: #ffffff; font-size: 22pt; margin: 0; }
+.content {
+  padding: 16pt 32pt; flex: 1; display: flex; gap: 18pt;
+}
+.left { flex: 1; }
+.right { flex: 1.2; }
+.objectives {
+  background: #ffffff; border-radius: 6pt; padding: 14pt; margin-bottom: 12pt;
+}
+.objectives h3 { color: #1a1a1a; font-size: 12pt; margin: 0 0 10pt 0; }
+.objectives ul { margin: 0; padding-left: 14pt; }
+.objectives li { color: #333333; font-size: 10pt; margin-bottom: 5pt; }
+.tools-box {
+  background: #E8A54B; border-radius: 6pt; padding: 10pt 14pt;
+}
+.tools-box h3 { color: #ffffff; font-size: 11pt; margin: 0 0 6pt 0; }
+.tools-box p { color: #ffffff; font-size: 10pt; margin: 0; }
+.day-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8pt;
+}
+.day-card {
+  background: #ffffff; border-radius: 5pt; padding: 8pt 10pt;
+  border-top: 2pt solid #E8A54B;
+}
+.day-card h4 { color: #E8A54B; font-size: 9pt; margin: 0 0 3pt 0; }
+.day-card h5 { color: #1a1a1a; font-size: 10pt; margin: 0 0 3pt 0; }
+.day-card p { color: #555555; font-size: 8pt; margin: 0; }
+.milestone {
+  background: #1a1a1a; border-radius: 5pt; padding: 10pt; margin-top: 8pt;
+  grid-column: span 2;
+}
+.milestone h4 { color: #E8A54B; font-size: 9pt; margin: 0 0 3pt 0; }
+.milestone p { color: #ffffff; font-size: 9pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="week-badge"><p>WEEK 6</p></div>
+  <h1>QA Integration & Collaboration</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <div class="objectives">
+      <h3>Objectives</h3>
+      <ul>
+        <li>Collaborate with developers on testability</li>
+        <li>Integrate testing into CI/CD pipelines</li>
+        <li>Build quality metrics dashboards</li>
+        <li>Evangelize test automation</li>
+      </ul>
+    </div>
+    <div class="tools-box">
+      <h3>Tools</h3>
+      <p>Claude Code, Codex CLI</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="day-grid">
+      <div class="day-card">
+        <h4>DAY 1</h4>
+        <h5>Developer Collaboration</h5>
+        <p>Improving testability together</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 2</h4>
+        <h5>CI/CD Integration</h5>
+        <p>Automating test execution</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 3</h4>
+        <h5>Quality Metrics</h5>
+        <p>Measuring and reporting quality</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 4</h4>
+        <h5>Test Automation Culture</h5>
+        <p>Promoting testing practices</p>
+      </div>
+      <div class="milestone">
+        <h4>MILESTONE</h4>
+        <p>CI/CD integrated tests with quality dashboards</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

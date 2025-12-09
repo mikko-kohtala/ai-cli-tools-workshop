@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #FDF8F3; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #7C9885; padding: 14pt 32pt; display: flex; align-items: center; gap: 14pt;
+}
+.week-badge {
+  background: #ffffff; padding: 5pt 10pt; border-radius: 4pt;
+}
+.week-badge p { color: #7C9885; font-size: 11pt; margin: 0; font-weight: bold; }
+.header h1 { color: #ffffff; font-size: 22pt; margin: 0; }
+.shared-tag { background: #5a7a63; padding: 3pt 8pt; border-radius: 3pt; margin-left: auto; }
+.shared-tag p { color: #ffffff; font-size: 9pt; margin: 0; }
+.content {
+  padding: 16pt 32pt; flex: 1; display: flex; gap: 18pt;
+}
+.left { flex: 1; }
+.right { flex: 1.2; }
+.objectives {
+  background: #ffffff; border-radius: 6pt; padding: 14pt; margin-bottom: 12pt;
+}
+.objectives h3 { color: #1a1a1a; font-size: 12pt; margin: 0 0 10pt 0; }
+.objectives ul { margin: 0; padding-left: 14pt; }
+.objectives li { color: #333333; font-size: 10pt; margin-bottom: 5pt; }
+.tools-box {
+  background: #7C9885; border-radius: 6pt; padding: 10pt 14pt;
+}
+.tools-box h3 { color: #ffffff; font-size: 11pt; margin: 0 0 6pt 0; }
+.tools-box p { color: #ffffff; font-size: 10pt; margin: 0; }
+.day-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8pt;
+}
+.day-card {
+  background: #ffffff; border-radius: 5pt; padding: 8pt 10pt;
+  border-top: 2pt solid #7C9885;
+}
+.day-card h4 { color: #7C9885; font-size: 9pt; margin: 0 0 3pt 0; }
+.day-card h5 { color: #1a1a1a; font-size: 10pt; margin: 0 0 3pt 0; }
+.day-card p { color: #555555; font-size: 8pt; margin: 0; }
+.milestone {
+  background: #1a1a1a; border-radius: 5pt; padding: 10pt; margin-top: 8pt;
+  grid-column: span 2;
+}
+.milestone h4 { color: #E8A54B; font-size: 9pt; margin: 0 0 3pt 0; }
+.milestone p { color: #ffffff; font-size: 9pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="week-badge"><p>WEEK 8</p></div>
+  <h1>Capstone & Deploy</h1>
+  <div class="shared-tag"><p>SHARED</p></div>
+</div>
+<div class="content">
+  <div class="left">
+    <div class="objectives">
+      <h3>Objectives</h3>
+      <ul>
+        <li>Set up CI/CD pipelines and containers</li>
+        <li>Understand AI governance and security</li>
+        <li>Complete capstone with agent component</li>
+        <li>Reflect on AI-assisted development</li>
+      </ul>
+    </div>
+    <div class="tools-box">
+      <h3>Tools</h3>
+      <p>Claude Code, Docker, GitHub Actions</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="day-grid">
+      <div class="day-card">
+        <h4>DAY 1</h4>
+        <h5>CI/CD for AI Apps</h5>
+        <p>Continuous integration and deployment</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 2</h4>
+        <h5>Containerization</h5>
+        <p>Docker and orchestration</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 3</h4>
+        <h5>AI Governance</h5>
+        <p>Security, compliance, responsible AI</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 4</h4>
+        <h5>Capstone Work</h5>
+        <p>Complete capstone features</p>
+      </div>
+      <div class="milestone">
+        <h4>MILESTONE</h4>
+        <p>Deployed capstone project with integrated AI agent</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

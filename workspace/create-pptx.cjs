@@ -12,11 +12,14 @@ async function createPresentation() {
     const slides = [
         'slide1-title.html',
         'slide2-overview.html',
-        'slide3-week3.html',
-        'slide4-week4.html',
-        'slide5-week5.html',
-        'slide6-week6.html',
-        'slide7-capstone.html'
+        'slide3-week1.html',
+        'slide4-week2.html',
+        'slide5-week3.html',
+        'slide6-week4.html',
+        'slide7-week5.html',
+        'slide8-week6.html',
+        'slide9-week7.html',
+        'slide10-week8.html'
     ];
 
     const workspaceDir = '/Users/mikko/code/ai-cli-tools-workshop/main/workspace';
