@@ -1,6 +1,6 @@
-import { Briefcase, Code2, type LucideIcon, Palette } from "lucide-react";
+import { Briefcase, Code2, type LucideIcon, Palette, ShieldCheck } from "lucide-react";
 
-export type LearningPath = "developer" | "product" | "design";
+export type LearningPath = "developer" | "product" | "design" | "qa";
 
 export interface PathMeta {
   id: LearningPath;
@@ -62,6 +62,15 @@ export const learningPaths: Record<LearningPath, PathMeta> = {
     color: "pink",
     tools: ["Figma AI", "Midjourney", "Claude", "Adobe Firefly"],
     outcome: "From research to polished designs in half the time",
+  },
+  qa: {
+    id: "qa",
+    name: "QA",
+    description: "Test automation, quality assurance, and AI-assisted testing workflows",
+    icon: ShieldCheck,
+    color: "amber",
+    tools: ["Playwright", "Cypress", "Claude Code", "Codex CLI"],
+    outcome: "Ship higher quality software with AI-assisted testing",
   },
 };
 
@@ -169,6 +178,7 @@ export const divergentWeeks: DivergentWeekData[] = [
         "This week introduces AI-assisted product management fundamentals including user story generation, PRD creation, and stakeholder interview synthesis.",
       design:
         "This week covers AI-assisted design research including research synthesis, persona creation, journey mapping, and competitive analysis.",
+      qa: "This week establishes AI-assisted test automation fundamentals. You'll learn test generation patterns, AI-assisted test writing workflows, coverage analysis, and test data generation techniques.",
     },
     paths: {
       developer: {
@@ -297,6 +307,48 @@ export const divergentWeeks: DivergentWeekData[] = [
         tools: ["Claude", "Figma AI"],
         milestone: "Research insights documented with design brief",
       },
+      qa: {
+        objectives: [
+          "Master test generation patterns with AI",
+          "Build AI-assisted test writing workflows",
+          "Analyze coverage and identify gaps",
+          "Generate effective test data",
+        ],
+        dailyTopics: [
+          {
+            day: "Day 1",
+            title: "Test Generation Patterns",
+            description: "AI-assisted test creation workflows",
+            tasks: ["Generate unit tests from code", "Practice describe-generate-refine for tests"],
+          },
+          {
+            day: "Day 2",
+            title: "Test Writing Workflows",
+            description: "Efficient test authoring with AI",
+            tasks: ["Set up test generation prompts", "Build test templates"],
+          },
+          {
+            day: "Day 3",
+            title: "Coverage Analysis",
+            description: "Finding and filling test gaps",
+            tasks: ["Analyze code coverage", "Generate tests for uncovered paths"],
+          },
+          {
+            day: "Day 4",
+            title: "Test Data Generation",
+            description: "Creating realistic test data",
+            tasks: ["Generate edge case data", "Build test fixtures with AI"],
+          },
+          {
+            day: "Day 5",
+            title: "Test Organization",
+            description: "Structuring test suites effectively",
+            tasks: ["Organize test structure", "Create test naming conventions"],
+          },
+        ],
+        tools: ["Claude Code", "Playwright"],
+        milestone: "Comprehensive test suite with AI-generated tests",
+      },
     },
   },
   {
@@ -311,6 +363,7 @@ export const divergentWeeks: DivergentWeekData[] = [
         "This week covers strategic product workflows including competitive analysis, market research synthesis, OKR definition, and risk assessment.",
       design:
         "This week focuses on design execution including concept generation, design system documentation, copy and microcopy creation, and rapid prototyping.",
+      qa: "This week builds core QA workflows with AI assistance. You'll master regression testing, API testing, performance analysis, and systematic bug documentation.",
     },
     paths: {
       developer: {
@@ -439,6 +492,48 @@ export const divergentWeeks: DivergentWeekData[] = [
         tools: ["Figma AI", "Midjourney"],
         milestone: "Design system documented with prototype ready",
       },
+      qa: {
+        objectives: [
+          "Build regression test suites with AI",
+          "Master API testing with AI assistance",
+          "Analyze performance with AI",
+          "Document bugs systematically",
+        ],
+        dailyTopics: [
+          {
+            day: "Day 1",
+            title: "Regression Testing",
+            description: "Building comprehensive regression suites",
+            tasks: ["Generate regression tests", "Prioritize test scenarios"],
+          },
+          {
+            day: "Day 2",
+            title: "API Testing",
+            description: "Testing APIs with AI assistance",
+            tasks: ["Generate API test cases", "Validate response schemas"],
+          },
+          {
+            day: "Day 3",
+            title: "Performance Testing",
+            description: "Analyzing application performance",
+            tasks: ["Generate load test scenarios", "Analyze performance bottlenecks"],
+          },
+          {
+            day: "Day 4",
+            title: "Bug Documentation",
+            description: "Systematic bug reporting",
+            tasks: ["Generate bug reports with AI", "Create reproduction steps"],
+          },
+          {
+            day: "Day 5",
+            title: "Test Reporting",
+            description: "Creating effective test reports",
+            tasks: ["Generate test summaries", "Build quality dashboards"],
+          },
+        ],
+        tools: ["Playwright", "Cypress"],
+        milestone: "Regression suite with API tests and quality reports",
+      },
     },
   },
   {
@@ -453,6 +548,7 @@ export const divergentWeeks: DivergentWeekData[] = [
         "This week covers advanced product communication including roadmap presentations, stakeholder updates, release communications, and customer feedback synthesis.",
       design:
         "This week focuses on design quality including design critique processes, accessibility audits, developer handoff documentation, and design token management.",
+      qa: "This week covers advanced testing techniques. You'll master E2E test orchestration, visual regression testing, test maintenance strategies, and flaky test diagnosis.",
     },
     paths: {
       developer: {
@@ -581,6 +677,48 @@ export const divergentWeeks: DivergentWeekData[] = [
         tools: ["Figma AI", "Adobe Firefly"],
         milestone: "Accessible designs with complete handoff documentation",
       },
+      qa: {
+        objectives: [
+          "Master E2E test orchestration",
+          "Implement visual regression testing",
+          "Maintain and refactor test suites",
+          "Diagnose and fix flaky tests",
+        ],
+        dailyTopics: [
+          {
+            day: "Day 1",
+            title: "E2E Test Orchestration",
+            description: "End-to-end test workflows",
+            tasks: ["Design E2E test architecture", "Implement cross-browser testing"],
+          },
+          {
+            day: "Day 2",
+            title: "Visual Regression",
+            description: "Catching visual changes",
+            tasks: ["Set up visual testing", "Generate baseline screenshots"],
+          },
+          {
+            day: "Day 3",
+            title: "Test Maintenance",
+            description: "Keeping tests healthy",
+            tasks: ["Refactor brittle tests", "Update test selectors"],
+          },
+          {
+            day: "Day 4",
+            title: "Flaky Test Diagnosis",
+            description: "Finding and fixing instability",
+            tasks: ["Identify flaky tests", "Implement retry strategies"],
+          },
+          {
+            day: "Day 5",
+            title: "Test Architecture",
+            description: "Scalable test design",
+            tasks: ["Design page object models", "Create reusable test utilities"],
+          },
+        ],
+        tools: ["Playwright", "Claude Code"],
+        milestone: "Stable E2E suite with visual regression tests",
+      },
     },
   },
   {
@@ -595,6 +733,7 @@ export const divergentWeeks: DivergentWeekData[] = [
         "This week covers cross-functional product leadership including engineering partnership, design alignment, cross-team planning, and building AI culture in organizations.",
       design:
         "This week focuses on design collaboration including engineering partnership, product alignment, design knowledge sharing, and AI tool evangelism.",
+      qa: "This week focuses on QA collaboration and integration. You'll learn to work with developers on testability, integrate testing into CI/CD pipelines, build quality metrics dashboards, and evangelize test automation.",
     },
     paths: {
       developer: {
@@ -722,6 +861,48 @@ export const divergentWeeks: DivergentWeekData[] = [
         ],
         tools: ["Figma AI", "Claude"],
         milestone: "Design AI toolkit and guidelines shared",
+      },
+      qa: {
+        objectives: [
+          "Collaborate with developers on testability",
+          "Integrate testing into CI/CD pipelines",
+          "Build quality metrics dashboards",
+          "Evangelize test automation",
+        ],
+        dailyTopics: [
+          {
+            day: "Day 1",
+            title: "Developer Collaboration",
+            description: "Improving testability together",
+            tasks: ["Review code for testability", "Suggest test hooks"],
+          },
+          {
+            day: "Day 2",
+            title: "CI/CD Integration",
+            description: "Automating test execution",
+            tasks: ["Set up CI test pipelines", "Configure test parallelization"],
+          },
+          {
+            day: "Day 3",
+            title: "Quality Metrics",
+            description: "Measuring and reporting quality",
+            tasks: ["Define quality KPIs", "Build metrics dashboards"],
+          },
+          {
+            day: "Day 4",
+            title: "Test Automation Culture",
+            description: "Promoting testing practices",
+            tasks: ["Create testing guidelines", "Train team on automation"],
+          },
+          {
+            day: "Day 5",
+            title: "QA Showcase",
+            description: "Presenting QA achievements",
+            tasks: ["Prepare QA metrics report", "Demo automation wins"],
+          },
+        ],
+        tools: ["Claude Code", "Codex CLI"],
+        milestone: "CI/CD integrated tests with quality dashboards",
       },
     },
   },

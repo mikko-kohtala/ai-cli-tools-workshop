@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #292929; padding: 16pt 32pt; display: flex; align-items: center; gap: 16pt;
+}
+.week-badge {
+  background: #f59e0b; padding: 6pt 12pt; border-radius: 4pt;
+}
+.week-badge p { color: #292929; font-size: 12pt; margin: 0; font-weight: bold; }
+.header h1 { color: #ffffff; font-size: 24pt; margin: 0; }
+.content {
+  padding: 20pt 32pt; flex: 1; display: flex; gap: 20pt;
+}
+.left { flex: 1; }
+.right { flex: 1.2; }
+.objectives {
+  background: #ffffff; border-radius: 8pt; padding: 16pt; margin-bottom: 16pt;
+}
+.objectives h3 { color: #292929; font-size: 14pt; margin: 0 0 12pt 0; }
+.objectives ul { margin: 0; padding-left: 16pt; }
+.objectives li { color: #444444; font-size: 11pt; margin-bottom: 6pt; }
+.tools-box {
+  background: #f59e0b; border-radius: 8pt; padding: 12pt 16pt;
+}
+.tools-box h3 { color: #292929; font-size: 12pt; margin: 0 0 8pt 0; }
+.tools-box p { color: #292929; font-size: 11pt; margin: 0; }
+.day-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10pt;
+}
+.day-card {
+  background: #ffffff; border-radius: 6pt; padding: 10pt 12pt;
+  border-top: 3pt solid #f59e0b;
+}
+.day-card h4 { color: #f59e0b; font-size: 10pt; margin: 0 0 4pt 0; }
+.day-card h5 { color: #292929; font-size: 11pt; margin: 0 0 4pt 0; }
+.day-card p { color: #666666; font-size: 9pt; margin: 0; }
+.milestone {
+  background: #292929; border-radius: 6pt; padding: 12pt; margin-top: 10pt;
+  grid-column: span 2;
+}
+.milestone h4 { color: #f59e0b; font-size: 10pt; margin: 0 0 4pt 0; }
+.milestone p { color: #ffffff; font-size: 10pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="week-badge"><p>WEEK 5</p></div>
+  <h1>Advanced Testing Techniques</h1>
+</div>
+<div class="content">
+  <div class="left">
+    <div class="objectives">
+      <h3>Objectives</h3>
+      <ul>
+        <li>Master E2E test orchestration</li>
+        <li>Implement visual regression testing</li>
+        <li>Maintain and refactor test suites</li>
+        <li>Diagnose and fix flaky tests</li>
+      </ul>
+    </div>
+    <div class="tools-box">
+      <h3>Tools</h3>
+      <p>Playwright, Claude Code</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="day-grid">
+      <div class="day-card">
+        <h4>DAY 1</h4>
+        <h5>E2E Test Orchestration</h5>
+        <p>End-to-end test workflows</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 2</h4>
+        <h5>Visual Regression</h5>
+        <p>Catching visual changes</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 3</h4>
+        <h5>Test Maintenance</h5>
+        <p>Keeping tests healthy</p>
+      </div>
+      <div class="day-card">
+        <h4>DAY 4</h4>
+        <h5>Flaky Test Diagnosis</h5>
+        <p>Finding and fixing instability</p>
+      </div>
+      <div class="milestone">
+        <h4>MILESTONE</h4>
+        <p>Stable E2E suite with visual regression tests</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

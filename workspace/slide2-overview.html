@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #F4F6F6; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #292929; padding: 20pt 32pt;
+}
+.header h1 { color: #ffffff; font-size: 28pt; margin: 0; }
+.content {
+  padding: 24pt 32pt; flex: 1; display: flex; gap: 24pt;
+}
+.column {
+  flex: 1; display: flex; flex-direction: column; gap: 12pt;
+}
+.week-card {
+  background: #ffffff; border-radius: 8pt; padding: 12pt 16pt;
+  border-left: 4pt solid #f59e0b;
+}
+.week-card.shared { border-left-color: #6366f1; }
+.week-card h3 { color: #292929; font-size: 12pt; margin: 0 0 4pt 0; }
+.week-card p { color: #666666; font-size: 10pt; margin: 0; }
+.outcome {
+  background: #f59e0b; border-radius: 8pt; padding: 16pt;
+  margin-top: auto;
+}
+.outcome p { color: #292929; font-size: 11pt; margin: 0; font-weight: bold; text-align: center; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>8-Week Program Structure</h1>
+</div>
+<div class="content">
+  <div class="column">
+    <div class="week-card shared">
+      <h3>Weeks 1-2: Shared Foundation</h3>
+      <p>LLM fundamentals, agentic patterns, tool setup, project configuration</p>
+    </div>
+    <div class="week-card">
+      <h3>Week 3: Test Automation Fundamentals</h3>
+      <p>Test generation patterns, AI-assisted test writing, coverage analysis</p>
+    </div>
+    <div class="week-card">
+      <h3>Week 4: Core QA Workflows</h3>
+      <p>Regression testing, API testing, performance analysis, bug documentation</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="week-card">
+      <h3>Week 5: Advanced Testing Techniques</h3>
+      <p>E2E orchestration, visual regression, test maintenance, flaky tests</p>
+    </div>
+    <div class="week-card">
+      <h3>Week 6: QA Integration</h3>
+      <p>Developer collaboration, CI/CD integration, quality metrics, evangelism</p>
+    </div>
+    <div class="week-card shared">
+      <h3>Weeks 7-8: Shared Capstone</h3>
+      <p>Building agents with Claude Agent SDK, capstone project, deployment</p>
+    </div>
+    <div class="outcome">
+      <p>Outcome: Ship higher quality software with AI-assisted testing</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

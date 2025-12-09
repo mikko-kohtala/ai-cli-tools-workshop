@@ -1,4 +1,4 @@
-import { Briefcase, Code2, Palette } from "lucide-react";
+import { Briefcase, Code2, Palette, ShieldCheck } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface PathData {
@@ -140,6 +140,52 @@ const pathsData: PathData[] = [
     tools: ["Figma AI", "Midjourney", "Claude", "Adobe Firefly"],
     outcome: "From research to polished designs in half the time",
   },
+  {
+    id: "qa",
+    name: "QA",
+    icon: ShieldCheck,
+    color: "amber",
+    description: "Test automation, quality assurance, and AI-assisted testing workflows",
+    weeks: [
+      {
+        week: 3,
+        title: "Test Automation Fundamentals",
+        topics: [
+          "Test generation patterns with AI",
+          "AI-assisted test writing workflows",
+          "Coverage analysis and gap identification",
+          "Test data generation",
+        ],
+      },
+      {
+        week: 4,
+        title: "Core QA Workflows",
+        topics: [
+          "Regression test suites with AI",
+          "API testing with AI assistance",
+          "Performance testing analysis",
+          "Bug documentation",
+        ],
+      },
+      {
+        week: 5,
+        title: "Advanced Testing Techniques",
+        topics: [
+          "E2E test orchestration",
+          "Visual regression testing",
+          "Test maintenance and refactoring",
+          "Flaky test diagnosis",
+        ],
+      },
+      {
+        week: 6,
+        title: "QA Integration & Collaboration",
+        topics: ["Developer collaboration on testability", "CI/CD pipeline integration", "Quality metrics and reporting", "Test automation evangelism"],
+      },
+    ],
+    tools: ["Playwright", "Cypress", "Claude Code", "Codex CLI"],
+    outcome: "Ship higher quality software with AI-assisted testing",
+  },
 ];
 
 const colorClasses: Record<string, { bg: string; border: string; text: string; light: string }> = {
@@ -160,6 +206,12 @@ const colorClasses: Record<string, { bg: string; border: string; text: string; l
     border: "border-l-blue-500",
     text: "text-blue-700 dark:text-blue-400",
     light: "bg-blue-50 dark:bg-blue-950/30",
+  },
+  amber: {
+    bg: "bg-amber-100 dark:bg-amber-900/40",
+    border: "border-l-amber-500",
+    text: "text-amber-700 dark:text-amber-400",
+    light: "bg-amber-50 dark:bg-amber-950/30",
   },
 };
 

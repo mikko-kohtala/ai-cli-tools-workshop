@@ -11,7 +11,7 @@ export function PathSelector() {
         Select your role to see a customized curriculum with path-specific content for weeks 3-6
       </p>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {(Object.keys(learningPaths) as LearningPath[]).map((pathId) => {
           const path = learningPaths[pathId];
           const colors = colorClasses[path.color];

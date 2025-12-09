@@ -26,7 +26,7 @@ const sections = [
 
 const SCROLL_OFFSET = 100;
 
-const validPaths: LearningPath[] = ["developer", "product", "design"];
+const validPaths: LearningPath[] = ["developer", "product", "design", "qa"];
 
 export default function PathCurriculumPage({ params }: { params: Promise<{ path: string }> }) {
   const [activeSection, setActiveSection] = useState("");

@@ -1,9 +1,10 @@
-import { Bot, Briefcase, Code2, Palette, Users } from "lucide-react";
+import { Bot, Briefcase, Code2, Palette, ShieldCheck, Users } from "lucide-react";
 
 const paths = [
   { id: "dev", name: "Developer", icon: Code2, color: "emerald" },
   { id: "product", name: "Product", icon: Briefcase, color: "blue" },
   { id: "design", name: "Design", icon: Palette, color: "pink" },
+  { id: "qa", name: "QA", icon: ShieldCheck, color: "amber" },
 ];
 
 const colorClasses: Record<string, { bg: string; border: string; text: string; line: string }> = {
@@ -24,6 +25,12 @@ const colorClasses: Record<string, { bg: string; border: string; text: string; l
     border: "border-pink-300 dark:border-pink-700",
     text: "text-pink-700 dark:text-pink-400",
     line: "bg-pink-400 dark:bg-pink-600",
+  },
+  amber: {
+    bg: "bg-amber-100 dark:bg-amber-900/40",
+    border: "border-amber-300 dark:border-amber-700",
+    text: "text-amber-700 dark:text-amber-400",
+    line: "bg-amber-400 dark:bg-amber-600",
   },
 };
 
@@ -49,10 +56,10 @@ export function PathFlowDiagram() {
         <div className="relative mt-4 flex justify-center">
           <svg
             aria-label="Lines diverging from shared foundation to specialized tracks"
-            className="h-16 w-full max-w-3xl"
+            className="h-16 w-full max-w-4xl"
             preserveAspectRatio="xMidYMid meet"
             role="img"
-            viewBox="0 0 600 60"
+            viewBox="0 0 800 60"
           >
             <defs>
               <linearGradient id="line-emerald" x1="0%" x2="0%" y1="0%" y2="100%">
@@ -67,11 +74,16 @@ export function PathFlowDiagram() {
                 <stop offset="0%" stopColor="#6366f1" />
                 <stop offset="100%" stopColor="#ec4899" />
               </linearGradient>
+              <linearGradient id="line-amber" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stopColor="#6366f1" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </linearGradient>
             </defs>
             {/* Lines from center to each path */}
-            <path d="M300,0 Q300,30 100,55" fill="none" stroke="url(#line-emerald)" strokeWidth="3" />
-            <path d="M300,0 L300,55" fill="none" stroke="url(#line-blue)" strokeWidth="3" />
-            <path d="M300,0 Q300,30 500,55" fill="none" stroke="url(#line-pink)" strokeWidth="3" />
+            <path d="M400,0 Q400,30 100,55" fill="none" stroke="url(#line-emerald)" strokeWidth="3" />
+            <path d="M400,0 Q400,30 300,55" fill="none" stroke="url(#line-blue)" strokeWidth="3" />
+            <path d="M400,0 Q400,30 500,55" fill="none" stroke="url(#line-pink)" strokeWidth="3" />
+            <path d="M400,0 Q400,30 700,55" fill="none" stroke="url(#line-amber)" strokeWidth="3" />
           </svg>
         </div>
 
@@ -81,7 +93,7 @@ export function PathFlowDiagram() {
             WEEKS 3-6
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-4 gap-2 md:gap-6">
           {paths.map((path) => {
             const colors = colorClasses[path.color];
             const Icon = path.icon;
@@ -104,10 +116,10 @@ export function PathFlowDiagram() {
         <div className="relative flex justify-center">
           <svg
             aria-label="Lines converging from specialized tracks to agent building"
-            className="h-16 w-full max-w-3xl"
+            className="h-16 w-full max-w-4xl"
             preserveAspectRatio="xMidYMid meet"
             role="img"
-            viewBox="0 0 600 60"
+            viewBox="0 0 800 60"
           >
             <defs>
               <linearGradient id="conv-emerald" x1="0%" x2="0%" y1="0%" y2="100%">
@@ -122,10 +134,15 @@ export function PathFlowDiagram() {
                 <stop offset="0%" stopColor="#ec4899" />
                 <stop offset="100%" stopColor="#f59e0b" />
               </linearGradient>
+              <linearGradient id="conv-amber" x1="0%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stopColor="#f59e0b" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </linearGradient>
             </defs>
-            <path d="M100,5 Q100,30 300,55" fill="none" stroke="url(#conv-emerald)" strokeWidth="3" />
-            <path d="M300,5 L300,55" fill="none" stroke="url(#conv-blue)" strokeWidth="3" />
-            <path d="M500,5 Q500,30 300,55" fill="none" stroke="url(#conv-pink)" strokeWidth="3" />
+            <path d="M100,5 Q100,30 400,55" fill="none" stroke="url(#conv-emerald)" strokeWidth="3" />
+            <path d="M300,5 Q300,30 400,55" fill="none" stroke="url(#conv-blue)" strokeWidth="3" />
+            <path d="M500,5 Q500,30 400,55" fill="none" stroke="url(#conv-pink)" strokeWidth="3" />
+            <path d="M700,5 Q700,30 400,55" fill="none" stroke="url(#conv-amber)" strokeWidth="3" />
           </svg>
         </div>
 
@@ -149,11 +166,11 @@ export function PathFlowDiagram() {
           <span className="text-foreground/70">Shared Foundation (Weeks 1-2)</span>
         </div>
         <div className="flex items-center gap-2 text-sm">
-          <div className="h-3 w-8 rounded-full bg-gradient-to-r from-emerald-400 via-blue-400 to-pink-400" />
+          <div className="h-3 w-10 rounded-full bg-gradient-to-r from-emerald-400 via-blue-400 via-pink-400 to-amber-400" />
           <span className="text-foreground/70">Specialized Tracks (Weeks 3-6)</span>
         </div>
         <div className="flex items-center gap-2 text-sm">
-          <div className="h-3 w-3 rounded-full bg-amber-500" />
+          <div className="h-3 w-3 rounded-full bg-rose-500" />
           <span className="text-foreground/70">Agent Building & Capstone (Weeks 7-8)</span>
         </div>
       </div>
