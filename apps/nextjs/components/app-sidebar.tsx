@@ -55,10 +55,13 @@ const curriculumNav = {
   title: "Curriculum",
   url: "/curriculum",
   icon: IconBook,
-  items: curriculumTools.flatMap((tool) => [
-    { title: tool.name, url: `/${tool.slug}` },
-    { title: `${tool.name} Paths`, url: `/${tool.slug}/learning-paths` },
-  ]),
+  items: [
+    ...curriculumTools.flatMap((tool) => [
+      { title: tool.name, url: `/${tool.slug}` },
+      { title: `${tool.name} Paths`, url: `/${tool.slug}/learning-paths` },
+    ]),
+    { title: "Developer Deep Dive", url: "/curriculum/learning-paths/developers" },
+  ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
