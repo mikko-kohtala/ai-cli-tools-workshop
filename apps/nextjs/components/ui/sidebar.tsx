@@ -1,7 +1,3 @@
-/** biome-ignore-all lint/style/noMagicNumbers: shadcn */
-/** biome-ignore-all lint/correctness/useExhaustiveDependencies: shadcn */
-/** biome-ignore-all lint/suspicious/noDocumentCookie: shadcn */
-/** biome-ignore-all lint/nursery/noShadow: shadcn */
 "use client";
 
 import { Slot } from "@radix-ui/react-slot";

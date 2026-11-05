@@ -180,7 +180,12 @@ const pathsData: PathData[] = [
       {
         week: 6,
         title: "QA Integration & Collaboration",
-        topics: ["Developer collaboration on testability", "CI/CD pipeline integration", "Quality metrics and reporting", "Test automation evangelism"],
+        topics: [
+          "Developer collaboration on testability",
+          "CI/CD pipeline integration",
+          "Quality metrics and reporting",
+          "Test automation evangelism",
+        ],
       },
     ],
     tools: ["Playwright", "Cypress", "Claude Code", "Codex CLI"],

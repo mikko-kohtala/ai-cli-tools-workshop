@@ -30,9 +30,8 @@ export default function DeveloperCurriculumPage() {
       <div className="mt-16 rounded-lg border border-emerald-200 bg-gradient-to-br from-emerald-50 to-cyan-50 p-8 text-center dark:border-emerald-800 dark:from-emerald-950/30 dark:to-cyan-950/30">
         <h2 className="mb-4 font-bold text-2xl">Ready to Master AI-Assisted Development?</h2>
         <p className="mx-auto mb-6 max-w-2xl text-foreground/70">
-          This curriculum takes you from AI tools setup to building production agents. By week 8,
-          you'll ship code faster, debug smarter, and automate repetitive workflows with custom
-          agents.
+          This curriculum takes you from AI tools setup to building production agents. By week 8, you'll ship code
+          faster, debug smarter, and automate repetitive workflows with custom agents.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <span className="rounded-full bg-emerald-100 px-4 py-2 font-medium text-emerald-700 text-sm dark:bg-emerald-900/30 dark:text-emerald-400">

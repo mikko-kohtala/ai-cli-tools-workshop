@@ -1,4 +1,3 @@
-/** biome-ignore-all lint/a11y/useValidAnchor: TODO: Fix this */
 "use client";
 
 import { IconBook, IconCheckbox, IconHome, IconInnerShadowTop, IconPresentation } from "@tabler/icons-react";

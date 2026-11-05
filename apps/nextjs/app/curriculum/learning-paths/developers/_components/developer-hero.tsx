@@ -10,8 +10,8 @@ export function DeveloperHero() {
         Developer AI Tools Mastery
       </h1>
       <p className="mx-auto max-w-2xl text-gray-600 text-lg dark:text-gray-400">
-        8-week intensive curriculum for experienced developers. Skip the basics, dive deep into
-        AI-assisted development, and build production-ready agents.
+        8-week intensive curriculum for experienced developers. Skip the basics, dive deep into AI-assisted development,
+        and build production-ready agents.
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">

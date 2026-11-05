@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Settings, Target } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import type { DeveloperWeek } from "./week-data";
 
 interface WeekSectionProps {
@@ -100,10 +100,7 @@ export function WeekSection({ week }: WeekSectionProps) {
           <p className="mb-2 font-semibold text-sm">Primary Tools</p>
           <div className="flex flex-wrap gap-2">
             {week.tools.map((tool) => (
-              <span
-                className="rounded-full bg-white px-3 py-1 text-sm dark:bg-slate-800"
-                key={tool}
-              >
+              <span className="rounded-full bg-white px-3 py-1 text-sm dark:bg-slate-800" key={tool}>
                 {tool}
               </span>
             ))}
@@ -111,9 +108,7 @@ export function WeekSection({ week }: WeekSectionProps) {
         </div>
 
         {/* Milestone */}
-        <div
-          className={`rounded-lg border p-4 ${week.colorClasses.bgLight} border-l-4 ${week.colorClasses.border}`}
-        >
+        <div className={`rounded-lg border p-4 ${week.colorClasses.bgLight} border-l-4 ${week.colorClasses.border}`}>
           <div className="flex items-center gap-2">
             <CheckCircle2 className={`h-5 w-5 ${week.colorClasses.text}`} />
             <p className="font-semibold">Week Milestone</p>

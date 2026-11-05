@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import "zx/globals";
 import chalk from "chalk";
 import { $ } from "zx";
@@ -15,7 +15,7 @@ try {
 
   console.log(chalk.green.bold("\n✨ Initialization complete!"));
   console.log(chalk.gray("\nYou can now run:"));
-  console.log(chalk.cyan("  pnpm dev"));
+  console.log(chalk.cyan("  bun run dev"));
 } catch (error) {
   const errorMessage = error instanceof Error ? error.message : String(error);
   console.error(chalk.red("✗ Initialization failed:"), errorMessage);

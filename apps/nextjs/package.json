@@ -7,9 +7,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint .",
-    "format": "biome format --write .",
-    "check": "biome check --write . && bun run typecheck",
     "typecheck": "tsc --noEmit",
     "clean": "git clean -xdf .next .turbo dist build node_modules"
   },

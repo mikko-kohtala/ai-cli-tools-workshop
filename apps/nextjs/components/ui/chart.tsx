@@ -1,10 +1,7 @@
-/** biome-ignore-all lint/nursery/noShadow: shadcn */
-/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: shadcn */
 "use client";
 
 import * as React from "react";
 import * as RechartsPrimitive from "recharts";
-
 import { cn } from "@/lib/utils";
 
 // Format: { THEME_NAME: CSS_SELECTOR }

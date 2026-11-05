@@ -1,13 +1,4 @@
-import {
-  Bot,
-  Bug,
-  Code2,
-  Layers,
-  Rocket,
-  Terminal,
-  TestTube,
-  Wrench,
-} from "lucide-react";
+import { Bot, Bug, Code2, Layers, Rocket, Terminal, TestTube, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface DailyTopic {
@@ -69,8 +60,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 1",
         title: "AI CLI Tools Landscape",
-        description:
-          "Overview of Claude Code, Codex CLI, Gemini CLI, Amp, Cursor, and Copilot",
+        description: "Overview of Claude Code, Codex CLI, Gemini CLI, Amp, Cursor, and Copilot",
         tasks: [
           "Survey available AI coding tools",
           "Understand capabilities and trade-offs of each",
@@ -80,8 +70,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 2",
         title: "Claude Code Deep Setup",
-        description:
-          "Installation, configuration, model selection, and approval modes",
+        description: "Installation, configuration, model selection, and approval modes",
         tasks: [
           "Install Claude Code CLI",
           "Configure API keys and settings",
@@ -92,8 +81,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 3",
         title: "Prompting for Code",
-        description:
-          "Describe-generate-refine pattern, constraints, examples in prompts",
+        description: "Describe-generate-refine pattern, constraints, examples in prompts",
         tasks: [
           "Practice the describe-generate-refine loop",
           "Write prompts with clear constraints",
@@ -104,8 +92,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 4",
         title: "Project Configuration",
-        description:
-          "CLAUDE.md, coding standards, memory, .claude directory structure",
+        description: "CLAUDE.md, coding standards, memory, .claude directory structure",
         tasks: [
           "Create CLAUDE.md for 2-3 real projects",
           "Define coding standards and conventions",
@@ -115,8 +102,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 5",
         title: "Context Management",
-        description:
-          "Tokens, context windows, /context, /clear, when to reset",
+        description: "Tokens, context windows, /context, /clear, when to reset",
         tasks: [
           "Understand token limits and context windows",
           "Practice /context and /clear commands",
@@ -143,8 +129,7 @@ export const developerWeeks: DeveloperWeek[] = [
       },
     ],
     tools: ["Claude Code", "Codex CLI"],
-    milestone:
-      "Development environment fully configured with CLAUDE.md for primary projects",
+    milestone: "Development environment fully configured with CLAUDE.md for primary projects",
   },
   {
     weekNumber: 2,
@@ -182,8 +167,7 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 2",
         title: "Multi-File Orchestration",
-        description:
-          "Coordinated changes across files, maintaining consistency",
+        description: "Coordinated changes across files, maintaining consistency",
         tasks: [
           "Implement feature spanning 3+ files",
           "Maintain consistency across modules",
@@ -213,13 +197,8 @@ export const developerWeeks: DeveloperWeek[] = [
       {
         day: "Day 5",
         title: "Code Understanding",
-        description:
-          "Generate documentation, explain complex code, trace flows",
-        tasks: [
-          "Document an existing module",
-          "Explain complex algorithms",
-          "Generate API documentation",
-        ],
+        description: "Generate documentation, explain complex code, trace flows",
+        tasks: ["Document an existing module", "Explain complex algorithms", "Generate API documentation"],
       },
     ],
     keySkills: [
@@ -241,8 +220,7 @@ export const developerWeeks: DeveloperWeek[] = [
       },
     ],
     tools: ["Claude Code", "GitHub Copilot"],
-    milestone:
-      "Successfully navigate and modify unfamiliar codebase with AI assistance",
+    milestone: "Successfully navigate and modify unfamiliar codebase with AI assistance",
   },
   {
     weekNumber: 3,
@@ -271,31 +249,19 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 1",
         title: "Unit Test Generation",
         description: "Generate tests from implementation, identify coverage gaps",
-        tasks: [
-          "Generate tests for existing module",
-          "Identify untested edge cases",
-          "Practice test-driven prompting",
-        ],
+        tasks: ["Generate tests for existing module", "Identify untested edge cases", "Practice test-driven prompting"],
       },
       {
         day: "Day 2",
         title: "Integration Testing",
         description: "API tests, database tests, service mocks",
-        tasks: [
-          "Build integration test suite",
-          "Create mock services",
-          "Test API endpoints",
-        ],
+        tasks: ["Build integration test suite", "Create mock services", "Test API endpoints"],
       },
       {
         day: "Day 3",
         title: "Edge Cases & Property Testing",
         description: "AI-identified edge cases, fuzzing, property-based testing",
-        tasks: [
-          "Identify 20 edge cases with AI",
-          "Implement property-based tests",
-          "Test boundary conditions",
-        ],
+        tasks: ["Identify 20 edge cases with AI", "Implement property-based tests", "Test boundary conditions"],
       },
       {
         day: "Day 4",
@@ -311,11 +277,7 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 5",
         title: "Coverage & Quality Gates",
         description: "Coverage analysis, linting, pre-commit hooks",
-        tasks: [
-          "Set up CI quality gates",
-          "Configure coverage thresholds",
-          "Implement pre-commit hooks",
-        ],
+        tasks: ["Set up CI quality gates", "Configure coverage thresholds", "Implement pre-commit hooks"],
       },
     ],
     keySkills: [
@@ -366,51 +328,31 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 1",
         title: "Systematic Debugging",
         description: "Error analysis, hypothesis generation, root cause finding",
-        tasks: [
-          "Debug 5 real bugs with AI",
-          "Practice hypothesis-driven debugging",
-          "Document root cause analysis",
-        ],
+        tasks: ["Debug 5 real bugs with AI", "Practice hypothesis-driven debugging", "Document root cause analysis"],
       },
       {
         day: "Day 2",
         title: "Log Analysis",
         description: "Parse logs, identify patterns, correlate events",
-        tasks: [
-          "Analyze production log samples",
-          "Build log parsing prompts",
-          "Correlate events across services",
-        ],
+        tasks: ["Analyze production log samples", "Build log parsing prompts", "Correlate events across services"],
       },
       {
         day: "Day 3",
         title: "Stack Trace Investigation",
         description: "Understand traces, find root causes, fix error chains",
-        tasks: [
-          "Debug 3 complex stack traces",
-          "Trace through async operations",
-          "Fix cascading errors",
-        ],
+        tasks: ["Debug 3 complex stack traces", "Trace through async operations", "Fix cascading errors"],
       },
       {
         day: "Day 4",
         title: "Performance Profiling",
         description: "CPU/memory profiling, flame graphs, bottleneck identification",
-        tasks: [
-          "Profile an application",
-          "Read and interpret flame graphs",
-          "Identify hot paths",
-        ],
+        tasks: ["Profile an application", "Read and interpret flame graphs", "Identify hot paths"],
       },
       {
         day: "Day 5",
         title: "Optimization Patterns",
         description: "Algorithmic improvements, caching, lazy loading",
-        tasks: [
-          "Implement 5 optimizations",
-          "Add caching where appropriate",
-          "Measure improvement metrics",
-        ],
+        tasks: ["Implement 5 optimizations", "Add caching where appropriate", "Measure improvement metrics"],
       },
     ],
     keySkills: [
@@ -432,8 +374,7 @@ export const developerWeeks: DeveloperWeek[] = [
       },
     ],
     tools: ["Claude Code", "Chrome DevTools", "Node Profiler"],
-    milestone:
-      "Debug complex issue and achieve 50% performance improvement in target area",
+    milestone: "Debug complex issue and achieve 50% performance improvement in target area",
   },
   {
     weekNumber: 5,
@@ -472,41 +413,25 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 2",
         title: "Legacy Migration",
         description: "Identify patterns, plan migration, execute safely",
-        tasks: [
-          "Migrate a legacy module",
-          "Update deprecated patterns",
-          "Maintain backwards compatibility",
-        ],
+        tasks: ["Migrate a legacy module", "Update deprecated patterns", "Maintain backwards compatibility"],
       },
       {
         day: "Day 3",
         title: "API Design",
         description: "RESTful design, GraphQL schemas, OpenAPI specs",
-        tasks: [
-          "Design API with AI assistance",
-          "Generate OpenAPI specification",
-          "Review API for consistency",
-        ],
+        tasks: ["Design API with AI assistance", "Generate OpenAPI specification", "Review API for consistency"],
       },
       {
         day: "Day 4",
         title: "Architecture Documentation",
         description: "Document current state, write ADRs, identify improvements",
-        tasks: [
-          "Write an ADR with AI",
-          "Document system architecture",
-          "Identify technical debt",
-        ],
+        tasks: ["Write an ADR with AI", "Document system architecture", "Identify technical debt"],
       },
       {
         day: "Day 5",
         title: "Design Patterns",
         description: "Apply patterns with AI, recognize anti-patterns",
-        tasks: [
-          "Implement 3 design patterns",
-          "Identify and fix anti-patterns",
-          "Refactor to improve structure",
-        ],
+        tasks: ["Implement 3 design patterns", "Identify and fix anti-patterns", "Refactor to improve structure"],
       },
     ],
     keySkills: [
@@ -557,51 +482,31 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 1",
         title: "MCP Fundamentals",
         description: "Protocol architecture, server/client model, tool schemas",
-        tasks: [
-          "Study MCP specification",
-          "Run example MCP servers",
-          "Understand tool schemas",
-        ],
+        tasks: ["Study MCP specification", "Run example MCP servers", "Understand tool schemas"],
       },
       {
         day: "Day 2",
         title: "Building MCP Servers",
         description: "Create server with custom tools, test locally",
-        tasks: [
-          "Build simple MCP server",
-          "Define tool schemas",
-          "Test with Claude Code",
-        ],
+        tasks: ["Build simple MCP server", "Define tool schemas", "Test with Claude Code"],
       },
       {
         day: "Day 3",
         title: "Database Integration",
         description: "Connect to databases, query generation, data tools",
-        tasks: [
-          "Build database MCP server",
-          "Implement query tools",
-          "Add data exploration features",
-        ],
+        tasks: ["Build database MCP server", "Implement query tools", "Add data exploration features"],
       },
       {
         day: "Day 4",
         title: "API Integration",
         description: "External API tools, authentication, rate limiting",
-        tasks: [
-          "Build API integration server",
-          "Handle authentication",
-          "Implement rate limiting",
-        ],
+        tasks: ["Build API integration server", "Handle authentication", "Implement rate limiting"],
       },
       {
         day: "Day 5",
         title: "Advanced MCP",
         description: "Resources, prompts, streaming, production deployment",
-        tasks: [
-          "Add resources and prompts",
-          "Implement streaming",
-          "Deploy MCP server",
-        ],
+        tasks: ["Add resources and prompts", "Implement streaming", "Deploy MCP server"],
       },
     ],
     keySkills: [
@@ -652,51 +557,31 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 1",
         title: "Agent Fundamentals",
         description: "Agent vs workflow, ReAct pattern, agent loops",
-        tasks: [
-          "Study Claude Agent SDK",
-          "Understand ReAct pattern",
-          "Run example agents",
-        ],
+        tasks: ["Study Claude Agent SDK", "Understand ReAct pattern", "Run example agents"],
       },
       {
         day: "Day 2",
         title: "Building Your First Agent",
         description: "SDK setup, tool registration, basic agent implementation",
-        tasks: [
-          "Build code review agent",
-          "Register custom tools",
-          "Implement basic agent loop",
-        ],
+        tasks: ["Build code review agent", "Register custom tools", "Implement basic agent loop"],
       },
       {
         day: "Day 3",
         title: "Context & Memory",
         description: "Automatic context, summarization, persistent memory",
-        tasks: [
-          "Implement context strategies",
-          "Add memory to agents",
-          "Handle long conversations",
-        ],
+        tasks: ["Implement context strategies", "Add memory to agents", "Handle long conversations"],
       },
       {
         day: "Day 4",
         title: "Multi-Agent Systems",
         description: "Orchestrator-worker, pipelines, agent handoffs",
-        tasks: [
-          "Build 2-agent system",
-          "Implement orchestrator pattern",
-          "Handle agent communication",
-        ],
+        tasks: ["Build 2-agent system", "Implement orchestrator pattern", "Handle agent communication"],
       },
       {
         day: "Day 5",
         title: "Safety & Guardrails",
         description: "Approval flows, sandboxing, rate limits, boundaries",
-        tasks: [
-          "Add production guardrails",
-          "Implement approval flows",
-          "Set agent boundaries",
-        ],
+        tasks: ["Add production guardrails", "Implement approval flows", "Set agent boundaries"],
       },
     ],
     keySkills: [
@@ -747,52 +632,31 @@ export const developerWeeks: DeveloperWeek[] = [
         day: "Day 1",
         title: "CI/CD with AI",
         description: "GitHub Actions generation, test automation, deployment",
-        tasks: [
-          "Generate CI/CD pipeline",
-          "Automate test runs",
-          "Set up deployment workflow",
-        ],
+        tasks: ["Generate CI/CD pipeline", "Automate test runs", "Set up deployment workflow"],
       },
       {
         day: "Day 2",
         title: "Team Workflows",
         description: "Shared prompts, team guidelines, onboarding materials",
-        tasks: [
-          "Create team AI playbook",
-          "Document best practices",
-          "Build onboarding guide",
-        ],
+        tasks: ["Create team AI playbook", "Document best practices", "Build onboarding guide"],
       },
       {
         day: "Day 3",
         title: "Capstone: Design",
         description: "Define requirements, plan architecture, design with AI",
-        tasks: [
-          "Define capstone requirements",
-          "Design architecture",
-          "Plan implementation",
-        ],
+        tasks: ["Define capstone requirements", "Design architecture", "Plan implementation"],
       },
       {
         day: "Day 4",
         title: "Capstone: Implement",
-        description:
-          "Build application with agent component, use all learned skills",
-        tasks: [
-          "Implement core features",
-          "Build agent component",
-          "Write tests",
-        ],
+        description: "Build application with agent component, use all learned skills",
+        tasks: ["Implement core features", "Build agent component", "Write tests"],
       },
       {
         day: "Day 5",
         title: "Capstone: Deploy & Present",
         description: "Deploy to production, document, present to stakeholders",
-        tasks: [
-          "Deploy application",
-          "Write documentation",
-          "Present and demo",
-        ],
+        tasks: ["Deploy application", "Write documentation", "Present and demo"],
       },
     ],
     keySkills: [

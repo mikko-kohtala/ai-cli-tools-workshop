@@ -119,18 +119,18 @@ All mentioned AI CLI tools are real, actively maintained products:
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 ```
 
 ## Key Commands
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run lint` - Run linting
-- `npm run format` - Format code
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run lint` - Run linting
+- `bun run format` - Format code

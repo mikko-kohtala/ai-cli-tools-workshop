@@ -14,5 +14,6 @@
     "playwright": "^1.57.0",
     "pptxgenjs": "^4.0.1",
     "sharp": "^0.34.5"
-  }
+  },
+  "packageManager": "bun@1.4.4"
 }

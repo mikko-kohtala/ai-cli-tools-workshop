@@ -1,5 +1,3 @@
-/** biome-ignore-all lint/style/noMagicNumbers: shadcn */
-/** biome-ignore-all lint/nursery/noShadow: shadcn */
 "use client";
 
 import {

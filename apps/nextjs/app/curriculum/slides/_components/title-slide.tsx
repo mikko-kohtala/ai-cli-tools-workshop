@@ -10,9 +10,7 @@ export function TitleSlide() {
           <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-100 dark:bg-indigo-900/30">
             <Sparkles className="h-12 w-12 text-indigo-600 dark:text-indigo-400" />
           </div>
-          <h1 className="mb-4 font-bold text-4xl text-gray-800 md:text-5xl dark:text-gray-200">
-            AI-Assisted Work
-          </h1>
+          <h1 className="mb-4 font-bold text-4xl text-gray-800 md:text-5xl dark:text-gray-200">AI-Assisted Work</h1>
           <p className="max-w-xl text-gray-600 text-lg dark:text-gray-400">
             8-week curriculum for accelerating your work with AI-powered workflows
           </p>

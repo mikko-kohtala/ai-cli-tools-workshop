@@ -11,22 +11,19 @@ const tools = [
   },
   {
     name: "Claude Agent SDK",
-    description:
-      "Build custom AI agents with tool use, context management, and multi-agent orchestration.",
+    description: "Build custom AI agents with tool use, context management, and multi-agent orchestration.",
     icon: Bot,
     color: "amber",
   },
   {
     name: "MCP (Model Context Protocol)",
-    description:
-      "Extend AI capabilities with custom tools, database connections, and API integrations.",
+    description: "Extend AI capabilities with custom tools, database connections, and API integrations.",
     icon: Wrench,
     color: "pink",
   },
   {
     name: "Codex CLI",
-    description:
-      "Open-source alternative supporting multiple LLM providers. Useful for comparison and flexibility.",
+    description: "Open-source alternative supporting multiple LLM providers. Useful for comparison and flexibility.",
     icon: Code2,
     color: "blue",
   },

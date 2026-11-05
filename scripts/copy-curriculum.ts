@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 import "zx/globals";
-import chalk from "chalk";
-import { $ } from "zx";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import chalk from "chalk";
+import { $ } from "zx";
 
 $.verbose = true;
 

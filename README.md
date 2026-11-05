@@ -39,23 +39,23 @@ An interactive workshop exploring the landscape of AI command line tools, with h
 - **UI:** [shadcn/ui](https://ui.shadcn.com/) with [Radix UI](https://www.radix-ui.com/)
 - **Styling:** [TailwindCSS](https://tailwindcss.com/) with full dark mode support
 - **Deployment:** [Vercel](https://vercel.com/)
-- **Package Manager:** pnpm (v10.19.0)
+- **Package Manager:** [Bun](https://bun.sh/)
 
 ## Quick Start
 
 ### Prerequisites
 
 - Node.js >= 22
-- pnpm >= 10
+- Bun >= 1.4
 
 ### Development
 
 ```bash
 # Install dependencies
-pnpm install
+bun install
 
 # Start development server
-pnpm dev
+bun run dev
 ```
 
 The workshop will be available at `http://localhost:3000`
@@ -64,16 +64,16 @@ The workshop will be available at `http://localhost:3000`
 
 ```bash
 # Build for production
-pnpm build
+bun run build
 
 # Type checking
-pnpm typecheck
+bun run typecheck
 
 # Linting
-pnpm lint
+bun run lint
 
 # Format code
-pnpm format
+bun run format
 ```
 
 ## Project Structure
@@ -106,4 +106,4 @@ This is a workshop repository. If you find issues or have suggestions:
 
 1. Open an issue describing the problem
 2. For fixes, submit a PR with clear description
-3. Follow the existing code style (Biome configured)
+3. Follow the existing code style (oxlint and oxfmt configured)
